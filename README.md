@@ -1,5 +1,5 @@
-# tube
-My first reverse engineering game
+# Tube
+My first reverse engineering game.
 
 Tube is a little known game from Bullfrog developed for M$ DOS, released in 1994.
 
