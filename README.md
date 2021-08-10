@@ -33,3 +33,6 @@ HOW TO COMPILE:
 3. for Web - run build_web.bat
 
 The "bin" directory contains compiled programs.
+
+Play game in browser: https://clobberasm.itch.io/tube
+
