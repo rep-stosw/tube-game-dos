@@ -15,6 +15,8 @@ The game is currently compiled by the following toolchains:
 3. Emscripten (Web)
 4. OpenWatcom 1.9 (DOS DPMI)
 
+Fully cross-platform, SDL2 is used.
+
 Please keep in mind that this game will only work on 32-bit platforms! It won't work on 64-bit ones, because of 32-bit pointers in the game code.
 
 The unaligned data access is done through "packed" pointers and can be redesigned for a different compiler that supports directives for handling unaligned data.
