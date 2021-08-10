@@ -1,4 +1,6 @@
 ![1](https://user-images.githubusercontent.com/88702500/128820449-94b8fe0d-296d-4232-a6eb-2eba36968028.png)
+![2](https://user-images.githubusercontent.com/88702500/128820980-07c0d238-edba-4681-8c02-4eb6ea317a98.png)
+
 # Tube
 My first reverse engineering game.
 
