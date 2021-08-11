@@ -7,15 +7,9 @@ extern "C" {
 
 #include "Type.h"
 
-#ifdef __EMSCRIPTEN__
-
-#define SB_SAMPLE 256 /* обязательно степень двойки */
-
-#else
-
-#define SB_SAMPLE 368 /* такая длина буфера выбрана, чтобы обеспечить синхронизацию MIDI: Fs/TEMPO = 44100/120 */
-
-#endif
+#define FS       44100 /* частота семплирования          */
+#define TEMPO      120 /* темп мелодий                   */
+#define SB_SAMPLE  512 /* требование SDL: степень двойки */
 
 void MIXER(s16 *stream);
 

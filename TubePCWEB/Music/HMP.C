@@ -30,7 +30,9 @@
 #include "HMP.H"
 #include "SB16.H"
 
-u8 MusicMode=1;  //Воспроизведение мелодий: 0 - с помощью MIDI(MPU401), 1 - с помощью Adlib(OPL)
+#define KDELTA ((double)(((double)(SB_SAMPLE*TEMPO))/((double)FS))) /* коэффициент для дельты, чтобы обеспечить нужный темп мелодий */
+
+u8 MusicMode=1; //Воспроизведение мелодий: 0 - с помощью MIDI(MPU401), 1 - с помощью Adlib(OPL)
 
 #ifdef _DBOPL_
 
@@ -256,8 +258,10 @@ static void song_start(u8 sn)
 
 static void mySDL_AudioCallback(void*, Uint8 *stream, int len) //аналог обработчика прерывания звуковой системы
 {
+ asm volatile ("" ::: "memory");
  AUDIO_FLAG=0;
 
+ asm volatile ("" ::: "memory");
  if(TIMER_FLAG)
  {
   if(Delta>=MUSIC_Delta[MUSIC_NUMBER])
@@ -278,10 +282,11 @@ static void mySDL_AudioCallback(void*, Uint8 *stream, int len) //аналог обработч
   MIXER((s16*)stream);
 
   DeltaAbsolute++;
-  while(Delta<=DeltaAbsolute)song_step();
+  while(Delta<=(int)(((double)DeltaAbsolute)*KDELTA))song_step();
  }
  else memset(stream,0,len);
 
+ asm volatile ("" ::: "memory");
  AUDIO_FLAG=1;
 }
 
@@ -295,22 +300,12 @@ void MY_OpenMusic(unsigned int a4)
   exit(-1);
  }
 
- SDL_AudioSpec spec;
- SDL_AudioDeviceID dev;
+ SDL_AudioSpec spec={};
 
- #ifdef __EMSCRIPTEN__
-
- spec.freq     = 32000;
-
- #else
-
- spec.freq     = 44100;               //частота семплирования
-
- #endif
-
+ spec.freq     = FS;                  //частота семплирования
  spec.format   = AUDIO_S16SYS;        //16 бит, знаковый
  spec.channels = 1;                   //1 канал
- spec.samples  = SB_SAMPLE;           //Fs/TEMPO
+ spec.samples  = SB_SAMPLE;           //степень двойки
  spec.callback = mySDL_AudioCallback;
  spec.userdata = NULL;
 
@@ -320,15 +315,12 @@ void MY_OpenMusic(unsigned int a4)
   exit(-1);
  }
 
- #ifdef _DBOPL_
-
- if(MusicMode)opl.Init(spec.freq);
-
- #else
-
- if(MusicMode)OPL3_Reset(&opl,spec.freq);
-
- #endif
+ if(MusicMode)
+       #ifdef _DBOPL_
+           opl.Init(FS);
+       #else
+           OPL3_Reset(&opl,FS);
+       #endif
 
  song_init();
 
@@ -385,17 +377,21 @@ void MY_StopMusic(void)
 {
  if(TIMER_FLAG)
  {
-  while(!AUDIO_FLAG); //prevent broken audio callback
-  AUDIO_FLAG=0;
+  asm volatile ("" ::: "memory");
+  while(!AUDIO_FLAG);             //prevent broken audio callback
 
+  asm volatile ("" ::: "memory");
+  AUDIO_FLAG=0;
   TIMER_FLAG=0;
 
+  asm volatile ("" ::: "memory");
   if(hf)
   {
    hmp_close(hf);
    hf=NULL;
   }
 
+  asm volatile ("" ::: "memory");
   if(MusicMode)
   {
    //hmpopl_reset(h);

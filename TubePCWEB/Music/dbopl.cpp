@@ -1538,19 +1538,25 @@ void Handler::WriteReg( Bit32u addr, Bit8u val ) {
 	chip.WriteReg( addr, val );
 }
 
+#include "SB16.H"                  //SB_SAMPLE
+
+static Bit32s buffer[SB_SAMPLE*2]; //буфер произвольной длины
+
 void Handler::Generate( void(*AddSamples_m32)(Bitu,Bit32s*),
 	                    void(*AddSamples_s32)(Bitu,Bit32s*),
 	                    Bitu samples ) {
-	Bit32s buffer[ 512 * 2 ];
-	if ( GCC_UNLIKELY(samples > 512) )
-		samples = 512;
-	if ( !chip.opl3Active ) {
-		chip.GenerateBlock2( samples, buffer );
-		AddSamples_m32( samples, buffer );
-	} else {
+//	Bit32s buffer[ 512 * 2 ];
+
+//	if ( GCC_UNLIKELY(samples > 512) )
+//		samples = 512;
+
+//	if ( !chip.opl3Active ) {
+//		chip.GenerateBlock2( samples, buffer );
+//		AddSamples_m32( samples, buffer );
+//	} else {
 		chip.GenerateBlock3( samples, buffer );
 		AddSamples_s32( samples, buffer );
-	}
+//	}
 }
 
 void Handler::Init( Bitu rate ) {

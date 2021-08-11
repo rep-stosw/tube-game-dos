@@ -15,8 +15,8 @@ g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -DNDE
 g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -DNDEBUG -Wno-unused-result -c Game/trig.cpp   -IGame -IMusic -ISound
 gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Game/misc.c     -IGame -IMusic -ISound
 
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Sound/SB16.C    -IGame -IMusic -ISound
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Music/HMP.C     -IGame -IMusic -ISound
+gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Sound/SB16.C -IGame -IMusic -ISound
+gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Music/HMP.C  -IGame -IMusic -ISound
 
 gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Music/hmpfile.c -IGame -IMusic -ISound
 gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Music/hmpopl.c  -IGame -IMusic -ISound

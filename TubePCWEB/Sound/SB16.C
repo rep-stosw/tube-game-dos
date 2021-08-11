@@ -79,8 +79,6 @@ static s32 MIX_BUFFER[SB_SAMPLE];
 
 #ifdef _DBOPL_
 
-static void MonoAudio(unsigned long count, int *samples){}
-
 static void StereoAudio(unsigned long count, int *samples)
 {
  for(u32 i=0;i<count<<1;i+=2)MIX_BUFFER[i>>1]+=samples[i]+samples[i|1]; //подмешиваем музыку, громкость увеличена в 2 раза
@@ -100,15 +98,7 @@ void MIXER(s16 *stream) //mixer: pitch, volume, loop
   {
    MIX_BUFFER[i]+=(((((s16)Voice_Data[j][(int)Voice_Position[j]])*257)-32768)*Voice_Volume[j])/0x7FFF; //0..255 => -32768..+32767 * Volume / VolumeMax
 
-   #ifdef __EMSCRIPTEN__
-
-   Voice_Position[j]+=((float)Voice_Pitch[j])*0.006890625; //Дробная позиция для переменного питча. Множитель для 32000 Гц
-
-   #else
-
-   Voice_Position[j]+=((float)Voice_Pitch[j])*0.005;       //Множитель 0.01F для 22050 Гц, 0.005F для 44100 Гц
-
-   #endif
+   Voice_Position[j]+=((double)Voice_Pitch[j])*(((double)22050)/((double)(100*FS)));
 
    if((int)Voice_Position[j]>=(int)Voice_Size[j])
    {
@@ -127,7 +117,7 @@ void MIXER(s16 *stream) //mixer: pitch, volume, loop
  {
   #ifdef _DBOPL_
 
-  opl.Generate(MonoAudio,StereoAudio,SB_SAMPLE);
+  opl.Generate(NULL,StereoAudio,SB_SAMPLE);
 
   #else
 

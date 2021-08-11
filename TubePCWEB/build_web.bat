@@ -5,9 +5,11 @@ cls
 ::goto LINK
 
 ::FMOPL(fast, but poor) DBOPL(compromise) OPL3(slow, but accuracy)
-set ADLIB=DBOPL
+set ADLIB=OPL3
 
 echo %ADLIB% selected
+
+::goto COMPILE
 
 echo Clear...
 
