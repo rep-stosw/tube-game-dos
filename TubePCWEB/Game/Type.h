@@ -7,6 +7,11 @@ extern "C" {
 
 #define IO volatile
 
+#define i8 char
+#define i16 short int
+#define i32 int
+#define i64 long long
+
 #define u8 unsigned char
 #define u16 unsigned short int
 #define u32 unsigned int

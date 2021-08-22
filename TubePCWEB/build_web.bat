@@ -38,10 +38,10 @@ echo Compile...
 
 call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Game/tube.cpp -IGame -IMusic -ISound -fsigned-char
 call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Game/trig.cpp -IGame -IMusic -ISound
-call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Game/misc.c   -IGame -IMusic -ISound
+call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Game/misc.cpp -IGame -IMusic -ISound
 
-call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -D_%ADLIB%_ -c Sound/SB16.C -IGame -IMusic -ISound
-call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -D_%ADLIB%_ -c Music/HMP.C  -IGame -IMusic -ISound
+call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -D_%ADLIB%_ -c Sound/SB16.cpp -IGame -IMusic -ISound
+call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -D_%ADLIB%_ -c Music/HMP.cpp  -IGame -IMusic -ISound
 
 call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Music/hmpfile.c -IGame -IMusic -ISound
 call emcc -O3 -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fpermissive -fdata-sections -ffunction-sections -DNDEBUG -c Music/hmpopl.c  -IGame -IMusic -ISound

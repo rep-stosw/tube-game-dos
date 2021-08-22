@@ -65,7 +65,7 @@ void CPP_LoadAllData(int a2);									//OK
 void CPP_load_all_tmaps(void);									//OK
 void CPP_load_all_3d_files(void);								//OK
 void CPP_setup_host(void);									//OK
-char CPP_FindColor(unsigned __int8 *a1, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4);	//OK
+char CPP_FindColor(u8 *a1, u8 a2, u8 a3, u8 a4);	//OK
 void CPP_InitMusic(void);									//OK
 void CPP_InitSound(void);									//OK
 void CPP_calibrate_digistick(void);								//OK
@@ -87,19 +87,19 @@ int CPP_MyClose(int a1);								//OK
 int CPP_UnpackM1(int a1, char *a2);							//NOT USED
 int CPP_delete_arena(int a1);								//OK
 void CPP_setup_vecs(int a1, int a2, int a3, int a4, int a5);				//OK
-void CPP_SetupScreenMCGA(unsigned __int8 *a1);						//OK SDL2
-void CPP_SetGraphicsWindow(__int16 a1, __int16 a2, __int16 a3, __int16 a4);      	//OK
-void CPP_SetPalette256(unsigned __int8 *a1);						//OK SDL2
-void CPP_GetPalette256(unsigned __int8 *a1);						//OK SDL2
+void CPP_SetupScreenMCGA(u8 *a1);						//OK SDL2
+void CPP_SetGraphicsWindow(i16 a1, i16 a2, i16 a3, i16 a4);      	//OK
+void CPP_SetPalette256(u8 *a1);						//OK SDL2
+void CPP_GetPalette256(u8 *a1);						//OK SDL2
 void CPP_WaitVbi(void);									//OK SDL2
-__int16 CPP_FadePalette256(unsigned __int8 *a1, unsigned __int8 a2, char a3);		//OK
+i16 CPP_FadePalette256(u8 *a1, u8 a2, char a3);		//OK
 
 unsigned int CPP_load_game(void);						//OK
 int CPP_init_tube(void);							//OK
 int CPP_setup_stuff(void);							//OK
 int CPP_SaveFileAt(int a1, int a2, int a3);				//OK
 int CPP_MyWrite(int a1, int a2, int a3);				//OK
-void CPP_make_fade_table(_BYTE *A2, _BYTE *A3, signed char a4, signed char a5, signed char a6, short a7, short a8, short a9); //OK Snowman
+void CPP_make_fade_table(u8 *A2, u8 *A3, signed char a4, signed char a5, signed char a6, short a7, short a8, short a9); //OK Snowman
 int CPP_clear_tube(void);							//OK
 char CPP_setup_tube_graphics(int a1);					//OK
 int CPP_find_distant(void);							//OK
@@ -107,88 +107,88 @@ int CPP_tunnel_table(void);							//OK
 int CPP_setup_high_scores(void);						//OK
 int CPP_set_scroll(int a1);						//OK
 void CPP_setup_addresses(void);						//OK
-int CPP_check_anim(unsigned __int16 a1, unsigned __int16 *a2);		//OK
+int CPP_check_anim(u16 a1, u16 *a2);		//OK
 char CPP_control_game(void);						//OK
 void CPP_read_digistick(void);						//OK
-int CPP_game_over(unsigned __int8 a1);					//OK
+int CPP_game_over(u8 a1);					//OK
 int CPP_do_ships(void);							//OK
 int CPP_do_players_ships(void);						//OK
-unsigned __int8 CPP_do_bullets(void);					//OK
-int CPP_enter_ships(unsigned __int8 a1);				//OK
-int CPP_quick_sort_ships(int a1, __int16 a2);				//OK
-char CPP_change_hit_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3); //OK
-char CPP_draw_block(int a1, unsigned __int16 a2);			//OK
+u8 CPP_do_bullets(void);					//OK
+int CPP_enter_ships(u8 a1);				//OK
+int CPP_quick_sort_ships(int a1, i16 a2);				//OK
+char CPP_change_hit_block(u8 a1, u16 a2, u16 a3); //OK
+char CPP_draw_block(int a1, u16 a2);			//OK
 int  CPP_do_tube(void);							//OK
-int CPP_check_scroll_change(unsigned __int8 a1);			//OK
-char CPP_check_for_race_end(unsigned __int8 a1);			//OK
-char CPP_scroll_tube(char a1, unsigned __int8 a2);			//OK
-int CPP_delete_anims(unsigned __int8 a1, unsigned int a2);		//OK
-int CPP_add_anims(unsigned __int8 a1, int a2, unsigned __int16 a3);	//OK
-int CPP_check_effects(unsigned __int8 a1);				//OK
-int CPP_remove_effect(unsigned __int8 a1);				//OK
-int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4);	//OK
-int CPP_do_anims(unsigned __int8 a1);									//OK
-void CPP_do_death_sound(unsigned __int8 a3, char a4);							//OK
-int CPP_do_swamp_sounds(unsigned __int8 a1);								//OK
+int CPP_check_scroll_change(u8 a1);			//OK
+char CPP_check_for_race_end(u8 a1);			//OK
+char CPP_scroll_tube(char a1, u8 a2);			//OK
+int CPP_delete_anims(u8 a1, unsigned int a2);		//OK
+int CPP_add_anims(u8 a1, int a2, u16 a3);	//OK
+int CPP_check_effects(u8 a1);				//OK
+int CPP_remove_effect(u8 a1);				//OK
+int CPP_add_alien(u8 a1, u8 a2, u8 a3, u8 a4);	//OK
+int CPP_do_anims(u8 a1);									//OK
+void CPP_do_death_sound(u8 a3, char a4);							//OK
+int CPP_do_swamp_sounds(u8 a1);								//OK
 
-_BOOL1 CPP_load_level(unsigned __int8 a1);				//OK
+_BOOL1 CPP_load_level(u8 a1);				//OK
 int CPP_next_frames(void);						//OK
 int CPP_draw_tube(void);						//OK
-void CPP_omni_map(int a1, int a2, __int16 a3);				//OK
+void CPP_omni_map(int a1, int a2, i16 a3);				//OK
 int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4);		//OK
-int CPP_new_starfield(__int16 a1, int a2);				//OK
+int CPP_new_starfield(i16 a1, int a2);				//OK
 int CPP_setup_anims(void);						//OK
 char CPP_setup_tube(void);						//OK
-unsigned __int8 CPP_setup_ships(void);					//OK
+u8 CPP_setup_ships(void);					//OK
 int CPP_setup_bullets(void);						//OK
 int CPP_setup_aliens(void);						//OK
-unsigned __int8 CPP_check_extra_life(void);						//OK
-unsigned __int8 CPP_draw_game(void);							//OK
+u8 CPP_check_extra_life(void);						//OK
+u8 CPP_draw_game(void);							//OK
 int CPP_draw_ships(void);								//OK
-unsigned __int16 CPP_move_it(int a1, int a2, int a3, __int16 a4, __int16 a5, int a6);	//OK
+u16 CPP_move_it(int a1, int a2, int a3, i16 a4, i16 a5, int a6);	//OK
 int CPP_draw_success(void);								//OK
 int CPP_draw_time_out(void);								//OK
-int CPP_draw_winner(unsigned __int8 a1);						//OK
-int CPP_draw_loser(unsigned __int8 a1);							//OK
-int CPP_DrawASpriteMCGA(__int16 a1, __int16 a2, int a3);				//OK
-void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, char *a4 /*esi*/ , unsigned __int8 a5, char a6);	//OK
-int CPP_draw_level_no(unsigned __int8 a1);						//OK
+int CPP_draw_winner(u8 a1);						//OK
+int CPP_draw_loser(u8 a1);							//OK
+int CPP_DrawASpriteMCGA(i16 a1, i16 a2, int a3);				//OK
+void CPP_DrawSpriteVres256(i16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, char *a4 /*esi*/ , u8 a5, char a6);	//OK
+int CPP_draw_level_no(u8 a1);						//OK
 void CPP_DrawBoxBPP(int a1, int a2, int a3, int a4, char a5, char a6);			//OK
-__int16 CPP_draw_hiscore(void);								//OK
+i16 CPP_draw_hiscore(void);								//OK
 int CPP_high_tube(void);								//OK
 int CPP_new_game(void);									//OK
 int CPP_enter_scores(void);								//OK
-void CPP_ClearScreenMCGA(void *a2, unsigned __int16 a3, char a4);			//OK
-char CPP_draw_enter_score(unsigned __int8 a1, unsigned __int8 a2);			//OK
-unsigned int CPP_save_score(unsigned __int8 a1, unsigned __int8 a2, const char *a3);	//OK
+void CPP_ClearScreenMCGA(void *a2, u16 a3, char a4);			//OK
+char CPP_draw_enter_score(u8 a1, u8 a2);			//OK
+unsigned int CPP_save_score(u8 a1, u8 a2, const char *a3);	//OK
 int CPP_who_won(void);									//OK
 unsigned int CPP_draw_the_winner(char a1);						//OK
 
-char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE *a6, _BYTE *a7);	//OK
-__int16 CPP_what_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3);			//OK
-char CPP_death_block(unsigned __int16 a1);								//OK
-char CPP_ice_block(unsigned __int16 a1);								//OK
-char CPP_solid_block(unsigned __int16 a1);								//OK
-char CPP_swamp_block(unsigned __int16 a1);								//OK
-char CPP_reverse_all(unsigned __int16 a1);								//OK
-char CPP_reverse_y(unsigned __int16 a1);								//OK
-char CPP_reverse_x(unsigned __int16 a1);								//OK
-unsigned __int8 CPP_do_contact_blocks(void);								//OK
-char CPP_change_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3);			//OK
-_WORD *CPP_organise_blocks(unsigned __int8 a1, _WORD *a2, _WORD *a3, _WORD *a4, _WORD *a5, _WORD *a6, _WORD *a7, _WORD *a8, _WORD *a9, _WORD *a10, _WORD *a11, _WORD *a12, _WORD *a13);	//OK
-__int16 CPP_arctan(int a1, int a2);									//OK
-unsigned __int8 CPP_do_aliens(void);									//OK
-char CPP_check_alien_to_players(unsigned __int8 a3, int a4);						//OK
-char CPP_check_point_with_players(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3, unsigned __int16 a4, unsigned __int16 a5, unsigned __int16 a6, unsigned __int16 a7);	//OK
-int CPP_power_up(unsigned __int8 a3);											//OK
-int CPP_add_extra_life(unsigned __int8 a3);										//OK
-int CPP_lose_life(unsigned __int8 a3);											//OK
-char CPP_insert_effect(unsigned __int16 a1, unsigned __int16 a2, __int16 a3);						//OK
-char CPP_add_alien_at_pos(unsigned __int8 a3, char a4, __int16 a5, __int16 a6, __int16 a7, unsigned __int16 a8);	//OK
+char CPP_do_player_blk_collision(u8 a3, u8 *a4, u8 *a5, u8 *a6, u8 *a7);	//OK
+i16 CPP_what_block(u8 a1, u16 a2, u16 a3);			//OK
+char CPP_death_block(u16 a1);								//OK
+char CPP_ice_block(u16 a1);								//OK
+char CPP_solid_block(u16 a1);								//OK
+char CPP_swamp_block(u16 a1);								//OK
+char CPP_reverse_all(u16 a1);								//OK
+char CPP_reverse_y(u16 a1);								//OK
+char CPP_reverse_x(u16 a1);								//OK
+u8 CPP_do_contact_blocks(void);								//OK
+char CPP_change_block(u8 a1, u16 a2, u16 a3);			//OK
+u16 *CPP_organise_blocks(u8 a1, u16 *a2, u16 *a3, u16 *a4, u16 *a5, u16 *a6, u16 *a7, u16 *a8, u16 *a9, u16 *a10, u16 *a11, u16 *a12, u16 *a13);	//OK
+i16 CPP_arctan(int a1, int a2);									//OK
+u8 CPP_do_aliens(void);									//OK
+char CPP_check_alien_to_players(u8 a3, int a4);						//OK
+char CPP_check_point_with_players(u8 a1, u16 a2, u16 a3, u16 a4, u16 a5, u16 a6, u16 a7);	//OK
+int CPP_power_up(u8 a3);											//OK
+int CPP_add_extra_life(u8 a3);										//OK
+int CPP_lose_life(u8 a3);											//OK
+char CPP_insert_effect(u16 a1, u16 a2, i16 a3);						//OK
+char CPP_add_alien_at_pos(u8 a3, char a4, i16 a5, i16 a6, i16 a7, u16 a8);	//OK
 char CPP_check_bullets_to_aliens(int a2);										//OK
-_WORD *CPP_organise_block(unsigned __int8 a1, _WORD *a2, _WORD *a3);							//OK
-int CPP_nearest_alien(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3, unsigned __int16 a4, _WORD *a5, _WORD *a6, _WORD *a7);	//OK
-__int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a4);								//OK
+u16 *CPP_organise_block(u8 a1, u16 *a2, u16 *a3);							//OK
+int CPP_nearest_alien(u8 a1, u16 a2, u16 a3, u16 a4, u16 *a5, u16 *a6, u16 *a7);	//OK
+i16 CPP_move_in_line(int a1, int a2, u16 a3, u16 a4);								//OK
 int CPP_save_game(void);															//OK
 
 //void CPP_OpenIKeyboard(void);									//OK not need for Win32
@@ -201,10 +201,10 @@ void CPP_ResetNetwork(void);									//OK
 int *CPP_FreeAllData(int a1);									//OK
 void CPP_ResetMemory(void);									//OK
 extern void CPP_trig(int *a1, int *a2, int *a3);						//OK
-char CPP_add_bullet(unsigned __int8 a3);							//OK
-char CPP_how_many_bullets(char a1, unsigned __int8 a2);						//OK
-int CPP_smart_bomb(unsigned __int8 a3);								//OK
-int CPP_count_swamp_anims(unsigned __int8 a1);							//OK
+char CPP_add_bullet(u8 a3);							//OK
+char CPP_how_many_bullets(char a1, u8 a2);						//OK
+int CPP_smart_bomb(u8 a3);								//OK
+int CPP_count_swamp_anims(u8 a1);							//OK
 int CPP_FindMusicType(int a1);									//OK
 
 //int CPP_compare(const void *a, const void *b);						//OK not need for Win32
@@ -304,24 +304,24 @@ int main(int argc, char *argv[]) //FINAL
 
 /*
   int v3; // edx
-  __int16 v4; // cx
+  i16 v4; // cx
   unsigned int *v5; // ebx
   int v6; // edi
-  __int16 v7; // si
+  i16 v7; // si
   char v9[32]; // [esp+0h] [ebp-4Ch] BYREF
   char v10[32]; // [esp+20h] [ebp-2Ch] BYREF
   int i; // [esp+40h] [ebp-Ch]
   char v12; // [esp+48h] [ebp-4h]
 
   v12 = 1;
-  for ( i = 1; (unsigned __int16)argc > i; ++i )
+  for ( i = 1; (u16)argc > i; ++i )
   {
     if ( *argv[i] == 45 || *argv[i] == 47 )
     {
       strcpy(v10, argv[i] + 1);
       v9[0] = 0;
       v3 = i + 1;
-      if ( i + 1 < (unsigned __int16)argc )
+      if ( i + 1 < (u16)argc )
         strcpy(v9, argv[i + 1]);
       if ( !stricmp(aTables, v10) )
       {
@@ -368,14 +368,14 @@ int CPP_setup_game(void) //FINAL
   CPP_load_all_3d_files();
   CPP_setup_host();
 
-  colour_lookup = CPP_FindColor((unsigned __int8 *)palette, 0, 0, 0);
-  byte_22EDA1 = CPP_FindColor((unsigned __int8 *)palette, 0x3Fu, 0x3Fu, 0x3Fu);
-  byte_22EDA2 = CPP_FindColor((unsigned __int8 *)palette, 0x3Fu, 0, 0);
-  byte_22EDA3 = CPP_FindColor((unsigned __int8 *)palette, 0, 0x3Fu, 0);
-  byte_22EDA4 = CPP_FindColor((unsigned __int8 *)palette, 0, 0, 0x3Fu);
-  byte_22EDA5 = CPP_FindColor((unsigned __int8 *)palette, 0x3Fu, 0x3Fu, 0);
-  byte_22EDA6 = CPP_FindColor((unsigned __int8 *)palette, 0, 0x3Fu, 0x3Fu);
-  byte_22EDA7 = CPP_FindColor((unsigned __int8 *)palette, 0x3Fu, 0, 0x3Fu);
+  colour_lookup = CPP_FindColor((u8 *)palette, 0, 0, 0);
+  byte_22EDA1 = CPP_FindColor((u8 *)palette, 0x3Fu, 0x3Fu, 0x3Fu);
+  byte_22EDA2 = CPP_FindColor((u8 *)palette, 0x3Fu, 0, 0);
+  byte_22EDA3 = CPP_FindColor((u8 *)palette, 0, 0x3Fu, 0);
+  byte_22EDA4 = CPP_FindColor((u8 *)palette, 0, 0, 0x3Fu);
+  byte_22EDA5 = CPP_FindColor((u8 *)palette, 0x3Fu, 0x3Fu, 0);
+  byte_22EDA6 = CPP_FindColor((u8 *)palette, 0, 0x3Fu, 0x3Fu);
+  byte_22EDA7 = CPP_FindColor((u8 *)palette, 0x3Fu, 0, 0x3Fu);
 
   CPP_InitSound();
   CPP_InitMusic();
@@ -522,15 +522,15 @@ int CPP_dos_free(int a1) //not need for Win32
   char v3[28]; // [esp+1Ch] [ebp-1Ch] BYREF
 
   result = a1;
-  if ( (_WORD)a1 )
+  if ( (u16)a1 )
   {
 
 /*
     v2[0] = 257;
-    v2[3] = (unsigned __int16)a1;
+    v2[3] = (u16)a1;
     result = int386(49, (union REGS*)v2, (union REGS*)v3); //result = int386(49, v2, v3);
 */
-   result=DOS_Free((unsigned __int16)a1); //=0 - успех, -1 - что-то пошло не так
+   result=DOS_Free((u16)a1); //=0 - успех, -1 - что-то пошло не так
 
   }
   return result;
@@ -539,10 +539,10 @@ int CPP_dos_free(int a1) //not need for Win32
 
 int CPP_FindMusicType(int a1) //FINAL
 {
-  while ( *(_BYTE *)a1 )
+  while ( *(u8 *)a1 )
   {
     if ( !stricmp((char*) musicboard, (char*)a1) )
-      return *(_DWORDNA *)(a1 + 12);
+      return *(UA<u32> *)(a1 + 12);
     a1 += 16;
   }
   return -1;
@@ -557,7 +557,7 @@ void CPP_ResetMemory(void)
   for ( i = MemoryBlocks; i[2]; i += 3 )
   {
     if ( i[1] )
-      ; //result = CPP_dos_free(*((unsigned __int16 *)i + 2));
+      ; //result = CPP_dos_free(*((u16 *)i + 2));
     else
       /*result =*/ free((void*)*i);
 
@@ -591,14 +591,14 @@ void CPP_ResetScreen() //SDL2
 /*
   char v1[28]; // [esp+0h] [ebp-38h] BYREF
   int v2[7]; // [esp+1Ch] [ebp-1Ch] BYREF
-  v2[0] = (unsigned __int16)OldVideoMode;
+  v2[0] = (u16)OldVideoMode;
   return int386(16, v2, v1);
 */
 }
 
 void CPP_CloseKeyboard(void) //FINAL
 {
-//  __int64 result; // rax
+//  i64 result; // rax
 
 //  BYTE1(result) = 0;
   KeyboardInstalled = 0;
@@ -612,7 +612,7 @@ void CPP_ResetNetwork(void) //FINAL
   int *result; // eax
   int v2; // [esp-4h] [ebp-4h]
 
-  if ( (_BYTE)Network )  //(_BYTE)Network = 0
+  if ( (u8)Network )  //(u8)Network = 0
   {
     v0 = 0;
     MyFree(dword_226294);
@@ -640,7 +640,7 @@ int *CPP_FreeAllData(int a1) //FINAL
 {
   int *result; // eax
 
-  while ( *(_DWORDNA *)(a1 + 28) )
+  while ( *(UA<u32> *)(a1 + 28) )
   {
     result = CPP_FreeData(a1);
     a1 += 44;
@@ -672,9 +672,9 @@ int CPP_save_game(void) //FINAL
 unsigned int CPP_draw_the_winner(char a1) //FINAL
 {
   unsigned int result; // eax
-  _BYTE *v2; // edx
+  u8 *v2; // edx
   char v3[256]; // [esp+0h] [ebp-120h] BYREF
-  _BYTE *v4; // [esp+100h] [ebp-20h]
+  u8 *v4; // [esp+100h] [ebp-20h]
   int v5; // [esp+104h] [ebp-1Ch]
   int v6; // [esp+108h] [ebp-18h]
   int v7; // [esp+10Ch] [ebp-14h]
@@ -692,22 +692,22 @@ unsigned int CPP_draw_the_winner(char a1) //FINAL
   if ( a1 )
   {
     if ( a1 == 1 )
-      ((void (*)(char*,char*))sprintf)(v3, aCongratulation_1); //sprintf((char*)v3, (const char*)aCongratulation_1); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_1);
+      sprintf((char*)v3, (const char*)aCongratulation_1); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_1);
     else
-      ((void (*)(char*,char*))sprintf)(v3, aCongratulation_2); //sprintf(v3, aCongratulation_2); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_2);
+      sprintf(v3, aCongratulation_2); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_2);
   }
   else
   {
-   ((void (*)(char*,char*))sprintf)(v3, aCongratulation_0); //sprintf(v3, aCongratulation_0); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_0);
+   sprintf(v3, aCongratulation_0); //((void (__cdecl *)(char *, char *))sprintf)(v3, aCongratulation_0);
   }
   for ( i = 0; ; ++i )
   {
     result = strlen(v3);
 
-    if ( (unsigned __int16)i >= result )
+    if ( (u16)i >= result )
       break;
 
-    if ( v3[(unsigned __int16)i] == 47 && v3[(unsigned __int16)i + 1] == 110 )
+    if ( v3[(u16)i] == 47 && v3[(u16)i + 1] == 110 )
     {
       v5 = v7;
       v7 += 2560;
@@ -715,15 +715,15 @@ unsigned int CPP_draw_the_winner(char a1) //FINAL
     }
     else
     {
-      v8 = (unsigned __int8)v3[(unsigned __int16)i] + 1952;
-      v4 = (_BYTE *)(((unsigned __int16)v8 << 6) + block_data);
-      for ( j = 0; (unsigned __int16)j < 8u; ++j )
+      v8 = (u8)v3[(u16)i] + 1952;
+      v4 = (u8 *)(((u16)v8 << 6) + block_data);
+      for ( j = 0; (u16)j < 8u; ++j )
       {
-        v6 = 320 * (unsigned __int16)j;
-        for ( k = 0; (unsigned __int16)k < 8u; ++k )
+        v6 = 320 * (u16)j;
+        for ( k = 0; (u16)k < 8u; ++k )
         {
           v2 = v4++;
-          *(_BYTE *)(v6 + (unsigned __int16)k + v5) = *v2;
+          *(u8 *)(v6 + (u16)k + v5) = *v2;
         }
       }
       v5 += 8;
@@ -737,7 +737,7 @@ int CPP_who_won(void) //FINAL
 {
   if ( fading == 1 )
   {
-    if ( CPP_FadePalette256((unsigned __int8 *)palette, 0x18u, 1) >= 24 )
+    if ( CPP_FadePalette256((u8 *)palette, 0x18u, 1) >= 24 )
       fading = 0;
   }
   else if ( fading == 2 )
@@ -755,11 +755,11 @@ int CPP_who_won(void) //FINAL
 
   CPP_setup_vecs(WScreen, 0, 320, 320, 200);
 
-  CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+  CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
 
-  if ( (unsigned int)wins[0] <= (unsigned __int8)byte_256B35 )
+  if ( (unsigned int)wins[0] <= (u8)byte_256B35 )
   {
-    if ( (unsigned int)wins[0] >= (unsigned __int8)byte_256B35 )
+    if ( (unsigned int)wins[0] >= (u8)byte_256B35 )
       CPP_draw_the_winner(10);
     else
       CPP_draw_the_winner(1);
@@ -772,28 +772,28 @@ int CPP_who_won(void) //FINAL
   return CPP_new_starfield(scrollpos[0], 256);
 }
 
-void CPP_ClearScreenMCGA(void *a2, unsigned __int16 a3, char a4) //FINAL
+void CPP_ClearScreenMCGA(void *a2, u16 a3, char a4) //FINAL
 {
  memset(a2,a4,(80*4)*a3);
 }
 
-unsigned int CPP_save_score(unsigned __int8 a1, unsigned __int8 a2, const char *a3) //FINAL
+unsigned int CPP_save_score(u8 a1, u8 a2, const char *a3) //FINAL
 {
-  _WORD *v3; // eax
-  _WORD *v4; // edx
+  u16 *v3; // eax
+  u16 *v4; // edx
   char v5; // bl
   unsigned int result; // eax
-  __int16 v7; // ax
-  _WORD *v8; // edx
+  i16 v7; // ax
+  u16 *v8; // edx
   int v9; // [esp+0h] [ebp-13Ch]
   int v10; // [esp+4h] [ebp-138h]
-  unsigned __int8 j; // [esp+10h] [ebp-12Ch]
-  unsigned __int8 i; // [esp+14h] [ebp-128h]
+  u8 j; // [esp+10h] [ebp-12Ch]
+  u8 i; // [esp+14h] [ebp-128h]
   char v13[256]; // [esp+18h] [ebp-124h] BYREF
   char v14[24]; // [esp+118h] [ebp-24h] BYREF
-  _WORD *v15; // [esp+130h] [ebp-Ch]
+  u16 *v15; // [esp+130h] [ebp-Ch]
   int k; // [esp+134h] [ebp-8h]
-  unsigned __int8 v17; // [esp+138h] [ebp-4h]
+  u8 v17; // [esp+138h] [ebp-4h]
 
   if ( a2 != 10 )
   {
@@ -803,9 +803,9 @@ unsigned int CPP_save_score(unsigned __int8 a1, unsigned __int8 a2, const char *
       v9 = (i << 6) + high_scores;
       for ( j = 0; j < 0x15u; ++j )
       {
-        v3 = (_WORD *)v9;
+        v3 = (u16 *)v9;
         v9 += 2;
-        v4 = (_WORD *)v10;
+        v4 = (u16 *)v10;
         v10 += 2;
         *v4 = *v3;
       }
@@ -817,25 +817,25 @@ unsigned int CPP_save_score(unsigned __int8 a1, unsigned __int8 a2, const char *
   v5 = 21 - strlen((const char*)a3);
   v17 = v5 - strlen(v13);
 
-  for ( k = 0; (unsigned __int16)k < (int)v17; ++k )
-    v14[(unsigned __int16)k] = 46;
+  for ( k = 0; (u16)k < (int)v17; ++k )
+    v14[(u16)k] = 46;
 
-  v14[(unsigned __int16)k] = 0;
+  v14[(u16)k] = 0;
 
   sprintf(v13, "%s%s%d", a3, v14, the_score[a1]);
 
   the_score[a1] = 0;
 
-  v15 = (_WORD *)((a2 << 6) + 64 + high_scores);
+  v15 = (u16 *)((a2 << 6) + 64 + high_scores);
 
   for ( k = 0; ; ++k )
   {
     result = strlen(v13);
 
-    if ( (unsigned __int16)k >= result )
+    if ( (u16)k >= result )
       break;
 
-    v7 = (unsigned __int8)v13[(unsigned __int16)k] + 1952;
+    v7 = (u8)v13[(u16)k] + 1952;
     v8 = v15++;
     *v8 = v7;
   }
@@ -843,40 +843,40 @@ unsigned int CPP_save_score(unsigned __int8 a1, unsigned __int8 a2, const char *
   return result;
 }
 
-char CPP_draw_enter_score(unsigned __int8 a1, unsigned __int8 a2) //FINAL
+char CPP_draw_enter_score(u8 a1, u8 a2) //FINAL
 {
-  unsigned __int8 v2; // al
+  u8 v2; // al
   unsigned int v3; // eax
-  _BYTE *v4; // edx
+  u8 *v4; // edx
   unsigned int v5; // eax
-  _BYTE *v6; // edx
+  u8 *v6; // edx
   char v8[256]; // [esp+0h] [ebp-128h] BYREF
-  _BYTE *v9; // [esp+100h] [ebp-28h]
+  u8 *v9; // [esp+100h] [ebp-28h]
   int v10; // [esp+104h] [ebp-24h]
   int v11; // [esp+108h] [ebp-20h]
   int v12; // [esp+10Ch] [ebp-1Ch]
   int v13; // [esp+110h] [ebp-18h]
-  unsigned __int8 j; // [esp+114h] [ebp-14h]
-  unsigned __int8 i; // [esp+11Ch] [ebp-Ch]
-  unsigned __int8 k; // [esp+120h] [ebp-8h]
+  u8 j; // [esp+114h] [ebp-14h]
+  u8 i; // [esp+11Ch] [ebp-Ch]
+  u8 k; // [esp+120h] [ebp-8h]
   char v17; // [esp+124h] [ebp-4h]
 
   v17 = 0;
 
-  ((void (*)(char*,char*,int))sprintf)(v8, (char*)aCongratulation, a1 + 1); //sprintf(v8, (char*)aCongratulation, a1 + 1);
+  sprintf(v8, (char*)aCongratulation, a1 + 1);
 
   v12 = WScreen + 24420;
   v10 = WScreen + 26980;
-  if ( (unsigned __int8)ascii < 0x20u || (unsigned __int8)ascii > 0x5Au || (unsigned __int8)byte_220A58 >= 0xAu )
+  if ( (u8)ascii < 0x20u || (u8)ascii > 0x5Au || (u8)byte_220A58 >= 0xAu )
   {
     if ( ascii == 8 && byte_220A58 )
-      byte_220A59[(unsigned __int8)--byte_220A58] = 0;
+      byte_220A59[(u8)--byte_220A58] = 0;
   }
   else
   {
     v2 = byte_220A58++;
     byte_220A59[v2] = ascii;
-    byte_220A59[(unsigned __int8)byte_220A58] = 0;
+    byte_220A59[(u8)byte_220A58] = 0;
   }
   for ( i = 0; ; ++i )
   {
@@ -893,15 +893,15 @@ char CPP_draw_enter_score(unsigned __int8 a1, unsigned __int8 a2) //FINAL
     }
     else
     {
-      v13 = (unsigned __int8)v8[i] + 1952;
-      v9 = (_BYTE *)(((unsigned __int16)v13 << 6) + block_data);
+      v13 = (u8)v8[i] + 1952;
+      v9 = (u8 *)(((u16)v13 << 6) + block_data);
       for ( j = 0; j < 8u; ++j )
       {
         v11 = 320 * j;
         for ( k = 0; k < 8u; ++k )
         {
           v4 = v9++;
-          *(_BYTE *)(v11 + k + v12) = *v4;
+          *(u8 *)(v11 + k + v12) = *v4;
         }
       }
       v12 += 8;
@@ -914,15 +914,15 @@ char CPP_draw_enter_score(unsigned __int8 a1, unsigned __int8 a2) //FINAL
     if ( i >= v5 )
       break;
 
-    v13 = (unsigned __int8)byte_220A59[i] + 1952;
-    v9 = (_BYTE *)(((unsigned __int16)v13 << 6) + block_data);
+    v13 = (u8)byte_220A59[i] + 1952;
+    v9 = (u8 *)(((u16)v13 << 6) + block_data);
     for ( j = 0; j < 8u; ++j )
     {
       v11 = 320 * j;
       for ( k = 0; k < 8u; ++k )
       {
         v6 = v9++;
-        *(_BYTE *)(v11 + k + v12) = *v6;
+        *(u8 *)(v11 + k + v12) = *v6;
       }
     }
     v12 += 8;
@@ -955,25 +955,25 @@ char CPP_draw_enter_score(unsigned __int8 a1, unsigned __int8 a2) //FINAL
 
 int CPP_enter_scores(void) //FINAL
 {
-  _WORD *v0; // eax
-  _WORD *v1; // eax
-  _WORD *v2; // edx
-  _WORD *v3; // eax
+  u16 *v0; // eax
+  u16 *v1; // eax
+  u16 *v2; // edx
+  u16 *v3; // eax
   int v5; // [esp+0h] [ebp-2Ch]
-  unsigned __int16 j; // [esp+4h] [ebp-28h]
-  unsigned __int16 k; // [esp+4h] [ebp-28h]
-  unsigned __int16 l; // [esp+4h] [ebp-28h]
+  u16 j; // [esp+4h] [ebp-28h]
+  u16 k; // [esp+4h] [ebp-28h]
+  u16 l; // [esp+4h] [ebp-28h]
   int v9; // [esp+8h] [ebp-24h]
-  _WORD *i; // [esp+Ch] [ebp-20h]
+  u16 *i; // [esp+Ch] [ebp-20h]
   int v11; // [esp+10h] [ebp-1Ch]
   unsigned int v12; // [esp+14h] [ebp-18h]
-  unsigned __int8 v13; // [esp+18h] [ebp-14h]
+  u8 v13; // [esp+18h] [ebp-14h]
 
   CPP_setup_vecs(WScreen, 0, 320, 320, 200);
 
-  CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+  CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
 
-  if ( (unsigned __int8)byte_220C44 >= (unsigned __int8)no_players )
+  if ( (u8)byte_220C44 >= (u8)no_players )
   {
     fading = 2;
   }
@@ -981,16 +981,16 @@ int CPP_enter_scores(void) //FINAL
   {
     v13 = 11;
     v12 = 0;
-    while ( the_score[(unsigned __int8)byte_220C44] > v12 && v13 > 1u )
+    while ( the_score[(u8)byte_220C44] > v12 && v13 > 1u )
     {
       v12 = 0;
       v11 = 1;
-      for ( i = (_WORD *)((v13 << 6) + 40 + high_scores); *i != 1998; --i )
+      for ( i = (u16 *)((v13 << 6) + 40 + high_scores); *i != 1998; --i )
       {
-        v12 += (unsigned __int16)v11 * ((unsigned __int16)*i - 2000);
+        v12 += (u16)v11 * ((u16)*i - 2000);
         v11 *= 10;
       }
-      if ( the_score[(unsigned __int8)byte_220C44] > v12 )
+      if ( the_score[(u8)byte_220C44] > v12 )
         --v13;
     }
     if ( v13 > 0xAu )
@@ -1009,7 +1009,7 @@ int CPP_enter_scores(void) //FINAL
   }
   if ( fading == 1 )
   {
-    if ( CPP_FadePalette256((unsigned __int8 *)palette, 0x18u, 1) >= 24 )
+    if ( CPP_FadePalette256((u8 *)palette, 0x18u, 1) >= 24 )
       fading = 0;
   }
   else if ( fading == 2 && CPP_FadePalette256(0, 0x18u, 1) >= 24 )
@@ -1018,7 +1018,7 @@ int CPP_enter_scores(void) //FINAL
 
     CPP_clear_tube();
     CPP_setup_vecs(WScreen, 0, 320, 320, 200);
-    CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+    CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
 
     v9 = level;
     game_mode = 2;
@@ -1036,7 +1036,7 @@ int CPP_enter_scores(void) //FINAL
 
     for ( j = 0; j < 0x306u; ++j )
     {
-      v0 = (_WORD *)v9;
+      v0 = (u16 *)v9;
       v9 += 2;
       *v0 = 0;
     }
@@ -1045,16 +1045,16 @@ int CPP_enter_scores(void) //FINAL
 
     for ( k = 0; k < 0x1A0u; ++k )
     {
-      v1 = (_WORD *)v5;
+      v1 = (u16 *)v5;
       v5 += 2;
-      v2 = (_WORD *)v9;
+      v2 = (u16 *)v9;
       v9 += 2;
       *v2 = *v1;
     }
 
     for ( l = 0; l < 0x27Au; ++l )
     {
-      v3 = (_WORD *)v9;
+      v3 = (u16 *)v9;
       v9 += 2;
       *v3 = 0;
     }
@@ -1071,14 +1071,14 @@ int CPP_high_tube(void) //FINAL Знакозависимая функция. Принудительно задал sign
   signed char *v0; // eax
   signed char *v1; // eax
   signed char *v2; // eax
-  unsigned __int8 v4; // [esp+8h] [ebp-24h]
+  u8 v4; // [esp+8h] [ebp-24h]
   _BOOL1 v5; // [esp+10h] [ebp-1Ch]
-  unsigned __int8 i; // [esp+28h] [ebp-4h]
-  unsigned __int8 j; // [esp+28h] [ebp-4h]
+  u8 i; // [esp+28h] [ebp-4h]
+  u8 j; // [esp+28h] [ebp-4h]
 
   if ( !hiscore_ticks )
   {
-    if ( *(_BYTE *)hi_look == 100 )
+    if ( *(u8 *)hi_look == 100 )
       hi_look = (int)&hiscore_second[0]; //fix [0] pointer
     v0 = (signed char *)hi_look++;
     vx[0] = *v0;
@@ -1152,14 +1152,14 @@ int CPP_high_tube(void) //FINAL Знакозависимая функция. Принудительно задал sign
 
 int CPP_new_game(void) //FINAL
 {
-  unsigned __int8 j; // [esp+0h] [ebp-8h]
-  unsigned __int8 i; // [esp+4h] [ebp-4h]
+  u8 j; // [esp+0h] [ebp-8h]
+  u8 i; // [esp+4h] [ebp-4h]
 
   bodge = 1;
   no_players = temp_no_players;
   bonus_game = temp_no_players == 1;
 
-  for ( i = 0; i < (unsigned __int8)no_players; ++i )
+  for ( i = 0; i < (u8)no_players; ++i )
   {
     old_score[i] = 0;
     wins[i] = 0;
@@ -1177,7 +1177,7 @@ int CPP_new_game(void) //FINAL
   game_mode = 0;
   level_start = 1;
   fading = 1;
-  for ( j = 0; j < (unsigned __int8)no_players; ++j )
+  for ( j = 0; j < (u8)no_players; ++j )
   {
     scrollpos[j] = 0;
     level_line[j] = 28;
@@ -1198,9 +1198,9 @@ int CPP_new_game(void) //FINAL
   return CPP_setup_anims();
 }
 
-__int16 CPP_draw_hiscore(void) //FINAL
+i16 CPP_draw_hiscore(void) //FINAL
 {
-  __int16 result; // ax
+  i16 result; // ax
 
   CPP_high_tube();
 
@@ -1219,16 +1219,16 @@ __int16 CPP_draw_hiscore(void) //FINAL
   }
   else if ( fading == 1 )
   {
-    result = CPP_FadePalette256((unsigned __int8 *)palette, 0x18u, 1);
+    result = CPP_FadePalette256((u8 *)palette, 0x18u, 1);
     if ( result >= 24 )
       fading = 0;
   }
   return result;
 }
 
-unsigned __int16 CPP_move_it(int a1, int a2, int a3, __int16 a4, __int16 a5, int a6) //FINAL
+u16 CPP_move_it(int a1, int a2, int a3, i16 a4, i16 a5, int a6) //FINAL
 {
-  unsigned __int16 result; // ax
+  u16 result; // ax
    char *v7; // [esp+4h] [ebp-60h]
   int v8; // [esp+8h] [ebp-5Ch]
   int v9; // [esp+Ch] [ebp-58h]
@@ -1241,20 +1241,20 @@ unsigned __int16 CPP_move_it(int a1, int a2, int a3, __int16 a4, __int16 a5, int
   int v16; // [esp+40h] [ebp-24h]
   int v17; // [esp+44h] [ebp-20h]
    char *v18; // [esp+48h] [ebp-1Ch]
-  _DWORD *v19; // [esp+4Ch] [ebp-18h]
+  u32 *v19; // [esp+4Ch] [ebp-18h]
    char *v20; // [esp+50h] [ebp-14h]
   char *v21; // [esp+54h] [ebp-10h]
   char *j; // [esp+58h] [ebp-Ch]
-  _DWORD *v23; // [esp+5Ch] [ebp-8h]
-  unsigned __int16 i; // [esp+60h] [ebp-4h]
-  unsigned __int16 v25; // [esp+60h] [ebp-4h]
+  u32 *v23; // [esp+5Ch] [ebp-8h]
+  u16 i; // [esp+60h] [ebp-4h]
+  u16 v25; // [esp+60h] [ebp-4h]
   int v26; // [esp+78h] [ebp+14h]
   int v27; // [esp+84h] [ebp+20h]
   int v28; // [esp+88h] [ebp+24h]
 
   v21 = (char *) object3ds + 16 * a6;
-  v19 = (_DWORD *)*((_DWORD *)v21 + 2);
-  v23 = (_DWORD *) polypoints;
+  v19 = (u32 *)*((u32 *)v21 + 2);
+  v23 = (u32 *) polypoints;
   v26 = (a1 >> 5) & 0x7FF;
   v27 = a4 & 0x7FF;
   v28 = a5 & 0x7FF;
@@ -1266,7 +1266,7 @@ unsigned __int16 CPP_move_it(int a1, int a2, int a3, __int16 a4, __int16 a5, int
   v13 = sintable[v28];
   v12 = costable[v28];
 
-  for ( i = 0; i < *((_WORD *)v21 + 2); ++i )
+  for ( i = 0; i < *((u16 *)v21 + 2); ++i )
   {
     //типкаст в signed - иначе сдвиги неправильно работают: корабли артефачат жутко
     v11 = (signed)(*v19 * v16 - v19[1] * v17) >> 16;
@@ -1282,37 +1282,37 @@ unsigned __int16 CPP_move_it(int a1, int a2, int a3, __int16 a4, __int16 a5, int
     v19 += 3;
     v23 += 6;
   }
-  result = *((_WORD *)v21 + 1);
+  result = *((u16 *)v21 + 1);
   if ( result )
   {
-    vec_map = tmaps[(unsigned __int8)v21[1]];
+    vec_map = tmaps[(u8)v21[1]];
     v25 = 0;
-    for ( j = (char *)*((_DWORD *)v21 + 3); ; j += 15 )
+    for ( j = (char *)*((u32 *)v21 + 3); ; j += 15 )
     {
       result = v25;
 
-      if ( v25 >= *((_WORD *)v21 + 1) )
+      if ( v25 >= *((u16 *)v21 + 1) )
         return result;
 
-      v20 = (char *) polypoints + 24 * (unsigned __int8)j[3];
-      v7 =  (char *) polypoints + 24 * (unsigned __int8)j[4];
-      v18 = (char *) polypoints + 24 * (unsigned __int8)j[5];
+      v20 = (char *) polypoints + 24 * (u8)j[3];
+      v7 =  (char *) polypoints + 24 * (u8)j[4];
+      v18 = (char *) polypoints + 24 * (u8)j[5];
 
-      if ( ((unsigned __int8)v18[22] & (unsigned __int8)(v7[22] & v20[22])) == 0 )
+      if ( ((u8)v18[22] & (u8)(v7[22] & v20[22])) == 0 )
         break;
 
 LABEL_10:
       ++v25;
     }
     vec_mode = *j;
-    if ( (unsigned __int8)vec_mode < 0xCu )
+    if ( (u8)vec_mode < 0xCu )
     {
-      if ( (unsigned __int8)vec_mode >= 4u )
+      if ( (u8)vec_mode >= 4u )
       {
-        if ( (unsigned __int8)vec_mode > 4u )
+        if ( (u8)vec_mode > 4u )
         {
 
-          if ( (unsigned __int8)vec_mode <= 6u )
+          if ( (u8)vec_mode <= 6u )
             goto LABEL_36;
 
           if ( vec_mode != 7 )
@@ -1322,9 +1322,9 @@ LABEL_10:
         }
 LABEL_34:
         vec_colour = j[2];
-        *((_DWORD *)v20 + 4) = (unsigned __int8)j[12] << 16;
-        *((_DWORD *)v7  + 4) = (unsigned __int8)j[13] << 16;
-        *((_DWORD *)v18 + 4) = (unsigned __int8)j[14] << 16;
+        *((u32 *)v20 + 4) = (u8)j[12] << 16;
+        *((u32 *)v7  + 4) = (u8)j[13] << 16;
+        *((u32 *)v18 + 4) = (u8)j[14] << 16;
 
 LABEL_37:
         CPP_trig((int*)v20,(int*)v7,(int*)v18);
@@ -1333,7 +1333,7 @@ LABEL_37:
       }
       if ( vec_mode )
       {
-        if ( (unsigned __int8)vec_mode < 2u )
+        if ( (u8)vec_mode < 2u )
           goto LABEL_37;
 
         goto LABEL_35;
@@ -1341,18 +1341,18 @@ LABEL_37:
     }
     else
     {
-      if ( (unsigned __int8)vec_mode <= 0xDu )
+      if ( (u8)vec_mode <= 0xDu )
         goto LABEL_35;
 
-      if ( (unsigned __int8)vec_mode >= 0x12u )
+      if ( (u8)vec_mode >= 0x12u )
       {
-        if ( (unsigned __int8)vec_mode > 0x13u )
+        if ( (u8)vec_mode > 0x13u )
         {
-          if ( (unsigned __int8)vec_mode >= 0x16u )
+          if ( (u8)vec_mode >= 0x16u )
           {
-            if ( (unsigned __int8)vec_mode > 0x17u )
+            if ( (u8)vec_mode > 0x17u )
             {
-              if ( (unsigned __int8)vec_mode > 0x19u )
+              if ( (u8)vec_mode > 0x19u )
                 goto LABEL_37;
 
               goto LABEL_36;
@@ -1361,27 +1361,27 @@ LABEL_37:
           }
 LABEL_36:
           vec_colour = j[2];
-          *((_DWORD *)v20 + 4) = (unsigned __int8)j[12] << 16;
-          *((_DWORD *)v7  + 4) = (unsigned __int8)j[13] << 16;
-          *((_DWORD *)v18 + 4) = (unsigned __int8)j[14] << 16;
-          *((_DWORD *)v20 + 2) = (unsigned __int8)j[6] << 16;
-          *((_DWORD *)v20 + 3) = (unsigned __int8)j[7] << 16;
-          *((_DWORD *)v7  + 2) = (unsigned __int8)j[8] << 16;
-          *((_DWORD *)v7  + 3) = (unsigned __int8)j[9] << 16;
-          *((_DWORD *)v18 + 2) = (unsigned __int8)j[10] << 16;
-          *((_DWORD *)v18 + 3) = (unsigned __int8)j[11] << 16;
+          *((u32 *)v20 + 4) = (u8)j[12] << 16;
+          *((u32 *)v7  + 4) = (u8)j[13] << 16;
+          *((u32 *)v18 + 4) = (u8)j[14] << 16;
+          *((u32 *)v20 + 2) = (u8)j[6] << 16;
+          *((u32 *)v20 + 3) = (u8)j[7] << 16;
+          *((u32 *)v7  + 2) = (u8)j[8] << 16;
+          *((u32 *)v7  + 3) = (u8)j[9] << 16;
+          *((u32 *)v18 + 2) = (u8)j[10] << 16;
+          *((u32 *)v18 + 3) = (u8)j[11] << 16;
           goto LABEL_37;
         }
 LABEL_35:
-        *((_DWORD *)v20 + 2) = (unsigned __int8)j[6] << 16;
-        *((_DWORD *)v20 + 3) = (unsigned __int8)j[7] << 16;
-        *((_DWORD *)v7  + 2) = (unsigned __int8)j[8] << 16;
-        *((_DWORD *)v7  + 3) = (unsigned __int8)j[9] << 16;
-        *((_DWORD *)v18 + 2) = (unsigned __int8)j[10] << 16;
-        *((_DWORD *)v18 + 3) = (unsigned __int8)j[11] << 16;
+        *((u32 *)v20 + 2) = (u8)j[6] << 16;
+        *((u32 *)v20 + 3) = (u8)j[7] << 16;
+        *((u32 *)v7  + 2) = (u8)j[8] << 16;
+        *((u32 *)v7  + 3) = (u8)j[9] << 16;
+        *((u32 *)v18 + 2) = (u8)j[10] << 16;
+        *((u32 *)v18 + 3) = (u8)j[11] << 16;
         goto LABEL_37;
       }
-      if ( (unsigned __int8)vec_mode > 0xFu )
+      if ( (u8)vec_mode > 0xFu )
         goto LABEL_34;
     }
     if ( (v21[6] & 1) != 0 )
@@ -1390,7 +1390,7 @@ LABEL_35:
     }
     else
     {
-      j[13] = tables_start[256 * (unsigned __int8)j[12] + (unsigned __int8)j[2]];
+      j[13] = tables_start[256 * (u8)j[12] + (u8)j[2]];
       vec_colour = j[13];
     }
     goto LABEL_37;
@@ -1404,31 +1404,31 @@ int CPP_draw_ships(void) //FINAL
   int v1; // [esp+0h] [ebp-8h]
   int v2; // [esp+0h] [ebp-8h]
   int v3; // [esp+0h] [ebp-8h]
-  unsigned __int16 j; // [esp+4h] [ebp-4h]
-  unsigned __int16 k; // [esp+4h] [ebp-4h]
-  unsigned __int16 i; // [esp+4h] [ebp-4h]
+  u16 j; // [esp+4h] [ebp-4h]
+  u16 k; // [esp+4h] [ebp-4h]
+  u16 i; // [esp+4h] [ebp-4h]
 
-  if ( (unsigned __int8)no_players <= 1u )
+  if ( (u8)no_players <= 1u )
   {
     v3 = (int)draw_items; //2451476; //0x256814 HARDCODED !!! 00256814 draw_items
 
-    CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+    CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
     CPP_setup_vecs(WScreen, 0, 320, 320, 200);
 
     for ( i = 0; ; ++i )
     {
       result = v3;
 
-      if ( !*(_DWORDNA *)v3 || i >= 0x60u )
+      if ( !*(UA<u32> *)v3 || i >= 0x60u )
         break;
 
       CPP_move_it(
-        *(unsigned __int16 *)(*(_DWORDNA *)v3 + 4),
-        *(unsigned __int16 *)(*(_DWORDNA *)v3 + 6) - 1792,
-        *(unsigned __int16 *)(*(_DWORDNA *)v3 + 8),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v3 + 8)),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v3 + 10)),
-        *(unsigned __int8 *)(*(_DWORDNA *)v3 + 16));
+        *(u16 *)(*(UA<u32> *)v3 + 4),
+        *(u16 *)(*(UA<u32> *)v3 + 6) - 1792,
+        *(u16 *)(*(UA<u32> *)v3 + 8),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v3 + 8)),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v3 + 10)),
+        *(u8 *)(*(UA<u32> *)v3 + 16));
 
       v3 += 4;
     }
@@ -1437,24 +1437,24 @@ int CPP_draw_ships(void) //FINAL
   {
     v1 = (int)draw_items; //2451476; HARDCODED !!!
 
-    CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+    CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
     CPP_setup_vecs(WScreen, 0, 320, 160, 200);
 
-    for ( j = 0; *(_DWORDNA *)v1 && j < 0x60u; ++j )
+    for ( j = 0; *(UA<u32> *)v1 && j < 0x60u; ++j )
     {
       CPP_move_it(
-        *(unsigned __int16 *)(*(_DWORDNA *)v1 + 4),
-        *(unsigned __int16 *)(*(_DWORDNA *)v1 + 6) - 1792,
-        *(unsigned __int16 *)(*(_DWORDNA *)v1 + 8),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v1 + 8)),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v1 + 10)),
-        *(unsigned __int8 *)(*(_DWORDNA *)v1 + 16));
+        *(u16 *)(*(UA<u32> *)v1 + 4),
+        *(u16 *)(*(UA<u32> *)v1 + 6) - 1792,
+        *(u16 *)(*(UA<u32> *)v1 + 8),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v1 + 8)),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v1 + 10)),
+        *(u8 *)(*(UA<u32> *)v1 + 16));
 
       v1 += 4;
     }
 
     CPP_setup_vecs(WScreen + 160, 0, 0, 160, 200);
-    CPP_set_scroll((int)(unsigned __int16)word_25679A >> 5);
+    CPP_set_scroll((int)(u16)word_25679A >> 5);
 
     v2 =(int)byte_256994; // 2451860; //0x256994 HARDCODED !!! 00256994
 
@@ -1462,16 +1462,16 @@ int CPP_draw_ships(void) //FINAL
     {
       result = v2;
 
-      if ( !*(_DWORDNA *)v2 || k >= 0x60u )
+      if ( !*(UA<u32> *)v2 || k >= 0x60u )
         break;
 
       CPP_move_it(
-        *(unsigned __int16 *)(*(_DWORDNA *)v2 + 4),
-        *(unsigned __int16 *)(*(_DWORDNA *)v2 + 6) - 1792,
-        *(unsigned __int16 *)(*(_DWORDNA *)v2 + 8),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v2 + 8)),
-        HIWORD(*(_DWORDNA *)(*(_DWORDNA *)v2 + 10)),
-        *(unsigned __int8 *)(*(_DWORDNA *)v2 + 16));
+        *(u16 *)(*(UA<u32> *)v2 + 4),
+        *(u16 *)(*(UA<u32> *)v2 + 6) - 1792,
+        *(u16 *)(*(UA<u32> *)v2 + 8),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v2 + 8)),
+        HIWORD(*(UA<u32> *)(*(UA<u32> *)v2 + 10)),
+        *(u8 *)(*(UA<u32> *)v2 + 16));
       v2 += 4;
     }
   }
@@ -1488,30 +1488,30 @@ int CPP_draw_time_out(void) //FINAL
   return CPP_DrawASpriteMCGA(266, 184, logo + 120);
 }
 
-int CPP_draw_winner(unsigned __int8 a1) //FINAL
+int CPP_draw_winner(u8 a1) //FINAL
 {
   return CPP_DrawASpriteMCGA(2 * (160 * a1 + 59), 184, logo + 108);
 }
 
-int CPP_draw_loser(unsigned __int8 a1) //FINAL
+int CPP_draw_loser(u8 a1) //FINAL
 {
   return CPP_DrawASpriteMCGA(2 * (160 * a1 + 63), 184, logo + 114);
 }
 
-void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, char *a4 /*esi*/ , unsigned __int8 a5, char a6) //FINAL
+void CPP_DrawSpriteVres256(i16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, char *a4 /*esi*/ , u8 a5, char a6) //FINAL
 {
   int v6; // edi
-  _BYTE *v7; // edi
+  u8 *v7; // edi
   int v8; // ecx
   int v9; // eax
-  _BYTE *v10; // ebx
+  u8 *v10; // ebx
   char v11; // al
   char v12; // al
   char v13; // al
-  _BYTE *v14; // edi
+  u8 *v14; // edi
   int v15; // ecx
   int v16; // eax
-  _BYTE *v17; // ebx
+  u8 *v17; // ebx
   char v18; // al
   char v19; // al
   char v20; // al
@@ -1530,14 +1530,14 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
   char v33; // al
   char *v34; // esi
   int v35; // ebp
-  _BYTE *v36; // edi
+  u8 *v36; // edi
   int v37; // ecx
-  _BYTE *v38; // ebx
+  u8 *v38; // ebx
   char v39; // al
   int v40; // eax
-  _BYTE *v41; // edi
+  u8 *v41; // edi
   int v42; // ecx
-  unsigned __int8 i; // dl
+  u8 i; // dl
   char v44; // al
   char v45; // al
   char v46; // cc
@@ -1564,54 +1564,54 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
   char *v67; // esi
   int v68; // edi
   int v69; // ebx
-  _BYTE *v70; // edi
-  _BYTE *v71; // edx
+  u8 *v70; // edi
+  u8 *v71; // edx
   int v72; // ecx
   char v73; // al
   char v74; // al
   char v75; // al
   char v76; // al
   int v77; // ebx
-  _BYTE *v78; // edi
+  u8 *v78; // edi
   int v79; // ecx
   int v80; // eax
-  _BYTE *v81; // ebx
+  u8 *v81; // ebx
   char v82; // al
   int v83; // ebx
-  _BYTE *v84; // edi
+  u8 *v84; // edi
   int v85; // ecx
   int v86; // eax
-  _BYTE *v87; // ebx
+  u8 *v87; // ebx
   char v88; // al
-  _BYTE *v89; // edi
+  u8 *v89; // edi
   int v90; // ecx
   int v91; // ebx
   int v92; // eax
-  _BYTE *v93; // ebx
+  u8 *v93; // ebx
   char v94; // al
   unsigned int v95; // ebx
-  _BYTE *v96; // edi
-  _BYTE *v97; // edx
+  u8 *v96; // edi
+  u8 *v97; // edx
   int v98; // ecx
   char v99; // al
   char v100; // al
   char v101; // al
   char v102; // al
-  _BYTE *v103; // edi
+  u8 *v103; // edi
   int v104; // ecx
   int v105; // ebx
-  _BYTE *v106; // ebx
+  u8 *v106; // ebx
   int v107; // eax
   char v108; // al
-  _BYTE *v109; // edi
+  u8 *v109; // edi
   int v110; // ecx
   int v111; // ebx
-  _BYTE *v112; // ebx
+  u8 *v112; // ebx
   int v113; // eax
   char v114; // al
   unsigned int v115; // ebx
-  _BYTE *v116; // edi
-  _BYTE *v117; // edx
+  u8 *v116; // edi
+  u8 *v117; // edx
   int v118; // ecx
   char v119; // al
   char v120; // al
@@ -1624,25 +1624,25 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
   char v127; // al
   int v128; // eax
   char *v129; // [esp-4h] [ebp-Ch]
-  unsigned __int8 v130; // [esp+2h] [ebp-6h]
-  unsigned __int8 v131; // [esp+2h] [ebp-6h]
-  unsigned __int8 v132; // [esp+2h] [ebp-6h]
-  unsigned __int8 v133; // [esp+2h] [ebp-6h]
-  unsigned __int8 v134; // [esp+2h] [ebp-6h]
-  unsigned __int8 v135; // [esp+2h] [ebp-6h]
-  unsigned __int8 v136; // [esp+2h] [ebp-6h]
-  unsigned __int8 v137; // [esp+2h] [ebp-6h]
+  u8 v130; // [esp+2h] [ebp-6h]
+  u8 v131; // [esp+2h] [ebp-6h]
+  u8 v132; // [esp+2h] [ebp-6h]
+  u8 v133; // [esp+2h] [ebp-6h]
+  u8 v134; // [esp+2h] [ebp-6h]
+  u8 v135; // [esp+2h] [ebp-6h]
+  u8 v136; // [esp+2h] [ebp-6h]
+  u8 v137; // [esp+2h] [ebp-6h]
   char v138; // [esp+3h] [ebp-5h]
   char v139; // [esp+3h] [ebp-5h]
-  _BYTE *v140; // [esp+4h] [ebp-4h]
-  _BYTE *v141; // [esp+4h] [ebp-4h]
+  u8 *v140; // [esp+4h] [ebp-4h]
+  u8 *v141; // [esp+4h] [ebp-4h]
 
   if ( !HIBYTE(a1) )
     return;
   v6 = WScreen + GraphicsWindowLeft + ScreenWidth * GraphicsWindowTop;
   if ( (ScreenMode & 1) != 0 )
   {
-    LOBYTE(a1) = (unsigned __int8)a1 >> 1;
+    LOBYTE(a1) = (u8)a1 >> 1;
     HIBYTE(a1) >>= 1;
     a3 >>= 1;
     a2 >>= 1;
@@ -1662,8 +1662,12 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
     else
     {
       v128 = a2 + HIBYTE(a1);
-      if ( (v128 < 0) ^ __OFADD__(a2, HIBYTE(a1)) | (v128 == 0) )
+
+      u8 tmp=HIBYTE(a1); //extra fix
+
+      if ( (v128 < 0) ^ __OFADD__(a2, tmp /*HIBYTE(a1)*/ ) | (v128 == 0) )
         return;
+
       HIBYTE(a1) = v128;
       BYTE1(v128) = 0;
       do
@@ -1671,7 +1675,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
         while ( 1 )
         {
           LOBYTE(v128) = *a4++;
-          if ( !(_BYTE)v128 )
+          if ( !(u8)v128 )
             break;
           if ( (v128 & 0x80u) == 0 )
             a4 += v128;
@@ -1696,7 +1700,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
         while ( 1 )
         {
           LOBYTE(v125) = *a4++;
-          if ( !(_BYTE)v125 )
+          if ( !(u8)v125 )
             break;
           if ( (v125 & 0x80u) == 0 )
             a4 += v125;
@@ -1715,7 +1719,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
   }
   if ( a3 >= 0 )
   {
-    if ( a3 + (unsigned __int8)a1 >= GraphicsWindowWidth )
+    if ( a3 + (u8)a1 >= GraphicsWindowWidth )
     {
       if ( DrawFlags )
       {
@@ -1725,8 +1729,8 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
           {
             if ( GraphicsWindowRight - a3 >= 0 )
             {
-              v77 = (unsigned __int8)a1 + a3;
-              v78 = (_BYTE *)(ScreenWidth * (HIBYTE(a1) + a2) + v77 + v6);
+              v77 = (u8)a1 + a3;
+              v78 = (u8 *)(ScreenWidth * (HIBYTE(a1) + a2) + v77 + v6);
               v79 = 0;
               LOBYTE(a1) = GraphicsWindowRight - v77 - 2;
               v131 = a1;
@@ -1744,7 +1748,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
                     v78 += v80;
                     LOBYTE(a1) = a1 - v80;
                   }
-                  if ( !(_BYTE)v80 )
+                  if ( !(u8)v80 )
                     break;
                   LOBYTE(v79) = v80;
                   do
@@ -1767,8 +1771,8 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
           }
           else if ( GraphicsWindowRight - a3 >= 0 )
           {
-            v83 = (unsigned __int8)a1 + a3;
-            v84 = (_BYTE *)(ScreenWidth * a2 + v83 + v6);
+            v83 = (u8)a1 + a3;
+            v84 = (u8 *)(ScreenWidth * a2 + v83 + v6);
             v85 = 0;
             LOBYTE(a1) = GraphicsWindowRight - v83 - 2;
             v132 = a1;
@@ -1786,7 +1790,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
                   v84 += v86;
                   LOBYTE(a1) = a1 - v86;
                 }
-                if ( !(_BYTE)v86 )
+                if ( !(u8)v86 )
                   break;
                 LOBYTE(v85) = v86;
                 do
@@ -1809,7 +1813,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
         }
         else if ( (DrawFlags & 2) != 0 )
         {
-          v89 = (_BYTE *)(ScreenWidth * (HIBYTE(a1) + a2) + a3 + v6);
+          v89 = (u8 *)(ScreenWidth * (HIBYTE(a1) + a2) + a3 + v6);
           v90 = 0;
           v91 = GraphicsWindowRight - a3;
           if ( v91 >= 0 )
@@ -1830,7 +1834,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
                   v89 -= v92;
                   LOBYTE(a1) = v92 + a1;
                 }
-                if ( !(_BYTE)v92 )
+                if ( !(u8)v92 )
                   break;
                 LOBYTE(v90) = v92;
                 do
@@ -1857,7 +1861,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
         v69 = GraphicsWindowRight - a3;
         if ( v69 >= 0 )
         {
-          v70 = (_BYTE *)(ScreenWidth * a2 + v68);
+          v70 = (u8 *)(ScreenWidth * a2 + v68);
           BYTE1(v69) = HIBYTE(a1);
           v130 = v69;
           v71 = v70;
@@ -1871,7 +1875,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
                 v73 = *a4++;
                 if ( v73 >= 0 )
                   break;
-                v46 = ((char)(v73 + v69) < 0) ^ __OFADD__(v73, (_BYTE)v69) | (v73 + (_BYTE)v69 == 0);
+                v46 = ((char)(v73 + v69) < 0) ^ __OFADD__(v73, (u8)v69) | (v73 + (u8)v69 == 0);
                 LOBYTE(v69) = v73 + v69;
                 if ( !v46 )
                 {
@@ -1914,7 +1918,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
     {
       if ( (DrawFlags & 2) != 0 )
       {
-        v7 = (_BYTE *)(ScreenWidth * (HIBYTE(a1) + a2) + (unsigned __int8)a1 + a3 + v6);
+        v7 = (u8 *)(ScreenWidth * (HIBYTE(a1) + a2) + (u8)a1 + a3 + v6);
         v8 = 0;
         v9 = -1;
         v10 = v7;
@@ -1938,7 +1942,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               }
               while ( v8 );
             }
-            if ( !(_BYTE)v9 )
+            if ( !(u8)v9 )
               break;
             LOBYTE(v8) = v9;
             do
@@ -1957,7 +1961,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
       }
       else
       {
-        v14 = (_BYTE *)(ScreenWidth * a2 + (unsigned __int8)a1 + a3 + v6);
+        v14 = (u8 *)(ScreenWidth * a2 + (u8)a1 + a3 + v6);
         v15 = 0;
         v16 = -1;
         v17 = v14;
@@ -1981,7 +1985,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               }
               while ( v15 );
             }
-            if ( !(_BYTE)v16 )
+            if ( !(u8)v16 )
               break;
             LOBYTE(v15) = v16;
             do
@@ -2025,7 +2029,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               v28 = &v32[v29];
               v29 = 0;
             }
-            if ( !(_BYTE)v30 )
+            if ( !(u8)v30 )
               break;
             LOBYTE(v29) = v30;
             qmemcpy(v28, a4, v29);
@@ -2042,7 +2046,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
       else if ( (DrawFlags & 4) != 0 )
       {
         v35 = GlassMap;
-        v36 = (_BYTE *)(ScreenWidth * a2 + a3 + v6);
+        v36 = (u8 *)(ScreenWidth * a2 + a3 + v6);
         v37 = 0;
         v38 = v36;
         do
@@ -2059,12 +2063,12 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
             if ( !v39 )
               break;
             LOBYTE(v37) = v39;
-            v40 = (unsigned __int8)v39;
+            v40 = (u8)v39;
             do
             {
               LOBYTE(v40) = *a4++;
               BYTE1(v40) = *v36;
-              *v36++ = *(_BYTE *)(v40 + v35);
+              *v36++ = *(u8 *)(v40 + v35);
               --v37;
             }
             while ( v37 );
@@ -2077,7 +2081,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
       }
       else if ( (DrawFlags & 8) != 0 )
       {
-        v41 = (_BYTE *)(ScreenWidth * a2 + a3 + v6);
+        v41 = (u8 *)(ScreenWidth * a2 + a3 + v6);
         v42 = 0;
         v140 = v41;
         v138 = HIBYTE(a1);
@@ -2090,7 +2094,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               v44 = *a4++;
               if ( v44 >= 0 )
                 break;
-              v42 = (unsigned __int8)-v44;
+              v42 = (u8)-v44;
               do
               {
                 v46 = (char)i-- < 1;
@@ -2131,7 +2135,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               while ( v48 < 0 );
               if ( !v48 )
                 break;
-              a4 += (unsigned __int8)v48;
+              a4 += (u8)v48;
             }
           }
           v140 += ScreenWidth;
@@ -2141,7 +2145,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
       else if ( (DrawFlags & 0x20) != 0 )
       {
         v49 = (char *)(ScreenWidth * a2 + a3 + v6);
-        v141 = (_BYTE*)v49;
+        v141 = (u8*)v49;
         v139 = HIBYTE(a1);
         do
         {
@@ -2152,7 +2156,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               v50 = *a4++;
               if ( v50 >= 0 )
                 break;
-              v49 += (unsigned __int16)(a5 * (unsigned __int8)-v50);
+              v49 += (u16)(a5 * (u8)-v50);
             }
             if ( !v50 )
               break;
@@ -2209,7 +2213,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               v56 = &v60[v57];
               v57 = 0;
             }
-            if ( !(_BYTE)v58 )
+            if ( !(u8)v58 )
               break;
             LOBYTE(v57) = v58;
             a4 += v57;
@@ -2247,7 +2251,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
               v61 = &v65[v62];
               v62 = 0;
             }
-            if ( !(_BYTE)v63 )
+            if ( !(u8)v63 )
               break;
             LOBYTE(v62) = v63;
             qmemcpy(v61, a4, v62);
@@ -2286,7 +2290,7 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
             v21 = &v25[v22];
             v22 = 0;
           }
-          if ( !(_BYTE)v23 )
+          if ( !(u8)v23 )
             break;
           LOBYTE(v22) = v23;
           qmemcpy(v21, a4, v22);
@@ -2305,9 +2309,9 @@ void CPP_DrawSpriteVres256(__int16 a1 /*dx*/ , int a2 /*ecx*/, int a3 /*ebx*/, c
   if ( !DrawFlags )
   {
     v95 = -a3;
-    if ( (unsigned __int8)a1 <= v95 )
+    if ( (u8)a1 <= v95 )
       return;
-    v96 = (_BYTE *)(ScreenWidth * a2 + v6);
+    v96 = (u8 *)(ScreenWidth * a2 + v6);
     BYTE1(v95) = HIBYTE(a1);
     v97 = v96;
     v134 = v95;
@@ -2372,9 +2376,9 @@ LABEL_179:
     if ( (DrawFlags & 2) == 0 )
       return;
     v115 = -a3;
-    if ( (unsigned __int8)a1 <= v115 )
+    if ( (u8)a1 <= v115 )
       return;
-    v116 = (_BYTE *)(ScreenWidth * (HIBYTE(a1) + a2) + v6);
+    v116 = (u8 *)(ScreenWidth * (HIBYTE(a1) + a2) + v6);
     BYTE1(v115) = HIBYTE(a1);
     v117 = v116;
     v137 = v115;
@@ -2436,9 +2440,9 @@ LABEL_225:
   }
   if ( (DrawFlags & 2) != 0 )
   {
-    v103 = (_BYTE *)(ScreenWidth * (HIBYTE(a1) + a2) + (unsigned __int8)a1 + a3 + v6);
+    v103 = (u8 *)(ScreenWidth * (HIBYTE(a1) + a2) + (u8)a1 + a3 + v6);
     v104 = 0;
-    v105 = (unsigned __int8)a1 + a3 + 1;
+    v105 = (u8)a1 + a3 + 1;
     if ( v105 >= 0 )
     {
       LOBYTE(a1) = v105;
@@ -2457,7 +2461,7 @@ LABEL_225:
             v103 += v107;
             LOBYTE(a1) = v107 + a1;
           }
-          if ( !(_BYTE)v107 )
+          if ( !(u8)v107 )
             break;
           LOBYTE(v104) = v107;
           do
@@ -2480,9 +2484,9 @@ LABEL_225:
   }
   else
   {
-    v109 = (_BYTE *)(ScreenWidth * a2 + (unsigned __int8)a1 + a3 + v6);
+    v109 = (u8 *)(ScreenWidth * a2 + (u8)a1 + a3 + v6);
     v110 = 0;
-    v111 = (unsigned __int8)a1 + a3 + 1;
+    v111 = (u8)a1 + a3 + 1;
     if ( v111 >= 0 )
     {
       LOBYTE(a1) = v111;
@@ -2501,7 +2505,7 @@ LABEL_225:
             v109 += v113;
             LOBYTE(a1) = v113 + a1;
           }
-          if ( !(_BYTE)v113 )
+          if ( !(u8)v113 )
             break;
           LOBYTE(v110) = v113;
           do
@@ -2524,13 +2528,13 @@ LABEL_225:
   }
 }
 
-int CPP_DrawASpriteMCGA(__int16 a1, __int16 a2, int a3) //FINAL
+int CPP_DrawASpriteMCGA(i16 a1, i16 a2, int a3) //FINAL
 {
   u16 DX;
   ((char*)&DX)[0]=*(char*)(((char*)a3)+4);
   ((char*)&DX)[1]=*(char*)(((char*)a3)+5);
 
-  CPP_DrawSpriteVres256(DX /*dx*/ , a2 /*ecx*/, a1 /*ebx*/, (char*)(*(intNA *)a3) /*esi*/ , 0, 0); //сложная передача аргументов функции!
+  CPP_DrawSpriteVres256(DX /*dx*/ , a2 /*ecx*/, a1 /*ebx*/, (char*)(i32)(*(UA<i32> *)a3) /*esi*/ , 0, 0); //сложная передача аргументов функции!
 
 /*
   _asm
@@ -2553,18 +2557,18 @@ int CPP_DrawASpriteMCGA(__int16 a1, __int16 a2, int a3) //FINAL
   }
 */
 
-//DrawSpriteVres256(*(_WORDNA *)(a3 + 4), a2, a1, *(char **)a3, 0, 0);
+//DrawSpriteVres256(*(UA<u16> *)(a3 + 4), a2, a1, *(char **)a3, 0, 0);
 
  return 0;
 }
 
-int CPP_draw_level_no(unsigned __int8 a1) //FINAL
+int CPP_draw_level_no(u8 a1) //FINAL
 {
   int result; // eax
-  unsigned __int8 v2; // [esp+0h] [ebp-4h]
+  u8 v2; // [esp+0h] [ebp-4h]
 
   v2 = level_no + 1;
-  if ( (unsigned __int8)no_players < 2u )
+  if ( (u8)no_players < 2u )
   {
     if ( v2 <= 0x63u )
     {
@@ -2699,7 +2703,7 @@ void CPP_DrawBoxBPP(int a1, int a2, int a3, int a4, char a5, char a6)
         {
           BYTE1(v12) = *v9;
           LOBYTE(v12) = a5;
-          *v9++ = *(_BYTE *)(v12 + v15);
+          *v9++ = *(u8 *)(v12 + v15);
           --v16;
         }
         while ( v16 );
@@ -2718,7 +2722,7 @@ void CPP_DrawBoxBPP(int a1, int a2, int a3, int a4, char a5, char a6)
         {
           LOBYTE(v12) = *v9;
           BYTE1(v12) = a5;
-          *v9++ = *(_BYTE *)(v12 + v17);
+          *v9++ = *(u8 *)(v12 + v17);
           --v18;
         }
         while ( v18 );
@@ -2735,22 +2739,22 @@ void CPP_DrawBoxBPP(int a1, int a2, int a3, int a4, char a5, char a6)
   return /*result*/;
 }
 
-unsigned __int8 CPP_draw_game(void)
+u8 CPP_draw_game(void)
 {
-  unsigned __int8 result; // al
-  unsigned __int8 v2; // dl
-  unsigned __int8 v3; // dl
-  __int64 v4; // [esp-1Ch] [ebp-7Ch]
-  __int64 v5; // [esp-1Ch] [ebp-7Ch]
+  u8 result; // al
+  u8 v2; // dl
+  u8 v3; // dl
+//  i64 v4; // [esp-1Ch] [ebp-7Ch]
+//  i64 v5; // [esp-1Ch] [ebp-7Ch]
   unsigned int v6; // [esp+0h] [ebp-60h]
-  unsigned __int8 v7; // [esp+4h] [ebp-5Ch]
-  unsigned __int8 k; // [esp+10h] [ebp-50h]
-  unsigned __int8 j; // [esp+1Ch] [ebp-44h]
+  u8 v7; // [esp+4h] [ebp-5Ch]
+  u8 k; // [esp+10h] [ebp-50h]
+  u8 j; // [esp+1Ch] [ebp-44h]
   unsigned int v10; // [esp+20h] [ebp-40h]
-  unsigned __int8 v11; // [esp+2Ch] [ebp-34h]
-  unsigned __int8 v12; // [esp+30h] [ebp-30h]
-  unsigned __int8 v13; // [esp+48h] [ebp-18h]
-  unsigned __int8 i; // [esp+5Ch] [ebp-4h]
+  u8 v11; // [esp+2Ch] [ebp-34h]
+  u8 v12; // [esp+30h] [ebp-30h]
+  u8 v13; // [esp+48h] [ebp-18h]
+  u8 i; // [esp+5Ch] [ebp-4h]
 
   CPP_draw_ships();
 
@@ -2758,57 +2762,57 @@ unsigned __int8 CPP_draw_game(void)
   {
     result = i;
 
-    if ( i >= (unsigned __int8)no_players )
+    if ( i >= (u8)no_players )
       break;
 
     if ( flicker[i] )
     {
-      if ( (unsigned __int8)flicker[i] % 15 > 7 && level_no != 3 )
+      if ( (u8)flicker[i] % 15 > 7 && level_no != 3 )
       {
         if ( game_over_flag[i] )
         {
-          if ( (unsigned __int8)no_players >= 2u )
+          if ( (u8)no_players >= 2u )
             CPP_DrawASpriteMCGA(2 * (160 * i + 43), 184, logo + 96);
           else
             CPP_DrawASpriteMCGA(246, 184, logo + 96);
         }
         else if ( level_start )
         {
-          if ( (unsigned __int8)flicker[i] / 15 > 3 )
+          if ( (u8)flicker[i] / 15 > 3 )
           {
             CPP_draw_level_no(i);
           }
-          else if ( (unsigned __int8)flicker[i] / 15 )
+          else if ( (u8)flicker[i] / 15 )
           {
-            if ( (unsigned __int8)flicker[i] % 15 == 14 )
+            if ( (u8)flicker[i] % 15 == 14 )
             {
-              HIDWORD(v5) = 14;
-              LODWORD(v5) = i;
+//              HIDWORD(v5) = 14;
+//              LODWORD(v5) = i;
 /*
               MY_PlaySample(
                 (unsigned int *)0xF,
                 a1,
                 v5,
                 0x7FFFu,
-                -2 - 0x7FFF * (unsigned __int8)no_players - 200,
+                -2 - 0x7FFF * (u8)no_players - 200,
                 100i64,
                 3u);
 */
-              MY_PlaySample( /*(unsigned int *)0xF, a1, v5,*/ i , 0xE,  0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+              MY_PlaySample( /*(unsigned int *)0xF, a1, v5,*/ i , 0xE,  0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
             }
-            v13 = (unsigned __int8)flicker[i] / 15;
+            v13 = (u8)flicker[i] / 15;
 
-            if ( (unsigned __int8)no_players >= 2u )
+            if ( (u8)no_players >= 2u )
               CPP_DrawASpriteMCGA(2 * (160 * i + 75), 184, logo + 6 * (v13 + 5));
             else
               CPP_DrawASpriteMCGA(310, 184, logo + 6 * (v13 + 5));
           }
           else
           {
-            if ( (unsigned __int8)flicker[i] % 15 == 14 )
+            if ( (u8)flicker[i] % 15 == 14 )
             {
-              HIDWORD(v4) = 14;
-              LODWORD(v4) = i;
+//              HIDWORD(v4) = 14;
+//              LODWORD(v4) = i;
 
 /*
               MY_PlaySample(
@@ -2816,14 +2820,14 @@ unsigned __int8 CPP_draw_game(void)
                 a1,
                 v4,
                 0x7FFFu,
-                -2 - 0x7FFF * (unsigned __int8)no_players - 300,
+                -2 - 0x7FFF * (u8)no_players - 300,
                 150i64,
                 3u);
 */
-              MY_PlaySample(/*(unsigned int *)0xF, a1, v4,*/ i ,0xE ,0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 300, 0x96, 0 ,3);
+              MY_PlaySample(/*(unsigned int *)0xF, a1, v4,*/ i ,0xE ,0x7FFF, -2 - 0x7FFF * (u8)no_players - 300, 0x96, 0 ,3);
             }
 
-            if ( (unsigned __int8)no_players >= 2u )
+            if ( (u8)no_players >= 2u )
               CPP_DrawASpriteMCGA(2 * (160 * i + 72), 184, logo + 132);
             else
               CPP_DrawASpriteMCGA(304, 184, logo + 132);
@@ -2838,10 +2842,10 @@ unsigned __int8 CPP_draw_game(void)
     }
     if ( fading == 1 )
     {
-      if ( CPP_FadePalette256((unsigned __int8 *)palette, 0x18u, 1) >= 24 )
+      if ( CPP_FadePalette256((u8 *)palette, 0x18u, 1) >= 24 )
         fading = 0;
     }
-    else if ( fading == 2 && (unsigned __int8)flicker[i] < 0x27u && CPP_FadePalette256(0, 0x18u, 1) >= 24 )
+    else if ( fading == 2 && (u8)flicker[i] < 0x27u && CPP_FadePalette256(0, 0x18u, 1) >= 24 )
     {
       fading = 1;
       game_mode = 3;
@@ -2849,13 +2853,13 @@ unsigned __int8 CPP_draw_game(void)
     }
     if ( level_no != 3 )
     {
-      CPP_DrawBoxBPP(160 * i, 20, 3 * (*(intNA *)((char *) dword_256784 + 30 * i) >> 16), 2, 15, 1); //рисует полоску под табло игрока
+      CPP_DrawBoxBPP(160 * i, 20, 3 * (*(UA<i32> *)((char *) dword_256784 + 30 * i) >> 16), 2, 15, 1); //рисует полоску под табло игрока
 
       v10 = the_score[i];
       v11 = i;
       v12 = 0;
 
-      if ( (unsigned __int8)no_players < 2u )
+      if ( (u8)no_players < 2u )
         v11 = 1;
 
       if ( v10 )
@@ -2872,10 +2876,10 @@ unsigned __int8 CPP_draw_game(void)
         CPP_DrawASpriteMCGA(320 * v11 + 301, 0, logo + 30);
       }
 
-      for ( j = 0; j < *(intNA *)&unk_256B3D[i] >> 24; ++j )
+      for ( j = 0; j < *(UA<i32> *)&unk_256B3D[i] >> 24; ++j )
         CPP_DrawASpriteMCGA(320 * i + 36 * j, 0, logo + 90);
 
-      for ( k = 0; k < (unsigned __int8)byte_25678A[30 * i]; ++k )
+      for ( k = 0; k < (u8)byte_25678A[30 * i]; ++k )
         CPP_DrawASpriteMCGA(320 * i + 6 + 36 * k, 16, logo + 102);
 
       v7 = 0;
@@ -2905,7 +2909,7 @@ unsigned __int8 CPP_draw_game(void)
           else
             CPP_draw_time_out();
         }
-        else if ( (unsigned int)laps[0] <= (unsigned __int8)byte_256B3B )
+        else if ( (unsigned int)laps[0] <= (u8)byte_256B3B )
         {
           CPP_draw_winner(1u);
           CPP_draw_loser(0);
@@ -2921,17 +2925,17 @@ unsigned __int8 CPP_draw_game(void)
   return result;
 }
 
-unsigned __int8 CPP_check_extra_life(void)
+u8 CPP_check_extra_life(void)
 {
-  unsigned __int8 result; // al
-  __int64 v2; // [esp-1Ch] [ebp-28h]
-  unsigned __int8 i; // [esp+8h] [ebp-4h]
+  u8 result; // al
+//  i64 v2; // [esp-1Ch] [ebp-28h]
+  u8 i; // [esp+8h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
     result = i;
 
-    if ( i >= (unsigned __int8)no_players )
+    if ( i >= (u8)no_players )
       break;
 
     if ( (unsigned int)(the_score[i] - old_score[i]) >= 0x5DC )
@@ -2939,12 +2943,12 @@ unsigned __int8 CPP_check_extra_life(void)
       old_score[i] += 1500;
       if ( no_lives[i] == 5 )
       {
-        *((_WORD *) dword_256784 + 15 * i + 1) = 20;
+        *((u16 *) dword_256784 + 15 * i + 1) = 20;
       }
       else
       {
-        HIDWORD(v2) = 10;
-        LODWORD(v2) = i;
+//        HIDWORD(v2) = 10;
+//        LODWORD(v2) = i;
 //        MY_PlaySample((unsigned int *)(4 * i), a1, v2, 0x7FFFu, 0x8000u, 100i64, 3u);
           MY_PlaySample(i, 0xA, 0x7FFF, 0x8000, 0x64 ,0, 3);
 
@@ -2955,11 +2959,11 @@ unsigned __int8 CPP_check_extra_life(void)
   return result;
 }
 
-int CPP_check_scroll_change(unsigned __int8 a1) //FINAL
+int CPP_check_scroll_change(u8 a1) //FINAL
 {
   int result; // eax
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
-  unsigned __int8 j; // [esp+0h] [ebp-4h]
+  u8 i; // [esp+0h] [ebp-4h]
+  u8 j; // [esp+0h] [ebp-4h]
 
   if ( vy[a1] > 0 && lastscroll[a1] == 1 )
   {
@@ -2974,14 +2978,14 @@ int CPP_check_scroll_change(unsigned __int8 a1) //FINAL
   else
   {
     result = 2 * a1;
-    if ( *(__int16NA *)((char *)vy + result) < 0 )
+    if ( *(UA<i16> *)((char *)vy + result) < 0 )
     {
       result = a1;
       if ( lastscroll[a1] == 2 )
       {
         for ( j = 0; j <= 0x20u; ++j )
         {
-          if ( (unsigned __int16)++level_line[a1] > 0x400u )
+          if ( (u16)++level_line[a1] > 0x400u )
             level_line[a1] = 1;
         }
         result = a1;
@@ -2992,7 +2996,7 @@ int CPP_check_scroll_change(unsigned __int8 a1) //FINAL
   return result;
 }
 
-char CPP_check_for_race_end(unsigned __int8 a1) //FINAL
+char CPP_check_for_race_end(u8 a1) //FINAL
 {
   char v3; // [esp+8h] [ebp-4h]
 
@@ -3010,7 +3014,7 @@ char CPP_check_for_race_end(unsigned __int8 a1) //FINAL
   if ( word_220C48[a1] == 1024 )
     word_220C48[a1] = 0;
 
-  if ( (unsigned __int16)level_line[a1] == (unsigned __int16)word_220C48[a1] + 1
+  if ( (u16)level_line[a1] == (u16)word_220C48[a1] + 1
     && ++word_220C48[a1] == 32
     && ++laps[a1] == 4 )
   {
@@ -3021,11 +3025,11 @@ char CPP_check_for_race_end(unsigned __int8 a1) //FINAL
   return v3;
 }
 
-int CPP_delete_anims(unsigned __int8 a1, unsigned int a2) //FINAL
+int CPP_delete_anims(u8 a1, unsigned int a2) //FINAL
 {
   int result; // eax
   unsigned int *v3; // [esp+0h] [ebp-8h]
-  unsigned __int16 i; // [esp+4h] [ebp-4h]
+  u16 i; // [esp+4h] [ebp-4h]
 
   result = 1600 * a1;
   v3 = (unsigned int *)((char *)&on_anims + result);
@@ -3039,24 +3043,24 @@ int CPP_delete_anims(unsigned __int8 a1, unsigned int a2) //FINAL
   return result;
 }
 
-int CPP_add_anims(unsigned __int8 a1, int a2, unsigned __int16 a3) //FINAL
+int CPP_add_anims(u8 a1, int a2, u16 a3) //FINAL
 {
   int result; // eax
-  __int16 j; // [esp+0h] [ebp-28h]
-  _DWORD *v5; // [esp+4h] [ebp-24h]
+  i16 j; // [esp+0h] [ebp-28h]
+  u32 *v5; // [esp+4h] [ebp-24h]
   int v6; // [esp+8h] [ebp-20h]
   int v7; // [esp+20h] [ebp-8h]
-  unsigned __int16 i; // [esp+24h] [ebp-4h]
+  u16 i; // [esp+24h] [ebp-4h]
 
   v7 = (int)anim_blks; //2289064; //22EDA8 HARDCODED !!!
 
   for ( i = 0; i < 0x3E8u; ++i )
   {
-    if ( *(_WORDNA *)(v7 + 8) >= a3 && *(unsigned __int16 *)(v7 + 8) < a3 + 32 )
+    if ( *(UA<u16> *)(v7 + 8) >= a3 && *(u16 *)(v7 + 8) < a3 + 32 )
     {
-      v6 = 8 * (*(unsigned __int16 *)(v7 + 8) - a3) + a2;
-      v5 = (_DWORD *)((char *)&on_anims + 1600 * a1);
-      for ( j = 0; (unsigned __int16)j < 0xC8u; ++j )
+      v6 = 8 * (*(u16 *)(v7 + 8) - a3) + a2;
+      v5 = (u32 *)((char *)&on_anims + 1600 * a1);
+      for ( j = 0; (u16)j < 0xC8u; ++j )
       {
         if ( !v5[1] )
         {
@@ -3073,40 +3077,40 @@ int CPP_add_anims(unsigned __int8 a1, int a2, unsigned __int16 a3) //FINAL
   return result;
 }
 
-char CPP_scroll_tube(char a1, unsigned __int8 a2) //FINAL
+char CPP_scroll_tube(char a1, u8 a2) //FINAL
 {
-  __int16 v2; // dx
-  __int16 v3; // bx
+  i16 v2; // dx
+  i16 v3; // bx
   char result; // al
-  unsigned __int16 *v5; // eax
+  u16 *v5; // eax
   unsigned int v6; // [esp+0h] [ebp-20h]
   int v7; // [esp+4h] [ebp-1Ch]
   int v8; // [esp+8h] [ebp-18h]
   unsigned int v9; // [esp+8h] [ebp-18h]
-  _DWORD *v10; // [esp+Ch] [ebp-14h]
-  __int16 v11; // [esp+10h] [ebp-10h]
-  unsigned __int16 v12; // [esp+14h] [ebp-Ch]
-  unsigned __int8 i; // [esp+18h] [ebp-8h]
-  unsigned __int8 j; // [esp+1Ch] [ebp-4h]
+  u32 *v10; // [esp+Ch] [ebp-14h]
+  i16 v11; // [esp+10h] [ebp-10h]
+  u16 v12; // [esp+14h] [ebp-Ch]
+  u8 i; // [esp+18h] [ebp-8h]
+  u8 j; // [esp+1Ch] [ebp-4h]
 
   if ( a1 == 1 )
   {
-    v8 = (unsigned __int8)scrollsave[a2] << 8;
+    v8 = (u8)scrollsave[a2] << 8;
     v2 = level_line[a2];
     level_line[a2] = v2 + 1;
     v11 = 1024 - v2;
-    v7 = ((unsigned __int16)(1024 - v2) << 6) + level;
+    v7 = ((u16)(1024 - v2) << 6) + level;
 
-    if ( (unsigned __int16)level_line[a2] > 0x400u )
+    if ( (u16)level_line[a2] > 0x400u )
       level_line[a2] = 1;
   }
   else
   {
-    v8 = (((unsigned __int8)scrollsave[a2] << 8) + 2048) % 0x10000;
+    v8 = (((u8)scrollsave[a2] << 8) + 2048) % 0x10000;
     v3 = level_line[a2];
     level_line[a2] = v3 - 1;
     v11 = 1024 - v3;
-    v7 = ((unsigned __int16)(1024 - v3) << 6) + level;
+    v7 = ((u16)(1024 - v3) << 6) + level;
 
     if ( !level_line[a2] )
       level_line[a2] = 1024;
@@ -3118,7 +3122,7 @@ char CPP_scroll_tube(char a1, unsigned __int8 a2) //FINAL
 
   for ( i = 0; i < 0x20u; ++i )
   {
-    v5 = (unsigned __int16 *)v7;
+    v5 = (u16 *)v7;
     v7 += 2;
     v12 = *v5;
     v6 = 8 * i + v9;
@@ -3126,11 +3130,11 @@ char CPP_scroll_tube(char a1, unsigned __int8 a2) //FINAL
     if ( *v5 >= 0x800u )
       v12 = 0;
 
-    v10 = (_DWORD *)((v12 << 6) + block_data);
+    v10 = (u32 *)((v12 << 6) + block_data);
     for ( j = 0; j < 8u; ++j )
     {
-      *(_DWORDNA *)(tube_graphics + v6) = *v10;
-      *(_DWORDNA *)(tube_graphics + v6 + 4) = v10[1];
+      *(UA<u32> *)(tube_graphics + v6) = *v10;
+      *(UA<u32> *)(tube_graphics + v6 + 4) = v10[1];
       v6 += 256;
       v10 += 2;
     }
@@ -3139,12 +3143,12 @@ char CPP_scroll_tube(char a1, unsigned __int8 a2) //FINAL
   return result;
 }
 
-int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4) //FINAL
+int CPP_add_alien(u8 a1, u8 a2, u8 a3, u8 a4) //FINAL
 {
   int result; // eax
   int v5; // [esp+4h] [ebp-10h]
-  unsigned __int16 i; // [esp+Ch] [ebp-8h]
-  __int16 v7; // [esp+10h] [ebp-4h]
+  u16 i; // [esp+Ch] [ebp-8h]
+  i16 v7; // [esp+10h] [ebp-4h]
 
   for ( i = 60 * a1; byte_235148[30 * i] && i < 60 * (a1 + 1); ++i )
     ;
@@ -3174,7 +3178,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         byte_235153[30 * i] = 0;
         byte_235148[30 * i] = 7;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 2;
+        *(UA<i16> *)((char *)word_235146 + result) = 2;
         break;
       case 1u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3187,7 +3191,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 17;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 2u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3200,7 +3204,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 6;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 3u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3213,7 +3217,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 21;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 127;
+        *(UA<i16> *)((char *)word_235146 + result) = 127;
         break;
       case 4u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3226,7 +3230,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 12;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 10;
+        *(UA<i16> *)((char *)word_235146 + result) = 10;
         break;
       case 5u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3239,7 +3243,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 8;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 6u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3252,7 +3256,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 16;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 7u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3265,7 +3269,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 15;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 8u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3278,7 +3282,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 23;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 5;
+        *(UA<i16> *)((char *)word_235146 + result) = 5;
         break;
       case 9u:
         word_23513C[15 * i] = (LOBYTE(scrollpos[a1]) % 8 + 8 * (32 - a4 + ((int)LOBYTE(scrollpos[a1]) >> 3)) - 4) << 8;
@@ -3291,7 +3295,7 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
         word_235144[15 * i] = 0;
         byte_235148[30 * i] = 49;
         result = 30 * i;
-        *(__int16NA *)((char *)word_235146 + result) = 127;
+        *(UA<i16> *)((char *)word_235146 + result) = 127;
         break;
       default:
         return result;
@@ -3300,54 +3304,54 @@ int CPP_add_alien(unsigned __int8 a1, unsigned __int8 a2, unsigned __int8 a3, un
   return result;
 }
 
-int CPP_remove_effect(unsigned __int8 a1) //FINAL
+int CPP_remove_effect(u8 a1) //FINAL
 {
   int result; // eax
 
-  while ( *(_WORDNA *)(effect_list + 6 * a1 + 4) && a1 < 0x63u )
+  while ( *(UA<u16> *)(effect_list + 6 * a1 + 4) && a1 < 0x63u )
   {
-    *(_WORDNA *)(6 * a1 + effect_list + 2) = *(_WORDNA *)(effect_list + 6 * (a1 + 1) + 2);
-    *(_WORDNA *)(6 * a1 + effect_list) = *(_WORDNA *)(effect_list + 6 * (a1 + 1));
-    *(_WORDNA *)(6 * a1 + effect_list + 4) = *(_WORDNA *)(effect_list + 6 * (a1 + 1) + 4);
+    *(UA<u16> *)(6 * a1 + effect_list + 2) = *(UA<u16> *)(effect_list + 6 * (a1 + 1) + 2);
+    *(UA<u16> *)(6 * a1 + effect_list) = *(UA<u16> *)(effect_list + 6 * (a1 + 1));
+    *(UA<u16> *)(6 * a1 + effect_list + 4) = *(UA<u16> *)(effect_list + 6 * (a1 + 1) + 4);
     ++a1;
   }
-  *(_WORDNA *)(effect_list + 6 * a1 + 2) = 0;
-  *(_WORDNA *)(effect_list + 6 * a1) = 0;
+  *(UA<u16> *)(effect_list + 6 * a1 + 2) = 0;
+  *(UA<u16> *)(effect_list + 6 * a1) = 0;
   result = effect_list + 6 * a1;
-  *(_WORDNA *)(result + 4) = 0;
+  *(UA<u16> *)(result + 4) = 0;
   return result;
 }
 
-int CPP_check_effects(unsigned __int8 a1) //FINAL
+int CPP_check_effects(u8 a1) //FINAL
 {
   int result; // eax
-  __int16 v2; // ax
-  __int16 v3; // ax
-  __int16 v4; // ax
-  __int16 v5; // ax
+  i16 v2; // ax
+  i16 v3; // ax
+  i16 v4; // ax
+  i16 v5; // ax
   int v6; // [esp+90h] [ebp-Ch]
   int v7; // [esp+90h] [ebp-Ch]
-  __int16 j; // [esp+94h] [ebp-8h]
-  __int16 i; // [esp+94h] [ebp-8h]
-  unsigned __int8 v10; // [esp+98h] [ebp-4h]
-  unsigned __int8 v11; // [esp+98h] [ebp-4h]
+  i16 j; // [esp+94h] [ebp-8h]
+  i16 i; // [esp+94h] [ebp-8h]
+  u8 v10; // [esp+98h] [ebp-4h]
+  u8 v11; // [esp+98h] [ebp-4h]
 
   if ( vy[a1] > 0 )
   {
-    v7 = (2047 - (unsigned __int16)level_line[a1]) % 1024;
+    v7 = (2047 - (u16)level_line[a1]) % 1024;
     v11 = 1;
     for ( i = 0; ; ++i )
     {
       result = effect_list + 6 * i;
-      if ( !*(_WORDNA *)(result + 4) )
+      if ( !*(UA<u16> *)(result + 4) )
         break;
-      if ( *(unsigned __int16 *)(effect_list + 6 * i) <= (__int16)v7
-        && *(unsigned __int16 *)(effect_list + 6 * i) >= (__int16)v7 - 4
-        && *(__int16NA *)(effect_list + 6 * i + 4) > 0 )
+      if ( *(u16 *)(effect_list + 6 * i) <= (i16)v7
+        && *(u16 *)(effect_list + 6 * i) >= (i16)v7 - 4
+        && *(UA<i16> *)(effect_list + 6 * i + 4) > 0 )
       {
-        if ( *(__int16NA *)(effect_list + 6 * i + 4) <= 33 )
+        if ( *(UA<i16> *)(effect_list + 6 * i + 4) <= 33 )
         {
-          v5 = *(_WORDNA *)(effect_list + 6 * i + 4);
+          v5 = *(UA<u16> *)(effect_list + 6 * i + 4);
           switch ( v5 )
           {
             case 1:
@@ -3405,7 +3409,7 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
             case 47:
             case 48:
             case 49:
-              CPP_add_alien(a1, v5 - 34, v11, *(_BYTE *)(effect_list + 6 * i + 2));
+              CPP_add_alien(a1, v5 - 34, v11, *(u8 *)(effect_list + 6 * i + 2));
               break;
             default:
               continue;
@@ -3413,8 +3417,8 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
         }
         else
         {
-          v11 += ((__int16)v7 + 1024 - *(unsigned __int16 *)(effect_list + 6 * i)) % 1024;
-          v4 = *(_WORDNA *)(effect_list + 6 * i + 4);
+          v11 += ((i16)v7 + 1024 - *(u16 *)(effect_list + 6 * i)) % 1024;
+          v4 = *(UA<u16> *)(effect_list + 6 * i + 4);
           switch ( v4 )
           {
             case 1:
@@ -3472,7 +3476,7 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
             case 47:
             case 48:
             case 49:
-              CPP_add_alien(a1, v4 - 34, v11, *(_BYTE *)(effect_list + 6 * i + 2));
+              CPP_add_alien(a1, v4 - 34, v11, *(u8 *)(effect_list + 6 * i + 2));
               break;
             default:
               break;
@@ -3484,20 +3488,20 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
   }
   else
   {
-    v6 = (1023 - (unsigned __int16)level_line[a1] + 4) % 1024;
+    v6 = (1023 - (u16)level_line[a1] + 4) % 1024;
     v10 = 30;
     for ( j = 0; ; ++j )
     {
       result = effect_list + 6 * j;
-      if ( !*(_WORDNA *)(result + 4) )
+      if ( !*(UA<u16> *)(result + 4) )
         break;
-      if ( *(unsigned __int16 *)(effect_list + 6 * j) >= (__int16)v6
-        && *(unsigned __int16 *)(effect_list + 6 * j) <= (__int16)v6 + 4
-        && *(__int16NA *)(effect_list + 6 * j + 4) > 0 )
+      if ( *(u16 *)(effect_list + 6 * j) >= (i16)v6
+        && *(u16 *)(effect_list + 6 * j) <= (i16)v6 + 4
+        && *(UA<i16> *)(effect_list + 6 * j + 4) > 0 )
       {
-        if ( *(__int16NA *)(effect_list + 6 * j + 4) <= 33 )
+        if ( *(UA<i16> *)(effect_list + 6 * j + 4) <= 33 )
         {
-          v3 = *(_WORDNA *)(effect_list + 6 * j + 4);
+          v3 = *(UA<u16> *)(effect_list + 6 * j + 4);
           switch ( v3 )
           {
             case 1:
@@ -3555,7 +3559,7 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
             case 47:
             case 48:
             case 49:
-              CPP_add_alien(a1, v3 - 34, v10, *(_BYTE *)(effect_list + 6 * j + 2));
+              CPP_add_alien(a1, v3 - 34, v10, *(u8 *)(effect_list + 6 * j + 2));
               break;
             default:
               continue;
@@ -3563,8 +3567,8 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
         }
         else
         {
-          v10 -= (*(unsigned __int16 *)(effect_list + 6 * j) + 1024 - (__int16)v6) % 1024;
-          v2 = *(_WORDNA *)(effect_list + 6 * j + 4);
+          v10 -= (*(u16 *)(effect_list + 6 * j) + 1024 - (i16)v6) % 1024;
+          v2 = *(UA<u16> *)(effect_list + 6 * j + 4);
           switch ( v2 )
           {
             case 1:
@@ -3622,7 +3626,7 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
             case 47:
             case 48:
             case 49:
-              CPP_add_alien(a1, v2 - 34, v10, *(_BYTE *)(effect_list + 6 * j + 2));
+              CPP_add_alien(a1, v2 - 34, v10, *(u8 *)(effect_list + 6 * j + 2));
               break;
             default:
               break;
@@ -3635,19 +3639,19 @@ int CPP_check_effects(unsigned __int8 a1) //FINAL
   return result;
 }
 
-int CPP_do_anims(unsigned __int8 a1) //FINAL
+int CPP_do_anims(u8 a1) //FINAL
 {
   int result; // eax
   char *v2; // [esp+0h] [ebp-8h]
-  unsigned __int16 i; // [esp+4h] [ebp-4h]
+  u16 i; // [esp+4h] [ebp-4h]
 
   result = 1600 * a1;
   v2 = (char *)&on_anims + result;
   for ( i = 0; i < 0xC8u; ++i )
   {
 
-    if ( *((_DWORD *)v2 + 1) )
-      CPP_draw_block(*(_DWORDNA *)v2, **((_WORD **)v2 + 1));
+    if ( *((u32 *)v2 + 1) )
+      CPP_draw_block(*(UA<u32> *)v2, **((u16 **)v2 + 1));
 
     result = (int)v2;
     v2 += 8;
@@ -3655,9 +3659,9 @@ int CPP_do_anims(unsigned __int8 a1) //FINAL
   return result;
 }
 
-void CPP_do_death_sound(unsigned __int8 a3, char a4)
+void CPP_do_death_sound(u8 a3, char a4)
 {
-  __int64 v4; // [esp-1Ch] [ebp-1Ch]
+//  i64 v4; // [esp-1Ch] [ebp-1Ch]
 
   if ( a4 )
   {
@@ -3669,19 +3673,19 @@ void CPP_do_death_sound(unsigned __int8 a3, char a4)
     if ( (int)abs(dword_22616C - turn) > 20 )
     {
       dword_226168 = 0;
-      HIDWORD(v4) = 13;
-      LODWORD(v4) = a3;
+//      HIDWORD(v4) = 13;
+//      LODWORD(v4) = a3;
 
- //     MY_PlaySample(a1, a2, v4, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*a1, a2, v4*/ a3, 0xD, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+ //     MY_PlaySample(a1, a2, v4, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*a1, a2, v4*/ a3, 0xD, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
     }
   }
 }
 
-int CPP_count_swamp_anims(unsigned __int8 a1)
+int CPP_count_swamp_anims(u8 a1)
 {
   char *v2; // [esp+0h] [ebp-10h]
-  unsigned __int16 v3; // [esp+8h] [ebp-8h]
+  u16 v3; // [esp+8h] [ebp-8h]
   int v4; // [esp+Ch] [ebp-4h]
 
   v2 = (char *)&on_anims + 1600 * a1;
@@ -3689,7 +3693,7 @@ int CPP_count_swamp_anims(unsigned __int8 a1)
   v4 = 0;
   while ( v3 < 0xC8u )
   {
-    if ( *((_DWORD *)v2 + 1) && CPP_swamp_block(**((_WORD **)v2 + 1)) )
+    if ( *((u32 *)v2 + 1) && CPP_swamp_block(**((u16 **)v2 + 1)) )
       ++v4;
     ++v3;
     v2 += 8;
@@ -3697,36 +3701,36 @@ int CPP_count_swamp_anims(unsigned __int8 a1)
   return v4;
 }
 
-int CPP_do_swamp_sounds(unsigned __int8 a1)
+int CPP_do_swamp_sounds(u8 a1)
 {
   int result; // eax
-  __int64 v2; // [esp-10h] [ebp-14h]
+//  i64 v2; // [esp-10h] [ebp-14h]
   int v3; // [esp+0h] [ebp-4h]
 
   v3 = CPP_count_swamp_anims(a1);
-  if ( (unsigned __int16)v3 > 0x18u )
+  if ( (u16)v3 > 0x18u )
     v3 = 24;
-  if ( (unsigned __int16)v3 <= (unsigned __int16)word_2B37C0[a1] )
+  if ( (u16)v3 <= (u16)word_2B37C0[a1] )
   {
     MY_FadeOutSample(a1, 12, 1365 * v3, 3u);
   }
   else
   {
-    HIDWORD(v2) = 12;
-    LODWORD(v2) = a1;
+//    HIDWORD(v2) = 12;
+//    LODWORD(v2) = a1;
     MY_FadeInSample(/*v2,*/ a1, 12, 1365 * v3, 3);
   }
-  MY_SetSamplePan(a1, 12, -2 - 0x7FFF * (unsigned __int8)no_players - 2 * a1);
+  MY_SetSamplePan(a1, 12, -2 - 0x7FFF * (u8)no_players - 2 * a1);
   result = v3;
   word_2B37C0[a1] = v3;
   return result;
 }
 
-_BOOL1 CPP_load_level(unsigned __int8 a1)
+_BOOL1 CPP_load_level(u8 a1)
 {
   char v2[40]; // [esp+0h] [ebp-2Ch] BYREF
 
-  ((void (*)(char*,char*,int))sprintf)((char*)v2,(char*)aDataLev05dDat, a1); //sprintf((char*)v2,(char*)aDataLev05dDat, a1);
+  sprintf((char*)v2,(char*)aDataLev05dDat, a1);
 
   return CPP_LoadFileAt(v2, (char *)level) == 66136;
 }
@@ -3735,28 +3739,31 @@ int CPP_next_frames(void) //FINAL
 {
   int result; // eax
   int v1; // [esp+0h] [ebp-10h]
-  _WORD *v2; // [esp+4h] [ebp-Ch]
-  unsigned __int16 i; // [esp+8h] [ebp-8h]
-  unsigned __int16 v4; // [esp+Ch] [ebp-4h]
+  u16 *v2; // [esp+4h] [ebp-Ch]
+  u16 i; // [esp+8h] [ebp-8h]
+  u16 v4; // [esp+Ch] [ebp-4h]
 
   v1 = (int)anim_blks; //2289064; //0x22EDA8 HARDCODED !!! 0022EDA8 anim_blks
   for ( i = 0; i < 0x3E8u; ++i )
   {
-    if ( *(_WORDNA *)(v1 + 8) != 0xFFFF )
+    if ( *(UA<u16> *)(v1 + 8) != 0xFFFF )
     {
-      memcpy(&v2 , (_WORD **)(v1 + 2), 4); //v2 = *(_WORD **)(v1 + 2);
-      v4 = *(_WORDNA *)(v1 + 6) + 1;
-      if ( *(intNA *)&v2[*(unsigned __int16 *)(v1 + 6)] >> 16 == -1 )
+
+      v2=(u16*)(u32)*(UA<u32>*)(v1+2);
+//    MCPY(&v2 , (u16 **)(v1 + 2), 4); //v2 = *(u16 **)(v1 + 2);
+
+      v4 = *(UA<u16> *)(v1 + 6) + 1;
+      if ( *(UA<i32> *)&v2[*(u16 *)(v1 + 6)] >> 16 == -1 )
       {
         v4 = 0;
-        *(_WORDNA *)v1 = *v2;
+        *(UA<u16> *)v1 = *v2;
       }
       else
       {
-        *(_WORDNA *)v1 = v2[v4];
+        *(UA<u16> *)v1 = v2[v4];
       }
-      *(_WORDNA *)(v1 + 6) = v4;
-      *(_WORDNA *)(2 * *(unsigned __int16 *)(v1 + 8) + level) = *(_WORDNA *)v1;
+      *(UA<u16> *)(v1 + 6) = v4;
+      *(UA<u16> *)(2 * *(u16 *)(v1 + 8) + level) = *(UA<u16> *)v1;
     }
     result = v1;
     v1 += 10;
@@ -3764,11 +3771,11 @@ int CPP_next_frames(void) //FINAL
   return result;
 }
 
-void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
+void CPP_omni_map(int a1, int a2, i16 a3) //FINAL
 {
   int v3; // ecx
   unsigned int v4; // eax
-  _WORD *v5; // esi
+  u16 *v5; // esi
   int v6; // edx
   int *v7; // edi
   int v8; // eax
@@ -3783,7 +3790,7 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
   v12 = vec_screen_width - v4;
   v13 = 2 * (vec_screen_width - v4);
   v14 = v4 >> 5;
-  v5 = (_WORD *)(a1 + 2 * (tube_scroll_x + 320 * tube_scroll_y));
+  v5 = (u16 *)(a1 + 2 * (tube_scroll_x + 320 * tube_scroll_y));
   HIWORD(v6) = 0;
   v7 = (int *)vec_screen;
   v11 = vec_window_height;
@@ -3799,16 +3806,16 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v3) = *(_BYTE *)(v8 + a2);
-      BYTE1(v3) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v3) = *(u8 *)(v8 + a2);
+      BYTE1(v3) = *(u8 *)(v6 + a2);
       v9 = v3 SHL16;
       LOWORD(v6) = v5[1];
       LOBYTE(v8) = a3 + *v5;
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) = HIBYTE(a3) + HIBYTE(*v5);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       *v7 = v9;
       LOWORD(v8) = v5[6];
       LOWORD(v6) = v5[7];
@@ -3816,8 +3823,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[4];
       LOWORD(v6) = v5[5];
@@ -3825,8 +3832,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[1] = v9;
       LOWORD(v8) = v5[10];
       LOWORD(v6) = v5[11];
@@ -3834,8 +3841,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[8];
       LOWORD(v6) = v5[9];
@@ -3843,8 +3850,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[2] = v9;
       LOWORD(v8) = v5[14];
       LOWORD(v6) = v5[15];
@@ -3852,8 +3859,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[12];
       LOWORD(v6) = v5[13];
@@ -3861,8 +3868,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[3] = v9;
       LOWORD(v8) = v5[18];
       LOWORD(v6) = v5[19];
@@ -3870,8 +3877,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[16];
       LOWORD(v6) = v5[17];
@@ -3879,8 +3886,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[4] = v9;
       LOWORD(v8) = v5[22];
       LOWORD(v6) = v5[23];
@@ -3888,8 +3895,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[20];
       LOWORD(v6) = v5[21];
@@ -3897,8 +3904,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[5] = v9;
       LOWORD(v8) = v5[26];
       LOWORD(v6) = v5[27];
@@ -3906,8 +3913,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v9 OSHL16;
       LOWORD(v8) = v5[24];
       LOWORD(v6) = v5[25];
@@ -3915,8 +3922,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v7[6] = v9;
       LOWORD(v8) = v5[30];
       LOWORD(v6) = v5[31];
@@ -3924,8 +3931,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v9) = *(_BYTE *)(v8 + a2);
-      BYTE1(v9) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v9) = *(u8 *)(v8 + a2);
+      BYTE1(v9) = *(u8 *)(v6 + a2);
       v3 = v9 SHL16;
       LOWORD(v8) = v5[28];
       LOWORD(v6) = v5[29];
@@ -3933,8 +3940,8 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
       LOBYTE(v6) = a3 + v6;
       BYTE1(v8) += HIBYTE(a3);
       BYTE1(v6) += HIBYTE(a3);
-      LOBYTE(v3) = *(_BYTE *)(v8 + a2);
-      BYTE1(v3) = *(_BYTE *)(v6 + a2);
+      LOBYTE(v3) = *(u8 *)(v8 + a2);
+      BYTE1(v3) = *(u8 *)(v6 + a2);
       v7[7] = v3;
       v7 += 8;
       v5 += 32;
@@ -3942,7 +3949,7 @@ void CPP_omni_map(int a1, int a2, __int16 a3) //FINAL
     }
     while ( v10 );
     v7 = (int *)((char *)v7 + v12);
-    v5 = (_WORD *)((char *)v5 + v13);
+    v5 = (u16 *)((char *)v5 + v13);
     --v11;
   }
   while ( v11 );
@@ -3952,10 +3959,10 @@ int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4) //FINAL
 {
   int result; // eax
   int v5; // ecx
-  _BYTE *v6; // esi
-  _BYTE *v7; // edi
+  u8 *v6; // esi
+  u8 *v7; // edi
   int v8; // eax
-  _BYTE *v9; // [esp+0h] [ebp-20h]
+  u8 *v9; // [esp+0h] [ebp-20h]
   int v10; // [esp+4h] [ebp-1Ch]
   int v11; // [esp+8h] [ebp-18h]
   unsigned int v12; // [esp+Ch] [ebp-14h]
@@ -3979,7 +3986,7 @@ int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4) //FINAL
   }
   if ( v11 > 0 )
   {
-    v9 = (_BYTE *)(v12 + a2);
+    v9 = (u8 *)(v12 + a2);
     v13 = a4;
     v14 = a1 / 0x140 - tube_scroll_y;
     if ( v14 < 0 )
@@ -4002,7 +4009,7 @@ int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4) //FINAL
       {
         v5 = v11;
         v6 = v9;
-        v7 = (_BYTE *)v10;
+        v7 = (u8 *)v10;
         HIWORD(v8) = 0;
         do
         {
@@ -4010,8 +4017,8 @@ int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4) //FINAL
           BYTE1(v8) = *v6;
           ++v7;
           ++v6;
-//          *(v7 - 1) = *(_BYTE *)(v8 + 2750140); //2750140 29F6BC HARDCODED !!! 0029F6BC tables_start
-            *(v7 - 1) = *(_BYTE *)(v8 + ((int)tables_start));
+//          *(v7 - 1) = *(u8 *)(v8 + 2750140); //2750140 29F6BC HARDCODED !!! 0029F6BC tables_start
+            *(v7 - 1) = *(u8 *)(v8 + ((int)tables_start));
           --v5;
         }
         while ( v5 );
@@ -4024,7 +4031,7 @@ int CPP_fade_zone(unsigned int a1, int a2, int a3, int a4) //FINAL
   return result;
 }
 
-int CPP_new_starfield(__int16 a1, int a2) //FINAL
+int CPP_new_starfield(i16 a1, int a2) //FINAL
 {
   int result; // eax
   char v3; // dl
@@ -4035,7 +4042,7 @@ int CPP_new_starfield(__int16 a1, int a2) //FINAL
   int v8; // [esp+18h] [ebp-Ch]
   int v9; // [esp+1Ch] [ebp-8h]
 
-  v9 = 8 * (unsigned __int8)a1;
+  v9 = 8 * (u8)a1;
   v5 = HIBYTE(a1);
   result = a2;
   v8 = a2;
@@ -4047,7 +4054,7 @@ int CPP_new_starfield(__int16 a1, int a2) //FINAL
     if ( (v6 >= 0) && (v6 < vec_window_width) )
     {
       v4 = scroll_y - ((signed)(costable[v9] * sts[2 * v7 + 1]) >> 10) / (v5 + 57); //тоже signed
-      if ( (v4 >= 0) && (v4 < vec_window_height) && (!*(_BYTE *)(v6 + v4 * vec_screen_width + vec_screen)) )
+      if ( (v4 >= 0) && (v4 < vec_window_height) && (!*(u8 *)(v6 + v4 * vec_screen_width + vec_screen)) )
       {
 
         if ( v5 <= 194 )
@@ -4055,12 +4062,12 @@ int CPP_new_starfield(__int16 a1, int a2) //FINAL
         else
           v3 = byte_29F6DC[256 * ((256 - v5) >> 1) + (v7 & 0x3F)];
 
-        *(_BYTE *)(v6 + v4 * vec_screen_width + vec_screen) = v3;
+        *(u8 *)(v6 + v4 * vec_screen_width + vec_screen) = v3;
       }
     }
-    v7 = (unsigned __int8)(v7 + 1);
-    v9 = ((_WORD)v9 + 111) & 0x7FF;
-    v5 = (unsigned __int8)(v5 + 78);
+    v7 = (u8)(v7 + 1);
+    v9 = ((u16)v9 + 111) & 0x7FF;
+    v5 = (u8)(v5 + 78);
     result = v8--;
   }
   return result;
@@ -4070,26 +4077,26 @@ int CPP_draw_tube(void) //FINAL
 {
   int result; // eax
 
-  if ( (unsigned __int8)no_players <= 1u )
+  if ( (u8)no_players <= 1u )
   {
     CPP_setup_vecs(WScreen, 0, 320, 320, 200);
-    CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+    CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
     CPP_omni_map((int) tunnelmap, tube_graphics, scrollpos[0]);
-    CPP_fade_zone(fade_offset, fade_out, (unsigned __int16)fade_width, (unsigned __int16)fade_height);
+    CPP_fade_zone(fade_offset, fade_out, (u16)fade_width, (u16)fade_height);
     result = CPP_new_starfield(scrollpos[0] + 256, 512);
   }
   else
   {
     CPP_setup_vecs(WScreen, 0, 320, 160, 200);
-    CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+    CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
     CPP_omni_map((int) tunnelmap, tube_graphics, scrollpos[0]);
-    CPP_fade_zone(fade_offset, fade_out, (unsigned __int16)fade_width, (unsigned __int16)fade_height);
+    CPP_fade_zone(fade_offset, fade_out, (u16)fade_width, (u16)fade_height);
     CPP_new_starfield(scrollpos[0], 256);
 
     CPP_setup_vecs(WScreen + 160, 0, 0, 160, 200);
-    CPP_set_scroll((int)(unsigned __int16)word_25679A >> 5);
+    CPP_set_scroll((int)(u16)word_25679A >> 5);
     CPP_omni_map((int) tunnelmap, tube_graphics + 0x10000, word_2567EA[0]);
-    CPP_fade_zone(fade_offset, fade_out, (unsigned __int16)fade_width, (unsigned __int16)fade_height);
+    CPP_fade_zone(fade_offset, fade_out, (u16)fade_width, (u16)fade_height);
     result = CPP_new_starfield(word_2567EA[0], 256);
   }
   return result;
@@ -4097,26 +4104,26 @@ int CPP_draw_tube(void) //FINAL
 
 int CPP_setup_anims(void) //FINAL
 {
-  unsigned __int16 v0; // ax
+  u16 v0; // ax
   int result; // eax
-  __int16 *v2; // [esp+0h] [ebp-Ch]
-  unsigned __int16 v3; // [esp+4h] [ebp-8h]
-  __int16 v4; // [esp+8h] [ebp-4h]
-  unsigned __int16 i; // [esp+8h] [ebp-4h]
+  i16 *v2; // [esp+0h] [ebp-Ch]
+  u16 v3; // [esp+4h] [ebp-8h]
+  i16 v4; // [esp+8h] [ebp-4h]
+  u16 i; // [esp+8h] [ebp-4h]
 
-  v2 = (__int16 *)level;
+  v2 = (i16 *)level;
   v4 = 0;
   v3 = 0;
 
-  while ( (unsigned __int16)v4 < 0x8000u && v3 < 0x3E8u )
+  while ( (u16)v4 < 0x8000u && v3 < 0x3E8u )
   {
-    if ( *(intNA *)((char *) anim_addresses + 6 * (unsigned __int16)*v2) )
+    if ( *(UA<i32> *)((char *) anim_addresses + 6 * (u16)*v2) )
     {
       anim_blks[5 * v3] = *v2;
-      word_22EDAE[5 * v3] = word_2314BC[3 * (unsigned __int16)*v2];
+      word_22EDAE[5 * v3] = word_2314BC[3 * (u16)*v2];
       word_22EDB0[5 * v3] = v4;
       v0 = v3++;
-      *(intNA *)((char *) dword_22EDAA + 10 * v0) = *(intNA *)((char *) anim_addresses + 6 * (unsigned __int16)*v2);
+      *(UA<i32> *)((char *) dword_22EDAA + 10 * v0) = *(UA<i32> *)((char *) anim_addresses + 6 * (u16)*v2);
     }
     ++v4;
     ++v2;
@@ -4127,7 +4134,7 @@ int CPP_setup_anims(void) //FINAL
 
   for ( i = 0; ; ++i )
   {
-    result = 200 * (unsigned __int8)no_players;
+    result = 200 * (u8)no_players;
 
     if ( i >= result )
       break;
@@ -4139,9 +4146,9 @@ int CPP_setup_anims(void) //FINAL
 
 char CPP_setup_tube(void) //FINAL
 {
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
+  u8 i; // [esp+0h] [ebp-4h]
 
-  for ( i = 0; i < (unsigned __int8)no_players; ++i )
+  for ( i = 0; i < (u8)no_players; ++i )
   {
     scrollpos[i] = 0;
     level_line[i] = 28;
@@ -4155,39 +4162,39 @@ char CPP_setup_tube(void) //FINAL
   return CPP_setup_tube_graphics(level + 63744);
 }
 
-unsigned __int8 CPP_setup_ships(void) //FINAL
+u8 CPP_setup_ships(void) //FINAL
 {
-  unsigned __int8 result; // al
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
+  u8 result; // al
+  u8 i; // [esp+0h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
     result = i;
 
-    if ( i >= (unsigned __int8)no_players )
+    if ( i >= (u8)no_players )
       break;
 
     word_25677C[15 * i] = (i + 16) << 11;
-    *((_WORD *) unk_25677E + 15 * i) = 0x2000;
-    *((_WORD *) dword_256780 + 15 * i) = 0;
-    *((_WORD *) dword_256780 + 15 * i + 1) = 0;
-    *((_WORD *) dword_256784 + 15 * i) = 0;
-    *((_BYTE *) dword_256791 + 30 * i) = 6;
-    *((_BYTE *) dword_256791 + 30 * i + 1) = 0;
-    *((_BYTE *) dword_256791 + 30 * i + 2) = 1;
-    *((_BYTE *) dword_256791 + 30 * i + 3) = 0;
+    *((u16 *) unk_25677E + 15 * i) = 0x2000;
+    *((u16 *) dword_256780 + 15 * i) = 0;
+    *((u16 *) dword_256780 + 15 * i + 1) = 0;
+    *((u16 *) dword_256784 + 15 * i) = 0;
+    *((u8 *) dword_256791 + 30 * i) = 6;
+    *((u8 *) dword_256791 + 30 * i + 1) = 0;
+    *((u8 *) dword_256791 + 30 * i + 2) = 1;
+    *((u8 *) dword_256791 + 30 * i + 3) = 0;
     byte_256788[30 * i] = i;
-    *((_BYTE *) dword_25678D + 30 * i + 3) = 32;
-    *((_WORD *) dword_256784 + 15 * i + 1) = 20;
+    *((u8 *) dword_25678D + 30 * i + 3) = 32;
+    *((u16 *) dword_256784 + 15 * i + 1) = 20;
     byte_256795[30 * i] = 0;
-    *((_BYTE *) dword_25678D + 30 * i + 2) = 3;
-    *(intNA *)((char *) players + 30 * i) = 0;
+    *((u8 *) dword_25678D + 30 * i + 2) = 3;
+    *(UA<i32> *)((char *) players + 30 * i) = 0;
     byte_256789[30 * i] = 0;
     byte_25678A[30 * i] = 3;
     byte_25678B[30 * i] = 0;
     byte_25678C[30 * i] = 0;
-    *((_BYTE *) dword_25678D + 30 * i) = 0;
-    *((_BYTE *) dword_25678D + 30 * i + 1) = 0;
+    *((u8 *) dword_25678D + 30 * i) = 0;
+    *((u8 *) dword_25678D + 30 * i + 1) = 0;
   }
   return result;
 }
@@ -4195,11 +4202,11 @@ unsigned __int8 CPP_setup_ships(void) //FINAL
 int CPP_setup_bullets(void) //FINAL
 {
   int result; // eax
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
+  u8 i; // [esp+0h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
-    result = 34 * (unsigned __int8)no_players;
+    result = 34 * (u8)no_players;
 
     if ( i >= result )
       break;
@@ -4212,11 +4219,11 @@ int CPP_setup_bullets(void) //FINAL
 int CPP_setup_aliens(void) //FINAL
 {
   int result; // eax
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
+  u8 i; // [esp+0h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
-    result = 60 * (unsigned __int8)no_players;
+    result = 60 * (u8)no_players;
 
     if ( i >= result )
       break;
@@ -4233,21 +4240,21 @@ int CPP_do_tube(void) //FINAL
 
   int result; // eax
   signed char v3; // [esp+4h] [ebp-2Ch]         добавил signed
-  unsigned __int8 v4; // [esp+8h] [ebp-28h]
-  unsigned __int8 v5; // [esp+Ch] [ebp-24h]
+  u8 v4; // [esp+8h] [ebp-28h]
+  u8 v5; // [esp+Ch] [ebp-24h]
   _BOOL1 v6; // [esp+10h] [ebp-20h]
-  unsigned __int8 v7; // [esp+1Ch] [ebp-14h]
-  unsigned __int8 v8; // [esp+20h] [ebp-10h]
+  u8 v7; // [esp+1Ch] [ebp-14h]
+  u8 v8; // [esp+20h] [ebp-10h]
   _BOOL1 v9; // [esp+24h] [ebp-Ch]
-  unsigned __int8 i; // [esp+28h] [ebp-8h]
+  u8 i; // [esp+28h] [ebp-8h]
   char v11; // [esp+2Ch] [ebp-4h]
 
   v11 = 0;
   if ( !race_finished )
   {
-    for ( i = 0; i < (unsigned __int8)no_players; ++i )
+    for ( i = 0; i < (u8)no_players; ++i )
     {
-      if ( (*(intNA *)&byte_21F942[2 * i] >> 16) >= -16 )
+      if ( (*(UA<i32> *)&byte_21F942[2 * i] >> 16) >= -16 )
       {
         if ( vx[i] > 16 )
           vx[i] = 16;
@@ -4256,7 +4263,7 @@ int CPP_do_tube(void) //FINAL
       {
         vx[i] = -16;
       }
-      if ( *(intNA *)&byte_21F946[2 * i] >> 16 >= -16 )
+      if ( *(UA<i32> *)&byte_21F946[2 * i] >> 16 >= -16 )
       {
         if ( vy[i] > 16 )
           vy[i] = 16;
@@ -4351,7 +4358,7 @@ int CPP_do_tube(void) //FINAL
   if ( (int)abs(turn - dword_256B60) > 63 && race_finished )
   {
     CPP_FadePalette256(0, 0x18u, 0);
-    if ( !bonus_game && (result = (unsigned __int8)level_no + 1, level_no == 2) )
+    if ( !bonus_game && (result = (u8)level_no + 1, level_no == 2) )
     {
       game_mode = 4;
       fading = 1;
@@ -4396,20 +4403,20 @@ int CPP_do_tube(void) //FINAL
   return result;
 }
 
-int CPP_add_extra_life(unsigned __int8 a3) //FINAL
+int CPP_add_extra_life(u8 a3) //FINAL
 {
   int result; // eax
-  __int64 v4; // [esp-1Ch] [ebp-1Ch]
+//  i64 v4; // [esp-1Ch] [ebp-1Ch]
 
   if ( no_lives[a3] == 5 )
   {
     result = 30 * a3;
-    *(_WORDNA *)((char *) dword_256784 + result + 2) = 20;
+    *(UA<u16> *)((char *) dword_256784 + result + 2) = 20;
   }
   else
   {
-    HIDWORD(v4) = 10;
-    LODWORD(v4) = a3;
+//    HIDWORD(v4) = 10;
+//    LODWORD(v4) = a3;
 
 //  MY_PlaySample(a1, a2, v4, 0x7FFFu, 0x8000u, 100i64, 3u);
     MY_PlaySample(/*a1, a2, v4,*/ a3 ,0xA, 0x7FFF, 0x8000, 0x64, 0, 3);
@@ -4420,7 +4427,7 @@ int CPP_add_extra_life(unsigned __int8 a3) //FINAL
   return result;
 }
 
-int CPP_power_up(unsigned __int8 a3) //FINAL
+int CPP_power_up(u8 a3) //FINAL
 {
   int result; // eax
 
@@ -4434,7 +4441,7 @@ int CPP_power_up(unsigned __int8 a3) //FINAL
     case 12:
     case 13:
       result = 30 * a3;
-      *((_BYTE *) dword_25678D + result + 2) += 3;
+      *((u8 *) dword_25678D + result + 2) += 3;
       break;
     case 4:
     case 5:
@@ -4445,13 +4452,13 @@ int CPP_power_up(unsigned __int8 a3) //FINAL
       break;
     case 6:
     case 11:
-      ++*((_BYTE *) dword_25678D + 30 * a3);
-      *((_BYTE *) dword_25678D + 30 * a3 + 2) -= 6;
+      ++*((u8 *) dword_25678D + 30 * a3);
+      *((u8 *) dword_25678D + 30 * a3 + 2) -= 6;
       result = 30 * a3;
       byte_25678B[result] -= 4;
       break;
     case 14:
-      *((_BYTE *) dword_25678D + 30 * a3 + 2) -= 6;
+      *((u8 *) dword_25678D + 30 * a3 + 2) -= 6;
       result = 30 * a3;
       ++byte_25678C[result];
       break;
@@ -4462,15 +4469,15 @@ int CPP_power_up(unsigned __int8 a3) //FINAL
     case 16:
       byte_25678C[30 * a3] -= 2;
       result = 30 * a3;
-      ++*((_BYTE *) dword_25678D + result + 1);
+      ++*((u8 *) dword_25678D + result + 1);
       break;
     case 17:
       result = 30 * a3;
-      ++*((_BYTE *) dword_25678D + result + 1);
+      ++*((u8 *) dword_25678D + result + 1);
       break;
     case 18:
       result = 30 * a3;
-      ++*((_BYTE *) dword_25678D + result);
+      ++*((u8 *) dword_25678D + result);
       break;
     default:
       byte_256789[30 * a3] = 19;
@@ -4480,14 +4487,14 @@ int CPP_power_up(unsigned __int8 a3) //FINAL
   return result;
 }
 
-char CPP_check_point_with_players(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3, unsigned __int16 a4, unsigned __int16 a5, unsigned __int16 a6, unsigned __int16 a7) //FINAL
+char CPP_check_point_with_players(u8 a1, u16 a2, u16 a3, u16 a4, u16 a5, u16 a6, u16 a7) //FINAL
 {
-  unsigned __int16 v8; // [esp+0h] [ebp-Ch]
+  u16 v8; // [esp+0h] [ebp-Ch]
   char v9; // [esp+8h] [ebp-4h]
 
   v9 = 0;
   v8 = word_25677C[15 * a1];
-  if ( (unsigned __int16)(a5 + a2) < (unsigned __int16)(a2 - a5) )
+  if ( (u16)(a5 + a2) < (u16)(a2 - a5) )
   {
     a2 += 0x8000;
     v8 = word_25677C[15 * a1] + 0x8000;
@@ -4495,43 +4502,43 @@ char CPP_check_point_with_players(unsigned __int8 a1, unsigned __int16 a2, unsig
   if ( (v8 + 1024 >= a2 - a5 && v8 + 1024 <= a5 + a2
      || v8 - 1024 >= a2 - a5 && v8 - 1024 <= a5 + a2
      || v8 >= a2 - a5 && v8 <= a2 + a5)
-    && (*((unsigned __int16 *) unk_25677E + 15 * a1) + 1792 >= a3 - a6
-     && *((unsigned __int16 *) unk_25677E + 15 * a1) + 1792 <= a3 + a6
-     || *((unsigned __int16 *) unk_25677E + 15 * a1) - 1792 >= a3 - a6
-     && *((unsigned __int16 *) unk_25677E + 15 * a1) - 1792 <= a3 + a6
-     || *((unsigned __int16 *) unk_25677E + 15 * a1) >= a3 - a6
-     && *((unsigned __int16 *) unk_25677E + 15 * a1) <= a3 + a6)
-    && (*((unsigned __int16 *) dword_256780 + 15 * a1) + 1536 >= a4
-     && *((unsigned __int16 *) dword_256780 + 15 * a1) + 1536 <= a4 + a7
-     || *((_WORD *) dword_256780 + 15 * a1) >= a4 && *((unsigned __int16 *) dword_256780 + 15 * a1) <= a4 + a7
-     || *((unsigned __int16 *) dword_256780 + 15 * a1) + 768 >= a4
-     && *((unsigned __int16 *) dword_256780 + 15 * a1) + 768 <= a4 + a7) )
+    && (*((u16 *) unk_25677E + 15 * a1) + 1792 >= a3 - a6
+     && *((u16 *) unk_25677E + 15 * a1) + 1792 <= a3 + a6
+     || *((u16 *) unk_25677E + 15 * a1) - 1792 >= a3 - a6
+     && *((u16 *) unk_25677E + 15 * a1) - 1792 <= a3 + a6
+     || *((u16 *) unk_25677E + 15 * a1) >= a3 - a6
+     && *((u16 *) unk_25677E + 15 * a1) <= a3 + a6)
+    && (*((u16 *) dword_256780 + 15 * a1) + 1536 >= a4
+     && *((u16 *) dword_256780 + 15 * a1) + 1536 <= a4 + a7
+     || *((u16 *) dword_256780 + 15 * a1) >= a4 && *((u16 *) dword_256780 + 15 * a1) <= a4 + a7
+     || *((u16 *) dword_256780 + 15 * a1) + 768 >= a4
+     && *((u16 *) dword_256780 + 15 * a1) + 768 <= a4 + a7) )
   {
     v9 = 1;
   }
   return v9;
 }
 
-int CPP_lose_life(unsigned __int8 a3) //FINAL
+int CPP_lose_life(u8 a3) //FINAL
 {
   int result; // eax
 
   CPP_do_death_sound(/*a1, a2,*/ a3, 1);
 
   --no_lives[a3];
-  if ( *(intNA *)&unk_256B3D[a3] >> 24 >= 1 - (unsigned __int8)no_players )
+  if ( *(UA<i32> *)&unk_256B3D[a3] >> 24 >= 1 - (u8)no_players )
   {
-    *((_BYTE *) dword_256791 + 30 * a3 + 1) = 0;
-    *((_BYTE *) dword_256791 + 30 * a3 + 2) = 0;
+    *((u8 *) dword_256791 + 30 * a3 + 1) = 0;
+    *((u8 *) dword_256791 + 30 * a3 + 2) = 0;
     byte_256788[30 * a3] = a3;
-    *((_WORD *) dword_256784 + 15 * a3 + 1) = 20;
+    *((u16 *) dword_256784 + 15 * a3 + 1) = 20;
     result = a3;
     flicker[a3] = 127;
   }
   else
   {
-    *((_BYTE *) dword_256791 + 30 * a3 + 1) = 0;
-    *((_BYTE *) dword_256791 + 30 * a3 + 2) = 0;
+    *((u8 *) dword_256791 + 30 * a3 + 1) = 0;
+    *((u8 *) dword_256791 + 30 * a3 + 2) = 0;
     result = a3;
     game_over_flag[a3] = 1;
     if ( level_no != 3 )
@@ -4545,20 +4552,20 @@ int CPP_lose_life(unsigned __int8 a3) //FINAL
   return result;
 }
 
-char CPP_check_alien_to_players(unsigned __int8 a3, int a4) //FINAL
+char CPP_check_alien_to_players(u8 a3, int a4) //FINAL
 {
   char result; // al
-  __int64 v5; // [esp-1Ch] [ebp-34h]
-  __int64 v6; // [esp-1Ch] [ebp-34h]
-  __int64 v7; // [esp-1Ch] [ebp-34h]
-  __int64 v8; // [esp-1Ch] [ebp-34h]
-  __int64 v9; // [esp-1Ch] [ebp-34h]
-  unsigned __int8 v10; // [esp+8h] [ebp-10h]
-  unsigned __int16 v11; // [esp+Ch] [ebp-Ch]
-  unsigned __int16 v12; // [esp+10h] [ebp-8h]
-  unsigned __int16 v13; // [esp+14h] [ebp-4h]
+//  i64 v5; // [esp-1Ch] [ebp-34h]
+//  i64 v6; // [esp-1Ch] [ebp-34h]
+//  i64 v7; // [esp-1Ch] [ebp-34h]
+//  i64 v8; // [esp-1Ch] [ebp-34h]
+//  i64 v9; // [esp-1Ch] [ebp-34h]
+  u8 v10; // [esp+8h] [ebp-10h]
+  u16 v11; // [esp+Ch] [ebp-Ch]
+  u16 v12; // [esp+10h] [ebp-8h]
+  u16 v13; // [esp+14h] [ebp-4h]
 
-  v10 = *(_BYTE *)(a4 + 16);
+  v10 = *(u8 *)(a4 + 16);
   if ( v10 < 0xFu )
   {
     if ( v10 >= 8u )
@@ -4577,9 +4584,9 @@ char CPP_check_alien_to_players(unsigned __int8 a3, int a4) //FINAL
           {
             result = CPP_check_point_with_players(
                        a3,
-                       *(_WORDNA *)(a4 + 4),
-                       *(_WORDNA *)(a4 + 6),
-                       *(_WORDNA *)(a4 + 8),
+                       *(UA<u16> *)(a4 + 4),
+                       *(UA<u16> *)(a4 + 6),
+                       *(UA<u16> *)(a4 + 8),
                        0x300u,
                        0x300u,
                        0x600u);
@@ -4596,9 +4603,9 @@ char CPP_check_alien_to_players(unsigned __int8 a3, int a4) //FINAL
     {
       result = CPP_check_point_with_players(
                  a3,
-                 *(_WORDNA *)(a4 + 4),
-                 *(_WORDNA *)(a4 + 6),
-                 *(_WORDNA *)(a4 + 8),
+                 *(UA<u16> *)(a4 + 4),
+                 *(UA<u16> *)(a4 + 6),
+                 *(UA<u16> *)(a4 + 8),
                  0x700u,
                  0x700u,
                  0x800u);
@@ -4616,9 +4623,9 @@ char CPP_check_alien_to_players(unsigned __int8 a3, int a4) //FINAL
       {
         result = CPP_check_point_with_players(
                    a3,
-                   *(_WORDNA *)(a4 + 4),
-                   *(_WORDNA *)(a4 + 6),
-                   *(_WORDNA *)(a4 + 8),
+                   *(UA<u16> *)(a4 + 4),
+                   *(UA<u16> *)(a4 + 6),
+                   *(UA<u16> *)(a4 + 8),
                    0x700u,
                    0x800u,
                    0x800u);
@@ -4633,9 +4640,9 @@ char CPP_check_alien_to_players(unsigned __int8 a3, int a4) //FINAL
 LABEL_25:
     result = CPP_check_point_with_players(
                a3,
-               *(_WORDNA *)(a4 + 4),
-               *(_WORDNA *)(a4 + 6),
-               *(_WORDNA *)(a4 + 8),
+               *(UA<u16> *)(a4 + 4),
+               *(UA<u16> *)(a4 + 6),
+               *(UA<u16> *)(a4 + 8),
                0x500u,
                0x500u,
                0xC00u);
@@ -4648,9 +4655,9 @@ LABEL_25:
 LABEL_27:
     result = CPP_check_point_with_players(
                a3,
-               *(_WORDNA *)(a4 + 4),
-               *(_WORDNA *)(a4 + 6),
-               *(_WORDNA *)(a4 + 8),
+               *(UA<u16> *)(a4 + 4),
+               *(UA<u16> *)(a4 + 6),
+               *(UA<u16> *)(a4 + 8),
                0x800u,
                0xA00u,
                0x800u);
@@ -4659,32 +4666,32 @@ LABEL_27:
   if ( v10 == 49 )
     goto LABEL_25;
 LABEL_30:
-  result = CPP_check_point_with_players(a3, *(_WORDNA *)(a4 + 4), *(_WORDNA *)(a4 + 6), *(_WORDNA *)(a4 + 8), v11, v12, v13);
+  result = CPP_check_point_with_players(a3, *(UA<u16> *)(a4 + 4), *(UA<u16> *)(a4 + 6), *(UA<u16> *)(a4 + 8), v11, v12, v13);
 LABEL_31:
   if ( result )
   {
-    if ( *(_BYTE *)(a4 + 16) == 21 )
+    if ( *(u8 *)(a4 + 16) == 21 )
     {
-      HIDWORD(v5) = 3;
-      LODWORD(v5) = a3;
+//      HIDWORD(v5) = 3;
+//      LODWORD(v5) = a3;
 
-//    MY_PlaySample(a1, a2, v5, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*a1, a2, v5,*/ a3, 3, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//    MY_PlaySample(a1, a2, v5, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*a1, a2, v5,*/ a3, 3, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-      *(_BYTE *)(a4 + 16) = 0;
+      *(u8 *)(a4 + 16) = 0;
       result = CPP_power_up(/*a1, a2,*/ a3);
     }
-    else if ( *(_BYTE *)(a4 + 16) == 49 )
+    else if ( *(u8 *)(a4 + 16) == 49 )
     {
-      HIDWORD(v6) = 3;
-      LODWORD(v6) = a3;
+//      HIDWORD(v6) = 3;
+//      LODWORD(v6) = a3;
 
-//    MY_PlaySample(a1, a2, v6, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*a1, a2, v6,*/ a3, 3, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//    MY_PlaySample(a1, a2, v6, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*a1, a2, v6,*/ a3, 3, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-      *(_BYTE *)(a4 + 16) = 0;
+      *(u8 *)(a4 + 16) = 0;
       result = 30 * a3;
-      if ( (unsigned __int8)byte_25678A[30 * a3] <= 4u )
+      if ( (u8)byte_25678A[30 * a3] <= 4u )
       {
         result = 30 * a3;
         ++byte_25678A[30 * a3];
@@ -4692,95 +4699,95 @@ LABEL_31:
     }
     else
     {
-      if ( !*(intNA *)((char *) players + 30 * a3) )
+      if ( !*(UA<i32> *)((char *) players + 30 * a3) )
       {
-        *((_WORD *) dword_256784 + 15 * a3 + 1) -= *(_WORDNA *)(a4 + 14);
-        if ( *((__int16 *) dword_256784 + 15 * a3 + 1) < 0 )
+        *((u16 *) dword_256784 + 15 * a3 + 1) -= *(UA<u16> *)(a4 + 14);
+        if ( *((i16 *) dword_256784 + 15 * a3 + 1) < 0 )
           CPP_lose_life(/*a1, a2,*/ a3);
       }
-      if ( *(_BYTE *)(a4 + 16) == 6 )
+      if ( *(u8 *)(a4 + 16) == 6 )
       {
-        HIDWORD(v7) = 15;
-        LODWORD(v7) = a3;
+//        HIDWORD(v7) = 15;
+//        LODWORD(v7) = a3;
 
-//      MY_PlaySample(a1, a2, v7, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*a1, a2, v7,*/ a3, 0xF , 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//      MY_PlaySample(a1, a2, v7, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*a1, a2, v7,*/ a3, 0xF , 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-        *(_WORDNA *)(a4 + 12) = 0;
-        *(_BYTE *)(a4 + 16) = 21;
-        *(_BYTE *)(a4 + 24) = 0;
+        *(UA<u16> *)(a4 + 12) = 0;
+        *(u8 *)(a4 + 16) = 21;
+        *(u8 *)(a4 + 24) = 0;
         result = a4;
-        *(_WORDNA *)(a4 + 14) = 127;
+        *(UA<u16> *)(a4 + 14) = 127;
       }
-      else if ( *(_BYTE *)(a4 + 16) == 11 )
+      else if ( *(u8 *)(a4 + 16) == 11 )
       {
-        HIDWORD(v8) = 7;
-        LODWORD(v8) = a3;
+//        HIDWORD(v8) = 7;
+//        LODWORD(v8) = a3;
 
-//      MY_PlaySample(a1, a2, v8, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*a1, a2, v8,*/ a3 ,7 ,0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//      MY_PlaySample(a1, a2, v8, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*a1, a2, v8,*/ a3 ,7 ,0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-        *(_BYTE *)(a4 + 16) = 41;
-        *(_WORDNA *)(a4 + 10) = 0;
+        *(u8 *)(a4 + 16) = 41;
+        *(UA<u16> *)(a4 + 10) = 0;
         result = a4;
-        *(_WORDNA *)(a4 + 12) = 0;
+        *(UA<u16> *)(a4 + 12) = 0;
       }
       else
       {
-        HIDWORD(v9) = 6;
-        LODWORD(v9) = a3;
+//        HIDWORD(v9) = 6;
+//        LODWORD(v9) = a3;
 
-//      MY_PlaySample(a1, a2, v9, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*a1, a2, v9,*/ a3 ,6 ,0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//      MY_PlaySample(a1, a2, v9, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*a1, a2, v9,*/ a3 ,6 ,0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-        *(_BYTE *)(a4 + 16) = 25;
-        *(_WORDNA *)(a4 + 12) = 0;
+        *(u8 *)(a4 + 16) = 25;
+        *(UA<u16> *)(a4 + 12) = 0;
         result = a4;
-        *(_WORDNA *)(a4 + 10) = 0;
+        *(UA<u16> *)(a4 + 10) = 0;
       }
     }
   }
   return result;
 }
 
-char CPP_insert_effect(unsigned __int16 a1, unsigned __int16 a2, __int16 a3) //FINAL
+char CPP_insert_effect(u16 a1, u16 a2, i16 a3) //FINAL
 {
   int v3; // eax
-  unsigned __int8 j; // [esp+40h] [ebp-2Ch]
+  u8 j; // [esp+40h] [ebp-2Ch]
   char v6; // [esp+64h] [ebp-8h]
-  unsigned __int8 i; // [esp+68h] [ebp-4h]
+  u8 i; // [esp+68h] [ebp-4h]
 
   v6 = 0;
   for ( i = 0; ; ++i )
   {
     v3 = effect_list + 6 * i;
-    if ( !*(_WORDNA *)(v3 + 4) || i >= 0x64u || v6 )
+    if ( !*(UA<u16> *)(v3 + 4) || i >= 0x64u || v6 )
       break;
-    if ( *(_WORDNA *)(effect_list + 6 * i) <= a2 && *(_WORDNA *)(effect_list + 6 * i + 2) <= a1 )
+    if ( *(UA<u16> *)(effect_list + 6 * i) <= a2 && *(UA<u16> *)(effect_list + 6 * i + 2) <= a1 )
     {
       v6 = 1;
-      if ( *(_WORDNA *)(effect_list + 6 * i) == a2 && *(_WORDNA *)(effect_list + 6 * i + 2) == a1 )
+      if ( *(UA<u16> *)(effect_list + 6 * i) == a2 && *(UA<u16> *)(effect_list + 6 * i + 2) == a1 )
       {
-        *(_WORDNA *)(6 * i + effect_list + 2) = a1;
-        *(_WORDNA *)(6 * i + effect_list) = a2;
-        *(_WORDNA *)(6 * i + effect_list + 4) = a3;
+        *(UA<u16> *)(6 * i + effect_list + 2) = a1;
+        *(UA<u16> *)(6 * i + effect_list) = a2;
+        *(UA<u16> *)(6 * i + effect_list + 4) = a3;
       }
       else
       {
-        for ( j = i; *(_WORDNA *)(effect_list + 6 * j + 4) && j < 0x64u; ++j )
+        for ( j = i; *(UA<u16> *)(effect_list + 6 * j + 4) && j < 0x64u; ++j )
           ;
         if ( j != 100 )
         {
           while ( j > i )
           {
-            *(_WORDNA *)(6 * j + effect_list + 2) = *(_WORDNA *)(effect_list + 6 * (j - 1) + 2);
-            *(_WORDNA *)(6 * j + effect_list) = *(_WORDNA *)(effect_list + 6 * (j - 1));
-            *(_WORDNA *)(6 * j + effect_list + 4) = *(_WORDNA *)(effect_list + 6 * (j - 1) + 4);
+            *(UA<u16> *)(6 * j + effect_list + 2) = *(UA<u16> *)(effect_list + 6 * (j - 1) + 2);
+            *(UA<u16> *)(6 * j + effect_list) = *(UA<u16> *)(effect_list + 6 * (j - 1));
+            *(UA<u16> *)(6 * j + effect_list + 4) = *(UA<u16> *)(effect_list + 6 * (j - 1) + 4);
             --j;
           }
-          *(_WORDNA *)(6 * i + effect_list + 2) = a1;
-          *(_WORDNA *)(6 * i + effect_list) = a2;
-          *(_WORDNA *)(6 * i + effect_list + 4) = a3;
+          *(UA<u16> *)(6 * i + effect_list + 2) = a1;
+          *(UA<u16> *)(6 * i + effect_list) = a2;
+          *(UA<u16> *)(6 * i + effect_list + 4) = a3;
         }
       }
     }
@@ -4790,23 +4797,23 @@ char CPP_insert_effect(unsigned __int16 a1, unsigned __int16 a2, __int16 a3) //F
     LOBYTE(v3) = i;
     if ( i != 100 )
     {
-      *(_WORDNA *)(6 * i + effect_list + 2) = a1;
-      *(_WORDNA *)(6 * i + effect_list) = a2;
+      *(UA<u16> *)(6 * i + effect_list + 2) = a1;
+      *(UA<u16> *)(6 * i + effect_list) = a2;
       LOBYTE(v3) = a3;
-      *(_WORDNA *)(6 * i + effect_list + 4) = a3;
+      *(UA<u16> *)(6 * i + effect_list + 4) = a3;
     }
   }
   return v3;
 }
 
-unsigned __int8 CPP_do_aliens(void)
+u8 CPP_do_aliens(void)
 {
-  unsigned __int8 result; // al
+  u8 result; // al
   char v3; // dl
   int v4; // eax
   int v5; // eax
   int v6; // edx
-  __int16 v7; // dx
+  i16 v7; // dx
   int v8; // ebx
   int v9; // ebx
   char v10; // dl
@@ -4852,105 +4859,105 @@ unsigned __int8 CPP_do_aliens(void)
   int v50; // eax
   int v51; // eax
   int v52; // edx
-  __int64 v53; // [esp-1Ch] [ebp-344h]
+//  i64 v53; // [esp-1Ch] [ebp-344h]
   signed int v54; // [esp+28h] [ebp-300h]
   int v55; // [esp+2Ch] [ebp-2FCh]
-  unsigned __int16 v56; // [esp+30h] [ebp-2F8h]
+  u16 v56; // [esp+30h] [ebp-2F8h]
   int v57; // [esp+74h] [ebp-2B4h]
-  unsigned __int16 v58; // [esp+94h] [ebp-294h]
+  u16 v58; // [esp+94h] [ebp-294h]
   signed int v59; // [esp+98h] [ebp-290h]
   int v60; // [esp+9Ch] [ebp-28Ch]
-  unsigned __int16 v61; // [esp+A0h] [ebp-288h]
+  u16 v61; // [esp+A0h] [ebp-288h]
   int v62; // [esp+E4h] [ebp-244h]
-  unsigned __int16 v63; // [esp+104h] [ebp-224h]
+  u16 v63; // [esp+104h] [ebp-224h]
   int v64; // [esp+134h] [ebp-1F4h]
-  unsigned __int16 v65; // [esp+154h] [ebp-1D4h]
+  u16 v65; // [esp+154h] [ebp-1D4h]
   signed int v66; // [esp+158h] [ebp-1D0h]
   int v67; // [esp+15Ch] [ebp-1CCh]
   int v68; // [esp+160h] [ebp-1C8h]
   int v69; // [esp+1A4h] [ebp-184h]
-  unsigned __int16 v70; // [esp+1C4h] [ebp-164h]
+  u16 v70; // [esp+1C4h] [ebp-164h]
   signed int v71; // [esp+240h] [ebp-E8h]
   int v72; // [esp+244h] [ebp-E4h]
-  unsigned __int16 v73; // [esp+248h] [ebp-E0h]
+  u16 v73; // [esp+248h] [ebp-E0h]
   int v74; // [esp+28Ch] [ebp-9Ch]
-  unsigned __int16 v75; // [esp+2ACh] [ebp-7Ch]
+  u16 v75; // [esp+2ACh] [ebp-7Ch]
   int v76; // [esp+2DCh] [ebp-4Ch]
-  unsigned __int16 v77; // [esp+2FCh] [ebp-2Ch]
-  intNA *v78; // [esp+304h] [ebp-24h]
-  unsigned __int16 v79; // [esp+308h] [ebp-20h]
-  unsigned __int16 v80; // [esp+308h] [ebp-20h]
-  unsigned __int16 v81; // [esp+308h] [ebp-20h]
-  unsigned __int16 v82; // [esp+308h] [ebp-20h]
-  unsigned __int16 v83; // [esp+308h] [ebp-20h]
-  unsigned __int16 v84; // [esp+30Ch] [ebp-1Ch]
-  unsigned __int16 v85; // [esp+30Ch] [ebp-1Ch]
-  unsigned __int16 v86; // [esp+30Ch] [ebp-1Ch]
-  unsigned __int16 v87; // [esp+30Ch] [ebp-1Ch]
-  unsigned __int16 v88; // [esp+314h] [ebp-14h]
-  unsigned __int16 v89; // [esp+314h] [ebp-14h]
-  unsigned __int16 v90; // [esp+314h] [ebp-14h]
-  unsigned __int16 v91; // [esp+314h] [ebp-14h]
-  unsigned __int16 v92; // [esp+314h] [ebp-14h]
-  unsigned __int16 v93; // [esp+314h] [ebp-14h]
-  unsigned __int16 v94; // [esp+314h] [ebp-14h]
-  unsigned __int16 v95; // [esp+314h] [ebp-14h]
-  unsigned __int16 v96; // [esp+314h] [ebp-14h]
-  unsigned __int16 v97; // [esp+314h] [ebp-14h]
-  unsigned __int16 v98; // [esp+31Ch] [ebp-Ch]
-  unsigned __int16 v99; // [esp+31Ch] [ebp-Ch]
-  unsigned __int16 v100; // [esp+31Ch] [ebp-Ch]
-  unsigned __int16 v101; // [esp+31Ch] [ebp-Ch]
-  unsigned __int16 v102; // [esp+31Ch] [ebp-Ch]
-  unsigned __int16 v103; // [esp+31Ch] [ebp-Ch]
-  unsigned __int8 j; // [esp+320h] [ebp-8h]
-  unsigned __int8 i; // [esp+324h] [ebp-4h]
+  u16 v77; // [esp+2FCh] [ebp-2Ch]
+  UA<i32> *v78; // [esp+304h] [ebp-24h]
+  u16 v79; // [esp+308h] [ebp-20h]
+  u16 v80; // [esp+308h] [ebp-20h]
+  u16 v81; // [esp+308h] [ebp-20h]
+  u16 v82; // [esp+308h] [ebp-20h]
+  u16 v83; // [esp+308h] [ebp-20h]
+  u16 v84; // [esp+30Ch] [ebp-1Ch]
+  u16 v85; // [esp+30Ch] [ebp-1Ch]
+  u16 v86; // [esp+30Ch] [ebp-1Ch]
+  u16 v87; // [esp+30Ch] [ebp-1Ch]
+  u16 v88; // [esp+314h] [ebp-14h]
+  u16 v89; // [esp+314h] [ebp-14h]
+  u16 v90; // [esp+314h] [ebp-14h]
+  u16 v91; // [esp+314h] [ebp-14h]
+  u16 v92; // [esp+314h] [ebp-14h]
+  u16 v93; // [esp+314h] [ebp-14h]
+  u16 v94; // [esp+314h] [ebp-14h]
+  u16 v95; // [esp+314h] [ebp-14h]
+  u16 v96; // [esp+314h] [ebp-14h]
+  u16 v97; // [esp+314h] [ebp-14h]
+  u16 v98; // [esp+31Ch] [ebp-Ch]
+  u16 v99; // [esp+31Ch] [ebp-Ch]
+  u16 v100; // [esp+31Ch] [ebp-Ch]
+  u16 v101; // [esp+31Ch] [ebp-Ch]
+  u16 v102; // [esp+31Ch] [ebp-Ch]
+  u16 v103; // [esp+31Ch] [ebp-Ch]
+  u8 j; // [esp+320h] [ebp-8h]
+  u8 i; // [esp+324h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
     result = i;
-    if ( i >= (unsigned __int8)no_players )
+    if ( i >= (u8)no_players )
       break;
-    v78 = &aliens[450 * i];
+    v78 = (UA<i32>*)&aliens[450 * i];
     for ( j = 0; j < 0x3Cu; ++j )
     {
-      switch ( *((_BYTE *)v78 + 16) )
+      switch ( *((u8 *)v78 + 16) )
       {
         case 6:
-          v17 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v17 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v90 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v17 - (__CFSHL__(v17 >> 31, 3) + 8 * (v17 >> 31))) >> 3))
               % 32;
-          v18 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v18 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v19 = (((v18 - (__CFSHL__(v18 >> 31, 3) + 8 * (v18 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v19 = (((v18 - (__CFSHL__(v18 >> 31, 3) + 8 * (v18 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v19 = (((v18 - (__CFSHL__(v18 >> 31, 3) + 8 * (v18 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) += (u16)vy[i] << 8; //shft fix
-          *((_WORD *)v78 + 5) += 36;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) += (u16)vy[i] << 8; //shft fix
+          *((u16 *)v78 + 5) += 36;
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
             goto LABEL_301;
 
           CPP_insert_effect(v90, 1023 - v19, 36);
 
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 7:
-          v98 = *((_WORD *) unk_25677E + 15 * i);
-          if ( v98 >= *((_WORD *)v78 + 3) )
-            v3 = -*((_BYTE *)v78 + 24);
+          v98 = *((u16 *) unk_25677E + 15 * i);
+          if ( v98 >= *((u16 *)v78 + 3) )
+            v3 = -*((u8 *)v78 + 24);
           else
-            v3 = *((_BYTE *)v78 + 24);
-          *((_BYTE *)v78 + 27) = v3;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          v77 = *((_WORD *)v78 + 2);
+            v3 = *((u8 *)v78 + 24);
+          *((u8 *)v78 + 27) = v3;
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          v77 = *((u16 *)v78 + 2);
           v76 = v77;
           if ( v77 >= 0x7800u )
           {
@@ -4961,59 +4968,59 @@ unsigned __int8 CPP_do_aliens(void)
           {
             v76 = v77 - 0x10000;
           }
-          v84 = CPP_arctan(v76 - v77, *((unsigned __int16 *)v78 + 3) - v98);
-          v4 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v84 = CPP_arctan(v76 - v77, *((u16 *)v78 + 3) - v98);
+          v4 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v88 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3)) % 32;
-          v5 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v5 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v6 = (((v5 - (__CFSHL__(v5 >> 31, 3) + 8 * (v5 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i] + 994)
+            v6 = (((v5 - (__CFSHL__(v5 >> 31, 3) + 8 * (v5 >> 31))) >> 3) - 4 + (u16)level_line[i] + 994)
                % 1024;
           else
-            v6 = (((v5 - (__CFSHL__(v5 >> 31, 3) + 8 * (v5 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i] + 1027)
+            v6 = (((v5 - (__CFSHL__(v5 >> 31, 3) + 8 * (v5 >> 31))) >> 3) - 4 + (u16)level_line[i] + 1027)
                % 1024;
           v99 = 1023 - v6;
           v7 = -256 * vy[i];
           if ( v78[2] >> 16 == v84 )
             v7 = ( *((char *)v78 + 27) SHL6) - (vy[i] SHL8); //shift fix
-          *((_WORD *)v78 + 3) -= v7;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 3) -= v7;
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
             v8 = abs((v78[2] >> 16) - v84);
             if ( v8 <= abs((v78[2] >> 16) - v84 + 2024) )
             {
               v9 = abs((v78[2] >> 16) - v84);
               if ( v9 > abs((v78[2] >> 16) - v84 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v84 )
             {
               if ( v78[2] >> 16 > v84 )
               {
-                *((_WORD *)v78 + 5) -= 36;
+                *((u16 *)v78 + 5) -= 36;
                 if ( v78[2] >> 16 < v84 )
-                  *((_WORD *)v78 + 5) = v84;
+                  *((u16 *)v78 + 5) = v84;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 36;
+              *((u16 *)v78 + 5) += 36;
               if ( v78[2] >> 16 > v84 )
-                *((_WORD *)v78 + 5) = v84;
+                *((u16 *)v78 + 5) = v84;
             }
             goto LABEL_157;
           }
           CPP_insert_effect(v88, v99, 34);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 8:
           v93 = word_25677C[15 * i];
-          v101 = *((_WORD *) unk_25677E + 15 * i);
-          v70 = *((_WORD *)v78 + 2);
+          v101 = *((u16 *) unk_25677E + 15 * i);
+          v70 = *((u16 *)v78 + 2);
           v69 = v93;
           if ( v70 >= 0x7800u )
           {
@@ -5024,34 +5031,34 @@ unsigned __int8 CPP_do_aliens(void)
           {
             v69 = v93 - 0x10000;
           }
-          v86 = CPP_arctan(v69 - v70, *((unsigned __int16 *)v78 + 3) - v101);
-          if ( v101 >= *((_WORD *)v78 + 3) )
-            v26 = -*((_BYTE *)v78 + 24);
+          v86 = CPP_arctan(v69 - v70, *((u16 *)v78 + 3) - v101);
+          if ( v101 >= *((u16 *)v78 + 3) )
+            v26 = -*((u8 *)v78 + 24);
           else
-            v26 = *((_BYTE *)v78 + 24);
-          *((_BYTE *)v78 + 27) = v26;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) -= -256 * vy[i];
-          v27 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+            v26 = *((u8 *)v78 + 24);
+          *((u8 *)v78 + 27) = v26;
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) -= -256 * vy[i];
+          v27 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v80 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v27 - (__CFSHL__(v27 >> 31, 3) + 8 * (v27 >> 31))) >> 3))
               % 32;
-          v28 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v28 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v29 = (((v28 - (__CFSHL__(v28 >> 31, 3) + 8 * (v28 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v29 = (((v28 - (__CFSHL__(v28 >> 31, 3) + 8 * (v28 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v29 = (((v28 - (__CFSHL__(v28 >> 31, 3) + 8 * (v28 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
-            v68 = abs(*(intNA *)((char *)v78 + 21) >> 24) << 6;
+            v68 = abs(*(UA<i32> *)((char *)v78 + 21) >> 24) << 6;
             v67 = v93;
-            v66 = *((unsigned __int16 *)v78 + 2);
+            v66 = *((u16 *)v78 + 2);
             if ( (unsigned int)v66 >= 0x7800 )
             {
               if ( v66 - 0x8000 > v93 )
@@ -5062,132 +5069,132 @@ unsigned __int8 CPP_do_aliens(void)
               v67 = v93 - 0x10000;
             }
             if ( v66 >= v67 )
-              v30 = (-(unsigned __int16)v68
-                   - (__CFSHL__(-(unsigned __int16)v68 >> 31, 6)
-                    + ( ((-(unsigned __int16)v68) >> 31) SHL6))) >> 6; //shift fix
+              v30 = (-(u16)v68
+                   - (__CFSHL__(-(u16)v68 >> 31, 6)
+                    + ( ((-(u16)v68) >> 31) SHL6))) >> 6; //shift fix
             else
-              v30 = (int)(unsigned __int16)v68 >> 6;
-            *((_BYTE *)v78 + 26) = v30;
+              v30 = (int)(u16)v68 >> 6;
+            *((u8 *)v78 + 26) = v30;
             if ( v66 >= v67 )
             {
               if ( v66 > v67 )
               {
-                v66 -= (unsigned __int16)v68;
+                v66 -= (u16)v68;
                 if ( v66 < v67 )
                   LOWORD(v66) = v67;
               }
             }
             else
             {
-              v66 += (unsigned __int16)v68;
+              v66 += (u16)v68;
               if ( v66 > v67 )
                 LOWORD(v66) = v67;
             }
-            *((_WORD *)v78 + 2) = v66;
-            if ( *((_WORD *)v78 + 3) >= v101 )
+            *((u16 *)v78 + 2) = v66;
+            if ( *((u16 *)v78 + 3) >= v101 )
             {
-              if ( *((_WORD *)v78 + 3) > v101 )
+              if ( *((u16 *)v78 + 3) > v101 )
               {
-                *((_WORD *)v78 + 3) -= abs(  ((v78[6] >> 24) SHL6)); //shift fix
-                if ( *((_WORD *)v78 + 3) < v101 )
-                  *((_WORD *)v78 + 3) = v101;
+                *((u16 *)v78 + 3) -= abs(  ((v78[6] >> 24) SHL6)); //shift fix
+                if ( *((u16 *)v78 + 3) < v101 )
+                  *((u16 *)v78 + 3) = v101;
               }
             }
             else
             {
-              *((_WORD *)v78 + 3) += abs(  ((v78[6] >> 24) SHL6)); //shift fix
-              if ( *((_WORD *)v78 + 3) > v101 )
-                *((_WORD *)v78 + 3) = v101;
+              *((u16 *)v78 + 3) += abs(  ((v78[6] >> 24) SHL6)); //shift fix
+              if ( *((u16 *)v78 + 3) > v101 )
+                *((u16 *)v78 + 3) = v101;
             }
             v31 = abs((v78[2] >> 16) - v86);
             if ( v31 <= abs((v78[2] >> 16) - v86 + 2024) )
             {
               v32 = abs((v78[2] >> 16) - v86);
               if ( v32 > abs((v78[2] >> 16) - v86 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v86 )
             {
               if ( v78[2] >> 16 > v86 )
               {
-                *((_WORD *)v78 + 5) -= 36;
+                *((u16 *)v78 + 5) -= 36;
                 if ( v78[2] >> 16 < v86 )
-                  *((_WORD *)v78 + 5) = v86;
+                  *((u16 *)v78 + 5) = v86;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 36;
+              *((u16 *)v78 + 5) += 36;
               if ( v78[2] >> 16 > v86 )
-                *((_WORD *)v78 + 5) = v86;
+                *((u16 *)v78 + 5) = v86;
             }
             goto LABEL_157;
           }
           CPP_insert_effect(v80, 1023 - v29, 39);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0xB:
-          *((_WORD *)v78 + 5) += 72;
-          *((_WORD *)v78 + 6) += 72;
-          *((_WORD *)v78 + 2) += ( *((char *)v78 + 26)  SHL8) - (vx[i]  SHL8); //shift fix
-          *((_WORD *)v78 + 3) -= ( *((char *)v78 + 27)  SHL8) - (vy[i]  SHL8); //shift fix
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 5) += 72;
+          *((u16 *)v78 + 6) += 72;
+          *((u16 *)v78 + 2) += ( *((char *)v78 + 26)  SHL8) - (vx[i]  SHL8); //shift fix
+          *((u16 *)v78 + 3) -= ( *((char *)v78 + 27)  SHL8) - (vy[i]  SHL8); //shift fix
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
             if ( --*v78 != -1 )
               goto LABEL_294;
-            HIDWORD(v53) = 7;
-            LODWORD(v53) = i;
+//            HIDWORD(v53) = 7;
+//            LODWORD(v53) = i;
 /*
             MY_PlaySample(
               (unsigned int *)a1,
               a2,
               v53,
               0x7FFFu,
-              -2 - 0x7FFF * (unsigned __int8)no_players - 200,
+              -2 - 0x7FFF * (u8)no_players - 200,
               100i64,
               3u);
 */
-            MY_PlaySample(/*(unsigned int *)a1, a2, v53,*/ i , 7, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+            MY_PlaySample(/*(unsigned int *)a1, a2, v53,*/ i , 7, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-            *((_BYTE *)v78 + 16) = 41;
+            *((u8 *)v78 + 16) = 41;
           }
           else
           {
-            *((_BYTE *)v78 + 16) = 0;
+            *((u8 *)v78 + 16) = 0;
           }
           break;
         case 0xC:
-          v23 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v23 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v92 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v23 - (__CFSHL__(v23 >> 31, 3) + 8 * (v23 >> 31))) >> 3))
               % 32;
-          v24 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v24 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v25 = (((v24 - (__CFSHL__(v24 >> 31, 3) + 8 * (v24 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v25 = (((v24 - (__CFSHL__(v24 >> 31, 3) + 8 * (v24 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v25 = (((v24 - (__CFSHL__(v24 >> 31, 3) + 8 * (v24 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) += vy[i]  SHL8; //shift fix
-          *((_WORD *)v78 + 5) += 36;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) += vy[i]  SHL8; //shift fix
+          *((u16 *)v78 + 5) += 36;
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
             goto LABEL_301;
           CPP_insert_effect(v92, 1023 - v25, 38);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0xF:
           v95 = word_25677C[15 * i];
-          v102 = *((_WORD *) unk_25677E + 15 * i);
-          v63 = *((_WORD *)v78 + 2);
+          v102 = *((u16 *) unk_25677E + 15 * i);
+          v63 = *((u16 *)v78 + 2);
           v62 = v95;
           if ( v63 >= 0x7800u )
           {
@@ -5198,73 +5205,73 @@ unsigned __int8 CPP_do_aliens(void)
           {
             v62 = v95 - 0x10000;
           }
-          v87 = CPP_arctan(v62 - v63, *((unsigned __int16 *)v78 + 3) - v102);
-          *((_BYTE *)v78 + 27) = *((_BYTE *)v78 + 24);
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) -= -256 * vy[i];
-          v38 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v87 = CPP_arctan(v62 - v63, *((u16 *)v78 + 3) - v102);
+          *((u8 *)v78 + 27) = *((u8 *)v78 + 24);
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) -= -256 * vy[i];
+          v38 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v82 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v38 - (__CFSHL__(v38 >> 31, 3) + 8 * (v38 >> 31))) >> 3))
               % 32;
-          v39 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v39 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v40 = (((v39 - (__CFSHL__(v39 >> 31, 3) + 8 * (v39 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v40 = (((v39 - (__CFSHL__(v39 >> 31, 3) + 8 * (v39 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v40 = (((v39 - (__CFSHL__(v39 >> 31, 3) + 8 * (v39 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
             v41 = abs((v78[2] >> 16) - v87);
             if ( v41 <= abs((v78[2] >> 16) - v87 + 2024) )
             {
               v42 = abs((v78[2] >> 16) - v87);
               if ( v42 > abs((v78[2] >> 16) - v87 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v87 )
             {
               if ( v78[2] >> 16 > v87 )
               {
-                *((_WORD *)v78 + 5) -= 72;
+                *((u16 *)v78 + 5) -= 72;
                 if ( v78[2] >> 16 < v87 )
-                  *((_WORD *)v78 + 5) = v87;
+                  *((u16 *)v78 + 5) = v87;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 72;
+              *((u16 *)v78 + 5) += 72;
               if ( v78[2] >> 16 > v87 )
-                *((_WORD *)v78 + 5) = v87;
+                *((u16 *)v78 + 5) = v87;
             }
 //            a1 = 2024;
-            *((__int16 *)v78 + 5) %= 2024;
-            if ( *((_WORD *)v78 + 3) >= v102 )
+            *((i16 *)v78 + 5) %= 2024;
+            if ( *((u16 *)v78 + 3) >= v102 )
             {
-              if ( *((_WORD *)v78 + 3) > v102 )
+              if ( *((u16 *)v78 + 3) > v102 )
               {
-                *((_WORD *)v78 + 3) -= abs(v78[6] >> 24 << 6);
-                if ( *((_WORD *)v78 + 3) < v102 )
-                  *((_WORD *)v78 + 3) = v102;
+                *((u16 *)v78 + 3) -= abs(v78[6] >> 24 << 6);
+                if ( *((u16 *)v78 + 3) < v102 )
+                  *((u16 *)v78 + 3) = v102;
               }
             }
             else
             {
-              *((_WORD *)v78 + 3) += abs(v78[6] >> 24 << 6);
-              if ( *((_WORD *)v78 + 3) > v102 )
-                *((_WORD *)v78 + 3) = v102;
+              *((u16 *)v78 + 3) += abs(v78[6] >> 24 << 6);
+              if ( *((u16 *)v78 + 3) > v102 )
+                *((u16 *)v78 + 3) = v102;
             }
-            v61 = abs(*(intNA *)((char *)v78 + 21) >> 24 << 6);
+            v61 = abs(*(UA<i32> *)((char *)v78 + 21) >> 24 << 6);
             v60 = v95;
-            v59 = *((unsigned __int16 *)v78 + 2);
+            v59 = *((u16 *)v78 + 2);
             if ( (unsigned int)v59 >= 0x7800 )
             {
               if ( v59 - 0x8000 > v95 )
@@ -5278,7 +5285,7 @@ unsigned __int8 CPP_do_aliens(void)
               v43 = (-v61 - (__CFSHL__(-v61 >> 31, 6) + ( ((-v61) >> 31) SHL6))) >> 6; //shift fix
             else
               v43 = (int)v61 >> 6;
-            *((_BYTE *)v78 + 26) = v43;
+            *((u8 *)v78 + 26) = v43;
             if ( v59 >= v60 )
             {
               if ( v59 > v60 )
@@ -5294,17 +5301,17 @@ unsigned __int8 CPP_do_aliens(void)
               if ( v59 > v60 )
                 LOWORD(v59) = v60;
             }
-            *((_WORD *)v78 + 2) = v59;
+            *((u16 *)v78 + 2) = v59;
             if ( v78[2] >> 16 == v87 && (int)abs(*v78 - turn) > 14 )
               goto LABEL_293;
             goto LABEL_294;
           }
           CPP_insert_effect(v82, 1023 - v40, 41);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0x10:
           v94 = word_25677C[15 * i];
-          v65 = *((_WORD *)v78 + 2);
+          v65 = *((u16 *)v78 + 2);
           v64 = v94;
           if ( v65 >= 0x7800u )
           {
@@ -5315,65 +5322,65 @@ unsigned __int8 CPP_do_aliens(void)
           {
             v64 = v94 - 0x10000;
           }
-          v87 = CPP_arctan(v64 - v65, *((unsigned __int16 *)v78 + 3) - *((unsigned __int16 *) unk_25677E + 15 * i));
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) -= -256 * vy[i];
-          v33 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v87 = CPP_arctan(v64 - v65, *((u16 *)v78 + 3) - *((u16 *) unk_25677E + 15 * i));
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) -= -256 * vy[i];
+          v33 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v81 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v33 - (__CFSHL__(v33 >> 31, 3) + 8 * (v33 >> 31))) >> 3))
               % 32;
-          v34 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v34 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v35 = (((v34 - (__CFSHL__(v34 >> 31, 3) + 8 * (v34 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v35 = (((v34 - (__CFSHL__(v34 >> 31, 3) + 8 * (v34 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v35 = (((v34 - (__CFSHL__(v34 >> 31, 3) + 8 * (v34 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
             v36 = abs((v78[2] >> 16) - v87);
             if ( v36 <= abs((v78[2] >> 16) - v87 + 2024) )
             {
               v37 = abs((v78[2] >> 16) - v87);
               if ( v37 > abs((v78[2] >> 16) - v87 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v87 )
             {
               if ( v78[2] >> 16 > v87 )
               {
-                *((_WORD *)v78 + 5) -= 36;
+                *((u16 *)v78 + 5) -= 36;
                 if ( v78[2] >> 16 < v87 )
-                  *((_WORD *)v78 + 5) = v87;
+                  *((u16 *)v78 + 5) = v87;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 36;
+              *((u16 *)v78 + 5) += 36;
               if ( v78[2] >> 16 > v87 )
-                *((_WORD *)v78 + 5) = v87;
+                *((u16 *)v78 + 5) = v87;
             }
 //            a1 = 2024;
-            *((__int16 *)v78 + 5) %= 2024;
+            *((i16 *)v78 + 5) %= 2024;
             if ( v78[2] >> 16 == v87 && (int)abs(*v78 - turn) > 28 )
               goto LABEL_293;
             goto LABEL_294;
           }
           CPP_insert_effect(v81, 1023 - v35, 40);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0x11:
           v89 = word_25677C[15 * i];
-          v100 = *((_WORD *) unk_25677E + 15 * i);
-          v75 = *((_WORD *)v78 + 2);
+          v100 = *((u16 *) unk_25677E + 15 * i);
+          v75 = *((u16 *)v78 + 2);
           v74 = v89;
           if ( v75 >= 0x7800u )
           {
@@ -5384,34 +5391,34 @@ unsigned __int8 CPP_do_aliens(void)
           {
             v74 = v89 - 0x10000;
           }
-          v85 = CPP_arctan(v74 - v75, *((unsigned __int16 *)v78 + 3) - v100);
-          if ( v100 >= *((_WORD *)v78 + 3) )
-            v10 = -*((_BYTE *)v78 + 24);
+          v85 = CPP_arctan(v74 - v75, *((u16 *)v78 + 3) - v100);
+          if ( v100 >= *((u16 *)v78 + 3) )
+            v10 = -*((u8 *)v78 + 24);
           else
-            v10 = *((_BYTE *)v78 + 24);
-          *((_BYTE *)v78 + 27) = v10;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) -= -256 * vy[i];
-          v11 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+            v10 = *((u8 *)v78 + 24);
+          *((u8 *)v78 + 27) = v10;
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) -= -256 * vy[i];
+          v11 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v79 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v11 - (__CFSHL__(v11 >> 31, 3) + 8 * (v11 >> 31))) >> 3))
               % 32;
-          v12 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v12 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v13 = (((v12 - (__CFSHL__(v12 >> 31, 3) + 8 * (v12 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v13 = (((v12 - (__CFSHL__(v12 >> 31, 3) + 8 * (v12 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v13 = (((v12 - (__CFSHL__(v12 >> 31, 3) + 8 * (v12 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
-            v73 = abs(*(intNA *)((char *)v78 + 21) >> 24 << 6);
+            v73 = abs(*(UA<i32> *)((char *)v78 + 21) >> 24 << 6);
             v72 = v89;
-            v71 = *((unsigned __int16 *)v78 + 2);
+            v71 = *((u16 *)v78 + 2);
             if ( (unsigned int)v71 >= 0x7800 )
             {
               if ( v71 - 0x8000 > v89 )
@@ -5425,7 +5432,7 @@ unsigned __int8 CPP_do_aliens(void)
               v14 = (-v73 - (__CFSHL__(-v73 >> 31, 6) + (((-v73) >> 31) SHL6))) >> 6; //shift fix
             else
               v14 = (int)v73 >> 6;
-            *((_BYTE *)v78 + 26) = v14;
+            *((u8 *)v78 + 26) = v14;
             if ( v71 >= v72 )
             {
               if ( v71 > v72 )
@@ -5441,88 +5448,88 @@ unsigned __int8 CPP_do_aliens(void)
               if ( v71 > v72 )
                 LOWORD(v71) = v72;
             }
-            *((_WORD *)v78 + 2) = v71;
-            if ( *((_WORD *)v78 + 3) >= v100 )
+            *((u16 *)v78 + 2) = v71;
+            if ( *((u16 *)v78 + 3) >= v100 )
             {
-              if ( *((_WORD *)v78 + 3) > v100 )
+              if ( *((u16 *)v78 + 3) > v100 )
               {
-                *((_WORD *)v78 + 3) -= abs(v78[6] >> 24 << 6);
-                if ( *((_WORD *)v78 + 3) < v100 )
-                  *((_WORD *)v78 + 3) = v100;
+                *((u16 *)v78 + 3) -= abs(v78[6] >> 24 << 6);
+                if ( *((u16 *)v78 + 3) < v100 )
+                  *((u16 *)v78 + 3) = v100;
               }
             }
             else
             {
-              *((_WORD *)v78 + 3) += abs( (v78[6] >> 24) SHL6); //shift fix
-              if ( *((_WORD *)v78 + 3) > v100 )
-                *((_WORD *)v78 + 3) = v100;
+              *((u16 *)v78 + 3) += abs( (v78[6] >> 24) SHL6); //shift fix
+              if ( *((u16 *)v78 + 3) > v100 )
+                *((u16 *)v78 + 3) = v100;
             }
             v15 = abs((v78[2] >> 16) - v85);
             if ( v15 <= abs((v78[2] >> 16) - v85 + 2024) )
             {
               v16 = abs((v78[2] >> 16) - v85);
               if ( v16 > abs((v78[2] >> 16) - v85 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v85 )
             {
               if ( v78[2] >> 16 > v85 )
               {
-                *((_WORD *)v78 + 5) -= 36;
+                *((u16 *)v78 + 5) -= 36;
                 if ( v78[2] >> 16 < v85 )
-                  *((_WORD *)v78 + 5) = v85;
+                  *((u16 *)v78 + 5) = v85;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 36;
+              *((u16 *)v78 + 5) += 36;
               if ( v78[2] >> 16 > v85 )
-                *((_WORD *)v78 + 5) = v85;
+                *((u16 *)v78 + 5) = v85;
             }
 LABEL_157:
 //            a1 = 2024;
-            *((__int16 *)v78 + 5) %= 2024;
+            *((i16 *)v78 + 5) %= 2024;
             CPP_check_alien_to_players( /* (unsigned int *)0x7E8, a2,*/  i, (int)v78);
           }
           else
           {
             CPP_insert_effect(v79, 1023 - v13, 35);
-            *((_BYTE *)v78 + 16) = 0;
+            *((u8 *)v78 + 16) = 0;
           }
           break;
         case 0x15:
-          v20 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v20 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v91 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v20 - (__CFSHL__(v20 >> 31, 3) + 8 * (v20 >> 31))) >> 3))
               % 32;
-          v21 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v21 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v22 = (((v21 - (__CFSHL__(v21 >> 31, 3) + 8 * (v21 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v22 = (((v21 - (__CFSHL__(v21 >> 31, 3) + 8 * (v21 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v22 = (((v21 - (__CFSHL__(v21 >> 31, 3) + 8 * (v21 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) += vy[i]  SHL8; //shift fix
-          *((_WORD *)v78 + 5) += 36;
-          *((_WORD *)v78 + 6) += 36;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) += vy[i]  SHL8; //shift fix
+          *((u16 *)v78 + 5) += 36;
+          *((u16 *)v78 + 6) += 36;
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
             goto LABEL_301;
           CPP_insert_effect(v91, 1023 - v22, 37);
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0x17:
           v96 = word_25677C[15 * i];
-          v103 = *((_WORD *) unk_25677E + 15 * i);
-          v58 = *((_WORD *)v78 + 2);
+          v103 = *((u16 *) unk_25677E + 15 * i);
+          v58 = *((u16 *)v78 + 2);
           v57 = v96;
           if ( v58 >= 0x7800u )
           {
@@ -5533,77 +5540,77 @@ LABEL_157:
           {
             v57 = v96 - 0x10000;
           }
-          v87 = CPP_arctan(v57 - v58, *((unsigned __int16 *)v78 + 3) - v103);
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          v44 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v87 = CPP_arctan(v57 - v58, *((u16 *)v78 + 3) - v103);
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          v44 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v83 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v44 - (__CFSHL__(v44 >> 31, 3) + 8 * (v44 >> 31))) >> 3))
               % 32;
-          v45 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v45 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v46 = (((v45 - (__CFSHL__(v45 >> 31, 3) + 8 * (v45 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v46 = (((v45 - (__CFSHL__(v45 >> 31, 3) + 8 * (v45 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v46 = (((v45 - (__CFSHL__(v45 >> 31, 3) + 8 * (v45 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
             v47 = abs((v78[2] >> 16) - v87);
             if ( v47 <= abs((v78[2] >> 16) - v87 + 2024) )
             {
               v48 = abs((v78[2] >> 16) - v87);
               if ( v48 > abs((v78[2] >> 16) - v87 - 2024) )
-                *((_WORD *)v78 + 5) -= 2024;
+                *((u16 *)v78 + 5) -= 2024;
             }
             else
             {
-              *((_WORD *)v78 + 5) += 2024;
+              *((u16 *)v78 + 5) += 2024;
             }
             if ( v78[2] >> 16 >= v87 )
             {
               if ( v78[2] >> 16 > v87 )
               {
-                *((_WORD *)v78 + 5) -= 72;
+                *((u16 *)v78 + 5) -= 72;
                 if ( v78[2] >> 16 < v87 )
-                  *((_WORD *)v78 + 5) = v87;
+                  *((u16 *)v78 + 5) = v87;
               }
             }
             else
             {
-              *((_WORD *)v78 + 5) += 72;
+              *((u16 *)v78 + 5) += 72;
               if ( v78[2] >> 16 > v87 )
-                *((_WORD *)v78 + 5) = v87;
+                *((u16 *)v78 + 5) = v87;
             }
 //            a1 = 2024;
-            *((__int16 *)v78 + 5) %= 2024;
-            if ( *((unsigned __int16 *)v78 + 3) >= v103 + 10240 )
+            *((i16 *)v78 + 5) %= 2024;
+            if ( *((u16 *)v78 + 3) >= v103 + 10240 )
             {
-              if ( *((unsigned __int16 *)v78 + 3) > v103 + 10240 )
+              if ( *((u16 *)v78 + 3) > v103 + 10240 )
               {
-                *((_WORD *)v78 + 3) -= *((char *)v78 + 24) << 6;
-                if ( *((unsigned __int16 *)v78 + 3) < v103 + 10240 )
-                  *((_WORD *)v78 + 3) = v103 + 10240;
+                *((u16 *)v78 + 3) -= *((char *)v78 + 24) << 6;
+                if ( *((u16 *)v78 + 3) < v103 + 10240 )
+                  *((u16 *)v78 + 3) = v103 + 10240;
               }
             }
             else
             {
-              *((_WORD *)v78 + 3) += *((char *)v78 + 24) << 6;
-              if ( *((unsigned __int16 *)v78 + 3) > v103 + 10240 )
-                *((_WORD *)v78 + 3) = v103 + 10240;
+              *((u16 *)v78 + 3) += *((char *)v78 + 24) << 6;
+              if ( *((u16 *)v78 + 3) > v103 + 10240 )
+                *((u16 *)v78 + 3) = v103 + 10240;
             }
-            if ( (int)abs(*((unsigned __int16 *)v78 + 2) - v96) <= 10240 )
+            if ( (int)abs(*((u16 *)v78 + 2) - v96) <= 10240 )
             {
-              *((_WORD *)v78 + 2) += *((char *)v78 + 26) << 6;
+              *((u16 *)v78 + 2) += *((char *)v78 + 26) << 6;
             }
             else
             {
               v56 = *((char *)v78 + 24) << 6;
               v55 = v96;
-              v54 = *((unsigned __int16 *)v78 + 2);
+              v54 = *((u16 *)v78 + 2);
               if ( (unsigned int)v54 >= 0x7800 )
               {
                 if ( v54 - 0x8000 > v96 )
@@ -5617,7 +5624,7 @@ LABEL_157:
                 v49 = (-v56 - (__CFSHL__(-v56 >> 31, 6) + (-v56 >> 31 << 6))) >> 6;
               else
                 v49 = (int)v56 >> 6;
-              *((_BYTE *)v78 + 26) = v49;
+              *((u8 *)v78 + 26) = v49;
               if ( v54 >= v55 )
               {
                 if ( v54 > v55 )
@@ -5633,7 +5640,7 @@ LABEL_157:
                 if ( v54 > v55 )
                   LOWORD(v54) = v55;
               }
-              *((_WORD *)v78 + 2) = v54;
+              *((u16 *)v78 + 2) = v54;
             }
             if ( v78[2] >> 16 == v87 && (int)abs(*v78 - turn) > 14 )
             {
@@ -5644,9 +5651,9 @@ LABEL_293:
 //                a2,
                 i,
                 11,
-                *((_WORD *)v78 + 2),
-                *((_WORD *)v78 + 3),
-                *((_WORD *)v78 + 4),
+                *((u16 *)v78 + 2),
+                *((u16 *)v78 + 3),
+                *((u16 *)v78 + 4),
                 v87);
             }
 LABEL_294:
@@ -5655,7 +5662,7 @@ LABEL_294:
           else
           {
             CPP_insert_effect(v83, 1023 - v46, 42);
-            *((_BYTE *)v78 + 16) = 0;
+            *((u8 *)v78 + 16) = 0;
           }
           break;
         case 0x19:
@@ -5678,37 +5685,37 @@ LABEL_294:
         case 0x2B:
         case 0x2C:
         case 0x2D:
-          *((_WORD *)v78 + 3) -= ( *((char *)v78 + 27)  SHL6) - (vy[i]  SHL8); //shift fix
-          if ( *((_WORD *)v78 + 3) && *((_WORD *)v78 + 3) <= 0xF000u )
-            ++*((_BYTE *)v78 + 16);
+          *((u16 *)v78 + 3) -= ( *((char *)v78 + 27)  SHL6) - (vy[i]  SHL8); //shift fix
+          if ( *((u16 *)v78 + 3) && *((u16 *)v78 + 3) <= 0xF000u )
+            ++*((u8 *)v78 + 16);
           else
-            *((_BYTE *)v78 + 16) = 0;
+            *((u8 *)v78 + 16) = 0;
           break;
         case 0x28:
         case 0x2E:
-          *((_BYTE *)v78 + 16) = 0;
+          *((u8 *)v78 + 16) = 0;
           break;
         case 0x31:
-          v50 = ((int)*((unsigned __int16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
+          v50 = ((int)*((u16 *)v78 + 2) >> 8) + 8 - LOBYTE(scrollpos[i]) % 8;
           v97 = (((int)LOBYTE(scrollpos[i]) >> 3) + 32 - ((v50 - (__CFSHL__(v50 >> 31, 3) + 8 * (v50 >> 31))) >> 3))
               % 32;
-          v51 = ((int)*((unsigned __int16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
+          v51 = ((int)*((u16 *)v78 + 3) >> 8) + 8 - HIBYTE(scrollpos[i]) % 8;
 //          a1 = 1024;
           if ( lastscroll[i] == 1 )
-            v52 = (((v51 - (__CFSHL__(v51 >> 31, 3) + 8 * (v51 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[i]
+            v52 = (((v51 - (__CFSHL__(v51 >> 31, 3) + 8 * (v51 >> 31))) >> 3) - 4 + (u16)level_line[i]
                                                                                   + 994)
                 % 1024;
           else
             v52 = (((v51 - (__CFSHL__(v51 >> 31, 3) + 8 * (v51 >> 31))) >> 3)
                  - 4
-                 + (unsigned __int16)level_line[i]
+                 + (u16)level_line[i]
                  + 1027)
                 % 1024;
-          *((_WORD *)v78 + 2) += -256 * vx[i];
-          *((_WORD *)v78 + 3) += vy[i]  SHL8; //shift fix
-          *((_WORD *)v78 + 5) += 36;
-          *((_WORD *)v78 + 6) += 36;
-          if ( *((_WORD *)v78 + 3) >= 0x800u && *((_WORD *)v78 + 3) <= 0xF000u )
+          *((u16 *)v78 + 2) += -256 * vx[i];
+          *((u16 *)v78 + 3) += vy[i]  SHL8; //shift fix
+          *((u16 *)v78 + 5) += 36;
+          *((u16 *)v78 + 6) += 36;
+          if ( *((u16 *)v78 + 3) >= 0x800u && *((u16 *)v78 + 3) <= 0xF000u )
           {
 LABEL_301:
             CPP_check_alien_to_players(/*(unsigned int *)0x400, a2,*/ i, (int)v78);
@@ -5716,23 +5723,23 @@ LABEL_301:
           else
           {
             CPP_insert_effect(v97, 1023 - v52, 43);
-            *((_BYTE *)v78 + 16) = 0;
+            *((u8 *)v78 + 16) = 0;
           }
           break;
         default:
           break;
       }
-      v78 = (int *)((char *)v78 + 30);
+      v78 = (UA<i32>*)((char *)v78 + 30);
     }
   }
   return result;
 }
 
-char CPP_add_alien_at_pos(unsigned __int8 a3, char a4, __int16 a5, __int16 a6, __int16 a7, unsigned __int16 a8) //FINAL
+char CPP_add_alien_at_pos(u8 a3, char a4, i16 a5, i16 a6, i16 a7, u16 a8) //FINAL
 {
   int v8; // eax
-  __int64 v10; // [esp-1Ch] [ebp-24h]
-  unsigned __int8 i; // [esp+4h] [ebp-4h]
+//  i64 v10; // [esp-1Ch] [ebp-24h]
+  u8 i; // [esp+4h] [ebp-4h]
 
   for ( i = 60 * a3; byte_235148[30 * i] && i < 60 * (a3 + 1); ++i )
     ;
@@ -5742,11 +5749,11 @@ char CPP_add_alien_at_pos(unsigned __int8 a3, char a4, __int16 a5, __int16 a6, _
     LOBYTE(v8) = a4;
     if ( a4 == 11 )
     {
-      HIDWORD(v10) = 9;
-      LODWORD(v10) = a3;
+//      HIDWORD(v10) = 9;
+//      LODWORD(v10) = a3;
 
-//    MY_PlaySample(a1, a2, v10, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*a1, a2, v10,*/ a3, 9, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//    MY_PlaySample(a1, a2, v10, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*a1, a2, v10,*/ a3, 9, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
       word_23513C[15 * i] = a5;
       word_23513E[15 * i] = a6;
@@ -5755,7 +5762,7 @@ char CPP_add_alien_at_pos(unsigned __int8 a3, char a4, __int16 a5, __int16 a6, _
       byte_235152[30 * i] = costable[(a8 + 1518) % 2024] >> 13;
       byte_235153[30 * i] = sintable[(a8 + 1518) % 2024] >> 13;
       word_235142[15 * i] = a8;
-      *(intNA *)((char *)aliens + 30 * i) = 40;
+      *(UA<i32> *)((char *)aliens + 30 * i) = 40;
       word_235144[15 * i] = 0;
       byte_235148[30 * i] = 11;
       LOBYTE(v8) = 30 * i;
@@ -5768,11 +5775,11 @@ char CPP_add_alien_at_pos(unsigned __int8 a3, char a4, __int16 a5, __int16 a6, _
 
 int CPP_do_ships(void)
 {
-  __int16 v2; // ax
-  __int16 v3; // ax
+  i16 v2; // ax
+  i16 v3; // ax
   int result; // eax
-  __int16 v5; // ax
-  __int64 v6; // [esp-2h] [ebp-8h]
+  i16 v5; // ax
+  i64 v6; // [esp-2h] [ebp-8h]
 
   CPP_do_players_ships( /*(int)a1, a2*/ );
 
@@ -5783,7 +5790,7 @@ int CPP_do_ships(void)
     CPP_do_bullets(/*a1, a2*/);
   }
 
-  if ( (unsigned __int8)no_players <= 1u )
+  if ( (u8)no_players <= 1u )
   {
     CPP_enter_ships(0);
     v5 = CPP_enter_ships(0);
@@ -5795,57 +5802,57 @@ int CPP_do_ships(void)
     WORD2(v6) = v2 + 1;
     CPP_quick_sort_ships(0, v2);
     v3 = CPP_enter_ships(1u);
-    LODWORD(v6) = (__int16)(WORD2(v6) + v3);
-    result = CPP_quick_sort_ships(*(intNA *)((char *)&v6 + 2) >> 16, WORD2(v6) + v3);
+    LODWORD(v6) = (i16)(WORD2(v6) + v3);
+    result = CPP_quick_sort_ships(*(UA<i32> *)((char *)&v6 + 2) >> 16, WORD2(v6) + v3);
   }
 
   return result;
 }
 
-int CPP_quick_sort_ships(int a1, __int16 a2) //FINAL
+int CPP_quick_sort_ships(int a1, i16 a2) //FINAL
 {
   int result; // eax
   int v3; // [esp+0h] [ebp-44h]
   int v4; // [esp+14h] [ebp-30h]
   int v5; // [esp+28h] [ebp-1Ch]
-  unsigned __int16 v6; // [esp+3Ch] [ebp-8h]
-  __int16 i; // [esp+40h] [ebp-4h]
+  u16 v6; // [esp+3Ch] [ebp-8h]
+  i16 i; // [esp+40h] [ebp-4h]
 
   result = a1;
-  if ( (__int16)a1 < a2 )
+  if ( (i16)a1 < a2 )
   {
-    v5 = draw_items[(unsigned __int16)a1];
-    draw_items[(unsigned __int16)a1] = draw_items[(unsigned __int16)(((__int16)a1 + a2) / 2)];
-    draw_items[(unsigned __int16)(((__int16)a1 + a2) / 2)] = v5;
+    v5 = draw_items[(u16)a1];
+    draw_items[(u16)a1] = draw_items[(u16)(((i16)a1 + a2) / 2)];
+    draw_items[(u16)(((i16)a1 + a2) / 2)] = v5;
     v6 = a1;
     for ( i = a1 + 1; i <= a2; ++i )
     {
-    //if ( *(_WORDNA *)(draw_items[i] + 6) > *(_WORDNA *)(draw_items[(__int16)a1] + 6) ) //это бредовое условие вылетает в сегфолт
-      if(*(_WORDNA *)&draw_items[i+6]>*(_WORDNA *)&draw_items[(__int16)a1+6]) //fix
+    //if ( *(UA<u16> *)(draw_items[i] + 6) > *(UA<u16> *)(draw_items[(i16)a1] + 6) ) //это бредовое условие вылетает в сегфолт
+      if(*(UA<u16> *)&draw_items[i+6]>*(UA<u16> *)&draw_items[(i16)a1+6]) //fix
       {
         v4 = draw_items[++v6];
-        draw_items[v6] = draw_items[(unsigned __int16)i];
-        draw_items[(unsigned __int16)i] = v4;
+        draw_items[v6] = draw_items[(u16)i];
+        draw_items[(u16)i] = v4;
       }
     }
-    v3 = draw_items[(unsigned __int16)a1];
-    draw_items[(unsigned __int16)a1] = draw_items[v6];
+    v3 = draw_items[(u16)a1];
+    draw_items[(u16)a1] = draw_items[v6];
     draw_items[v6] = v3;
-    CPP_quick_sort_ships((__int16)a1, v6 - 1);
-    result = CPP_quick_sort_ships((__int16)(v6 + 1), a2);
+    CPP_quick_sort_ships((i16)a1, v6 - 1);
+    result = CPP_quick_sort_ships((i16)(v6 + 1), a2);
   }
   return result;
 }
 
-int CPP_enter_ships(unsigned __int8 a1) //FINAL
+int CPP_enter_ships(u8 a1) //FINAL
 {
   int *v1; // edx
   int **v2; // edx
   int *v4; // [esp+0h] [ebp-14h]
   char *v5; // [esp+4h] [ebp-10h]
   int *v6; // [esp+4h] [ebp-10h]
-  unsigned __int16 i; // [esp+8h] [ebp-Ch]
-  unsigned __int16 j; // [esp+8h] [ebp-Ch]
+  u16 i; // [esp+8h] [ebp-Ch]
+  u16 j; // [esp+8h] [ebp-Ch]
   int v9; // [esp+10h] [ebp-4h]
 
   v4 = &draw_items[96 * a1];
@@ -5864,7 +5871,7 @@ int CPP_enter_ships(unsigned __int8 a1) //FINAL
   v6 = &aliens[450 * a1];
   for ( j = 0; j < 0x3Cu; ++j )
   {
-    if ( *((_BYTE *)v6 + 16) )
+    if ( *((u8 *)v6 + 16) )
     {
       ++v9;
       v2 = (int **)v4++;
@@ -5877,20 +5884,20 @@ int CPP_enter_ships(unsigned __int8 a1) //FINAL
   return v9;
 }
 
-char CPP_change_hit_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3) //FINAL
+char CPP_change_hit_block(u8 a1, u16 a2, u16 a3) //FINAL
 {
   int v3; // edx
-  unsigned __int16 v5; // [esp+4h] [ebp-Ch]
-  unsigned __int16 v6; // [esp+8h] [ebp-8h]
+  u16 v5; // [esp+4h] [ebp-Ch]
+  u16 v6; // [esp+8h] [ebp-8h]
   char v7; // [esp+Ch] [ebp-4h]
 
-  v6 = *(_WORDNA *)(level + 2 * (32 * a3 + a2));
+  v6 = *(UA<u16> *)(level + 2 * (32 * a3 + a2));
   v5 = 0;
   v7 = 0;
 
   while ( hit_blocks[v5] >= 0 && !v7 )
   {
-    if ( *(intNA *)((char *) byte_21FDDA + 2 * v5) >> 16 == v6 )
+    if ( *(UA<i32> *)((char *) byte_21FDDA + 2 * v5) >> 16 == v6 )
     {
       v6 = word_21FDDE[v5];
       v7 = 1;
@@ -5898,34 +5905,34 @@ char CPP_change_hit_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __in
     v5 += 2;
   }
 
-  *(_WORDNA *)(2 * (32 * a3 + a2) + level) = v6;
+  *(UA<u16> *)(2 * (32 * a3 + a2) + level) = v6;
 
   if ( lastscroll[a1] == 1 )
     v3 = (a1 << 16)
-       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + (a3 + (unsigned __int16)level_line[a1]) % 1024) % 32) << 11);
+       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + (a3 + (u16)level_line[a1]) % 1024) % 32) << 11);
   else
     v3 = (a1 << 16)
-       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + 32 - ((2048 - (unsigned __int16)level_line[a1] - a3) % 1024 - 1)) % 32) << 11);
+       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + 32 - ((2048 - (u16)level_line[a1] - a3) % 1024 - 1)) % 32) << 11);
 
   return CPP_draw_block(8 * a2 + v3, v6);
 }
 
-char CPP_draw_block(int a1, unsigned __int16 a2) //FINAL
+char CPP_draw_block(int a1, u16 a2) //FINAL
 {
   int v2; // eax
-  _DWORD *v4; // [esp+0h] [ebp-8h]
-  unsigned __int8 i; // [esp+4h] [ebp-4h]
+  u32 *v4; // [esp+0h] [ebp-8h]
+  u8 i; // [esp+4h] [ebp-4h]
 
   if ( a2 >= 0x800u )
     a2 = 0;
 
   v2 = a2 << 6;
-  v4 = (_DWORD *)(v2 + block_data);
+  v4 = (u32 *)(v2 + block_data);
 
   for ( i = 0; i < 8u; ++i )
   {
-    *(_DWORDNA *)(tube_graphics + a1) = *v4;
-    *(_DWORDNA *)(tube_graphics + a1 + 4) = v4[1];
+    *(UA<u32> *)(tube_graphics + a1) = *v4;
+    *(UA<u32> *)(tube_graphics + a1 + 4) = v4[1];
     LOBYTE(v2) = i;
     a1 += 256;
     v4 += 2;
@@ -5939,28 +5946,28 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
   int v3; // eax
   int v4; // eax
   int v5; // edx
-  __int64 v7; // [esp-1Ch] [ebp-90h]
-  __int64 v8; // [esp-1Ch] [ebp-90h]
-  __int64 v9; // [esp-1Ch] [ebp-90h]
-  unsigned __int8 v10; // [esp+2Ch] [ebp-48h]
+//  i64 v7; // [esp-1Ch] [ebp-90h]
+//  i64 v8; // [esp-1Ch] [ebp-90h]
+//  i64 v9; // [esp-1Ch] [ebp-90h]
+  u8 v10; // [esp+2Ch] [ebp-48h]
   int v11; // [esp+30h] [ebp-44h]
   int *v12; // [esp+34h] [ebp-40h]
   unsigned int v13; // [esp+38h] [ebp-3Ch]
-  unsigned __int16 v14; // [esp+3Ch] [ebp-38h]
-  unsigned __int16 v15; // [esp+40h] [ebp-34h]
-  unsigned __int16 v16; // [esp+48h] [ebp-2Ch]
-  unsigned __int16 v17; // [esp+4Ch] [ebp-28h]
-  unsigned __int16 v18; // [esp+50h] [ebp-24h]
-  unsigned __int8 v19; // [esp+54h] [ebp-20h]
-  unsigned __int8 v20; // [esp+5Ch] [ebp-18h]
-  unsigned __int8 v21; // [esp+60h] [ebp-14h]
-  unsigned __int8 v22; // [esp+64h] [ebp-10h]
+  u16 v14; // [esp+3Ch] [ebp-38h]
+  u16 v15; // [esp+40h] [ebp-34h]
+  u16 v16; // [esp+48h] [ebp-2Ch]
+  u16 v17; // [esp+4Ch] [ebp-28h]
+  u16 v18; // [esp+50h] [ebp-24h]
+  u8 v19; // [esp+54h] [ebp-20h]
+  u8 v20; // [esp+5Ch] [ebp-18h]
+  u8 v21; // [esp+60h] [ebp-14h]
+  u8 v22; // [esp+64h] [ebp-10h]
   char i; // [esp+68h] [ebp-Ch]
-  unsigned __int8 v24; // [esp+6Ch] [ebp-8h]
+  u8 v24; // [esp+6Ch] [ebp-8h]
   char v25; // [esp+70h] [ebp-4h]
 
   v25 = 0;
-  v10 = *(_BYTE *)(a2 + 16);
+  v10 = *(u8 *)(a2 + 16);
   if ( v10 < 9u )
   {
     if ( v10 < 3u )
@@ -6008,14 +6015,14 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
     else if ( v10 == 13 )
     {
       v24 = 0;
-      v20 = *(_BYTE *)(a2 + 14);
+      v20 = *(u8 *)(a2 + 14);
       v17 = 512;
     }
   }
   else if ( v10 <= 0xEu )
   {
     v24 = 1;
-    v20 = *(_BYTE *)(a2 + 14);
+    v20 = *(u8 *)(a2 + 14);
     v17 = 512;
   }
   else if ( v10 >= 0x2Fu )
@@ -6034,14 +6041,14 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
     }
   }
   v12 = &aliens[450 * v24];
-  for ( i = 0; (unsigned __int8)i < 0x3Cu; ++i )
+  for ( i = 0; (u8)i < 0x3Cu; ++i )
   {
-    if ( *((_BYTE *)v12 + 16)
-      && *((_BYTE *)v12 + 16) != 21
-      && *((_BYTE *)v12 + 16) != 49
-      && (*((_BYTE *)v12 + 16) < 0x19u || *((_BYTE *)v12 + 16) > 0x2Eu) )
+    if ( *((u8 *)v12 + 16)
+      && *((u8 *)v12 + 16) != 21
+      && *((u8 *)v12 + 16) != 49
+      && (*((u8 *)v12 + 16) < 0x19u || *((u8 *)v12 + 16) > 0x2Eu) )
     {
-      switch ( *((_BYTE *)v12 + 16) )
+      switch ( *((u8 *)v12 + 16) )
       {
         case 6:
           v16 = 3072;
@@ -6118,13 +6125,13 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
         default:
           break;
       }
-      if ( *(unsigned __int16 *)(a2 + 8) <= v17 + v16 + *((unsigned __int16 *)v12 + 4)
-        && *(unsigned __int16 *)(a2 + 8) >= *((unsigned __int16 *)v12 + 4) - v17
-        && *(unsigned __int16 *)(a2 + 6) <= v17 + v18 + *((unsigned __int16 *)v12 + 3)
-        && *(unsigned __int16 *)(a2 + 6) >= *((unsigned __int16 *)v12 + 3) - v18 - v17 )
+      if ( *(u16 *)(a2 + 8) <= v17 + v16 + *((u16 *)v12 + 4)
+        && *(u16 *)(a2 + 8) >= *((u16 *)v12 + 4) - v17
+        && *(u16 *)(a2 + 6) <= v17 + v18 + *((u16 *)v12 + 3)
+        && *(u16 *)(a2 + 6) >= *((u16 *)v12 + 3) - v18 - v17 )
       {
-        v13 = *(unsigned __int16 *)(a2 + 4);
-        v11 = *((unsigned __int16 *)v12 + 2);
+        v13 = *(u16 *)(a2 + 4);
+        v11 = *((u16 *)v12 + 2);
         v2 = (unsigned int *)(v14 + v11 + v17);
         if ( (unsigned int)v2 < v11 - v14 - (unsigned int)v17 )
         {
@@ -6134,81 +6141,81 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
         if ( v14 + v11 + (unsigned int)v17 > v13 && v11 - v14 - (unsigned int)v17 < v13 )
         {
           i = 60;
-          if ( *(_WORDNA *)(a2 + 14) > *((_WORD *)v12 + 7)
-            && (*(_BYTE *)(a2 + 16) == 9
-             || *(_BYTE *)(a2 + 16) == 10
-             || *(_BYTE *)(a2 + 16) == 13
-             || *(_BYTE *)(a2 + 16) == 14) )
+          if ( *(UA<u16> *)(a2 + 14) > *((u16 *)v12 + 7)
+            && (*(u8 *)(a2 + 16) == 9
+             || *(u8 *)(a2 + 16) == 10
+             || *(u8 *)(a2 + 16) == 13
+             || *(u8 *)(a2 + 16) == 14) )
           {
-            *(_WORDNA *)(a2 + 14) -= *((_WORD *)v12 + 7);
+            *(UA<u16> *)(a2 + 14) -= *((u16 *)v12 + 7);
             v25 = 0;
           }
           else
           {
             v25 = 1;
           }
-          *((_WORD *)v12 + 7) -= v20;
-          if ( *((__int16 *)v12 + 7) >= 0 )
+          *((u16 *)v12 + 7) -= v20;
+          if ( *((i16 *)v12 + 7) >= 0 )
           {
             the_score[v24] += v22;
           }
           else
           {
             the_score[v24] += v21;
-            if ( *((_BYTE *)v12 + 16) == 6 )
+            if ( *((u8 *)v12 + 16) == 6 )
             {
-              HIDWORD(v7) = 15;
-              LODWORD(v7) = v24;
+//              HIDWORD(v7) = 15;
+//              LODWORD(v7) = v24;
 
-//            MY_PlaySample(v2, a1, v7, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-              MY_PlaySample(/*v2, a1, v7,*/ v24 ,15, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//            MY_PlaySample(v2, a1, v7, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+              MY_PlaySample(/*v2, a1, v7,*/ v24 ,15, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-              *((_WORD *)v12 + 6) = 0;
-              *((_BYTE *)v12 + 16) = 21;
-              *((_BYTE *)v12 + 24) = 0;
-              *((_WORD *)v12 + 7) = 127;
+              *((u16 *)v12 + 6) = 0;
+              *((u8 *)v12 + 16) = 21;
+              *((u8 *)v12 + 24) = 0;
+              *((u16 *)v12 + 7) = 127;
             }
-            else if ( *((_BYTE *)v12 + 16) == 11 )
+            else if ( *((u8 *)v12 + 16) == 11 )
             {
-              HIDWORD(v8) = 7;
-              LODWORD(v8) = v24;
+//              HIDWORD(v8) = 7;
+//              LODWORD(v8) = v24;
 
-//            MY_PlaySample(v2, a1, v8, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-              MY_PlaySample(/*v2, a1, v8,*/ v24, 7 ,0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//            MY_PlaySample(v2, a1, v8, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+              MY_PlaySample(/*v2, a1, v8,*/ v24, 7 ,0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-              *((_BYTE *)v12 + 16) = 41;
-              *((_WORD *)v12 + 5) = 0;
-              *((_WORD *)v12 + 6) = 0;
+              *((u8 *)v12 + 16) = 41;
+              *((u16 *)v12 + 5) = 0;
+              *((u16 *)v12 + 6) = 0;
             }
             else
             {
-              HIDWORD(v9) = 6;
-              LODWORD(v9) = v24;
+//              HIDWORD(v9) = 6;
+//              LODWORD(v9) = v24;
 
-//            MY_PlaySample(v2, a1, v9, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-              MY_PlaySample(/*v2, a1, v9,*/ v24, 6 ,0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//            MY_PlaySample(v2, a1, v9, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+              MY_PlaySample(/*v2, a1, v9,*/ v24, 6 ,0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-              *((_BYTE *)v12 + 16) = 25;
-              v3 = ((int)*((unsigned __int16 *)v12 + 2) >> 8) + 8 - LOBYTE(scrollpos[v24]) % 8;
+              *((u8 *)v12 + 16) = 25;
+              v3 = ((int)*((u16 *)v12 + 2) >> 8) + 8 - LOBYTE(scrollpos[v24]) % 8;
               v15 = (((int)LOBYTE(scrollpos[v24]) >> 3) + 32 - ((v3 - (__CFSHL__(v3 >> 31, 3) + 8 * (v3 >> 31))) >> 3))
                   % 32;
-              v4 = ((int)*((unsigned __int16 *)v12 + 3) >> 8) + 8 - HIBYTE(scrollpos[v24]) % 8;
+              v4 = ((int)*((u16 *)v12 + 3) >> 8) + 8 - HIBYTE(scrollpos[v24]) % 8;
               if ( lastscroll[v24] == 1 )
                 v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3)
                     - 4
-                    + (unsigned __int16)level_line[v24]
+                    + (u16)level_line[v24]
                     + 994)
                    % 1024;
               else
                 v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3)
                     - 4
-                    + (unsigned __int16)level_line[v24]
+                    + (u16)level_line[v24]
                     + 1027)
                    % 1024;
               if ( v19 != 0xFF )
                 CPP_insert_effect(v15, 1023 - v5, v19);
-              *((_WORD *)v12 + 5) = 0;
-              *((_WORD *)v12 + 6) = 0;
+              *((u16 *)v12 + 5) = 0;
+              *((u16 *)v12 + 6) = 0;
             }
           }
         }
@@ -6219,44 +6226,44 @@ char CPP_check_bullets_to_aliens(int a2) //FINAL
   return v25;
 }
 
-_WORD *CPP_organise_block(unsigned __int8 a1, _WORD *a2, _WORD *a3) //FINAL
+u16 *CPP_organise_block(u8 a1, u16 *a2, u16 *a3) //FINAL
 {
   int v3; // eax
   int v4; // eax
   int v5; // edx
-  _WORD *result; // eax
+  u16 *result; // eax
 
-  v3 = ((int)(unsigned __int16)*a2 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v3 = ((int)(u16)*a2 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a2 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v3 - (__CFSHL__(v3 >> 31, 3) + 8 * (v3 >> 31))) >> 3)) % 32;
-  v4 = ((int)(unsigned __int16)*a3 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+  v4 = ((int)(u16)*a3 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
   if ( lastscroll[a1] == 1 )
-    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994) % 1024;
+    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994) % 1024;
   else
-    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027) % 1024;
+    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027) % 1024;
   result = a3;
   *a3 = 1023 - v5;
   return result;
 }
 
-int CPP_nearest_alien(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3, unsigned __int16 a4, _WORD *a5, _WORD *a6, _WORD *a7) //FINAL
+int CPP_nearest_alien(u8 a1, u16 a2, u16 a3, u16 a4, u16 *a5, u16 *a6, u16 *a7) //FINAL
 {
   int result; // eax
   char *v9; // [esp+4h] [ebp-1Ch]
   int v10; // [esp+8h] [ebp-18h]
-  unsigned __int16 v11; // [esp+Ch] [ebp-14h]
-  unsigned __int16 v12; // [esp+10h] [ebp-10h]
-  unsigned __int16 v13; // [esp+14h] [ebp-Ch]
-  unsigned __int16 v14; // [esp+18h] [ebp-8h]
-  unsigned __int8 i; // [esp+1Ch] [ebp-4h]
+  u16 v11; // [esp+Ch] [ebp-14h]
+  u16 v12; // [esp+10h] [ebp-10h]
+  u16 v13; // [esp+14h] [ebp-Ch]
+  u16 v14; // [esp+18h] [ebp-8h]
+  u8 i; // [esp+1Ch] [ebp-4h]
 
   v11 = -1;
   result = 1800 * a1;
   v9 = (char *) aliens + result; //& fix
   for ( i = 0; i < 0x3Cu; ++i )
   {
-    if ( v9[16] && v9[16] != 21 && v9[16] != 49 && ((unsigned __int8)v9[16] < 0x19u || (unsigned __int8)v9[16] > 0x2Eu) )
+    if ( v9[16] && v9[16] != 21 && v9[16] != 49 && ((u8)v9[16] < 0x19u || (u8)v9[16] > 0x2Eu) )
     {
-      v10 = *((unsigned __int16 *)v9 + 2);
+      v10 = *((u16 *)v9 + 2);
       if ( a2 >= 0x7800u )
       {
         if ( a2 - 0x8000 > v10 )
@@ -6267,8 +6274,8 @@ int CPP_nearest_alien(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 
         v10 -= 0x10000;
       }
       v14 = abs(a2 - v10);
-      v13 = abs(a3 - *((unsigned __int16 *)v9 + 3));
-      v12 = abs(a4 - *((unsigned __int16 *)v9 + 4));
+      v13 = abs(a3 - *((u16 *)v9 + 3));
+      v12 = abs(a4 - *((u16 *)v9 + 4));
       if ( v13 < v11 && v14 < v11 && v12 < v11 )
       {
         if ( v14 <= v13 )
@@ -6286,9 +6293,9 @@ int CPP_nearest_alien(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 
         {
           v11 = v14;
         }
-        *a5 = *((_WORD *)v9 + 2);
-        *a6 = *((_WORD *)v9 + 3);
-        *a7 = *((_WORD *)v9 + 4);
+        *a5 = *((u16 *)v9 + 2);
+        *a6 = *((u16 *)v9 + 3);
+        *a7 = *((u16 *)v9 + 4);
       }
     }
     result = (int)v9;
@@ -6297,16 +6304,16 @@ int CPP_nearest_alien(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 
   return result;
 }
 
-__int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a4) //FINAL
+i16 CPP_move_in_line(int a1, int a2, u16 a3, u16 a4) //FINAL
 {
-  __int16 result; // ax
+  i16 result; // ax
   int v5; // [esp+0h] [ebp-30h]
   int v6; // [esp+0h] [ebp-30h]
   int v7; // [esp+4h] [ebp-2Ch]
   int v8; // [esp+4h] [ebp-2Ch]
-  __int16 v9; // [esp+8h] [ebp-28h]
-  __int16 v10; // [esp+8h] [ebp-28h]
-  __int16 v11; // [esp+8h] [ebp-28h]
+  i16 v9; // [esp+8h] [ebp-28h]
+  i16 v10; // [esp+8h] [ebp-28h]
+  i16 v11; // [esp+8h] [ebp-28h]
   int v12; // [esp+Ch] [ebp-24h]
   int v13; // [esp+10h] [ebp-20h]
   int v14; // [esp+14h] [ebp-1Ch]
@@ -6325,24 +6332,24 @@ __int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a
   int v27; // [esp+50h] [ebp+20h]
 
   LOWORD(a2) = BYTE1(a2);
-  v14 = (int)*(unsigned __int16 *)(a1 + 4) >> 8;
-  if ( (__int16)v14 >= 128 )
+  v14 = (int)*(u16 *)(a1 + 4) >> 8;
+  if ( (i16)v14 >= 128 )
   {
-    if ( (unsigned __int16)a2 < (__int16)v14 - 128 )
+    if ( (u16)a2 < (i16)v14 - 128 )
       a2 += 256;
   }
-  else if ( (unsigned __int16)a2 > (__int16)v14 + 128 )
+  else if ( (u16)a2 > (i16)v14 + 128 )
   {
     a2 -= 256;
   }
   v21 = a2 - v14;
-  v13 = (int)*(unsigned __int16 *)(a1 + 6) >> 8;
+  v13 = (int)*(u16 *)(a1 + 6) >> 8;
   v26 = (int)a3 >> 8;
-  v5 = (unsigned __int16)v26 - (__int16)v13;
-  v12 = (int)*(unsigned __int16 *)(a1 + 8) >> 8;
+  v5 = (u16)v26 - (i16)v13;
+  v12 = (int)*(u16 *)(a1 + 8) >> 8;
   v27 = (int)a4 >> 8;
-  v7 = (unsigned __int16)v27 - (__int16)v12;
-  if ( (__int16)(a2 - v14) < 0 )
+  v7 = (u16)v27 - (i16)v12;
+  if ( (i16)(a2 - v14) < 0 )
   {
     v23 = -1;
     v21 = v14 - a2;
@@ -6353,7 +6360,7 @@ __int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a
   }
   if ( (v5 & 0x8000u) != 0 )
   {
-    v5 = (__int16)v13 - (unsigned __int16)v26;
+    v5 = (i16)v13 - (u16)v26;
     v25 = -1;
   }
   else
@@ -6362,7 +6369,7 @@ __int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a
   }
   if ( (v7 & 0x8000u) != 0 )
   {
-    v7 = (__int16)v12 - (unsigned __int16)v27;
+    v7 = (i16)v12 - (u16)v27;
     v24 = -1;
   }
   else
@@ -6372,57 +6379,57 @@ __int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a
   v22 = v21 + 1;
   v6 = v5 + 1;
   v8 = v7 + 1;
-  if ( (__int16)v22 >= (__int16)v6 && (__int16)v22 >= (__int16)v8 )
+  if ( (i16)v22 >= (i16)v6 && (i16)v22 >= (i16)v8 )
   {
     v9 = *(char *)(a1 + 24);
-    if ( v9 > (__int16)v22 )
+    if ( v9 > (i16)v22 )
       v9 = v22;
     v18 = v22;
     v15 = v22;
     while ( v9 > 0 )
     {
-      if ( (__int16)v14 != (unsigned __int16)a2 )
+      if ( (i16)v14 != (u16)a2 )
       {
-        LOWORD(v14) = v23 + (_WORD)v14;
+        LOWORD(v14) = v23 + (u16)v14;
         v18 -= v6;
         v15 -= v8;
       }
-      if ( (v18 & 0x8000u) != 0 && (__int16)v13 != (unsigned __int16)v26 )
+      if ( (v18 & 0x8000u) != 0 && (i16)v13 != (u16)v26 )
       {
-        LOWORD(v13) = v25 + (_WORD)v13;
+        LOWORD(v13) = v25 + (u16)v13;
         v18 += v22;
       }
-      if ( (v15 & 0x8000u) != 0 && (__int16)v12 != (unsigned __int16)v27 )
+      if ( (v15 & 0x8000u) != 0 && (i16)v12 != (u16)v27 )
       {
-        LOWORD(v12) = v24 + (_WORD)v12;
+        LOWORD(v12) = v24 + (u16)v12;
         v15 += v22;
       }
       --v9;
     }
   }
-  else if ( (__int16)v6 < (__int16)v8 )
+  else if ( (i16)v6 < (i16)v8 )
   {
     v11 = *(char *)(a1 + 24);
-    if ( v11 > (__int16)v8 )
+    if ( v11 > (i16)v8 )
       v11 = v8;
     v20 = v8;
     v17 = v8;
     while ( v11 > 0 )
     {
-      if ( (__int16)v12 != (unsigned __int16)v27 )
+      if ( (i16)v12 != (u16)v27 )
       {
-        LOWORD(v12) = v24 + (_WORD)v12;
+        LOWORD(v12) = v24 + (u16)v12;
         v20 -= v6;
         v17 -= v22;
       }
-      if ( (v20 & 0x8000u) != 0 && (__int16)v13 != (unsigned __int16)v26 )
+      if ( (v20 & 0x8000u) != 0 && (i16)v13 != (u16)v26 )
       {
-        LOWORD(v13) = v25 + (_WORD)v13;
+        LOWORD(v13) = v25 + (u16)v13;
         v20 += v8;
       }
-      if ( (v17 & 0x8000u) != 0 && (__int16)v14 != (unsigned __int16)a2 )
+      if ( (v17 & 0x8000u) != 0 && (i16)v14 != (u16)a2 )
       {
-        LOWORD(v14) = v23 + (_WORD)v14;
+        LOWORD(v14) = v23 + (u16)v14;
         v17 += v8;
       }
       --v11;
@@ -6431,87 +6438,87 @@ __int16 CPP_move_in_line(int a1, int a2, unsigned __int16 a3, unsigned __int16 a
   else
   {
     v10 = *(char *)(a1 + 24);
-    if ( v10 > (__int16)v6 )
+    if ( v10 > (i16)v6 )
       v10 = v6;
     v19 = v6;
     v16 = v6;
     while ( v10 > 0 )
     {
-      if ( (__int16)v13 != (unsigned __int16)v26 )
+      if ( (i16)v13 != (u16)v26 )
       {
-        LOWORD(v13) = v25 + (_WORD)v13;
+        LOWORD(v13) = v25 + (u16)v13;
         v19 -= v22;
         v16 -= v8;
       }
-      if ( (v19 & 0x8000u) != 0 && (__int16)v14 != (unsigned __int16)a2 )
+      if ( (v19 & 0x8000u) != 0 && (i16)v14 != (u16)a2 )
       {
-        LOWORD(v14) = v23 + (_WORD)v14;
+        LOWORD(v14) = v23 + (u16)v14;
         v19 += v6;
       }
-      if ( (v16 & 0x8000u) != 0 && (__int16)v12 != (unsigned __int16)v27 )
+      if ( (v16 & 0x8000u) != 0 && (i16)v12 != (u16)v27 )
       {
-        LOWORD(v12) = v24 + (_WORD)v12;
+        LOWORD(v12) = v24 + (u16)v12;
         v16 += v6;
       }
       --v10;
     }
   }
-  *(_WORDNA *)(a1 + 4) = (_WORD)v14 << 8;
-  *(_WORDNA *)(a1 + 6) = (_WORD)v13 << 8;
-  result = (_WORD)v12 << 8;
-  *(_WORDNA *)(a1 + 8) = (_WORD)v12 << 8;
+  *(UA<u16> *)(a1 + 4) = (u16)v14 << 8;
+  *(UA<u16> *)(a1 + 6) = (u16)v13 << 8;
+  result = (u16)v12 << 8;
+  *(UA<u16> *)(a1 + 8) = (u16)v12 << 8;
   return result;
 }
 
-unsigned __int8 CPP_do_bullets(void) //FINAL
+u8 CPP_do_bullets(void) //FINAL
 {
-  unsigned __int8 result; // al
+  u8 result; // al
   int v3; // edx
   int v4; // eax
   int v5; // eax
-  __int16 v6; // ax
+  i16 v6; // ax
   int v7; // eax
   int v8; // eax
   int v9; // edx
   int v10; // eax
-  __int16 v11; // ax
+  i16 v11; // ax
   int v12; // eax
   int v13; // eax
-  __int16 v14; // ax
+  i16 v14; // ax
   int v15; // eax
   int v16; // eax
-  __int16 v17; // ax
+  i16 v17; // ax
   int v18; // eax
-  __int16 v19; // ax
+  i16 v19; // ax
   int v20; // eax
-  __int16 v21; // ax
+  i16 v21; // ax
   int v22; // eax
   int v23; // eax
-  __int16 v24; // ax
+  i16 v24; // ax
   int v25; // eax
   int v26; // eax
   int v27; // edx
-  __int16 v28; // ax
+  i16 v28; // ax
   int v29; // eax
   int v30; // eax
   int v31; // eax
   int v32; // eax
-  __int16 v33; // ax
+  i16 v33; // ax
   int v34; // eax
   int v35; // eax
   int v36; // eax
-  __int16 v37; // ax
+  i16 v37; // ax
   int v38; // eax
   int v39; // eax
   int v40; // edx
-  __int64 v41; // [esp-1Ch] [ebp-240h]
-  __int64 v42; // [esp-1Ch] [ebp-240h]
+//  i64 v41; // [esp-1Ch] [ebp-240h]
+//  i64 v42; // [esp-1Ch] [ebp-240h]
   int v43; // [esp+0h] [ebp-224h] BYREF
   int v44[5]; // [esp+4h] [ebp-220h] BYREF
   int v45; // [esp+18h] [ebp-20Ch]
   int v46; // [esp+1Ch] [ebp-208h]
   char v47; // [esp+20h] [ebp-204h]
-  unsigned __int8 v48; // [esp+24h] [ebp-200h]
+  u8 v48; // [esp+24h] [ebp-200h]
   int v49; // [esp+28h] [ebp-1FCh]
   int v50; // [esp+2Ch] [ebp-1F8h]
   _BOOL1 v51; // [esp+30h] [ebp-1F4h]
@@ -6519,8 +6526,8 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v53[5]; // [esp+38h] [ebp-1ECh] BYREF
   int v54; // [esp+4Ch] [ebp-1D8h]
   int v55; // [esp+50h] [ebp-1D4h]
-  unsigned __int8 v56; // [esp+54h] [ebp-1D0h]
-  unsigned __int8 v57; // [esp+58h] [ebp-1CCh]
+  u8 v56; // [esp+54h] [ebp-1D0h]
+  u8 v57; // [esp+58h] [ebp-1CCh]
   int v58; // [esp+5Ch] [ebp-1C8h]
   int v59; // [esp+60h] [ebp-1C4h]
   _BOOL1 v60; // [esp+64h] [ebp-1C0h]
@@ -6528,7 +6535,7 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v62[5]; // [esp+6Ch] [ebp-1B8h] BYREF
   int v63; // [esp+80h] [ebp-1A4h]
   int v64; // [esp+84h] [ebp-1A0h]
-  unsigned __int8 v65; // [esp+88h] [ebp-19Ch]
+  u8 v65; // [esp+88h] [ebp-19Ch]
   char v66; // [esp+8Ch] [ebp-198h]
   int v67; // [esp+90h] [ebp-194h]
   int v68; // [esp+94h] [ebp-190h]
@@ -6537,8 +6544,8 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v71[5]; // [esp+A0h] [ebp-184h] BYREF
   int v72; // [esp+B4h] [ebp-170h]
   int v73; // [esp+B8h] [ebp-16Ch]
-  unsigned __int8 v74; // [esp+BCh] [ebp-168h]
-  unsigned __int8 v75; // [esp+C0h] [ebp-164h]
+  u8 v74; // [esp+BCh] [ebp-168h]
+  u8 v75; // [esp+C0h] [ebp-164h]
   int v76; // [esp+C4h] [ebp-160h]
   int v77; // [esp+C8h] [ebp-15Ch]
   _BOOL1 v78; // [esp+CCh] [ebp-158h]
@@ -6547,7 +6554,7 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v81; // [esp+E8h] [ebp-13Ch]
   int v82; // [esp+ECh] [ebp-138h]
   char v83; // [esp+F0h] [ebp-134h]
-  unsigned __int8 v84; // [esp+F4h] [ebp-130h]
+  u8 v84; // [esp+F4h] [ebp-130h]
   int v85; // [esp+F8h] [ebp-12Ch]
   int v86; // [esp+FCh] [ebp-128h]
   _BOOL1 v87; // [esp+100h] [ebp-124h]
@@ -6555,8 +6562,8 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v89[5]; // [esp+108h] [ebp-11Ch] BYREF
   int v90; // [esp+11Ch] [ebp-108h]
   int v91; // [esp+120h] [ebp-104h]
-  unsigned __int8 v92; // [esp+124h] [ebp-100h]
-  unsigned __int8 v93; // [esp+128h] [ebp-FCh]
+  u8 v92; // [esp+124h] [ebp-100h]
+  u8 v93; // [esp+128h] [ebp-FCh]
   int v94; // [esp+12Ch] [ebp-F8h]
   int v95; // [esp+130h] [ebp-F4h]
   _BOOL1 v96; // [esp+134h] [ebp-F0h]
@@ -6565,7 +6572,7 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v99; // [esp+150h] [ebp-D4h]
   int v100; // [esp+154h] [ebp-D0h]
   char v101; // [esp+158h] [ebp-CCh]
-  unsigned __int8 v102; // [esp+15Ch] [ebp-C8h]
+  u8 v102; // [esp+15Ch] [ebp-C8h]
   int v103; // [esp+160h] [ebp-C4h]
   int v104; // [esp+164h] [ebp-C0h]
   _BOOL1 v105; // [esp+168h] [ebp-BCh]
@@ -6573,8 +6580,8 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v107[5]; // [esp+170h] [ebp-B4h] BYREF
   int v108; // [esp+184h] [ebp-A0h]
   int v109; // [esp+188h] [ebp-9Ch]
-  unsigned __int8 v110; // [esp+18Ch] [ebp-98h]
-  unsigned __int8 v111; // [esp+190h] [ebp-94h]
+  u8 v110; // [esp+18Ch] [ebp-98h]
+  u8 v111; // [esp+190h] [ebp-94h]
   int v112; // [esp+194h] [ebp-90h]
   int v113; // [esp+198h] [ebp-8Ch]
   _BOOL1 v114; // [esp+19Ch] [ebp-88h]
@@ -6583,7 +6590,7 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v117; // [esp+1B8h] [ebp-6Ch]
   int v118; // [esp+1BCh] [ebp-68h]
   char v119; // [esp+1C0h] [ebp-64h]
-  unsigned __int8 v120; // [esp+1C4h] [ebp-60h]
+  u8 v120; // [esp+1C4h] [ebp-60h]
   int v121; // [esp+1C8h] [ebp-5Ch]
   int v122; // [esp+1CCh] [ebp-58h]
   _BOOL1 v123; // [esp+1D0h] [ebp-54h]
@@ -6591,23 +6598,23 @@ unsigned __int8 CPP_do_bullets(void) //FINAL
   int v125[5]; // [esp+1D8h] [ebp-4Ch] BYREF
   int v126; // [esp+1ECh] [ebp-38h]
   int v127; // [esp+1F0h] [ebp-34h]
-  unsigned __int8 v128; // [esp+1F4h] [ebp-30h]
-  unsigned __int8 v129; // [esp+1F8h] [ebp-2Ch]
+  u8 v128; // [esp+1F4h] [ebp-30h]
+  u8 v129; // [esp+1F8h] [ebp-2Ch]
   int v130; // [esp+1FCh] [ebp-28h]
   int v131; // [esp+200h] [ebp-24h]
   _BOOL1 v132; // [esp+204h] [ebp-20h]
-  unsigned __int8 v133; // [esp+208h] [ebp-1Ch]
+  u8 v133; // [esp+208h] [ebp-1Ch]
   int v134; // [esp+20Ch] [ebp-18h]
   int v135; // [esp+210h] [ebp-14h] BYREF
   int v136; // [esp+214h] [ebp-10h] BYREF
   int v137; // [esp+218h] [ebp-Ch] BYREF
-  unsigned __int8 v138; // [esp+21Ch] [ebp-8h]
-  unsigned __int8 v139; // [esp+220h] [ebp-4h]
+  u8 v138; // [esp+21Ch] [ebp-8h]
+  u8 v139; // [esp+220h] [ebp-4h]
 
   v139 = 0;
 LABEL_2:
   result = v139;
-  if ( v139 < (unsigned __int8)no_players )
+  if ( v139 < (u8)no_players )
   {
     v3 = (int) bullets + 1020 * v139;
     v134 = v3;
@@ -6619,7 +6626,7 @@ LABEL_2:
         ++v139;
         goto LABEL_2;
       }
-      v133 = *(_BYTE *)(v134 + 16);
+      v133 = *(u8 *)(v134 + 16);
       if ( v133 < 0xAu )
       {
         if ( v133 < 4u )
@@ -6632,33 +6639,33 @@ LABEL_2:
               HIWORD(v4) = HIWORD(v134);
               LOWORD(v4) = *(char *)(v134 + 24);
               v3 = (v4 SHL8) + (v3 SHL8);
-              *(_WORDNA *)(v134 + 6) += v3;
-              if ( *(_WORDNA *)(v134 + 6) > 0xE000u )
+              *(UA<u16> *)(v134 + 6) += v3;
+              if ( *(UA<u16> *)(v134 + 6) > 0xE000u )
               {
-                *(_BYTE *)(v134 + 16) = 0;
+                *(u8 *)(v134 + 16) = 0;
                 goto LABEL_6;
               }
               LOWORD(v3) = vx[v139];
               HIWORD(v5) = HIWORD(v134);
               LOWORD(v5) = *(char *)(v134 + 26);
               v3 = (v5 SHL8) - (v3 SHL8);
-              *(_WORDNA *)(v134 + 4) += v3;
-              *(_WORDNA *)(v134 + 10) += 36;
-              *(_WORDNA *)(v134 + 12) += 48;
+              *(UA<u16> *)(v134 + 4) += v3;
+              *(UA<u16> *)(v134 + 10) += 36;
+              *(UA<u16> *)(v134 + 12) += 48;
               v131 = v134;
               v130 = v134;
               v132 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-              if ( v132 || (v6 = CPP_what_block(v139, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v6)) )
+              if ( v132 || (v6 = CPP_what_block(v139, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v6)) )
               {
                 v128 = v139;
                 HIWORD(v7) = HIWORD(v134);
-                LOWORD(v7) = *(_WORDNA *)(v134 + 4);
+                LOWORD(v7) = *(UA<u16> *)(v134 + 4);
                 v127 = v7;
                 HIWORD(v7) = HIWORD(v134);
-                LOWORD(v7) = *(_WORDNA *)(v134 + 6);
+                LOWORD(v7) = *(UA<u16> *)(v134 + 6);
                 v126 = v7;
                 HIWORD(v7) = HIWORD(v134);
-                LOWORD(v7) = *(_WORDNA *)(v134 + 8);
+                LOWORD(v7) = *(UA<u16> *)(v134 + 8);
                 v125[4] = v7;
                 v129 = v139;
                 v125[3] = v127;
@@ -6666,14 +6673,14 @@ LABEL_2:
                 v125[1] = v7;
                 v125[0] = v127;
                 v124 = v126;
-                if ( !(_WORD)v7 )
+                if ( !(u16)v7 )
                 {
-                  CPP_organise_block(v129, (_WORD*)v125, (_WORD*)&v124);
+                  CPP_organise_block(v129, (u16*)v125, (u16*)&v124);
                   CPP_change_hit_block(v129, v125[0], v124);
                 }
                 goto LABEL_106;
               }
-              if ( --*(_DWORDNA *)v134 == (unsigned)-1 ) //unsigned fix
+              if ( --*(UA<u32> *)v134 == (unsigned)-1 ) //unsigned fix
                 goto LABEL_106;
             }
             else
@@ -6684,33 +6691,33 @@ LABEL_2:
               v9 = v8;
               LOWORD(v8) = word_21F94A;
               v3 = (v8 SHL8) + v9;
-              *(_WORDNA *)(v134 + 6) += v3;
-              if ( *(_WORDNA *)(v134 + 6) > 0xE000u )
+              *(UA<u16> *)(v134 + 6) += v3;
+              if ( *(UA<u16> *)(v134 + 6) > 0xE000u )
               {
-                *(_BYTE *)(v134 + 16) = 0;
+                *(u8 *)(v134 + 16) = 0;
                 goto LABEL_6;
               }
               LOWORD(v3) = vx[v139];
               HIWORD(v10) = HIWORD(v134);
               LOWORD(v10) = *(char *)(v134 + 26);
               v3 = (v10 SHL8) - (v3 SHL8);
-              *(_WORDNA *)(v134 + 4) += v3;
-              *(_WORDNA *)(v134 + 10) += 36;
-              *(_WORDNA *)(v134 + 12) += 48;
+              *(UA<u16> *)(v134 + 4) += v3;
+              *(UA<u16> *)(v134 + 10) += 36;
+              *(UA<u16> *)(v134 + 12) += 48;
               v122 = v134;
               v121 = v134;
               v123 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-              if ( v123 || (v11 = CPP_what_block(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v11)) )
+              if ( v123 || (v11 = CPP_what_block(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v11)) )
               {
                 v119 = 1;
                 HIWORD(v12) = HIWORD(v134);
-                LOWORD(v12) = *(_WORDNA *)(v134 + 4);
+                LOWORD(v12) = *(UA<u16> *)(v134 + 4);
                 v118 = v12;
                 HIWORD(v12) = HIWORD(v134);
-                LOWORD(v12) = *(_WORDNA *)(v134 + 6);
+                LOWORD(v12) = *(UA<u16> *)(v134 + 6);
                 v117 = v12;
                 HIWORD(v12) = HIWORD(v134);
-                LOWORD(v12) = *(_WORDNA *)(v134 + 8);
+                LOWORD(v12) = *(UA<u16> *)(v134 + 8);
                 v116[4] = v12;
                 v120 = 1;
                 v116[3] = v118;
@@ -6718,14 +6725,14 @@ LABEL_2:
                 v116[1] = v12;
                 v116[0] = v118;
                 v115 = v117;
-                if ( !(_WORD)v12 )
+                if ( !(u16)v12 )
                 {
-                  CPP_organise_block(v120, (_WORD*)v116, (_WORD*)&v115);
+                  CPP_organise_block(v120, (u16*)v116, (u16*)&v115);
                   CPP_change_hit_block(v120, v116[0], v115);
                 }
                 goto LABEL_106;
               }
-              if ( --*(_DWORDNA *)v134 == (unsigned)-1 ) //unsigned fix
+              if ( --*(UA<u32> *)v134 == (unsigned)-1 ) //unsigned fix
                 goto LABEL_106;
             }
           }
@@ -6733,36 +6740,36 @@ LABEL_2:
         else if ( v133 <= 4u )
         {
           HIWORD(v13) = HIWORD(v134);
-          LOWORD(v13) = *(_WORDNA *)(v134 + 4);
+          LOWORD(v13) = *(UA<u16> *)(v134 + 4);
           v137 = v13;
           v135 = 57344;
           HIWORD(v13) = HIWORD(v134);
-          LOWORD(v13) = *(_WORDNA *)(v134 + 8);
+          LOWORD(v13) = *(UA<u16> *)(v134 + 8);
           v136 = v13;
-          CPP_nearest_alien(0, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6), *(_WORDNA *)(v134 + 8), (_WORD*)&v137, (_WORD*)&v135, (_WORD*)&v136);
-          CPP_move_in_line(v134, (unsigned __int16)v137, v135, v136);
-          if ( *(_BYTE *)(v134 + 24) != 8 && (turn & 3) == 0 )
-            ++*(_BYTE *)(v134 + 24);
-          if ( *(_WORDNA *)(v134 + 6) >= 0xE000u )
+          CPP_nearest_alien(0, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6), *(UA<u16> *)(v134 + 8), (u16*)&v137, (u16*)&v135, (u16*)&v136);
+          CPP_move_in_line(v134, (u16)v137, v135, v136);
+          if ( *(u8 *)(v134 + 24) != 8 && (turn & 3) == 0 )
+            ++*(u8 *)(v134 + 24);
+          if ( *(UA<u16> *)(v134 + 6) >= 0xE000u )
           {
-            *(_BYTE *)(v134 + 16) = 0;
+            *(u8 *)(v134 + 16) = 0;
             goto LABEL_6;
           }
-          *(_WORDNA *)(v134 + 10) += 72;
+          *(UA<u16> *)(v134 + 10) += 72;
           v113 = v134;
           v112 = v134;
           v114 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-          if ( v114 || (v14 = CPP_what_block(v139, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v14)) )
+          if ( v114 || (v14 = CPP_what_block(v139, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v14)) )
           {
             v110 = v139;
             HIWORD(v15) = HIWORD(v134);
-            LOWORD(v15) = *(_WORDNA *)(v134 + 4);
+            LOWORD(v15) = *(UA<u16> *)(v134 + 4);
             v109 = v15;
             HIWORD(v15) = HIWORD(v134);
-            LOWORD(v15) = *(_WORDNA *)(v134 + 6);
+            LOWORD(v15) = *(UA<u16> *)(v134 + 6);
             v108 = v15;
             HIWORD(v15) = HIWORD(v134);
-            LOWORD(v15) = *(_WORDNA *)(v134 + 8);
+            LOWORD(v15) = *(UA<u16> *)(v134 + 8);
             v107[4] = v15;
             v111 = v139;
             v107[3] = v109;
@@ -6770,9 +6777,9 @@ LABEL_2:
             v107[1] = v15;
             v107[0] = v109;
             v106 = v108;
-            if ( !(_WORD)v15 )
+            if ( !(u16)v15 )
             {
-              CPP_organise_block(v111, (_WORD*)v107, (_WORD*)&v106);
+              CPP_organise_block(v111, (u16*)v107, (u16*)&v106);
               CPP_change_hit_block(v111, v107[0], v106);
             }
             goto LABEL_136;
@@ -6781,36 +6788,36 @@ LABEL_2:
         else if ( v133 <= 5u )
         {
           HIWORD(v16) = HIWORD(v134);
-          LOWORD(v16) = *(_WORDNA *)(v134 + 4);
+          LOWORD(v16) = *(UA<u16> *)(v134 + 4);
           v137 = v16;
           v135 = 57344;
           HIWORD(v16) = HIWORD(v134);
-          LOWORD(v16) = *(_WORDNA *)(v134 + 8);
+          LOWORD(v16) = *(UA<u16> *)(v134 + 8);
           v136 = v16;
-          CPP_nearest_alien(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6), *(_WORDNA *)(v134 + 8), (_WORD*)&v137, (_WORD*)&v135, (_WORD*)&v136);
-          CPP_move_in_line(v134, (unsigned __int16)v137, v135, v136);
-          if ( *(_BYTE *)(v134 + 24) != 8 && (turn & 3) == 0 )
-            ++*(_BYTE *)(v134 + 24);
-          if ( *(_WORDNA *)(v134 + 6) >= 0xE000u )
+          CPP_nearest_alien(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6), *(UA<u16> *)(v134 + 8), (u16*)&v137, (u16*)&v135, (u16*)&v136);
+          CPP_move_in_line(v134, (u16)v137, v135, v136);
+          if ( *(u8 *)(v134 + 24) != 8 && (turn & 3) == 0 )
+            ++*(u8 *)(v134 + 24);
+          if ( *(UA<u16> *)(v134 + 6) >= 0xE000u )
           {
-            *(_BYTE *)(v134 + 16) = 0;
+            *(u8 *)(v134 + 16) = 0;
             goto LABEL_6;
           }
-          *(_WORDNA *)(v134 + 10) += 72;
+          *(UA<u16> *)(v134 + 10) += 72;
           v104 = v134;
           v103 = v134;
           v105 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-          if ( v105 || (v17 = CPP_what_block(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v17)) )
+          if ( v105 || (v17 = CPP_what_block(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v17)) )
           {
             v101 = 1;
             HIWORD(v18) = HIWORD(v134);
-            LOWORD(v18) = *(_WORDNA *)(v134 + 4);
+            LOWORD(v18) = *(UA<u16> *)(v134 + 4);
             v100 = v18;
             HIWORD(v18) = HIWORD(v134);
-            LOWORD(v18) = *(_WORDNA *)(v134 + 6);
+            LOWORD(v18) = *(UA<u16> *)(v134 + 6);
             v99 = v18;
             HIWORD(v18) = HIWORD(v134);
-            LOWORD(v18) = *(_WORDNA *)(v134 + 8);
+            LOWORD(v18) = *(UA<u16> *)(v134 + 8);
             v98[4] = v18;
             v102 = 1;
             v98[3] = v100;
@@ -6818,9 +6825,9 @@ LABEL_2:
             v98[1] = v18;
             v98[0] = v100;
             v97 = v99;
-            if ( !(_WORD)v18 )
+            if ( !(u16)v18 )
             {
-              CPP_organise_block(v102, (_WORD*)v98, (_WORD*)&v97);
+              CPP_organise_block(v102, (u16*)v98, (u16*)&v97);
               CPP_change_hit_block(v102, v98[0], v97);
             }
             goto LABEL_136;
@@ -6832,27 +6839,27 @@ LABEL_2:
           HIWORD(v23) = HIWORD(v134);
           LOWORD(v23) = *(char *)(v134 + 24);
           v3 = (v23 SHL8) + (v3 SHL8);
-          *(_WORDNA *)(v134 + 6) += v3;
-          if ( *(_WORDNA *)(v134 + 6) > 0xE000u || *(_WORDNA *)(v134 + 8) > 0xE000u )
+          *(UA<u16> *)(v134 + 6) += v3;
+          if ( *(UA<u16> *)(v134 + 6) > 0xE000u || *(UA<u16> *)(v134 + 8) > 0xE000u )
           {
-            *(_BYTE *)(v134 + 16) = 0;
+            *(u8 *)(v134 + 16) = 0;
             goto LABEL_6;
           }
           v77 = v134;
           v76 = v134;
           v78 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-          if ( v78 || (v24 = CPP_what_block(v139, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v24)) )
+          if ( v78 || (v24 = CPP_what_block(v139, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v24)) )
           {
-            *(_WORDNA *)(v134 + 4) -= vx[v139]  SHL8; //shift fix
+            *(UA<u16> *)(v134 + 4) -= vx[v139]  SHL8; //shift fix
             v75 = v139;
             HIWORD(v25) = HIWORD(v134);
-            LOWORD(v25) = *(_WORDNA *)(v134 + 4);
+            LOWORD(v25) = *(UA<u16> *)(v134 + 4);
             v73 = v25;
             HIWORD(v25) = HIWORD(v134);
-            LOWORD(v25) = *(_WORDNA *)(v134 + 6);
+            LOWORD(v25) = *(UA<u16> *)(v134 + 6);
             v72 = v25;
             HIWORD(v25) = HIWORD(v134);
-            LOWORD(v25) = *(_WORDNA *)(v134 + 8);
+            LOWORD(v25) = *(UA<u16> *)(v134 + 8);
             v71[4] = v25;
             v74 = v139;
             v71[3] = v73;
@@ -6860,14 +6867,14 @@ LABEL_2:
             v71[1] = v25;
             v71[0] = v73;
             v70 = v72;
-            if ( !(_WORD)v25 )
+            if ( !(u16)v25 )
             {
-              CPP_organise_block(v74, (_WORD*)v71, (_WORD*)&v70);
+              CPP_organise_block(v74, (u16*)v71, (u16*)&v70);
               CPP_change_hit_block(v74, v71[0], v70);
             }
             goto LABEL_136;
           }
-          if ( --*(_DWORDNA *)v134 == (unsigned)-1 ) //unsigned fix
+          if ( --*(UA<u32> *)v134 == (unsigned)-1 ) //unsigned fix
             goto LABEL_106;
         }
       }
@@ -6879,27 +6886,27 @@ LABEL_2:
         v27 = v26;
         LOWORD(v26) = word_21F94A;
         v3 = (v26 SHL8) + v27;
-        *(_WORDNA *)(v134 + 6) += v3;
-        if ( *(_WORDNA *)(v134 + 6) > 0xE000u || *(_WORDNA *)(v134 + 8) > 0xE000u )
+        *(UA<u16> *)(v134 + 6) += v3;
+        if ( *(UA<u16> *)(v134 + 6) > 0xE000u || *(UA<u16> *)(v134 + 8) > 0xE000u )
         {
-          *(_BYTE *)(v134 + 16) = 0;
+          *(u8 *)(v134 + 16) = 0;
           goto LABEL_6;
         }
         v68 = v134;
         v67 = v134;
         v69 = CPP_check_bullets_to_aliens(/*a2, */ v134) != 0;
-        if ( v69 || (v28 = CPP_what_block(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v28)) )
+        if ( v69 || (v28 = CPP_what_block(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v28)) )
         {
-          *(_WORDNA *)(v134 + 4) -= vx[v139]  SHL8; //shift fix
+          *(UA<u16> *)(v134 + 4) -= vx[v139]  SHL8; //shift fix
           v66 = 1;
           HIWORD(v29) = HIWORD(v134);
-          LOWORD(v29) = *(_WORDNA *)(v134 + 4);
+          LOWORD(v29) = *(UA<u16> *)(v134 + 4);
           v64 = v29;
           HIWORD(v29) = HIWORD(v134);
-          LOWORD(v29) = *(_WORDNA *)(v134 + 6);
+          LOWORD(v29) = *(UA<u16> *)(v134 + 6);
           v63 = v29;
           HIWORD(v29) = HIWORD(v134);
-          LOWORD(v29) = *(_WORDNA *)(v134 + 8);
+          LOWORD(v29) = *(UA<u16> *)(v134 + 8);
           v62[4] = v29;
           v65 = 1;
           v62[3] = v64;
@@ -6907,14 +6914,14 @@ LABEL_2:
           v62[1] = v29;
           v62[0] = v64;
           v61 = v63;
-          if ( !(_WORD)v29 )
+          if ( !(u16)v29 )
           {
-            CPP_organise_block(v65, (_WORD*)v62, (_WORD*)&v61);
+            CPP_organise_block(v65, (u16*)v62, (u16*)&v61);
             CPP_change_hit_block(v65, v62[0], v61);
           }
           goto LABEL_136;
         }
-        if ( --*(_DWORDNA *)v134 == (unsigned)-1 ) //unsigned fix
+        if ( --*(UA<u32> *)v134 == (unsigned)-1 ) //unsigned fix
           goto LABEL_106;
       }
       else if ( v133 < 0x29u )
@@ -6924,7 +6931,7 @@ LABEL_2:
           if ( v133 <= 0xDu )
           {
             HIWORD(v31) = HIWORD(v134);
-            if ( *(_BYTE *)(v134 + 29) )
+            if ( *(u8 *)(v134 + 29) )
             {
               LOWORD(v31) = word_25677C[0] + 1536;
             }
@@ -6939,31 +6946,31 @@ LABEL_2:
             v135 = v32;
             LOWORD(v32) = dword_256780[0]; //space fix
             v136 = v32;
-            CPP_nearest_alien(0, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6), *(_WORDNA *)(v134 + 8), (_WORD*)&v137, (_WORD*)&v135, (_WORD*)&v136);
-            CPP_move_in_line(v134, (unsigned __int16)v137, v135, v136);
-            if ( *(_BYTE *)(v134 + 24) != 12 && (turn & 3) == 0 )
-              ++*(_BYTE *)(v134 + 24);
-            if ( *(_WORDNA *)(v134 + 6) >= 0xE000u )
+            CPP_nearest_alien(0, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6), *(UA<u16> *)(v134 + 8), (u16*)&v137, (u16*)&v135, (u16*)&v136);
+            CPP_move_in_line(v134, (u16)v137, v135, v136);
+            if ( *(u8 *)(v134 + 24) != 12 && (turn & 3) == 0 )
+              ++*(u8 *)(v134 + 24);
+            if ( *(UA<u16> *)(v134 + 6) >= 0xE000u )
             {
-              *(_BYTE *)(v134 + 16) = 0;
+              *(u8 *)(v134 + 16) = 0;
               goto LABEL_6;
             }
-            *(_WORDNA *)(v134 + 12) += 48;
-            *(_WORDNA *)(v134 + 10) += 36;
+            *(UA<u16> *)(v134 + 12) += 48;
+            *(UA<u16> *)(v134 + 10) += 36;
             v59 = v134;
             v58 = v134;
             v60 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-            if ( v60 || (v33 = CPP_what_block(v139, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v33)) )
+            if ( v60 || (v33 = CPP_what_block(v139, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v33)) )
             {
               v56 = v139;
               HIWORD(v34) = HIWORD(v134);
-              LOWORD(v34) = *(_WORDNA *)(v134 + 4);
+              LOWORD(v34) = *(UA<u16> *)(v134 + 4);
               v55 = v34;
               HIWORD(v34) = HIWORD(v134);
-              LOWORD(v34) = *(_WORDNA *)(v134 + 6);
+              LOWORD(v34) = *(UA<u16> *)(v134 + 6);
               v54 = v34;
               HIWORD(v34) = HIWORD(v134);
-              LOWORD(v34) = *(_WORDNA *)(v134 + 8);
+              LOWORD(v34) = *(UA<u16> *)(v134 + 8);
               v53[4] = v34;
               v57 = v139;
               v53[3] = v55;
@@ -6971,9 +6978,9 @@ LABEL_2:
               v53[1] = v34;
               v53[0] = v55;
               v52 = v54;
-              if ( !(_WORD)v34 )
+              if ( !(u16)v34 )
               {
-                CPP_organise_block(v57, (_WORD*)v53, (_WORD*)&v52);
+                CPP_organise_block(v57, (u16*)v53, (u16*)&v52);
                 CPP_change_hit_block(v57, v53[0], v52);
               }
               goto LABEL_136;
@@ -6982,7 +6989,7 @@ LABEL_2:
           else if ( v133 == 14 )
           {
             HIWORD(v35) = HIWORD(v134);
-            if ( *(_BYTE *)(v134 + 29) )
+            if ( *(u8 *)(v134 + 29) )
             {
               LOWORD(v35) = word_25679A + 1536;
             }
@@ -6997,31 +7004,31 @@ LABEL_2:
             v135 = v36;
             LOWORD(v36) = word_25679E;
             v136 = v36;
-            CPP_nearest_alien(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6), *(_WORDNA *)(v134 + 8), (_WORD*)&v137, (_WORD*)&v135, (_WORD*)&v136);
-            CPP_move_in_line(v134, (unsigned __int16)v137, v135, v136);
-            if ( *(_BYTE *)(v134 + 24) != 12 && (turn & 3) == 0 )
-              ++*(_BYTE *)(v134 + 24);
-            if ( *(_WORDNA *)(v134 + 6) >= 0xE000u )
+            CPP_nearest_alien(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6), *(UA<u16> *)(v134 + 8), (u16*)&v137, (u16*)&v135, (u16*)&v136);
+            CPP_move_in_line(v134, (u16)v137, v135, v136);
+            if ( *(u8 *)(v134 + 24) != 12 && (turn & 3) == 0 )
+              ++*(u8 *)(v134 + 24);
+            if ( *(UA<u16> *)(v134 + 6) >= 0xE000u )
             {
-              *(_BYTE *)(v134 + 16) = 0;
+              *(u8 *)(v134 + 16) = 0;
               goto LABEL_6;
             }
-            *(_WORDNA *)(v134 + 12) += 48;
-            *(_WORDNA *)(v134 + 10) += 36;
+            *(UA<u16> *)(v134 + 12) += 48;
+            *(UA<u16> *)(v134 + 10) += 36;
             v50 = v134;
             v49 = v134;
             v51 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-            if ( v51 || (v37 = CPP_what_block(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v37)) )
+            if ( v51 || (v37 = CPP_what_block(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v37)) )
             {
               v47 = 1;
               HIWORD(v38) = HIWORD(v134);
-              LOWORD(v38) = *(_WORDNA *)(v134 + 4);
+              LOWORD(v38) = *(UA<u16> *)(v134 + 4);
               v46 = v38;
               HIWORD(v38) = HIWORD(v134);
-              LOWORD(v38) = *(_WORDNA *)(v134 + 6);
+              LOWORD(v38) = *(UA<u16> *)(v134 + 6);
               v45 = v38;
               HIWORD(v38) = HIWORD(v134);
-              LOWORD(v38) = *(_WORDNA *)(v134 + 8);
+              LOWORD(v38) = *(UA<u16> *)(v134 + 8);
               v44[4] = v38;
               v48 = 1;
               v44[3] = v46;
@@ -7029,24 +7036,24 @@ LABEL_2:
               v44[1] = v38;
               v44[0] = v46;
               v43 = v45;
-              if ( !(_WORD)v38 )
+              if ( !(u16)v38 )
               {
-                CPP_organise_block(v48, (_WORD*)v44, (_WORD*)&v43);
+                CPP_organise_block(v48, (u16*)v44, (u16*)&v43);
                 CPP_change_hit_block(v48, v44[0], v43);
               }
 LABEL_136:
-              *(_WORDNA *)(v134 + 10) = 0;
-              *(_WORDNA *)(v134 + 12) = 0;
+              *(UA<u16> *)(v134 + 10) = 0;
+              *(UA<u16> *)(v134 + 12) = 0;
               v39 = 100;
               LOBYTE(v39) = no_players;
               v3 = 65534 - 0x7FFF * v39;
-              HIDWORD(v42) = 7;
-              LODWORD(v42) = v139;
+//              HIDWORD(v42) = 7;
+//              LODWORD(v42) = v139;
 
               //MY_PlaySample(a1, a2, v42, 0x7FFFu, v3 - 200, 100i64, 3u);
-                MY_PlaySample(/*a1, a2, v42*/  v42, 7, 0x7FFF, v3 - 200, 0x64, 0, 3);
+                MY_PlaySample(/*a1, a2, v42*/  v139, 7, 0x7FFF, v3 - 200, 0x64, 0, 3);
 
-              *(_BYTE *)(v134 + 16) = 41;
+              *(u8 *)(v134 + 16) = 41;
               goto LABEL_6;
             }
           }
@@ -7056,43 +7063,43 @@ LABEL_136:
       {
         LOWORD(v3) = vx[v139];
         v40 = v3 SHL8;
-        *(_WORDNA *)(v134 + 4) -= v40;
+        *(UA<u16> *)(v134 + 4) -= v40;
         LOWORD(v40) = vy[v139];
         v3 = v40 SHL8;
-        *(_WORDNA *)(v134 + 6) += v3;
-        if ( *(_WORDNA *)(v134 + 6) <= 0xE000u && *(_WORDNA *)(v134 + 8) <= 0xE000u )
-          ++*(_BYTE *)(v134 + 16);
+        *(UA<u16> *)(v134 + 6) += v3;
+        if ( *(UA<u16> *)(v134 + 6) <= 0xE000u && *(UA<u16> *)(v134 + 8) <= 0xE000u )
+          ++*(u8 *)(v134 + 16);
         else
-          *(_BYTE *)(v134 + 16) = 0;
+          *(u8 *)(v134 + 16) = 0;
       }
       else
       {
         if ( v133 < 0x2Fu )
         {
-          *(_BYTE *)(v134 + 16) = 0;
+          *(u8 *)(v134 + 16) = 0;
           goto LABEL_6;
         }
         if ( v133 <= 0x2Fu )
         {
-          *(_WORDNA *)(v134 + 4) += *(char *)(v134 + 24)  SHL8; //shift fix
-          v3 = *(intNA *)(v134 + 22) >> 24;
-          if ( (int)*(unsigned __int16 *)(v134 + 4) >> 11 == v3 )
+          *(UA<u16> *)(v134 + 4) += *(char *)(v134 + 24)  SHL8; //shift fix
+          v3 = *(UA<i32> *)(v134 + 22) >> 24;
+          if ( (int)*(u16 *)(v134 + 4) >> 11 == v3 )
             goto LABEL_106;
-          *(_WORDNA *)(v134 + 10) += 72;
+          *(UA<u16> *)(v134 + 10) += 72;
           v95 = v134;
           v94 = v134;
           v96 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-          if ( v96 || (v19 = CPP_what_block(v139, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v19)) )
+          if ( v96 || (v19 = CPP_what_block(v139, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v19)) )
           {
             v92 = v139;
             HIWORD(v20) = HIWORD(v134);
-            LOWORD(v20) = *(_WORDNA *)(v134 + 4);
+            LOWORD(v20) = *(UA<u16> *)(v134 + 4);
             v91 = v20;
             HIWORD(v20) = HIWORD(v134);
-            LOWORD(v20) = *(_WORDNA *)(v134 + 6);
+            LOWORD(v20) = *(UA<u16> *)(v134 + 6);
             v90 = v20;
             HIWORD(v20) = HIWORD(v134);
-            LOWORD(v20) = *(_WORDNA *)(v134 + 8);
+            LOWORD(v20) = *(UA<u16> *)(v134 + 8);
             v89[4] = v20;
             v93 = v139;
             v89[3] = v91;
@@ -7100,9 +7107,9 @@ LABEL_136:
             v89[1] = v20;
             v89[0] = v91;
             v88 = v90;
-            if ( !(_WORD)v20 )
+            if ( !(u16)v20 )
             {
-              CPP_organise_block(v93, (_WORD*)v89, (_WORD*)&v88);
+              CPP_organise_block(v93, (u16*)v89, (u16*)&v88);
               CPP_change_hit_block(v93, v89[0], v88);
             }
             goto LABEL_106;
@@ -7110,25 +7117,25 @@ LABEL_136:
         }
         else if ( v133 == 48 )
         {
-          *(_WORDNA *)(v134 + 4) += *(char *)(v134 + 24) SHL8;
-          v3 = *(intNA *)(v134 + 22) >> 24;
-          if ( (int)*(unsigned __int16 *)(v134 + 4) >> 11 == v3 )
+          *(UA<u16> *)(v134 + 4) += *(char *)(v134 + 24) SHL8;
+          v3 = *(UA<i32> *)(v134 + 22) >> 24;
+          if ( (int)*(u16 *)(v134 + 4) >> 11 == v3 )
             goto LABEL_106;
-          *(_WORDNA *)(v134 + 10) += 72;
+          *(UA<u16> *)(v134 + 10) += 72;
           v86 = v134;
           v85 = v134;
           v87 = CPP_check_bullets_to_aliens(/*a2,*/ v134) != 0;
-          if ( v87 || (v21 = CPP_what_block(1u, *(_WORDNA *)(v134 + 4), *(_WORDNA *)(v134 + 6)), CPP_solid_block(v21)) )
+          if ( v87 || (v21 = CPP_what_block(1u, *(UA<u16> *)(v134 + 4), *(UA<u16> *)(v134 + 6)), CPP_solid_block(v21)) )
           {
             v83 = 1;
             HIWORD(v22) = HIWORD(v134);
-            LOWORD(v22) = *(_WORDNA *)(v134 + 4);
+            LOWORD(v22) = *(UA<u16> *)(v134 + 4);
             v82 = v22;
             HIWORD(v22) = HIWORD(v134);
-            LOWORD(v22) = *(_WORDNA *)(v134 + 6);
+            LOWORD(v22) = *(UA<u16> *)(v134 + 6);
             v81 = v22;
             HIWORD(v22) = HIWORD(v134);
-            LOWORD(v22) = *(_WORDNA *)(v134 + 8);
+            LOWORD(v22) = *(UA<u16> *)(v134 + 8);
             v80[4] = v22;
             v84 = 1;
             v80[3] = v82;
@@ -7136,24 +7143,24 @@ LABEL_136:
             v80[1] = v22;
             v80[0] = v82;
             v79 = v81;
-            if ( !(_WORD)v22 )
+            if ( !(u16)v22 )
             {
-              CPP_organise_block(v84, (_WORD*)v80, (_WORD*)&v79);
+              CPP_organise_block(v84, (u16*)v80, (u16*)&v79);
               CPP_change_hit_block(v84, v80[0], v79);
             }
 LABEL_106:
             v30 = 100;
             LOBYTE(v30) = no_players;
             v3 = 65534 - 0x7FFF * v30;
-            HIDWORD(v41) = 7;
-            LODWORD(v41) = v139;
+//            HIDWORD(v41) = 7;
+//            LODWORD(v41) = v139;
 
 //            MY_PlaySample(a1, a2, v41, 0x7FFFu, v3 - 200, 100i64, 3u);
-              MY_PlaySample(/*a1, a2, v41*/ v41, 7, 0x7FFF, v3 - 200, 0x64, 0, 3);
+              MY_PlaySample(/*a1, a2, v41*/ v139, 7, 0x7FFF, v3 - 200, 0x64, 0, 3);
 
-            *(_BYTE *)(v134 + 16) = 41;
-            *(_WORDNA *)(v134 + 10) = 0;
-            *(_WORDNA *)(v134 + 12) = 0;
+            *(u8 *)(v134 + 16) = 41;
+            *(UA<u16> *)(v134 + 10) = 0;
+            *(UA<u16> *)(v134 + 12) = 0;
             goto LABEL_6;
           }
         }
@@ -7166,7 +7173,7 @@ LABEL_6:
   return result;
 }
 
-__int16 CPP_what_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3) //FINAL
+i16 CPP_what_block(u8 a1, u16 a2, u16 a3) //FINAL
 {
   int v3; // eax
   int v4; // eax
@@ -7177,170 +7184,170 @@ __int16 CPP_what_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16
   v7 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v3 - (__CFSHL__(v3 >> 31, 3) + 8 * (v3 >> 31))) >> 3)) % 32;
   v4 = ((int)a3 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
   if ( lastscroll[a1] == 1 )
-    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994) % 1024;
+    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994) % 1024;
   else
-    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027) % 1024;
-  return *(_WORDNA *)(level + 2 * (32 * (unsigned __int16)(1023 - v5) + (unsigned __int16)v7));
+    v5 = (((v4 - (__CFSHL__(v4 >> 31, 3) + 8 * (v4 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027) % 1024;
+  return *(UA<u16> *)(level + 2 * (32 * (u16)(1023 - v5) + (u16)v7));
 }
 
-char CPP_death_block(unsigned __int16 a1) //FINAL
+char CPP_death_block(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; death_blocks[i] >= 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FAC0 + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FAC0 + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_ice_block(unsigned __int16 a1) //FINAL
+char CPP_ice_block(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; ice_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FA68 + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FA68 + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_solid_block(unsigned __int16 a1) //FINAL
+char CPP_solid_block(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; solid_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FCCC + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FCCC + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_swamp_block(unsigned __int16 a1) //FINAL
+char CPP_swamp_block(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; swamp_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FA2A + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FA2A + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_reverse_all(unsigned __int16 a1) //FINAL
+char CPP_reverse_all(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; reverse_all_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FBDE + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FBDE + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_reverse_y(unsigned __int16 a1) //FINAL
+char CPP_reverse_y(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; reverse_y_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) unk_21FC42 + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) unk_21FC42 + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_reverse_x(unsigned __int16 a1) //FINAL
+char CPP_reverse_x(u16 a1) //FINAL
 {
-  unsigned __int16 i; // [esp+0h] [ebp-Ch]
+  u16 i; // [esp+0h] [ebp-Ch]
   char v3; // [esp+4h] [ebp-8h]
 
   v3 = 0;
   for ( i = 0; reverse_x_blocks[i] > 0; ++i )
   {
-    if ( a1 == *(intNA *)((char *) byte_21FC38 + 2 * i) >> 16 )
+    if ( a1 == *(UA<i32> *)((char *) byte_21FC38 + 2 * i) >> 16 )
       v3 = 1;
   }
   return v3;
 }
 
-char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE *a6, _BYTE *a7)
+char CPP_do_player_blk_collision(u8 a3, u8 *a4, u8 *a5, u8 *a6, u8 *a7)
 {
-  unsigned __int16 v7; // ax
-  unsigned __int16 v8; // ax
-  unsigned __int16 v9; // ax
-  unsigned __int16 v10; // ax
-  unsigned __int16 v11; // ax
-  __int64 v13; // [esp-1Ch] [ebp-114h]
-  unsigned __int16 v14; // [esp-4h] [ebp-FCh]
-  unsigned __int16 mm; // [esp+0h] [ebp-F8h]
+  u16 v7; // ax
+  u16 v8; // ax
+  u16 v9; // ax
+  u16 v10; // ax
+  u16 v11; // ax
+//  i64 v13; // [esp-1Ch] [ebp-114h]
+  u16 v14; // [esp-4h] [ebp-FCh]
+  u16 mm; // [esp+0h] [ebp-F8h]
   char v16; // [esp+Ch] [ebp-ECh]
-  unsigned __int16 ll; // [esp+14h] [ebp-E4h]
+  u16 ll; // [esp+14h] [ebp-E4h]
   char v18; // [esp+20h] [ebp-D8h]
-  unsigned __int16 kk; // [esp+28h] [ebp-D0h]
+  u16 kk; // [esp+28h] [ebp-D0h]
   char v20; // [esp+34h] [ebp-C4h]
-  unsigned __int16 jj; // [esp+3Ch] [ebp-BCh]
+  u16 jj; // [esp+3Ch] [ebp-BCh]
   char v22; // [esp+48h] [ebp-B0h]
-  unsigned __int16 ii; // [esp+50h] [ebp-A8h]
+  u16 ii; // [esp+50h] [ebp-A8h]
   char v24; // [esp+5Ch] [ebp-9Ch]
-  unsigned __int16 n; // [esp+64h] [ebp-94h]
+  u16 n; // [esp+64h] [ebp-94h]
   char v26; // [esp+70h] [ebp-88h]
-  unsigned __int16 m; // [esp+78h] [ebp-80h]
+  u16 m; // [esp+78h] [ebp-80h]
   char v28; // [esp+84h] [ebp-74h]
-  unsigned __int16 l; // [esp+8Ch] [ebp-6Ch]
+  u16 l; // [esp+8Ch] [ebp-6Ch]
   char v30; // [esp+98h] [ebp-60h]
-  unsigned __int16 k; // [esp+A0h] [ebp-58h]
+  u16 k; // [esp+A0h] [ebp-58h]
   char v32; // [esp+ACh] [ebp-4Ch]
-  unsigned __int16 j; // [esp+B4h] [ebp-44h]
+  u16 j; // [esp+B4h] [ebp-44h]
   char v34; // [esp+C0h] [ebp-38h]
-  unsigned __int16 i; // [esp+C8h] [ebp-30h]
+  u16 i; // [esp+C8h] [ebp-30h]
   char v36; // [esp+D4h] [ebp-24h]
-  __int16 v37; // [esp+DCh] [ebp-1Ch]
-  __int16 v38; // [esp+E0h] [ebp-18h]
-  __int16 v39; // [esp+E4h] [ebp-14h]
-  unsigned __int16 v40; // [esp+E8h] [ebp-10h]
-  __int16 v41; // [esp+ECh] [ebp-Ch]
+  i16 v37; // [esp+DCh] [ebp-1Ch]
+  i16 v38; // [esp+E0h] [ebp-18h]
+  i16 v39; // [esp+E4h] [ebp-14h]
+  u16 v40; // [esp+E8h] [ebp-10h]
+  i16 v41; // [esp+ECh] [ebp-Ch]
   char v42; // [esp+F0h] [ebp-8h]
 
   v42 = 0;
-  v7 = *((_WORD *) unk_25677E + 15 * a3);
+  v7 = *((u16 *) unk_25677E + 15 * a3);
   HIBYTE(v7) += 7;
   v14 = v7;
   v8 = word_25677C[15 * a3];
   HIBYTE(v8) += 4;
   v37 = CPP_what_block(a3, v8, v14);
-  v9 = *((_WORD *) unk_25677E + 15 * a3);
+  v9 = *((u16 *) unk_25677E + 15 * a3);
   HIBYTE(v9) += 7;
   v38 = CPP_what_block(a3, word_25677C[15 * a3] - 1024, v9);
   v10 = word_25677C[15 * a3];
   HIBYTE(v10) += 4;
-  v41 = CPP_what_block(a3, v10, *((_WORD *) unk_25677E + 15 * a3) - 1792);
-  v39 = CPP_what_block(a3, word_25677C[15 * a3] - 1024, *((_WORD *) unk_25677E + 15 * a3) - 1792);
-  v11 = CPP_what_block(a3, word_25677C[15 * a3], *((_WORD *) unk_25677E + 15 * a3));
+  v41 = CPP_what_block(a3, v10, *((u16 *) unk_25677E + 15 * a3) - 1792);
+  v39 = CPP_what_block(a3, word_25677C[15 * a3] - 1024, *((u16 *) unk_25677E + 15 * a3) - 1792);
+  v11 = CPP_what_block(a3, word_25677C[15 * a3], *((u16 *) unk_25677E + 15 * a3));
   v40 = v11;
-  if ( *((_WORD *) dword_256780 + 15 * a3) || blk_collision )
+  if ( *((u16 *) dword_256780 + 15 * a3) || blk_collision )
   {
-    if ( *(intNA *)((char *) dword_256791 + 30 * a3) >> 24 < -118 )
-      *((_BYTE *) dword_256791 + 30 * a3 + 3) = -118;
-    *((_BYTE *) dword_256791 + 30 * a3 + 3) -= 8;
-    *a4 = *((_BYTE *) dword_256791 + 30 * a3);
+    if ( *(UA<i32> *)((char *) dword_256791 + 30 * a3) >> 24 < -118 )
+      *((u8 *) dword_256791 + 30 * a3 + 3) = -118;
+    *((u8 *) dword_256791 + 30 * a3 + 3) -= 8;
+    *a4 = *((u8 *) dword_256791 + 30 * a3);
     *a5 = 1;
     *a7 = 0;
     *a6 = 0;
@@ -7350,50 +7357,50 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
     v36 = 0;
     for ( i = 0; death_blocks[i] >= 0; ++i )
     {
-      if ( v11 == *(intNA *)((char *) byte_21FAC0 + 2 * i) >> 16 )
+      if ( v11 == *(UA<i32> *)((char *) byte_21FAC0 + 2 * i) >> 16 )
         v36 = 1;
     }
     if ( v36 && (CPP_death_block(v37) || CPP_death_block(v38) || CPP_death_block(v41) || CPP_death_block(v39)) )
     {
-      *((_BYTE *) dword_256791 + 30 * a3 + 2) = 0;
-      *((_BYTE *) dword_256791 + 30 * a3 + 1) = 0;
+      *((u8 *) dword_256791 + 30 * a3 + 2) = 0;
+      *((u8 *) dword_256791 + 30 * a3 + 1) = 0;
     }
     v34 = 0;
     for ( j = 0; jump_blocks[j] > 0; ++j )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FAE4 + 2 * j) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FAE4 + 2 * j) >> 16 )
         v34 = 1;
     }
     if ( v34 )
     {
-      HIDWORD(v13) = 11;
-      LODWORD(v13) = a3;
+//      HIDWORD(v13) = 11;
+//      LODWORD(v13) = a3;
 
-//    MY_PlaySample(a1, a2, v13, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*a1, a2, v13,*/ a3 , 0xB, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//    MY_PlaySample(a1, a2, v13, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*a1, a2, v13,*/ a3 , 0xB, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
-      *((_BYTE *) dword_256791 + 30 * a3 + 3) = 80;
+      *((u8 *) dword_256791 + 30 * a3 + 3) = 80;
     }
     else
     {
-      if ( *(intNA *)((char *) dword_256791 + 30 * a3) >> 24 < -118 )
-        *((_BYTE *) dword_256791 + 30 * a3 + 3) = -118;
-      *((_BYTE *) dword_256791 + 30 * a3 + 3) -= 8;
+      if ( *(UA<i32> *)((char *) dword_256791 + 30 * a3) >> 24 < -118 )
+        *((u8 *) dword_256791 + 30 * a3 + 3) = -118;
+      *((u8 *) dword_256791 + 30 * a3 + 3) -= 8;
     }
     v32 = 0;
     for ( k = 0; ice_blocks[k] > 0; ++k )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FA68 + 2 * k) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FA68 + 2 * k) >> 16 )
         v32 = 1;
     }
     if ( v32 || CPP_ice_block(v37) || CPP_ice_block(v38) || CPP_ice_block(v41) || CPP_ice_block(v39) )
       *a4 = 0;
     else
-      *a4 = *((_BYTE *) dword_256791 + 30 * a3);
+      *a4 = *((u8 *) dword_256791 + 30 * a3);
     v30 = 0;
     for ( l = 0; swamp_blocks[l] > 0; ++l )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FA2A + 2 * l) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FA2A + 2 * l) >> 16 )
         v30 = 1;
     }
     if ( v30 )
@@ -7403,7 +7410,7 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
     v28 = 0;
     for ( m = 0; arrow_up_blocks[m] > 0; ++m )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FB06 + 2 * m) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FB06 + 2 * m) >> 16 )
         v28 = 1;
     }
     if ( v28 )
@@ -7415,7 +7422,7 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
       v26 = 0;
       for ( n = 0; arrow_down_blocks[n] > 0; ++n )
       {
-        if ( v40 == *(intNA *)((char *) byte_21FB1A + 2 * n) >> 16 )
+        if ( v40 == *(UA<i32> *)((char *) byte_21FB1A + 2 * n) >> 16 )
           v26 = 1;
       }
       if ( v26 )
@@ -7426,7 +7433,7 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
     v24 = 0;
     for ( ii = 0; arrow_left_blocks[ii] > 0; ++ii )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FB2E + 2 * ii) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FB2E + 2 * ii) >> 16 )
         v24 = 1;
     }
     if ( v24 )
@@ -7438,7 +7445,7 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
       v22 = 0;
       for ( jj = 0; arrow_right_blocks[jj] > 0; ++jj )
       {
-        if ( v40 == *(intNA *)((char *) byte_21FB76 + 2 * jj) >> 16 )
+        if ( v40 == *(UA<i32> *)((char *) byte_21FB76 + 2 * jj) >> 16 )
           v22 = 1;
       }
       if ( v22 )
@@ -7449,40 +7456,40 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
     v20 = 0;
     for ( kk = 0; reverse_all_blocks[kk] > 0; ++kk )
     {
-      if ( v40 == *(intNA *)((char *) byte_21FBDE + 2 * kk) >> 16 )
+      if ( v40 == *(UA<i32> *)((char *) byte_21FBDE + 2 * kk) >> 16 )
         v20 = 1;
     }
     if ( v20 || CPP_reverse_all(v37) || CPP_reverse_all(v38) || CPP_reverse_all(v41) || CPP_reverse_all(v39) )
     {
       v42 = 1;
-      *((_BYTE *) dword_256791 + 30 * a3 + 1) = -*((_BYTE *) dword_256791 + 30 * a3 + 1);
-      *((_BYTE *) dword_256791 + 30 * a3 + 2) = -*((_BYTE *) dword_256791 + 30 * a3 + 2);
+      *((u8 *) dword_256791 + 30 * a3 + 1) = -*((u8 *) dword_256791 + 30 * a3 + 1);
+      *((u8 *) dword_256791 + 30 * a3 + 2) = -*((u8 *) dword_256791 + 30 * a3 + 2);
     }
     else
     {
       v18 = 0;
       for ( ll = 0; reverse_x_blocks[ll] > 0; ++ll )
       {
-        if ( v40 == *(intNA *)((char *) byte_21FC38 + 2 * ll) >> 16 )
+        if ( v40 == *(UA<i32> *)((char *) byte_21FC38 + 2 * ll) >> 16 )
           v18 = 1;
       }
       if ( v18 || CPP_reverse_x(v37) || CPP_reverse_x(v38) || CPP_reverse_x(v41) || CPP_reverse_x(v39) )
       {
         v42 = 1;
-        *((_BYTE *) dword_256791 + 30 * a3 + 1) = -*((_BYTE *) dword_256791 + 30 * a3 + 1);
+        *((u8 *) dword_256791 + 30 * a3 + 1) = -*((u8 *) dword_256791 + 30 * a3 + 1);
       }
       else
       {
         v16 = 0;
         for ( mm = 0; reverse_y_blocks[mm] > 0; ++mm )
         {
-          if ( v40 == *(intNA *)((char *) unk_21FC42 + 2 * mm) >> 16 )
+          if ( v40 == *(UA<i32> *)((char *) unk_21FC42 + 2 * mm) >> 16 )
             v16 = 1;
         }
         if ( v16 || CPP_reverse_y(v37) || CPP_reverse_y(v38) || CPP_reverse_y(v41) || CPP_reverse_y(v39) )
         {
           v42 = 1;
-          *((_BYTE *) dword_256791 + 30 * a3 + 2) = -*((_BYTE *) dword_256791 + 30 * a3 + 2);
+          *((u8 *) dword_256791 + 30 * a3 + 2) = -*((u8 *) dword_256791 + 30 * a3 + 2);
         }
       }
     }
@@ -7490,20 +7497,20 @@ char CPP_do_player_blk_collision(unsigned __int8 a3, _BYTE *a4, _BYTE *a5, _BYTE
   return v42;
 }
 
-char CPP_change_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 a3) //FINAL
+char CPP_change_block(u8 a1, u16 a2, u16 a3) //FINAL
 {
   int v3; // edx
-  unsigned __int16 i; // [esp+4h] [ebp-Ch]
-  unsigned __int16 v6; // [esp+4h] [ebp-Ch]
-  unsigned __int16 v7; // [esp+8h] [ebp-8h]
+  u16 i; // [esp+4h] [ebp-Ch]
+  u16 v6; // [esp+4h] [ebp-Ch]
+  u16 v7; // [esp+8h] [ebp-8h]
   char v8; // [esp+Ch] [ebp-4h]
   char v9; // [esp+Ch] [ebp-4h]
 
   v8 = 0;
-  v7 = *(_WORDNA *)(level + 2 * (32 * a3 + a2));
+  v7 = *(UA<u16> *)(level + 2 * (32 * a3 + a2));
   for ( i = 0; contact_blocks[i] >= 0 && !v8; i += 2 )
   {
-    if ( *(intNA *)((char *) byte_21FE6C + 2 * i) >> 16 == v7 )
+    if ( *(UA<i32> *)((char *) byte_21FE6C + 2 * i) >> 16 == v7 )
     {
       v7 = anim_order_1[i];
       v8 = 1;
@@ -7513,25 +7520,25 @@ char CPP_change_block(unsigned __int8 a1, unsigned __int16 a2, unsigned __int16 
   v9 = 0;
   while ( hit_blocks[v6] >= 0 && !v9 )
   {
-    if ( *(intNA *)((char *) byte_21FDDA + 2 * v6) >> 16 == v7 )
+    if ( *(UA<i32> *)((char *) byte_21FDDA + 2 * v6) >> 16 == v7 )
     {
       v7 = word_21FDDE[v6];
       v9 = 1;
     }
     v6 += 2;
   }
-  *(_WORDNA *)(2 * (32 * a3 + a2) + level) = v7;
+  *(UA<u16> *)(2 * (32 * a3 + a2) + level) = v7;
   if ( lastscroll[a1] == 1 )
     v3 = (a1 << 16)
-       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + (a3 + (unsigned __int16)level_line[a1]) % 1024) % 32) << 11);
+       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + (a3 + (u16)level_line[a1]) % 1024) % 32) << 11);
   else
     v3 = (a1 << 16)
-       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + 32 - ((2048 - (unsigned __int16)level_line[a1] - a3) % 1024 - 1)) % 32) << 11);
+       + (((((int)HIBYTE(scrollpos[a1]) >> 3) + 32 - ((2048 - (u16)level_line[a1] - a3) % 1024 - 1)) % 32) << 11);
 
   return CPP_draw_block(8 * a2 + v3, v7);
 }
 
-_WORD *CPP_organise_blocks(unsigned __int8 a1, _WORD *a2, _WORD *a3, _WORD *a4, _WORD *a5, _WORD *a6, _WORD *a7, _WORD *a8, _WORD *a9, _WORD *a10, _WORD *a11, _WORD *a12, _WORD *a13) //FINAL
+u16 *CPP_organise_blocks(u8 a1, u16 *a2, u16 *a3, u16 *a4, u16 *a5, u16 *a6, u16 *a7, u16 *a8, u16 *a9, u16 *a10, u16 *a11, u16 *a12, u16 *a13) //FINAL
 {
   int v13; // eax
   int v14; // eax
@@ -7546,74 +7553,74 @@ _WORD *CPP_organise_blocks(unsigned __int8 a1, _WORD *a2, _WORD *a3, _WORD *a4, 
   int v23; // eax
   int v24; // eax
   int v25; // edx
-  _WORD *result; // eax
+  u16 *result; // eax
   int v27; // eax
   int v28; // eax
   int v29; // eax
   int v30; // eax
   int v31; // eax
 
-  v13 = ((int)(unsigned __int16)*a2 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v13 = ((int)(u16)*a2 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a2 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v13 - (__CFSHL__(v13 >> 31, 3) + 8 * (v13 >> 31))) >> 3)) % 32;
-  v14 = ((int)(unsigned __int16)*a4 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v14 = ((int)(u16)*a4 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a4 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v14 - (__CFSHL__(v14 >> 31, 3) + 8 * (v14 >> 31))) >> 3)) % 32;
-  v15 = ((int)(unsigned __int16)*a6 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v15 = ((int)(u16)*a6 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a6 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v15 - (__CFSHL__(v15 >> 31, 3) + 8 * (v15 >> 31))) >> 3)) % 32;
-  v16 = ((int)(unsigned __int16)*a8 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v16 = ((int)(u16)*a8 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a8 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v16 - (__CFSHL__(v16 >> 31, 3) + 8 * (v16 >> 31))) >> 3)) % 32;
-  v17 = ((int)(unsigned __int16)*a10 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v17 = ((int)(u16)*a10 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a10 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v17 - (__CFSHL__(v17 >> 31, 3) + 8 * (v17 >> 31))) >> 3)) % 32;
-  v18 = ((int)(unsigned __int16)*a12 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
+  v18 = ((int)(u16)*a12 >> 8) + 8 - LOBYTE(scrollpos[a1]) % 8;
   *a12 = (((int)LOBYTE(scrollpos[a1]) >> 3) + 32 - ((v18 - (__CFSHL__(v18 >> 31, 3) + 8 * (v18 >> 31))) >> 3)) % 32;
-  v19 = ((int)(unsigned __int16)*a3 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+  v19 = ((int)(u16)*a3 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
   if ( lastscroll[a1] == 1 )
   {
     *a3 = 1023
-        - (((v19 - (__CFSHL__(v19 >> 31, 3) + 8 * (v19 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+        - (((v19 - (__CFSHL__(v19 >> 31, 3) + 8 * (v19 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
         % 1024;
-    v20 = ((int)(unsigned __int16)*a5 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v20 = ((int)(u16)*a5 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a5 = 1023
-        - (((v20 - (__CFSHL__(v20 >> 31, 3) + 8 * (v20 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+        - (((v20 - (__CFSHL__(v20 >> 31, 3) + 8 * (v20 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
         % 1024;
-    v21 = ((int)(unsigned __int16)*a7 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v21 = ((int)(u16)*a7 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a7 = 1023
-        - (((v21 - (__CFSHL__(v21 >> 31, 3) + 8 * (v21 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+        - (((v21 - (__CFSHL__(v21 >> 31, 3) + 8 * (v21 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
         % 1024;
-    v22 = ((int)(unsigned __int16)*a9 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v22 = ((int)(u16)*a9 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a9 = 1023
-        - (((v22 - (__CFSHL__(v22 >> 31, 3) + 8 * (v22 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+        - (((v22 - (__CFSHL__(v22 >> 31, 3) + 8 * (v22 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
         % 1024;
-    v23 = ((int)(unsigned __int16)*a11 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v23 = ((int)(u16)*a11 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a11 = 1023
-         - (((v23 - (__CFSHL__(v23 >> 31, 3) + 8 * (v23 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+         - (((v23 - (__CFSHL__(v23 >> 31, 3) + 8 * (v23 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
          % 1024;
-    v24 = ((int)(unsigned __int16)*a13 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
-    v25 = (((v24 - (__CFSHL__(v24 >> 31, 3) + 8 * (v24 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 994)
+    v24 = ((int)(u16)*a13 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v25 = (((v24 - (__CFSHL__(v24 >> 31, 3) + 8 * (v24 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 994)
         % 1024;
   }
   else
   {
     *a3 = 1023
-        - (((v19 - (__CFSHL__(v19 >> 31, 3) + 8 * (v19 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+        - (((v19 - (__CFSHL__(v19 >> 31, 3) + 8 * (v19 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
         % 1024;
-    v27 = ((int)(unsigned __int16)*a5 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v27 = ((int)(u16)*a5 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a5 = 1023
-        - (((v27 - (__CFSHL__(v27 >> 31, 3) + 8 * (v27 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+        - (((v27 - (__CFSHL__(v27 >> 31, 3) + 8 * (v27 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
         % 1024;
-    v28 = ((int)(unsigned __int16)*a7 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v28 = ((int)(u16)*a7 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a7 = 1023
-        - (((v28 - (__CFSHL__(v28 >> 31, 3) + 8 * (v28 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+        - (((v28 - (__CFSHL__(v28 >> 31, 3) + 8 * (v28 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
         % 1024;
-    v29 = ((int)(unsigned __int16)*a9 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v29 = ((int)(u16)*a9 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a9 = 1023
-        - (((v29 - (__CFSHL__(v29 >> 31, 3) + 8 * (v29 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+        - (((v29 - (__CFSHL__(v29 >> 31, 3) + 8 * (v29 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
         % 1024;
-    v30 = ((int)(unsigned __int16)*a11 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v30 = ((int)(u16)*a11 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
     *a11 = 1023
-         - (((v30 - (__CFSHL__(v30 >> 31, 3) + 8 * (v30 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+         - (((v30 - (__CFSHL__(v30 >> 31, 3) + 8 * (v30 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
          % 1024;
-    v31 = ((int)(unsigned __int16)*a13 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
-    v25 = (((v31 - (__CFSHL__(v31 >> 31, 3) + 8 * (v31 >> 31))) >> 3) - 4 + (unsigned __int16)level_line[a1] + 1027)
+    v31 = ((int)(u16)*a13 >> 8) + 8 - HIBYTE(scrollpos[a1]) % 8;
+    v25 = (((v31 - (__CFSHL__(v31 >> 31, 3) + 8 * (v31 >> 31))) >> 3) - 4 + (u16)level_line[a1] + 1027)
         % 1024;
   }
   result = a13;
@@ -7621,9 +7628,9 @@ _WORD *CPP_organise_blocks(unsigned __int8 a1, _WORD *a2, _WORD *a3, _WORD *a4, 
   return result;
 }
 
-unsigned __int8 CPP_do_contact_blocks(void) //FINAL
+u8 CPP_do_contact_blocks(void) //FINAL
 {
-  unsigned __int8 result; // al
+  u8 result; // al
   int v1; // eax
   int v2; // eax
   int v3; // eax
@@ -7648,85 +7655,85 @@ unsigned __int8 CPP_do_contact_blocks(void) //FINAL
   int v22; // [esp+24h] [ebp-10h] BYREF
   int v23; // [esp+28h] [ebp-Ch] BYREF
   int v24; // [esp+2Ch] [ebp-8h] BYREF
-  unsigned __int8 i; // [esp+30h] [ebp-4h]
+  u8 i; // [esp+30h] [ebp-4h]
 
   for ( i = 0; ; ++i )
   {
     result = i;
-    if ( i >= (unsigned __int8)no_players )
+    if ( i >= (u8)no_players )
       break;
-    if ( !*((_WORD *) dword_256780 + 15 * i) )
+    if ( !*((u16 *) dword_256780 + 15 * i) )
     {
       v1 = 30 * i;
-      LOWORD(v1) = *(__int16NA *)((char *)word_25677C + v1);
+      LOWORD(v1) = *(UA<i16> *)((char *)word_25677C + v1);
       BYTE1(v1) += 4;
       v19 = v1;
       v2 = 30 * i;
-      LOWORD(v2) = *(_WORDNA *)((char *) unk_25677E + v2);
+      LOWORD(v2) = *(UA<u16> *)((char *) unk_25677E + v2);
       BYTE1(v2) += 7;
       v24 = v2;
       v3 = 30 * i;
-      LOWORD(v3) = *(__int16NA *)((char *)word_25677C + v3);
+      LOWORD(v3) = *(UA<i16> *)((char *)word_25677C + v3);
       v23 = v3 - 1024;
       v4 = 30 * i;
-      LOWORD(v4) = *(_WORDNA *)((char *) unk_25677E + v4);
+      LOWORD(v4) = *(UA<u16> *)((char *) unk_25677E + v4);
       BYTE1(v4) += 7;
       v22 = v4;
       v5 = 30 * i;
-      LOWORD(v5) = *(__int16NA *)((char *)word_25677C + v5);
+      LOWORD(v5) = *(UA<i16> *)((char *)word_25677C + v5);
       BYTE1(v5) += 4;
       v17 = v5;
       v6 = 30 * i;
-      LOWORD(v6) = *(_WORDNA *)((char *) unk_25677E + v6);
+      LOWORD(v6) = *(UA<u16> *)((char *) unk_25677E + v6);
       v16 = v6 - 1792;
       v7 = 30 * i;
-      LOWORD(v7) = *(__int16NA *)((char *)word_25677C + v7);
+      LOWORD(v7) = *(UA<i16> *)((char *)word_25677C + v7);
       v15 = v7 - 1024;
       v8 = 30 * i;
-      LOWORD(v8) = *(_WORDNA *)((char *) unk_25677E + v8);
+      LOWORD(v8) = *(UA<u16> *)((char *) unk_25677E + v8);
       v14 = v8 - 1792;
       v9 = 30 * i;
-      LOWORD(v9) = *(__int16NA *)((char *)word_25677C + v9);
+      LOWORD(v9) = *(UA<i16> *)((char *)word_25677C + v9);
       v21 = v9 - 1024;
       v10 = 30 * i;
-      LOWORD(v10) = *(_WORDNA *)((char *) unk_25677E + v10);
+      LOWORD(v10) = *(UA<u16> *)((char *) unk_25677E + v10);
       v20 = v10;
       v11 = 30 * i;
-      LOWORD(v11) = *(__int16NA *)((char *)word_25677C + v11);
+      LOWORD(v11) = *(UA<i16> *)((char *)word_25677C + v11);
       BYTE1(v11) += 4;
       v13 = v11;
       v12 = 30 * i;
-      LOWORD(v12) = *(_WORDNA *)((char *) unk_25677E + v12);
+      LOWORD(v12) = *(UA<u16> *)((char *) unk_25677E + v12);
       v18 = v12;
 
-      CPP_organise_blocks(i, (_WORD*)&v19, (_WORD*)&v24, (_WORD*)&v23, (_WORD*)&v22, (_WORD*)&v21, (_WORD*)&v20, (_WORD*)&v13, (_WORD*)&v18, (_WORD*)&v17, (_WORD*)&v16, (_WORD*)&v15, (_WORD*)&v14);
+      CPP_organise_blocks(i, (u16*)&v19, (u16*)&v24, (u16*)&v23, (u16*)&v22, (u16*)&v21, (u16*)&v20, (u16*)&v13, (u16*)&v18, (u16*)&v17, (u16*)&v16, (u16*)&v15, (u16*)&v14);
       CPP_change_block(i, v19, v24);
 
-      if ( (_WORD)v19 != (_WORD)v23 || (_WORD)v24 != (_WORD)v22 )
+      if ( (u16)v19 != (u16)v23 || (u16)v24 != (u16)v22 )
         CPP_change_block(i, v23, v22);
-      if ( ((_WORD)v21 != (_WORD)v19 || (_WORD)v20 != (_WORD)v24)
-        && ((_WORD)v21 != (_WORD)v23 || (_WORD)v20 != (_WORD)v22) )
+      if ( ((u16)v21 != (u16)v19 || (u16)v20 != (u16)v24)
+        && ((u16)v21 != (u16)v23 || (u16)v20 != (u16)v22) )
       {
         CPP_change_block(i, v21, v20);
       }
-      if ( ((_WORD)v13 != (_WORD)v19 || (_WORD)v18 != (_WORD)v24)
-        && ((_WORD)v13 != (_WORD)v23 || (_WORD)v18 != (_WORD)v22)
-        && ((_WORD)v13 != (_WORD)v21 || (_WORD)v18 != (_WORD)v20) )
+      if ( ((u16)v13 != (u16)v19 || (u16)v18 != (u16)v24)
+        && ((u16)v13 != (u16)v23 || (u16)v18 != (u16)v22)
+        && ((u16)v13 != (u16)v21 || (u16)v18 != (u16)v20) )
       {
         CPP_change_block(i, v13, v18);
       }
-      if ( ((_WORD)v17 != (_WORD)v19 || (_WORD)v16 != (_WORD)v24)
-        && ((_WORD)v17 != (_WORD)v23 || (_WORD)v16 != (_WORD)v22)
-        && ((_WORD)v17 != (_WORD)v21 || (_WORD)v16 != (_WORD)v20)
-        && ((_WORD)v17 != (_WORD)v13 || (_WORD)v16 != (_WORD)v18) )
+      if ( ((u16)v17 != (u16)v19 || (u16)v16 != (u16)v24)
+        && ((u16)v17 != (u16)v23 || (u16)v16 != (u16)v22)
+        && ((u16)v17 != (u16)v21 || (u16)v16 != (u16)v20)
+        && ((u16)v17 != (u16)v13 || (u16)v16 != (u16)v18) )
       {
         CPP_change_block(i, v17, v16);
       }
-      if ( ((_WORD)v15 != (_WORD)v19 || (_WORD)v14 != (_WORD)v24)
-        && ((_WORD)v15 != (_WORD)v23 || (_WORD)v14 != (_WORD)v22)
-        && ((_WORD)v15 != (_WORD)v21 || (_WORD)v14 != (_WORD)v20)
-        && ((_WORD)v15 != (_WORD)v13 || (_WORD)v14 != (_WORD)v18)
-        && ((_WORD)v15 != (_WORD)v17 || (_WORD)v14 != (_WORD)v16) )
+      if ( ((u16)v15 != (u16)v19 || (u16)v14 != (u16)v24)
+        && ((u16)v15 != (u16)v23 || (u16)v14 != (u16)v22)
+        && ((u16)v15 != (u16)v21 || (u16)v14 != (u16)v20)
+        && ((u16)v15 != (u16)v13 || (u16)v14 != (u16)v18)
+        && ((u16)v15 != (u16)v17 || (u16)v14 != (u16)v16) )
       {
         CPP_change_block(i, v15, v14);
       }
@@ -7735,10 +7742,10 @@ unsigned __int8 CPP_do_contact_blocks(void) //FINAL
   return result;
 }
 
-__int16 CPP_arctan(int a1, int a2) //FINAL
+i16 CPP_arctan(int a1, int a2) //FINAL
 {
   int v2; // ebx
-  __int16 result; // ax
+  i16 result; // ax
   int v4; // ebx
   int v5; // eax
   int v6; // ebx
@@ -7792,11 +7799,11 @@ __int16 CPP_arctan(int a1, int a2) //FINAL
   return result;
 }
 
-char CPP_how_many_bullets(char a1, unsigned __int8 a2) //FINAL
+char CPP_how_many_bullets(char a1, u8 a2) //FINAL
 {
   char *v3; // [esp+0h] [ebp-10h]
   char v4; // [esp+8h] [ebp-8h]
-  unsigned __int8 i; // [esp+Ch] [ebp-4h]
+  u8 i; // [esp+Ch] [ebp-4h]
 
   v4 = 0;
   v3 = (char *) bullets + 1020 * a2;
@@ -7809,39 +7816,39 @@ char CPP_how_many_bullets(char a1, unsigned __int8 a2) //FINAL
   return v4;
 }
 
-char CPP_add_bullet(unsigned __int8 a3)
+char CPP_add_bullet(u8 a3)
 {
  int a1;
 
-  __int16 v3; // dx
-  __int16 v4; // dx
-  __int16 v5; // dx
+  i16 v3; // dx
+  i16 v4; // dx
+  i16 v5; // dx
   int v6; // ebx
   char *v7; // eax
   int v8; // ebx
-  __int16 v9; // dx
+  i16 v9; // dx
   int v10; // ebx
-  __int16 v11; // dx
-  __int16 v12; // dx
-  __int16 v13; // dx
+  i16 v11; // dx
+  i16 v12; // dx
+  i16 v13; // dx
   int v14; // ebx
-  __int16 v15; // dx
-  __int16 v16; // dx
-  __int64 v18; // [esp-1Ch] [ebp-30h]
-  __int64 v19; // [esp-1Ch] [ebp-30h]
-  __int64 v20; // [esp-1Ch] [ebp-30h]
-  __int64 v21; // [esp-1Ch] [ebp-30h]
-  __int64 v22; // [esp-1Ch] [ebp-30h]
+  i16 v15; // dx
+  i16 v16; // dx
+//  i64 v18; // [esp-1Ch] [ebp-30h]
+//  i64 v19; // [esp-1Ch] [ebp-30h]
+//  i64 v20; // [esp-1Ch] [ebp-30h]
+//  i64 v21; // [esp-1Ch] [ebp-30h]
+//  i64 v22; // [esp-1Ch] [ebp-30h]
   char *v23; // [esp+4h] [ebp-10h]
-  unsigned __int8 i; // [esp+8h] [ebp-Ch]
-  unsigned __int8 j; // [esp+8h] [ebp-Ch]
-  unsigned __int8 l; // [esp+8h] [ebp-Ch]
-  unsigned __int8 m; // [esp+8h] [ebp-Ch]
-  unsigned __int8 k; // [esp+8h] [ebp-Ch]
-  unsigned __int8 v29; // [esp+Ch] [ebp-8h]
-  unsigned __int8 v30; // [esp+Ch] [ebp-8h]
-  unsigned __int8 v31; // [esp+Ch] [ebp-8h]
-  unsigned __int8 v32; // [esp+10h] [ebp-4h]
+  u8 i; // [esp+8h] [ebp-Ch]
+  u8 j; // [esp+8h] [ebp-Ch]
+  u8 l; // [esp+8h] [ebp-Ch]
+  u8 m; // [esp+8h] [ebp-Ch]
+  u8 k; // [esp+8h] [ebp-Ch]
+  u8 v29; // [esp+Ch] [ebp-8h]
+  u8 v30; // [esp+Ch] [ebp-8h]
+  u8 v31; // [esp+Ch] [ebp-8h]
+  u8 v32; // [esp+10h] [ebp-4h]
   char v33; // [esp+10h] [ebp-4h]
 
   v23 = (char *) bullets + 1020 * a3;
@@ -7850,18 +7857,18 @@ char CPP_add_bullet(unsigned __int8 a3)
   if ( i < 0x22u )
   {
     a1 = 30 * a3;
-    if ( (unsigned __int8)CPP_how_many_bullets(a3 + 13, a3) < *((_BYTE *) dword_25678D + a1 + 1) )
+    if ( (u8)CPP_how_many_bullets(a3 + 13, a3) < *((u8 *) dword_25678D + a1 + 1) )
     {
       v23[30 * i + 16] = a3 + 13;
       v23[30 * i + 24] = 1;
-      *(_WORDNA *)&v23[30 * i + 4] = word_25677C[15 * a3];
-      v3 = *((_WORD *) unk_25677E + 15 * a3);
+      *(UA<u16> *)&v23[30 * i + 4] = word_25677C[15 * a3];
+      v3 = *((u16 *) unk_25677E + 15 * a3);
       HIBYTE(v3) += 7;
-      *(_WORDNA *)&v23[30 * i + 6] = v3;
-      *(_WORDNA *)&v23[30 * i + 8] = *((_WORD *) dword_256780 + 15 * a3);
-      *(_WORDNA *)&v23[30 * i + 10] = 0;
-      *(_WORDNA *)&v23[30 * i + 12] = 0;
-      *(_WORDNA *)&v23[30 * i + 14] = 20;
+      *(UA<u16> *)&v23[30 * i + 6] = v3;
+      *(UA<u16> *)&v23[30 * i + 8] = *((u16 *) dword_256780 + 15 * a3);
+      *(UA<u16> *)&v23[30 * i + 10] = 0;
+      *(UA<u16> *)&v23[30 * i + 12] = 0;
+      *(UA<u16> *)&v23[30 * i + 14] = 20;
       byte_29F698[a3] ^= 1u;
       v23[30 * i++ + 29] = byte_29F698[a3];
       while ( v23[30 * i + 16] && i < 0x22u )
@@ -7872,32 +7879,32 @@ char CPP_add_bullet(unsigned __int8 a3)
   {
     a1 = 30 * a3;
     v32 = CPP_how_many_bullets(a3 + 9, a3);
-    if ( v32 < *((_BYTE *) dword_25678D + a1) )
+    if ( v32 < *((u8 *) dword_25678D + a1) )
     {
-      a1 = 14 / *((unsigned __int8 *) dword_25678D + 30 * a3);
+      a1 = 14 / *((u8 *) dword_25678D + 30 * a3);
       if ( abs(turn - dword_29F6A4[a3]) > a1 || !v32 )
       {
-        HIDWORD(v18) = 2;
-        LODWORD(v18) = a3;
+//        HIDWORD(v18) = 2;
+//        LODWORD(v18) = a3;
 
-//        MY_PlaySample((unsigned int *)a1, a2, v18, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*(unsigned int *)a1, a2, v18,*/ a3, 2, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//        MY_PlaySample((unsigned int *)a1, a2, v18, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*(unsigned int *)a1, a2, v18,*/ a3, 2, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
         dword_29F6A4[a3] = turn;
         v23[30 * i + 16] = a3 + 9;
         if ( vy[a3] > 0 )
-          v23[30 * i + 24] = -12 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16);
+          v23[30 * i + 24] = -12 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16);
         else
-          v23[30 * i + 24] = abs(*(intNA *)&byte_21F946[2 * a3] >> 16) + 12;
-        *(_WORDNA *)&v23[30 * i + 4] = word_25677C[15 * a3];
-        v4 = *((_WORD *) unk_25677E + 15 * a3);
+          v23[30 * i + 24] = abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) + 12;
+        *(UA<u16> *)&v23[30 * i + 4] = word_25677C[15 * a3];
+        v4 = *((u16 *) unk_25677E + 15 * a3);
         HIBYTE(v4) += 7;
-        *(_WORDNA *)&v23[30 * i + 6] = v4;
+        *(UA<u16> *)&v23[30 * i + 6] = v4;
         a1 = (int)&v23[30 * i];
-        *(_WORDNA *)(a1 + 8) = *((_WORD *) dword_256780 + 15 * a3);
-        *(_WORDNA *)(a1 + 12) = 0;
-        *(_WORDNA *)(a1 + 10) = 0;
-        *(_WORDNA *)(a1 + 14) = 10;
+        *(UA<u16> *)(a1 + 8) = *((u16 *) dword_256780 + 15 * a3);
+        *(UA<u16> *)(a1 + 12) = 0;
+        *(UA<u16> *)(a1 + 10) = 0;
+        *(UA<u16> *)(a1 + 14) = 10;
         ++i;
         while ( v23[30 * i + 16] && i < 0x22u )
           ++i;
@@ -7908,22 +7915,22 @@ char CPP_add_bullet(unsigned __int8 a3)
   {
     a1 = 30 * a3;
     v32 = CPP_how_many_bullets(a3 + 4, a3);
-    if ( v32 < (unsigned __int8)byte_25678C[a1] )
+    if ( v32 < (u8)byte_25678C[a1] )
     {
-      a1 = 28 / (unsigned __int8)byte_25678C[30 * a3];
+      a1 = 28 / (u8)byte_25678C[30 * a3];
       if ( abs(turn - dword_29F69C[a3]) > a1 || !v32 )
       {
         dword_29F69C[a3] = turn;
         v23[30 * i + 16] = a3 + 4;
         v23[30 * i + 24] = 1;
-        *(_WORDNA *)&v23[30 * i + 4] = word_25677C[15 * a3];
-        v5 = *((_WORD *) unk_25677E + 15 * a3);
+        *(UA<u16> *)&v23[30 * i + 4] = word_25677C[15 * a3];
+        v5 = *((u16 *) unk_25677E + 15 * a3);
         HIBYTE(v5) += 7;
-        *(_WORDNA *)&v23[30 * i + 6] = v5;
-        *(_WORDNA *)&v23[30 * i + 8] = *((_WORD *) dword_256780 + 15 * a3);
-        *(_WORDNA *)&v23[30 * i + 12] = -506;
-        *(_WORDNA *)&v23[30 * i + 10] = 0;
-        *(_WORDNA *)&v23[30 * i++ + 14] = 3;
+        *(UA<u16> *)&v23[30 * i + 6] = v5;
+        *(UA<u16> *)&v23[30 * i + 8] = *((u16 *) dword_256780 + 15 * a3);
+        *(UA<u16> *)&v23[30 * i + 12] = -506;
+        *(UA<u16> *)&v23[30 * i + 10] = 0;
+        *(UA<u16> *)&v23[30 * i++ + 14] = 3;
         while ( v23[30 * i + 16] && i < 0x22u )
           ++i;
       }
@@ -7931,13 +7938,13 @@ char CPP_add_bullet(unsigned __int8 a3)
   }
   if ( i < 0x22u )
   {
-    v6 = (unsigned __int8)byte_25678B[30 * a3];
+    v6 = (u8)byte_25678B[30 * a3];
     v32 = CPP_how_many_bullets(a3 + 47, a3);
     a1 = v6 - 2;
     if ( v32 <= a1 )
     {
       a1 = 4 * a3;
-      if ( /*abs*/ ((unsigned)(turn - *(intNA *)((char *)dword_29F6AC + a1)) > (unsigned int)(56 / (unsigned __int8)byte_25678B[30 * a3])) || !v32 ) //unsigned fix
+      if ( /*abs*/ ((unsigned)(turn - *(UA<i32> *)((char *)dword_29F6AC + a1)) > (unsigned int)(56 / (u8)byte_25678B[30 * a3])) || !v32 ) //unsigned fix
       {
         dword_29F6AC[a3] = turn;
         v29 = i;
@@ -7949,29 +7956,29 @@ char CPP_add_bullet(unsigned __int8 a3)
         }
         else
         {
-          HIDWORD(v19) = 1;
-          LODWORD(v19) = a3;
+//          HIDWORD(v19) = 1;
+//          LODWORD(v19) = a3;
 
-//          MY_PlaySample((unsigned int *)a1, a2, v19, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-          MY_PlaySample(/*(unsigned int *)a1, a2, v19,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//          MY_PlaySample((unsigned int *)a1, a2, v19, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+          MY_PlaySample(/*(unsigned int *)a1, a2, v19,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
           v23[30 * j + 16] = a3 + 47;
           v23[30 * j + 24] = 4;
-          *(_WORDNA *)&v23[30 * j + 12] = 0;
-          *(_WORDNA *)&v23[30 * j + 4] = word_25677C[15 * a3];
-          *(_WORDNA *)&v23[30 * j + 6] = *((_WORD *) unk_25677E + 15 * a3);
-          *(_WORDNA *)&v23[30 * j + 8] = *((_WORD *) dword_256780 + 15 * a3);
-          v23[30 * j + 25] = (((int)(unsigned __int16)word_25677C[15 * a3] >> 11) + 16) % 32;
-          *(_WORDNA *)&v23[30 * j + 14] = 2;
+          *(UA<u16> *)&v23[30 * j + 12] = 0;
+          *(UA<u16> *)&v23[30 * j + 4] = word_25677C[15 * a3];
+          *(UA<u16> *)&v23[30 * j + 6] = *((u16 *) unk_25677E + 15 * a3);
+          *(UA<u16> *)&v23[30 * j + 8] = *((u16 *) dword_256780 + 15 * a3);
+          v23[30 * j + 25] = (((int)(u16)word_25677C[15 * a3] >> 11) + 16) % 32;
+          *(UA<u16> *)&v23[30 * j + 14] = 2;
           v23[30 * v29 + 16] = a3 + 47;
           v23[30 * v29 + 24] = -4;
-          *(_WORDNA *)&v23[30 * v29 + 12] = 0;
-          *(_WORDNA *)&v23[30 * v29 + 4] = word_25677C[15 * a3];
-          *(_WORDNA *)&v23[30 * v29 + 6] = *((_WORD *) unk_25677E + 15 * a3);
-          *(_WORDNA *)&v23[30 * v29 + 8] = *((_WORD *) dword_256780 + 15 * a3);
+          *(UA<u16> *)&v23[30 * v29 + 12] = 0;
+          *(UA<u16> *)&v23[30 * v29 + 4] = word_25677C[15 * a3];
+          *(UA<u16> *)&v23[30 * v29 + 6] = *((u16 *) unk_25677E + 15 * a3);
+          *(UA<u16> *)&v23[30 * v29 + 8] = *((u16 *) dword_256780 + 15 * a3);
           a1 = 32;
-          v23[30 * v29 + 25] = (((int)(unsigned __int16)word_25677C[15 * a3] >> 11) + 16) % 32;
-          *(_WORDNA *)&v23[30 * v29 + 14] = 2;
+          v23[30 * v29 + 25] = (((int)(u16)word_25677C[15 * a3] >> 11) + 16) % 32;
+          *(UA<u16> *)&v23[30 * v29 + 14] = 2;
           for ( i = j + 1; v23[30 * i + 16] && i < 0x22u; ++i )
             ;
         }
@@ -7979,41 +7986,41 @@ char CPP_add_bullet(unsigned __int8 a3)
     }
   }
   LOBYTE(v7) = 30 * a3;
-  if ( *((_BYTE *) dword_25678D + 30 * a3 + 2) == 3 )
+  if ( *((u8 *) dword_25678D + 30 * a3 + 2) == 3 )
   {
     if ( i < 0x22u )
     {
       LOBYTE(v7) = 30 * a3;
-      if ( !*((_BYTE *) dword_25678D + 30 * a3) )
+      if ( !*((u8 *) dword_25678D + 30 * a3) )
       {
         if ( (v8 = 30 * a3,
               LOBYTE(v7) = CPP_how_many_bullets(a3 + 2, a3),
               v33 = (char)((int)v7), //??? mingw todo
-              (unsigned __int8)((int)v7) < *((_BYTE *) dword_25678D + v8 + 2)) //??? mingw todo
-          && (v8 = 28 / *((unsigned __int8 *) dword_25678D + 30 * a3 + 2),
+              (u8)((int)v7) < *((u8 *) dword_25678D + v8 + 2)) //??? mingw todo
+          && (v8 = 28 / *((u8 *) dword_25678D + 30 * a3 + 2),
               v7 = (char *)abs(turn - dword_29F6B4[a3]),
               (int)v7 > v8)
           || !v33 )
         {
-          HIDWORD(v20) = 1;
-          LODWORD(v20) = a3;
+//          HIDWORD(v20) = 1;
+//          LODWORD(v20) = a3;
 
-//          MY_PlaySample((unsigned int *)v8, a2, v20, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-          MY_PlaySample(/*(unsigned int *)v8, a2, v20,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//          MY_PlaySample((unsigned int *)v8, a2, v20, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+          MY_PlaySample(/*(unsigned int *)v8, a2, v20,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
           v23[30 * i + 16] = a3 + 2;
           if ( vy[a3] > 0 )
-            v23[30 * i + 24] = -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16);
+            v23[30 * i + 24] = -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16);
           else
-            v23[30 * i + 24] = abs(*(intNA *)&byte_21F946[2 * a3] >> 16) + 8;
-          *(_WORDNA *)&v23[30 * i + 4] = word_25677C[15 * a3];
-          v9 = *((_WORD *) unk_25677E + 15 * a3);
+            v23[30 * i + 24] = abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) + 8;
+          *(UA<u16> *)&v23[30 * i + 4] = word_25677C[15 * a3];
+          v9 = *((u16 *) unk_25677E + 15 * a3);
           HIBYTE(v9) += 7;
-          *(_WORDNA *)&v23[30 * i + 6] = v9;
-          *(_WORDNA *)&v23[30 * i + 8] = *((_WORD *) dword_256780 + 15 * a3);
+          *(UA<u16> *)&v23[30 * i + 6] = v9;
+          *(UA<u16> *)&v23[30 * i + 8] = *((u16 *) dword_256780 + 15 * a3);
           v23[30 * i + 26] = 0;
-          *(_DWORDNA *)&v23[30 * i] = 40;
-          *(_WORDNA *)&v23[30 * i + 14] = 1;
+          *(UA<u32> *)&v23[30 * i] = 40;
+          *(UA<u16> *)&v23[30 * i + 14] = 1;
           LOBYTE(v7) = turn;
           dword_29F6B4[a3] = turn;
         }
@@ -8021,26 +8028,26 @@ char CPP_add_bullet(unsigned __int8 a3)
     }
   }
   else if ( i >= 0x22u
-         || (LOBYTE(v7) = 30 * a3, *((_BYTE *) dword_25678D + 30 * a3))
-         || ((v10 = *((unsigned __int8 *) dword_25678D + 30 * a3 + 2),
+         || (LOBYTE(v7) = 30 * a3, *((u8 *) dword_25678D + 30 * a3))
+         || ((v10 = *((u8 *) dword_25678D + 30 * a3 + 2),
               v32 = CPP_how_many_bullets(a3 + 2, a3),
               LOBYTE(v7) = v32,
               a1 = v10 - 3,
               v32 > a1)
-          || (a1 = 28 / (*((unsigned __int8 *) dword_25678D + 30 * a3 + 2) / 3),
+          || (a1 = 28 / (*((u8 *) dword_25678D + 30 * a3 + 2) / 3),
               v7 = (char *)abs(turn - dword_29F6B4[a3]),
               (int)v7 <= a1))
          && v32 >= 3u )
   {
     if ( i < 0x22u
-      && (LOBYTE(v7) = 30 * a3, *((_BYTE *) dword_25678D + 30 * a3))
-      && (v14 = *((unsigned __int8 *) dword_25678D + 30 * a3 + 2)
-              - *((unsigned __int8 *) dword_25678D + 30 * a3 + 2) / 3,
+      && (LOBYTE(v7) = 30 * a3, *((u8 *) dword_25678D + 30 * a3))
+      && (v14 = *((u8 *) dword_25678D + 30 * a3 + 2)
+              - *((u8 *) dword_25678D + 30 * a3 + 2) / 3,
           v32 = CPP_how_many_bullets(a3 + 2, a3),
           LOBYTE(v7) = v32,
           a1 = v14 - 2,
           v32 <= a1)
-      && (a1 = 28 / (*((unsigned __int8 *) dword_25678D + 30 * a3 + 2) / 3),
+      && (a1 = 28 / (*((u8 *) dword_25678D + 30 * a3 + 2) / 3),
           v7 = (char *)abs(turn - dword_29F6B4[a3]),
           (int)v7 > a1)
       || v32 < 2u )
@@ -8054,37 +8061,37 @@ char CPP_add_bullet(unsigned __int8 a3)
       }
       if ( k < 0x22u )
       {
-        HIDWORD(v22) = 1;
-        LODWORD(v22) = a3;
+//        HIDWORD(v22) = 1;
+//        LODWORD(v22) = a3;
 
-//        MY_PlaySample((unsigned int *)a1, a2, v22, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-        MY_PlaySample(/*(unsigned int *)a1, a2, v22,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//        MY_PlaySample((unsigned int *)a1, a2, v22, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+        MY_PlaySample(/*(unsigned int *)a1, a2, v22,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
         v23[30 * k + 16] = a3 + 2;
         if ( vy[a3] > 0 )
-          v23[30 * k + 24] = -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16);
+          v23[30 * k + 24] = -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16);
         else
-          v23[30 * k + 24] = abs(*(intNA *)&byte_21F946[2 * a3] >> 16) + 8;
-        *(_WORDNA *)&v23[30 * k + 4] = word_25677C[15 * a3];
-        v15 = *((_WORD *) unk_25677E + 15 * a3);
+          v23[30 * k + 24] = abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) + 8;
+        *(UA<u16> *)&v23[30 * k + 4] = word_25677C[15 * a3];
+        v15 = *((u16 *) unk_25677E + 15 * a3);
         HIBYTE(v15) += 7;
-        *(_WORDNA *)&v23[30 * k + 6] = v15;
-        *(_WORDNA *)&v23[30 * k + 8] = *((_WORD *) dword_256780 + 15 * a3);
-        *(_DWORDNA *)&v23[30 * k] = 40;
-        *(_WORDNA *)&v23[30 * k + 14] = 1;
+        *(UA<u16> *)&v23[30 * k + 6] = v15;
+        *(UA<u16> *)&v23[30 * k + 8] = *((u16 *) dword_256780 + 15 * a3);
+        *(UA<u32> *)&v23[30 * k] = 40;
+        *(UA<u16> *)&v23[30 * k + 14] = 1;
         v23[30 * k + 26] = 1;
         v23[30 * v31 + 16] = a3 + 2;
         if ( vy[a3] > 0 )
-          v23[30 * v31 + 24] = -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16);
+          v23[30 * v31 + 24] = -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16);
         else
-          v23[30 * v31 + 24] = abs(*(intNA *)&byte_21F946[2 * a3] >> 16) + 8;
-        *(_WORDNA *)&v23[30 * v31 + 4] = word_25677C[15 * a3];
-        v16 = *((_WORD *) unk_25677E + 15 * a3);
+          v23[30 * v31 + 24] = abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) + 8;
+        *(UA<u16> *)&v23[30 * v31 + 4] = word_25677C[15 * a3];
+        v16 = *((u16 *) unk_25677E + 15 * a3);
         HIBYTE(v16) += 7;
-        *(_WORDNA *)&v23[30 * v31 + 6] = v16;
-        *(_DWORDNA *)&v23[30 * v31] = 40;
-        *(_WORDNA *)&v23[30 * v31 + 8] = *((_WORD *) dword_256780 + 15 * a3);
-        *(_WORDNA *)&v23[30 * v31 + 14] = 1;
+        *(UA<u16> *)&v23[30 * v31 + 6] = v16;
+        *(UA<u32> *)&v23[30 * v31] = 40;
+        *(UA<u16> *)&v23[30 * v31 + 8] = *((u16 *) dword_256780 + 15 * a3);
+        *(UA<u16> *)&v23[30 * v31 + 14] = 1;
         v23[30 * v31 + 26] = -1;
         LOBYTE(v7) = turn;
         dword_29F6B4[a3] = turn;
@@ -8102,33 +8109,33 @@ char CPP_add_bullet(unsigned __int8 a3)
     }
     if ( l < 0x22u )
     {
-      HIDWORD(v21) = 1;
-      LODWORD(v21) = a3;
+//      HIDWORD(v21) = 1;
+//      LODWORD(v21) = a3;
 
-//      MY_PlaySample((unsigned int *)a1, a2, v21, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*(unsigned int *)a1, a2, v21,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//      MY_PlaySample((unsigned int *)a1, a2, v21, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*(unsigned int *)a1, a2, v21,*/ a3, 1, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
       v23[30 * l + 16] = a3 + 2;
-      v23[30 * l + 24] = vy[a3] > 0 ? -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16) : abs(*(intNA *)&byte_21F946[2 * a3] >> 16)
+      v23[30 * l + 24] = vy[a3] > 0 ? -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) : abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16)
                                                                                    + 8;
-      *(_WORDNA *)&v23[30 * l + 4] = word_25677C[15 * a3];
-      v11 = *((_WORD *) unk_25677E + 15 * a3);
+      *(UA<u16> *)&v23[30 * l + 4] = word_25677C[15 * a3];
+      v11 = *((u16 *) unk_25677E + 15 * a3);
       HIBYTE(v11) += 7;
-      *(_WORDNA *)&v23[30 * l + 6] = v11;
-      *(_WORDNA *)&v23[30 * l + 8] = *((_WORD *) dword_256780 + 15 * a3);
-      *(_DWORDNA *)&v23[30 * l] = 40;
-      *(_WORDNA *)&v23[30 * l + 14] = 1;
+      *(UA<u16> *)&v23[30 * l + 6] = v11;
+      *(UA<u16> *)&v23[30 * l + 8] = *((u16 *) dword_256780 + 15 * a3);
+      *(UA<u32> *)&v23[30 * l] = 40;
+      *(UA<u16> *)&v23[30 * l + 14] = 1;
       v23[30 * l + 26] = 1;
       v23[30 * v30 + 16] = a3 + 2;
-      v23[30 * v30 + 24] = vy[a3] > 0 ? -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16) : abs(*(intNA *)&byte_21F946[2 * a3] >> 16)
+      v23[30 * v30 + 24] = vy[a3] > 0 ? -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) : abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16)
                                                                                      + 8;
-      *(_WORDNA *)&v23[30 * v30 + 4] = word_25677C[15 * a3];
-      v12 = *((_WORD *) unk_25677E + 15 * a3);
+      *(UA<u16> *)&v23[30 * v30 + 4] = word_25677C[15 * a3];
+      v12 = *((u16 *) unk_25677E + 15 * a3);
       HIBYTE(v12) += 7;
-      *(_WORDNA *)&v23[30 * v30 + 6] = v12;
-      *(_WORDNA *)&v23[30 * v30 + 8] = *((_WORD *) dword_256780 + 15 * a3);
-      *(_WORDNA *)&v23[30 * v30 + 14] = 1;
-      *(_DWORDNA *)&v23[30 * v30] = 40;
+      *(UA<u16> *)&v23[30 * v30 + 6] = v12;
+      *(UA<u16> *)&v23[30 * v30 + 8] = *((u16 *) dword_256780 + 15 * a3);
+      *(UA<u16> *)&v23[30 * v30 + 14] = 1;
+      *(UA<u32> *)&v23[30 * v30] = 40;
       v23[30 * v30 + 26] = -1;
       dword_29F6B4[a3] = turn;
       for ( m = l + 1; ; ++m )
@@ -8141,30 +8148,30 @@ char CPP_add_bullet(unsigned __int8 a3)
       {
         v23[30 * m + 16] = a3 + 2;
         if ( vy[a3] > 0 )
-          v23[30 * m + 24] = -8 - abs(*(intNA *)&byte_21F946[2 * a3] >> 16);
+          v23[30 * m + 24] = -8 - abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16);
         else
-          v23[30 * m + 24] = abs(*(intNA *)&byte_21F946[2 * a3] >> 16) + 8;
-        *(_WORDNA *)&v23[30 * m + 4] = word_25677C[15 * a3];
-        v13 = *((_WORD *) unk_25677E + 15 * a3);
+          v23[30 * m + 24] = abs(*(UA<i32> *)&byte_21F946[2 * a3] >> 16) + 8;
+        *(UA<u16> *)&v23[30 * m + 4] = word_25677C[15 * a3];
+        v13 = *((u16 *) unk_25677E + 15 * a3);
         HIBYTE(v13) += 7;
-        *(_WORDNA *)&v23[30 * m + 6] = v13;
-        *(_WORDNA *)&v23[30 * m + 8] = *((_WORD *) dword_256780 + 15 * a3);
-        *(_DWORDNA *)&v23[30 * m] = 40;
+        *(UA<u16> *)&v23[30 * m + 6] = v13;
+        *(UA<u16> *)&v23[30 * m + 8] = *((u16 *) dword_256780 + 15 * a3);
+        *(UA<u32> *)&v23[30 * m] = 40;
         v23[30 * m + 26] = 0;
         v7 = &v23[30 * m];
-        *((_WORD *)v7 + 7) = 1;
+        *((u16 *)v7 + 7) = 1;
       }
     }
   }
   return (char)((int)v7); //??? mingw todo
 }
 
-int CPP_smart_bomb(unsigned __int8 a3)
+int CPP_smart_bomb(u8 a3)
 {
   int result; // eax
-  __int64 v4; // [esp-1Ch] [ebp-28h]
+//  i64 v4; // [esp-1Ch] [ebp-28h]
   int *v5; // [esp+4h] [ebp-8h]
-  unsigned __int16 i; // [esp+8h] [ebp-4h]
+  u16 i; // [esp+8h] [ebp-4h]
 
   v5 = &aliens[450 * a3];
   result = 30 * a3;
@@ -8174,79 +8181,79 @@ int CPP_smart_bomb(unsigned __int8 a3)
     if ( result > 20 )
     {
       dword_29F690[a3] = turn;
-      HIDWORD(v4) = 5;
-      LODWORD(v4) = a3;
+//      HIDWORD(v4) = 5;
+//      LODWORD(v4) = a3;
 
-//      MY_PlaySample(a1, a2, v4, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 100i64, 3u);
-      MY_PlaySample(/*a1, a2, v4,*/ a3, 5, 0x7FFF, -2 - 0x7FFF * (unsigned __int8)no_players - 200, 0x64, 0, 3);
+//      MY_PlaySample(a1, a2, v4, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 200, 100i64, 3u);
+      MY_PlaySample(/*a1, a2, v4,*/ a3, 5, 0x7FFF, -2 - 0x7FFF * (u8)no_players - 200, 0x64, 0, 3);
 
       for ( i = 0; i < 0x3Cu; ++i )
       {
-        if ( *((_BYTE *)v5 + 16)
-          && *((_BYTE *)v5 + 16) != 21
-          && (*((_BYTE *)v5 + 16) < 0x19u || *((_BYTE *)v5 + 16) > 0x2Eu) )
+        if ( *((u8 *)v5 + 16)
+          && *((u8 *)v5 + 16) != 21
+          && (*((u8 *)v5 + 16) < 0x19u || *((u8 *)v5 + 16) > 0x2Eu) )
         {
-          if ( *((__int16 *)v5 + 7) > 50 )
+          if ( *((i16 *)v5 + 7) > 50 )
           {
-            *((_WORD *)v5 + 7) -= 50;
+            *((u16 *)v5 + 7) -= 50;
           }
           else
           {
-            switch ( *((_BYTE *)v5 + 16) )
+            switch ( *((u8 *)v5 + 16) )
             {
               case 6:
                 the_score[a3] += 100;
-                *((_WORD *)v5 + 6) = 0;
-                *((_BYTE *)v5 + 16) = 21;
-                *((_BYTE *)v5 + 24) = 0;
-                *((_WORD *)v5 + 7) = 127;
+                *((u16 *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 21;
+                *((u8 *)v5 + 24) = 0;
+                *((u16 *)v5 + 7) = 127;
                 break;
               case 7:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 5;
                 break;
               case 8:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 15;
                 break;
               case 0xB:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 2;
                 break;
               case 0xC:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 50;
                 break;
               case 0xF:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 15;
                 break;
               case 0x10:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 15;
                 break;
               case 0x11:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 10;
                 break;
               case 0x17:
-                *((_BYTE *)v5 + 16) = 25;
-                *((_WORD *)v5 + 5) = 0;
-                *((_WORD *)v5 + 6) = 0;
+                *((u8 *)v5 + 16) = 25;
+                *((u16 *)v5 + 5) = 0;
+                *((u16 *)v5 + 6) = 0;
                 the_score[a3] += 15;
                 break;
               default:
@@ -8269,7 +8276,7 @@ int CPP_smart_bomb(unsigned __int8 a3)
 //#pragma GCC optimize ("no-tree-pre")
 //#pragma GCC optimize ("no-tree-dominator-opts")
 
-int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить маскимальную оптимизацию: dword_25678D и dword_256791. Пофиксил с помощью volatile(IO).
+int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить маскимальную оптимизацию: dword_25678D и dword_256791.
 {
   int result; // eax
   unsigned int *v3; // ebx
@@ -8307,8 +8314,8 @@ int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить м
   int v35; // eax
   int v36; // eax
   int v37; // eax
-  __int64 v38; // [esp-1Ch] [ebp-50h]
-  __int64 v39; // [esp-1Ch] [ebp-50h]
+//  i64 v38; // [esp-1Ch] [ebp-50h]
+//  i64 v39; // [esp-1Ch] [ebp-50h]
   int v40; // [esp-4h] [ebp-38h]
   int v41; // [esp-4h] [ebp-38h]
   int v42; // [esp-4h] [ebp-38h]
@@ -8330,147 +8337,147 @@ int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить м
   char v56[4]; // [esp+24h] [ebp-10h] BYREF
   char v57[4]; // [esp+28h] [ebp-Ch] BYREF
   char v58[4]; // [esp+2Ch] [ebp-8h] BYREF
-  signed __int8 i; // [esp+30h] [ebp-4h]
+  s8 i; // [esp+30h] [ebp-4h]
 
   if ( level_no == 3 )
     blk_collision = 0;
 
   for ( i = 0; ; ++i )
   {
-    result = (unsigned __int8)no_players;
+    result = (u8)no_players;
 
-    if ( i >= (int)(unsigned __int8)no_players )
+    if ( i >= (int)(u8)no_players )
       break;
 
 //----------------------------------------------------------------------------------
     if ( (!flicker[i] || !level_start) && !game_over_flag[i] )
     {
-      v54 = CPP_do_player_blk_collision(/*(unsigned int *)a1, a2,*/  i, (_BYTE*)v58, (_BYTE*)v57, (_BYTE*)v56, (_BYTE*)v55);
+      v54 = CPP_do_player_blk_collision(/*(unsigned int *)a1, a2,*/  i, (u8*)v58, (u8*)v57, (u8*)v56, (u8*)v55);
       CPP_do_contact_blocks();
 
       if ( !v54 ) //ранее это условие не выполнялось, если v54 - char.  Была порча памяти? Спасало глобальное объявление, либо int
       {
         if ( joysx[i] )
         {
-          v52 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+          v52 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
           v3 = (unsigned int *)(30 * i);
-          *((IO _BYTE *) dword_256791 + (_DWORD)v3 + 1) += *((IO _BYTE *) dword_256791 + (_DWORD)v3) * -LOBYTE(joysx[i]);
+          *((u8 *) dword_256791 + (u32)v3 + 1) += *((u8 *) dword_256791 + (u32)v3) * -LOBYTE(joysx[i]);
           if ( v52 >= 0 )
             v51 = v52 > 0;
           else
             v51 = -1;
-          if ( *((IO char *) dword_256791 + 30 * i + 1) >= 0 )
-            v50 = *((IO _BYTE *) dword_256791 + 30 * i + 1) > 0;
+          if ( *((char *) dword_256791 + 30 * i + 1) >= 0 )
+            v50 = *((u8 *) dword_256791 + 30 * i + 1) > 0;
           else
             v50 = -1;
           if ( v51 != v50 && v51 && v50 )
           {
-            HIDWORD(v38) = 8;
-            LODWORD(v38) = i;
+//            HIDWORD(v38) = 8;
+//            LODWORD(v38) = i;
 
-            //MY_PlaySample(v3, a2, v38, 0x7FFFu, -2 - 0x7FFF * (unsigned __int8)no_players - 2 * i, 100i64, 3u);
-            MY_PlaySample(/*v3, a2, v38*/ i, 8 ,  0x7FFFu    , -2 - 0x7FFF * (unsigned __int8)no_players - 2 * i, 0x64, 0, 3);
+            //MY_PlaySample(v3, a2, v38, 0x7FFFu, -2 - 0x7FFF * (u8)no_players - 2 * i, 100i64, 3u);
+            MY_PlaySample(/*v3, a2, v38*/ i, 8 ,  0x7FFFu    , -2 - 0x7FFF * (u8)no_players - 2 * i, 0x64, 0, 3);
           }
         }
-        else if ( *((IO char *) dword_256791 + 30 * i + 1) >= 0 )
+        else if ( *((char *) dword_256791 + 30 * i + 1) >= 0 )
         {
-          if ( *((IO char *) dword_256791 + 30 * i + 1) > 0 )
+          if ( *((char *) dword_256791 + 30 * i + 1) > 0 )
           {
-            *((IO _BYTE *) dword_256791 + 30 * i + 1) -= v58[0];
-            if ( *((IO char *) dword_256791 + 30 * i + 1) < 0 )
-              *((IO _BYTE *) dword_256791 + 30 * i + 1) = 0;
+            *((u8 *) dword_256791 + 30 * i + 1) -= v58[0];
+            if ( *((char *) dword_256791 + 30 * i + 1) < 0 )
+              *((u8 *) dword_256791 + 30 * i + 1) = 0;
           }
         }
         else
         {
-          *((IO _BYTE *) dword_256791 + 30 * i + 1) += v58[0];
-          if ( *((IO char *) dword_256791 + 30 * i + 1) > 0 )
-            *((IO _BYTE *) dword_256791 + 30 * i + 1) = 0;
+          *((u8 *) dword_256791 + 30 * i + 1) += v58[0];
+          if ( *((char *) dword_256791 + 30 * i + 1) > 0 )
+            *((u8 *) dword_256791 + 30 * i + 1) = 0;
         }
 
-        int tmp=(*(IO intNA *)((char *) dword_25678D + 30 * i) >> 24) ; // / v57[0]; sanitizer crash
+        int tmp=(*(UA<i32> *)((char *) dword_25678D + 30 * i) >> 24) ; // / v57[0]; sanitizer crash
         tmp/=v57[0];
 
-        if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -(tmp) )
+        if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -(tmp) )
         {
 //          a1 = v57[0];
-          if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24 > tmp )
+          if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24 > tmp )
           {
 //            a1 = v57[0];
-            *((IO _BYTE *) dword_256791 + 30 * i + 1) = tmp;
+            *((u8 *) dword_256791 + 30 * i + 1) = tmp;
           }
         }
         else
         {
 //          a1 = v57[0];
-          *((IO _BYTE *) dword_256791 + 30 * i + 1) = -(tmp);
+          *((u8 *) dword_256791 + 30 * i + 1) = -(tmp);
         }
-        *((IO _BYTE *) dword_256791 + 30 * i + 1) += v56[0];
-        if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -32 )
+        *((u8 *) dword_256791 + 30 * i + 1) += v56[0];
+        if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -32 )
         {
-          if ( *((IO char *) dword_256791 + 30 * i + 1) > 32 )
-            *((IO _BYTE *) dword_256791 + 30 * i + 1) = 32;
+          if ( *((char *) dword_256791 + 30 * i + 1) > 32 )
+            *((u8 *) dword_256791 + 30 * i + 1) = 32;
         }
         else
         {
-          *((IO _BYTE *) dword_256791 + 30 * i + 1) = -32;
+          *((u8 *) dword_256791 + 30 * i + 1) = -32;
         }
         if ( level_no == 3 )
         {
-          if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -4 )
+          if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24 >= -4 )
           {
-            if ( *((IO char *) dword_256791 + 30 * i + 1) > 4 )
-              *((IO _BYTE *) dword_256791 + 30 * i + 1) = 4;
+            if ( *((char *) dword_256791 + 30 * i + 1) > 4 )
+              *((u8 *) dword_256791 + 30 * i + 1) = 4;
           }
           else
           {
-            *((IO _BYTE *) dword_256791 + 30 * i + 1) = -4;
+            *((u8 *) dword_256791 + 30 * i + 1) = -4;
           }
         }
       }
-      v53 = (  (u32)(*(intNA *)((char *) dword_256791 + 30 * i) >> 24) << 6) + *((unsigned __int16 *) dword_256780 + 15 * i);
+      v53 = (  (u32)(*(UA<i32> *)((char *) dword_256791 + 30 * i) >> 24) << 6) + *((u16 *) dword_256780 + 15 * i);
       if ( v53 >= 0 )
-        *((_WORD *) dword_256780 + 15 * i) = v53;
+        *((u16 *) dword_256780 + 15 * i) = v53;
       else
-        *((_WORD *) dword_256780 + 15 * i) = 0;
+        *((u16 *) dword_256780 + 15 * i) = 0;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       if ( !v54 ) //это условие выполняется!
       {
-        *((IO _BYTE *) dword_256791 + 30 * i + 2) += *((IO _BYTE *) dword_256791 + 30 * i) * -LOBYTE(joysy[i]);
+        *((u8 *) dword_256791 + 30 * i + 2) += *((u8 *) dword_256791 + 30 * i) * -LOBYTE(joysy[i]);
 
-        int tmp=(*(IO intNA *)((char *) dword_25678D + 30 * i) >> 24); // / v57[0]; sanitizer crash
+        int tmp=(*(UA<i32> *)((char *) dword_25678D + 30 * i) >> 24); // / v57[0]; sanitizer crash
         tmp/=v57[0];
 
-        if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24 >= -(tmp) )
+        if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24 >= -(tmp) )
         {
 //          a1 = v57[0];
-          if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24 > tmp )
+          if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24 > tmp )
           {
 //            a1 = v57[0];
-            *((IO _BYTE *) dword_256791 + 30 * i + 2) = tmp;
+            *((u8 *) dword_256791 + 30 * i + 2) = tmp;
           }
         }
         else
         {
 //          a1 = v57[0];
-          *((IO _BYTE *) dword_256791 + 30 * i + 2) = -(tmp);
+          *((u8 *) dword_256791 + 30 * i + 2) = -(tmp);
         }
-        *((IO _BYTE *) dword_256791 + 30 * i + 2) += v55[0];
-        if ( *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24 >= -32 )
+        *((u8 *) dword_256791 + 30 * i + 2) += v55[0];
+        if ( *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24 >= -32 )
         {
-          if ( *((IO char *) dword_256791 + 30 * i + 2) > 32 )
-            *((IO _BYTE *) dword_256791 + 30 * i + 2) = 32;
+          if ( *((char *) dword_256791 + 30 * i + 2) > 32 )
+            *((u8 *) dword_256791 + 30 * i + 2) = 32;
         }
         else
         {
-          *((IO _BYTE *) dword_256791 + 30 * i + 2) = -32;
+          *((u8 *) dword_256791 + 30 * i + 2) = -32;
         }
       }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
       if ( level_no == 3 )
-        *((IO _BYTE *) dword_256791 + 30 * i + 2) = -4;
+        *((u8 *) dword_256791 + 30 * i + 2) = -4;
     }
 //--------------------------------------------------------------------------
 
@@ -8478,118 +8485,118 @@ int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить м
     if ( myvx[i] )
     {
 //      a1 = 2 * i;
-//      *(__int16NA *)((char *)vx + a1) = *(__int16NA *)((char *)myvx + a1);
-        *(__int16NA *)((char *)vx + (2 * i)) = *(__int16NA *)((char *)myvx + (2 * i));
+//      *(UA<i16> *)((char *)vx + a1) = *(UA<i16> *)((char *)myvx + a1);
+        *(UA<i16> *)((char *)vx + (2 * i)) = *(UA<i16> *)((char *)myvx + (2 * i));
     }
-    else if ( (unsigned __int16)word_25677C[15 * i] >= 0x7800u )
+    else if ( (u16)word_25677C[15 * i] >= 0x7800u )
     {
-      vx[i] = (unsigned __int16)word_25677C[15 * i] > 0x8800u;
+      vx[i] = (u16)word_25677C[15 * i] > 0x8800u;
     }
     else
     {
       vx[i] = -1;
     }
-    if ( *((_WORD *) unk_25677E + 15 * i) > 0x2000u && *((IO char *) dword_256791 + 30 * i + 2) > 0 )
+    if ( *((u16 *) unk_25677E + 15 * i) > 0x2000u && *((char *) dword_256791 + 30 * i + 2) > 0 )
     {
-      v4 = *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24;
-      vy[i] = -(__int16)((v4 - (__CFSHL__(v4 >> 31, 2) + 4 * (v4 >> 31))) >> 2) - 6;
-      *((_WORD *) unk_25677E + 15 * i) -= 1536;
+      v4 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24;
+      vy[i] = -(i16)((v4 - (__CFSHL__(v4 >> 31, 2) + 4 * (v4 >> 31))) >> 2) - 6;
+      *((u16 *) unk_25677E + 15 * i) -= 1536;
     }
-    else if ( *((_WORD *) unk_25677E + 15 * i) < 0x8000u && *((IO char *) dword_256791 + 30 * i + 2) < 0 )
+    else if ( *((u16 *) unk_25677E + 15 * i) < 0x8000u && *((char *) dword_256791 + 30 * i + 2) < 0 )
     {
-      v5 = *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24;
+      v5 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24;
       vy[i] = 6 - ((v5 - (__CFSHL__(v5 >> 31, 2) + 4 * (v5 >> 31))) >> 2);
       byte_25677F[30 * i] += 6;
     }
     else
     {
-      v6 = *(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24;
-      vy[i] = -(__int16)((v6 - (__CFSHL__(v6 >> 31, 2) + 4 * (v6 >> 31))) >> 2);
+      v6 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24;
+      vy[i] = -(i16)((v6 - (__CFSHL__(v6 >> 31, 2) + 4 * (v6 >> 31))) >> 2);
     }
     if ( (!flicker[i] || !level_start) && !game_over_flag[i] )
     {
-      word_25677C[15 * i] += ( *((IO char *) dword_256791 + 30 * i + 1)  SHL6) - (vx[i]  SHL8); //shift fix
-      v7 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-      v8 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+      word_25677C[15 * i] += ( *((char *) dword_256791 + 30 * i + 1)  SHL6) - (vx[i]  SHL8); //shift fix
+      v7 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+      v8 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
       v40 = (v8 - (__CFSHL__(v8 >> 31, 2) + 4 * (v8 >> 31))) >> 2;
-      v9 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+      v9 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
       LOWORD(v9) = CPP_arctan((v9 - (__CFSHL__(v9 >> 31, 2) + 4 * (v9 >> 31))) >> 2, v40);
-      v10 = abs(v7 - (unsigned __int16)v9);
-      v11 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-      v12 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+      v10 = abs(v7 - (u16)v9);
+      v11 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+      v12 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
       v41 = (v12 - (__CFSHL__(v12 >> 31, 2) + 4 * (v12 >> 31))) >> 2;
-      v13 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+      v13 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
       LOWORD(v13) = CPP_arctan((v13 - (__CFSHL__(v13 >> 31, 2) + 4 * (v13 >> 31))) >> 2, v41);
-      if ( v10 <= abs(v11 - (unsigned __int16)v13 + 2024) )
+      if ( v10 <= abs(v11 - (u16)v13 + 2024) )
       {
-        v14 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-        v15 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+        v14 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+        v15 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
         v42 = (v15 - (__CFSHL__(v15 >> 31, 2) + 4 * (v15 >> 31))) >> 2;
-        v16 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+        v16 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
         LOWORD(v16) = CPP_arctan((v16 - (__CFSHL__(v16 >> 31, 2) + 4 * (v16 >> 31))) >> 2, v42);
-        v17 = abs(v14 - (unsigned __int16)v16);
-        v18 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-        v19 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+        v17 = abs(v14 - (u16)v16);
+        v18 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+        v19 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
         v43 = (v19 - (__CFSHL__(v19 >> 31, 2) + 4 * (v19 >> 31))) >> 2;
-        v20 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+        v20 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
         LOWORD(v20) = CPP_arctan((v20 - (__CFSHL__(v20 >> 31, 2) + 4 * (v20 >> 31))) >> 2, v43);
-        if ( v17 > abs(v18 - (unsigned __int16)v20 - 2024) )
-          *((_WORD *) dword_256780 + 15 * i + 1) -= 2024;
+        if ( v17 > abs(v18 - (u16)v20 - 2024) )
+          *((u16 *) dword_256780 + 15 * i + 1) -= 2024;
       }
       else
       {
-        *((_WORD *) dword_256780 + 15 * i + 1) += 2024;
+        *((u16 *) dword_256780 + 15 * i + 1) += 2024;
       }
-      v21 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-      v22 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+      v21 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+      v22 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
       v44 = (v22 - (__CFSHL__(v22 >> 31, 2) + 4 * (v22 >> 31))) >> 2;
-      v23 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
-      if ( v21 >= (unsigned __int16)CPP_arctan((v23 - (__CFSHL__(v23 >> 31, 2) + 4 * (v23 >> 31))) >> 2, v44) )
+      v23 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
+      if ( v21 >= (u16)CPP_arctan((v23 - (__CFSHL__(v23 >> 31, 2) + 4 * (v23 >> 31))) >> 2, v44) )
       {
-        v29 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-        v30 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+        v29 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+        v30 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
         v47 = (v30 - (__CFSHL__(v30 >> 31, 2) + 4 * (v30 >> 31))) >> 2;
-        v31 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
-        if ( v29 > (unsigned __int16)CPP_arctan((v31 - (__CFSHL__(v31 >> 31, 2) + 4 * (v31 >> 31))) >> 2, v47) )
+        v31 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
+        if ( v29 > (u16)CPP_arctan((v31 - (__CFSHL__(v31 >> 31, 2) + 4 * (v31 >> 31))) >> 2, v47) )
         {
-          *((_WORD *) dword_256780 + 15 * i + 1) -= 72;
-          v32 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-          v33 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+          *((u16 *) dword_256780 + 15 * i + 1) -= 72;
+          v32 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+          v33 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
           v48 = (v33 - (__CFSHL__(v33 >> 31, 2) + 4 * (v33 >> 31))) >> 2;
-          v34 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
-          if ( v32 < (unsigned __int16)CPP_arctan((v34 - (__CFSHL__(v34 >> 31, 2) + 4 * (v34 >> 31))) >> 2, v48) )
+          v34 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
+          if ( v32 < (u16)CPP_arctan((v34 - (__CFSHL__(v34 >> 31, 2) + 4 * (v34 >> 31))) >> 2, v48) )
           {
-            v35 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+            v35 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
             v49 = (v35 - (__CFSHL__(v35 >> 31, 2) + 4 * (v35 >> 31))) >> 2;
-            v36 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+            v36 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
             LOWORD(v36) = CPP_arctan((v36 - (__CFSHL__(v36 >> 31, 2) + 4 * (v36 >> 31))) >> 2, v49);
-            *((_WORD *) dword_256780 + 15 * i + 1) = v36;
+            *((u16 *) dword_256780 + 15 * i + 1) = v36;
           }
         }
       }
       else
       {
-        *((_WORD *) dword_256780 + 15 * i + 1) += 72;
-        v24 = *(intNA *)((char *) dword_256780 + 30 * i) >> 16;
-        v25 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+        *((u16 *) dword_256780 + 15 * i + 1) += 72;
+        v24 = *(UA<i32> *)((char *) dword_256780 + 30 * i) >> 16;
+        v25 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
         v45 = (v25 - (__CFSHL__(v25 >> 31, 2) + 4 * (v25 >> 31))) >> 2;
-        v26 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
-        if ( v24 > (unsigned __int16)CPP_arctan((v26 - (__CFSHL__(v26 >> 31, 2) + 4 * (v26 >> 31))) >> 2, v45) )
+        v26 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
+        if ( v24 > (u16)CPP_arctan((v26 - (__CFSHL__(v26 >> 31, 2) + 4 * (v26 >> 31))) >> 2, v45) )
         {
-          v27 = -(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+          v27 = -(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
           v46 = (v27 - (__CFSHL__(v27 >> 31, 2) + 4 * (v27 >> 31))) >> 2;
-          v28 = *(IO intNA *)((char *) dword_25678D + 30 * i + 2) >> 24;
+          v28 = *(UA<i32> *)((char *) dword_25678D + 30 * i + 2) >> 24;
           LOWORD(v28) = CPP_arctan((v28 - (__CFSHL__(v28 >> 31, 2) + 4 * (v28 >> 31))) >> 2, v46);
-          *((_WORD *) dword_256780 + 15 * i + 1) = v28;
+          *((u16 *) dword_256780 + 15 * i + 1) = v28;
         }
       }
-      *((__int16 *) dword_256780 + 15 * i + 1) %= 2024;
+      *((i16 *) dword_256780 + 15 * i + 1) %= 2024;
 //      a1 = 30 * i;
-//      if ( *(_WORDNA *)((char *) dword_256780 + a1) )
-        if ( *(_WORDNA *)((char *) dword_256780 + (30 * i)) )
-        *((_WORD *) dword_256784 + 15 * i) += 101;
+//      if ( *(UA<u16> *)((char *) dword_256780 + a1) )
+        if ( *(UA<u16> *)((char *) dword_256780 + (30 * i)) )
+        *((u16 *) dword_256784 + 15 * i) += 101;
       else
-        *((_WORD *) dword_256784 + 15 * i) = 0;
+        *((u16 *) dword_256784 + 15 * i) = 0;
       if ( level_no != 3 )
       {
         if ( (xbuttons[i] & 0x10) != 0 )
@@ -8603,35 +8610,35 @@ int CPP_do_players_ships(void) //Пересекающиеся указатели, не давали выставить м
         }
       }
     }
-    HIDWORD(v39) = 4;
-    LODWORD(v39) = i;
+//    HIDWORD(v39) = 4;
+//    LODWORD(v39) = i;
 /*
     MY_PlaySample(
       (unsigned int *)a1,
       a2,
       v39,
       0x2AF8u,
-      -2 - 0x7FFF * (unsigned __int8)no_players - 2 * i,
+      -2 - 0x7FFF * (u8)no_players - 2 * i,
       -4294967196i64,
       2u);
 */
-    MY_PlaySample(/*(unsigned int *)a1, a2, v39*/ i , 4 , 0x2AF8, -2 - 0x7FFF * (unsigned __int8)no_players - 2 * i, 0x64, 0xFFFFFFFF, 2);
+    MY_PlaySample(/*(unsigned int *)a1, a2, v39*/ i , 4 , 0x2AF8, -2 - 0x7FFF * (u8)no_players - 2 * i, 0x64, 0xFFFFFFFF, 2);
 
 
-    v37 = abs(*(IO intNA *)((char *) dword_25678D + 30 * i + 3) >> 24);
+    v37 = abs(*(UA<i32> *)((char *) dword_25678D + 30 * i + 3) >> 24);
     new_ship_pitch[i] = ((120 * v37 - (__CFSHL__((120 * v37) >> 31, 5) + 32 * ((120 * v37) >> 31))) >> 5) + 100;
     if ( new_ship_pitch[i] != current_ship_pitch[i] )
     {
-      if ( (unsigned __int8)new_ship_pitch[i] <= (unsigned __int8)current_ship_pitch[i] )
+      if ( (u8)new_ship_pitch[i] <= (u8)current_ship_pitch[i] )
       {
-        if ( (unsigned __int8)new_ship_pitch[i] < (unsigned __int8)current_ship_pitch[i] )
+        if ( (u8)new_ship_pitch[i] < (u8)current_ship_pitch[i] )
           current_ship_pitch[i] -= 4;
       }
       else
       {
         current_ship_pitch[i] += 4;
       }
-      MY_SetSamplePitch(i, 4, (unsigned __int8)current_ship_pitch[i]);
+      MY_SetSamplePitch(i, 4, (u8)current_ship_pitch[i]);
     }
   }
   return result;
@@ -8643,7 +8650,7 @@ char CPP_control_game(void) //FINAL
 {
   int v2; // eax
 
-  ascii = inkey_asckey[(unsigned __int8)Inkey];
+  ascii = inkey_asckey[(u8)Inkey];
 
   CPP_read_digistick(/*ascii*/ ); //только присвоения
 
@@ -8723,7 +8730,7 @@ char CPP_control_game(void) //FINAL
       else if ( byte_2B3806 )
       {
         byte_2567B1 = 0;
-        *(_WORDNA *)((char *) dword_256791 + 1) = 0;
+        *(UA<u16> *)((char *) dword_256791 + 1) = 0;
         byte_2567B0 = 0;
       }
       v2 = abs(turn - dword_22ED90);
@@ -8737,99 +8744,99 @@ char CPP_control_game(void) //FINAL
         }
         else if ( byte_2B37D8 && !race_finished )
         {
-          LOWORD(v2) = (unsigned __int8)++laps[0] / 5;
-          laps[0] = (unsigned __int8)laps[0] % 5;
+          LOWORD(v2) = (u8)++laps[0] / 5;
+          laps[0] = (u8)laps[0] % 5;
         }
         else if ( byte_2B37D9 && !race_finished )
         {
-          LOWORD(v2) = (unsigned __int8)++byte_256B3B / 5;
-          byte_256B3B = (unsigned __int8)byte_256B3B % 5;
+          LOWORD(v2) = (u8)++byte_256B3B / 5;
+          byte_256B3B = (u8)byte_256B3B % 5;
         }
       }
     }
-    if ( (unsigned __int8)no_players <= 1u )
+    if ( (u8)no_players <= 1u )
     {
       if ( byte_2B37E8 )
       {
         LOBYTE(v2) = 2 * no_players;
-        word_2567EE[(unsigned __int8)no_players] = -1;
+        word_2567EE[(u8)no_players] = -1;
       }
       else if ( byte_2B37E9 )
       {
         LOBYTE(v2) = 2 * no_players;
-        word_2567EE[(unsigned __int8)no_players] = 1;
+        word_2567EE[(u8)no_players] = 1;
       }
       if ( byte_2B37E0 )
       {
         LOBYTE(v2) = 2 * no_players;
-        word_2567EA[(unsigned __int8)no_players] = -1;
+        word_2567EA[(u8)no_players] = -1;
       }
       else if ( byte_2B37EE )
       {
         LOBYTE(v2) = 2 * no_players;
-        word_2567EA[(unsigned __int8)no_players] = 1;
+        word_2567EA[(u8)no_players] = 1;
       }
       if ( byte_2B3809 )
       {
         LOBYTE(v2) = no_players;
-        byte_256B41[(unsigned __int8)no_players] &= 0xEFu;
+        byte_256B41[(u8)no_players] &= 0xEFu;
       }
       if ( byte_2B37EC )
       {
         LOBYTE(v2) = no_players;
-        byte_256B41[(unsigned __int8)no_players] &= 0xDFu;
+        byte_256B41[(u8)no_players] &= 0xDFu;
       }
     }
     else
     {
       if ( byte_2B37E8 )
       {
-        word_2567EE[(unsigned __int8)no_players] = -1;
+        word_2567EE[(u8)no_players] = -1;
       }
       else if ( byte_2B37E9 )
       {
-        word_2567EE[(unsigned __int8)no_players] = 1;
+        word_2567EE[(u8)no_players] = 1;
       }
       else
       {
-        word_2567EE[(unsigned __int8)no_players] = 0;
+        word_2567EE[(u8)no_players] = 0;
       }
       if ( byte_2B37E0 )
       {
-        word_2567EA[(unsigned __int8)no_players] = -1;
+        word_2567EA[(u8)no_players] = -1;
       }
       else if ( byte_2B37EE )
       {
-        word_2567EA[(unsigned __int8)no_players] = 1;
+        word_2567EA[(u8)no_players] = 1;
       }
       else
       {
-        word_2567EA[(unsigned __int8)no_players] = 0;
+        word_2567EA[(u8)no_players] = 0;
       }
 
       if ( byte_2B3809 )
-        byte_256B41[(unsigned __int8)no_players] &= 0xEFu;
+        byte_256B41[(u8)no_players] &= 0xEFu;
       else
-        byte_256B41[(unsigned __int8)no_players] |= 0x10u;
+        byte_256B41[(u8)no_players] |= 0x10u;
 
       LOBYTE(v2) = no_players;
 
       if ( byte_2B37EC )
-        byte_256B41[(unsigned __int8)no_players] &= 0xDFu;
+        byte_256B41[(u8)no_players] &= 0xDFu;
       else
-        byte_256B41[(unsigned __int8)no_players] |= 0x20u;
+        byte_256B41[(u8)no_players] |= 0x20u;
     }
   }
   Inkey = 0;
   return v2;
 }
 
-int CPP_game_over(unsigned __int8 a1) //FINAL
+int CPP_game_over(u8 a1) //FINAL
 {
   int result; // eax
 
-  *((_BYTE *) dword_256791 + 30 * a1 + 1) = 0;
-  *((_BYTE *) dword_256791 + 30 * a1 + 2) = 0;
+  *((u8 *) dword_256791 + 30 * a1 + 1) = 0;
+  *((u8 *) dword_256791 + 30 * a1 + 2) = 0;
 
   result = a1;
   game_over_flag[a1] = 1;
@@ -8847,12 +8854,12 @@ int CPP_game_over(unsigned __int8 a1) //FINAL
 
 void CPP_read_digistick(void) //FINAL
 {
-  unsigned __int16 v1; // bx
-  unsigned __int16 v2; // si
+  u16 v1; // bx
+  u16 v2; // si
   int v3; // ecx
-  unsigned __int8 v4; // al
-  __int16 v5; // ax
-  __int16 v6; // ax
+  u8 v4; // al
+  i16 v5; // ax
+  i16 v6; // ax
 
 //запрещаем джойстик, но кое-какие присвоения отсюда возьмём
 /*
@@ -8882,9 +8889,9 @@ void CPP_read_digistick(void) //FINAL
     _enable();
     buttons = v4;
     v5 = 0;
-    if ( v1 >= (unsigned __int16)word_1A5504 )
+    if ( v1 >= (u16)word_1A5504 )
     {
-      if ( v1 > (unsigned __int16)word_1A5508 )
+      if ( v1 > (u16)word_1A5508 )
         v5 = 1;
     }
     else
@@ -8893,9 +8900,9 @@ void CPP_read_digistick(void) //FINAL
     }
     joyx = v5;
     v6 = 0;
-    if ( v2 >= (unsigned __int16)word_1A5506 )
+    if ( v2 >= (u16)word_1A5506 )
     {
-      if ( v2 > (unsigned __int16)word_1A550A )
+      if ( v2 > (u16)word_1A550A )
         v6 = 1;
     }
     else
@@ -8921,22 +8928,22 @@ void CPP_setup_addresses(void) //FINAL
   int v1; // [esp+0h] [ebp-8h] BYREF
   int i; // [esp+4h] [ebp-4h]
 
-  for ( i = 0; (unsigned __int16)i < 0x800u; ++i )
+  for ( i = 0; (u16)i < 0x800u; ++i )
   {
-    v0 = CPP_check_anim(i, (unsigned __int16 *)&v1);
+    v0 = CPP_check_anim(i, (u16 *)&v1);
 
-    *(intNA *)((char *) anim_addresses + 6 * (unsigned __int16)i) = v0;
+    *(UA<i32> *)((char *) anim_addresses + 6 * (u16)i) = v0;
 
-    word_2314BC[3 * (unsigned __int16)i] = v1;
+    word_2314BC[3 * (u16)i] = v1;
   }
 }
 
-int CPP_check_anim(unsigned __int16 a1, unsigned __int16 *a2) //FINAL
+int CPP_check_anim(u16 a1, u16 *a2) //FINAL
 {
   int v3; // [esp+0h] [ebp-18h]
   int *i; // [esp+8h] [ebp-10h]
   int v5; // [esp+Ch] [ebp-Ch]
-  unsigned __int16 j; // [esp+10h] [ebp-8h]
+  u16 j; // [esp+10h] [ebp-8h]
   char v7; // [esp+14h] [ebp-4h]
 
   v5 = 0;
@@ -8944,9 +8951,9 @@ int CPP_check_anim(unsigned __int16 a1, unsigned __int16 *a2) //FINAL
   for ( i = (int *)&array_list[0]; *i != -1 && !v7; ++i ) //fix [0] pointer
   {
     v3 = *i;
-    for ( j = 0; *(__int16NA *)(v3 + 2 * j) >= 0 && !v7; ++j )
+    for ( j = 0; *(UA<i16> *)(v3 + 2 * j) >= 0 && !v7; ++j )
     {
-      if ( *(__int16NA *)(v3 + 2 * j) == a1 )
+      if ( *(UA<i16> *)(v3 + 2 * j) == a1 )
       {
         v7 = 1;
         *a2 = j;
@@ -8959,14 +8966,14 @@ int CPP_check_anim(unsigned __int16 a1, unsigned __int16 *a2) //FINAL
 
 int CPP_setup_high_scores(void) //FINAL
 {
-  _WORD *v0; // eax
+  u16 *v0; // eax
   int result; // eax
-  _WORD *v2; // eax
-  _WORD *v3; // edx
-  _WORD *v4; // eax
+  u16 *v2; // eax
+  u16 *v3; // edx
+  u16 *v4; // eax
   int v5; // [esp+0h] [ebp-Ch]
   int v6; // [esp+4h] [ebp-8h]
-  unsigned __int16 i; // [esp+8h] [ebp-4h]
+  u16 i; // [esp+8h] [ebp-4h]
   int j; // [esp+8h] [ebp-4h]
   int k; // [esp+8h] [ebp-4h]
 
@@ -8974,7 +8981,7 @@ int CPP_setup_high_scores(void) //FINAL
 
   CPP_setup_vecs(WScreen, 0, 320, 320, 200);
 
-  CPP_set_scroll((int)(unsigned __int16)word_25677C[0] >> 5);
+  CPP_set_scroll((int)(u16)word_25677C[0] >> 5);
 
   v5 = level;
   game_mode = 2;
@@ -8992,7 +8999,7 @@ int CPP_setup_high_scores(void) //FINAL
 
   for ( i = 0; i < 0x306u; ++i )
   {
-    v0 = (_WORD *)v5;
+    v0 = (u16 *)v5;
     v5 += 2;
     *v0 = 0;
   }
@@ -9000,19 +9007,19 @@ int CPP_setup_high_scores(void) //FINAL
   result = high_scores;
   v6 = high_scores;
 
-  for ( j = 0; (unsigned __int16)j < 0x1A0u; ++j )
+  for ( j = 0; (u16)j < 0x1A0u; ++j )
   {
-    v2 = (_WORD *)v6;
+    v2 = (u16 *)v6;
     v6 += 2;
-    v3 = (_WORD *)v5;
+    v3 = (u16 *)v5;
     v5 += 2;
     *v3 = *v2;
     result = j;
   }
 
-  for ( k = 0; (unsigned __int16)k < 0x27Au; ++k )
+  for ( k = 0; (u16)k < 0x27Au; ++k )
   {
-    v4 = (_WORD *)v5;
+    v4 = (u16 *)v5;
     v5 += 2;
     *v4 = 0;
     result = k;
@@ -9040,27 +9047,27 @@ int CPP_set_scroll(int a1) //FINAL
 unsigned int CPP_load_game(void) //FINAL
 {
   unsigned int result; // eax
-  __int16 v1; // ax
-  _WORD *v2; // edx
+  i16 v1; // ax
+  u16 *v2; // edx
   char v3[252]; // [esp+0h] [ebp-108h] BYREF
-  _WORD *v4; // [esp+FCh] [ebp-Ch]
-  _WORD *v5; // [esp+100h] [ebp-8h]
+  u16 *v4; // [esp+FCh] [ebp-Ch]
+  u16 *v5; // [esp+100h] [ebp-8h]
   int i; // [esp+104h] [ebp-4h]
 
   strcpy((char*)v3,(char*)aHighScoresNNjo); //CLIB
 
   if ( tabgen )
   {
-    v4 = (_WORD *)high_scores;
-    v5 = (_WORD *)high_scores;
+    v4 = (u16 *)high_scores;
+    v5 = (u16 *)high_scores;
     for ( i = 0; ; ++i )
     {
       result = strlen((char*)v3); //CLIB
 
-      if ( (unsigned __int16)i >= result )
+      if ( (u16)i >= result )
         break;
 
-      if ( v3[(unsigned __int16)i] == 47 && v3[(unsigned __int16)i + 1] == 110 )
+      if ( v3[(u16)i] == 47 && v3[(u16)i + 1] == 110 )
       {
         v5 += 32;
         v4 = v5;
@@ -9068,7 +9075,7 @@ unsigned int CPP_load_game(void) //FINAL
       }
       else
       {
-        v1 = (unsigned __int8)v3[(unsigned __int16)i] + 1952;
+        v1 = (u8)v3[(u16)i] + 1952;
         v2 = v4++;
         *v2 = v1;
       }
@@ -9086,12 +9093,12 @@ unsigned int CPP_load_game(void) //FINAL
 
 int CPP_init_tube(void) //FINAL
 {
-  unsigned __int8 i; // [esp+0h] [ebp-4h]
+  u8 i; // [esp+0h] [ebp-4h]
 
   CPP_setup_stuff();
 
   vec_mode = 0;
-  for ( i = 0; i < (unsigned __int8)no_players; ++i )
+  for ( i = 0; i < (u8)no_players; ++i )
   {
     scrollpos[i] = 0;
     level_line[i] = 28;
@@ -9119,10 +9126,10 @@ int CPP_init_tube(void) //FINAL
 
 int CPP_tunnel_table(void) //FINAL
 {
-  _BYTE *v0; // eax
-  _WORD *v1; // edx
-  _WORD *v2; // eax
-  unsigned __int8 *v3; // edx
+  u8 *v0; // eax
+  u16 *v1; // edx
+  u16 *v2; // eax
+  u8 *v3; // edx
   int result; // eax
   int v5; // [esp+0h] [ebp-5Ch] BYREF
   int v6; // [esp+4h] [ebp-58h]
@@ -9130,7 +9137,7 @@ int CPP_tunnel_table(void) //FINAL
   int v8; // [esp+1Ch] [ebp-40h]
   int v9; // [esp+30h] [ebp-2Ch] BYREF
   int v10; // [esp+34h] [ebp-28h]
-  _WORD *v11; // [esp+48h] [ebp-14h]
+  u16 *v11; // [esp+48h] [ebp-14h]
   int v12; // [esp+4Ch] [ebp-10h]
   int v13; // [esp+50h] [ebp-Ch]
   int i; // [esp+54h] [ebp-8h]
@@ -9144,8 +9151,8 @@ int CPP_tunnel_table(void) //FINAL
   for ( i = 0; i < 256 ; ++i )
   {
 /*
-    v5 =       8 * sintable[8 * (unsigned __int8)(i + 1)] / (v12 * v13) + 160;
-    v6 = 100 - 5 * costable[8 * (unsigned __int8)(i + 1)] / (v12 * v13);
+    v5 =       8 * sintable[8 * (u8)(i + 1)] / (v12 * v13) + 160;
+    v6 = 100 - 5 * costable[8 * (u8)(i + 1)] / (v12 * v13);
     v7 =       8 * sintable[8 * i] / (v12 * v13) + 160;
     v8 = 100 - 5 * costable[8 * i] / (v12 * v13);
     v9 = 160;
@@ -9154,8 +9161,8 @@ int CPP_tunnel_table(void) //FINAL
 */
     vec_colour = i;
 
-    V[0] = 160 + ((8 * sintable[8 * (unsigned __int8)(i + 1)]) / (v12 * v13));
-    V[1] = 100 - ((5 * costable[8 * (unsigned __int8)(i + 1)]) / (v12 * v13));
+    V[0] = 160 + ((8 * sintable[8 * (u8)(i + 1)]) / (v12 * v13));
+    V[1] = 100 - ((5 * costable[8 * (u8)(i + 1)]) / (v12 * v13));
 
     V[2] = 160 + ((8 * sintable[8 * i]) / (v12 * v13));
     V[3] = 100 - ((5 * costable[8 * i]) / (v12 * v13));
@@ -9168,14 +9175,14 @@ int CPP_tunnel_table(void) //FINAL
 
   ToScreen(); //qmemcpy((void *)0xA0000, (const void *)WScreen, 0xFA00u);
 
-  v11 = (_WORD *) tunnelmap;
+  v11 = (u16 *) tunnelmap;
   plotat = WScreen;
   for ( i = 0; i < 0x10000; ++i )
   {
-    v0 = (_BYTE *)plotat++;
+    v0 = (u8 *)plotat++;
     LOBYTE(v0) = *v0;
     v1 = v11++;
-    *v1 = 255 - (unsigned __int8)((int)v0); //??? mingw todo
+    *v1 = 255 - (u8)((int)v0); //??? mingw todo
   }
 
   for ( j = 0; j < 256; ++j )
@@ -9186,12 +9193,12 @@ int CPP_tunnel_table(void) //FINAL
 /*
       v7 =       8 * sintable[8 * i]                        / ((v13 + j) * v12) + 160;
       v8 = 100 - 5 * costable[8 * i]                        / ((v13 + j) * v12);
-      v5 = 8       * sintable[8 * (unsigned __int8)(i + 1)] / (v12 * (v13 + j)) + 160;
-      v6 = 100 - 5 * costable[8 * (unsigned __int8)(i + 1)] / ((v13 + j) * v12);
+      v5 = 8       * sintable[8 * (u8)(i + 1)] / (v12 * (v13 + j)) + 160;
+      v6 = 100 - 5 * costable[8 * (u8)(i + 1)] / ((v13 + j) * v12);
 */
 
-      V[0] = 160 + 8 * sintable[8 * (unsigned __int8)(i + 1)] / ((v13 + j) * v12);
-      V[1] = 100 - 5 * costable[8 * (unsigned __int8)(i + 1)] / ((v13 + j) * v12);
+      V[0] = 160 + 8 * sintable[8 * (u8)(i + 1)] / ((v13 + j) * v12);
+      V[1] = 100 - 5 * costable[8 * (u8)(i + 1)] / ((v13 + j) * v12);
 
       V[2] = 160 + 8 * sintable[8 * i]                        / ((v13 + j) * v12);
       V[3] = 100 - 5 * costable[8 * i]                        / ((v13 + j) * v12);
@@ -9205,13 +9212,13 @@ int CPP_tunnel_table(void) //FINAL
 
   ToScreen(); //qmemcpy((void *)0xA0000, (const void *)WScreen, 0xFA00u);
 
-  v11 = (_WORD *) tunnelmap;
+  v11 = (u16 *) tunnelmap;
   plotat = WScreen;
 
   for ( i = 0; i < 0x10000; ++i )
   {
     v2 = v11++;
-    v3 = (unsigned __int8 *)plotat++;
+    v3 = (u8 *)plotat++;
     *v2 += (255 - *v3) << 8;
   }
 
@@ -9225,22 +9232,22 @@ int CPP_tunnel_table(void) //FINAL
 
 int CPP_find_distant(void) //FINAL
 {
-  unsigned __int16 *v0; // eax
-  unsigned __int16 v1; // ax
+  u16 *v0; // eax
+  u16 v1; // ax
   int result; // eax
-  unsigned __int16 *v3; // eax
+  u16 *v3; // eax
   char *v4; // edx
   int v5; // [esp+0h] [ebp-24h]
   char *v6; // [esp+0h] [ebp-24h]
   int v7; // [esp+4h] [ebp-20h]
-  unsigned __int16 v8; // [esp+8h] [ebp-1Ch]
-  unsigned __int16 v9; // [esp+Ch] [ebp-18h]
-  unsigned __int16 v10; // [esp+10h] [ebp-14h]
-  unsigned __int16 i; // [esp+14h] [ebp-10h]
+  u16 v8; // [esp+8h] [ebp-1Ch]
+  u16 v9; // [esp+Ch] [ebp-18h]
+  u16 v10; // [esp+10h] [ebp-14h]
+  u16 i; // [esp+14h] [ebp-10h]
   int k; // [esp+14h] [ebp-10h]
-  unsigned __int16 j; // [esp+18h] [ebp-Ch]
-  unsigned __int16 l; // [esp+18h] [ebp-Ch]
-  unsigned __int16 v15; // [esp+1Ch] [ebp-8h]
+  u16 j; // [esp+18h] [ebp-Ch]
+  u16 l; // [esp+18h] [ebp-Ch]
+  u16 v15; // [esp+1Ch] [ebp-8h]
   char v16; // [esp+20h] [ebp-4h]
 
   v10 = 319;
@@ -9252,7 +9259,7 @@ int CPP_find_distant(void) //FINAL
   {
     for ( j = 0; j < 0x140u; ++j )
     {
-      v0 = (unsigned __int16 *)v5;
+      v0 = (u16 *)v5;
       v5 += 2;
       if ( (int)*v0 >> 8 < 128 )
       {
@@ -9271,7 +9278,7 @@ int CPP_find_distant(void) //FINAL
   LOBYTE(v1) = v1 & 0xFC;
   fade_width = v1;
   fade_height = v8 - v9;
-  fade_out = (int)malloc(v1 * (unsigned __int16)(v8 - v9));
+  fade_out = (int)malloc(v1 * (u16)(v8 - v9));
   fade_offset = 320 * v9 + v10;
   v6 = (char *) tunnelmap + 640 * v9 + 2 * v10;
   v7 = fade_out;
@@ -9279,19 +9286,19 @@ int CPP_find_distant(void) //FINAL
   for ( k = 0; ; ++k )
   {
     result = k;
-    if ( (unsigned __int16)k >= (unsigned __int16)fade_height )
+    if ( (u16)k >= (u16)fade_height )
       break;
-    for ( l = 0; l < (unsigned __int16)fade_width; ++l )
+    for ( l = 0; l < (u16)fade_width; ++l )
     {
-      v3 = (unsigned __int16 *)v6;
+      v3 = (u16 *)v6;
       v6 += 2;
       v16 = (*v3 + 768) >> 10;
-      if ( (unsigned __int8)v16 > 0x20u )
+      if ( (u8)v16 > 0x20u )
         v16 = 32;
       v4 = (char *)v7++;
       *v4 = v16;
     }
-    v6 += 2 * (320 - (unsigned __int16)fade_width);
+    v6 += 2 * (320 - (u16)fade_width);
   }
   return result;
 }
@@ -9299,17 +9306,17 @@ int CPP_find_distant(void) //FINAL
 char CPP_setup_tube_graphics(int a1) //FINAL
 {
   int v1; // eax
-  unsigned __int16 *v2; // eax
-  unsigned __int16 v3; // ax
-  _BYTE *v4; // ebx
+  u16 *v2; // eax
+  u16 v3; // ax
+  u8 *v4; // ebx
   int v6; // [esp+0h] [ebp-24h]
   unsigned int v7; // [esp+4h] [ebp-20h]
   int v8; // [esp+8h] [ebp-1Ch]
   int v9; // [esp+Ch] [ebp-18h]
-  unsigned __int8 k; // [esp+14h] [ebp-10h]
-  unsigned __int8 l; // [esp+18h] [ebp-Ch]
-  unsigned __int8 j; // [esp+1Ch] [ebp-8h]
-  unsigned __int8 i; // [esp+20h] [ebp-4h]
+  u8 k; // [esp+14h] [ebp-10h]
+  u8 l; // [esp+18h] [ebp-Ch]
+  u8 j; // [esp+1Ch] [ebp-8h]
+  u8 i; // [esp+20h] [ebp-4h]
 
   LOBYTE(v1) = a1;
   v8 = a1;
@@ -9317,7 +9324,7 @@ char CPP_setup_tube_graphics(int a1) //FINAL
   {
     for ( j = 0; j < 0x20u; ++j )
     {
-      v2 = (unsigned __int16 *)v8;
+      v2 = (u16 *)v8;
       v8 += 2;
       v3 = *v2;
       if ( level + 0x10000 == v8 )
@@ -9327,8 +9334,8 @@ char CPP_setup_tube_graphics(int a1) //FINAL
       {
         for ( l = 0; l < 8u; ++l )
         {
-          v4 = (_BYTE *)v9++;
-          *(_BYTE *)((i << 11) + 8 * j + (k << 8) + l + tube_graphics) = *v4;
+          v4 = (u8 *)v9++;
+          *(u8 *)((i << 11) + 8 * j + (k << 8) + l + tube_graphics) = *v4;
         }
       }
     }
@@ -9338,9 +9345,9 @@ char CPP_setup_tube_graphics(int a1) //FINAL
   v6 = 0x10000;
   while ( v7 < 0x10000 )
   {
-    *(_DWORDNA *)(tube_graphics + v6) = *(_DWORDNA *)(tube_graphics + v7);
-    v1 = *(_DWORDNA *)(tube_graphics + v7 + 4);
-    *(_DWORDNA *)(tube_graphics + v6 + 4) = v1;
+    *(UA<u32> *)(tube_graphics + v6) = *(UA<u32> *)(tube_graphics + v7);
+    v1 = *(UA<u32> *)(tube_graphics + v7 + 4);
+    *(UA<u32> *)(tube_graphics + v6 + 4) = v1;
     v7 += 8;
     v6 += 8;
   }
@@ -9359,11 +9366,11 @@ int CPP_clear_tube(void) //FINAL
 int CPP_setup_stuff(void) //FINAL
 {
   int result; // eax
-  unsigned __int16 i; // [esp+Ch] [ebp-Ch]
+  u16 i; // [esp+Ch] [ebp-Ch]
   int v2; // [esp+10h] [ebp-8h]
   int v3; // [esp+10h] [ebp-8h]
-  unsigned __int16 v4; // [esp+14h] [ebp-4h]
-  unsigned __int16 v5; // [esp+14h] [ebp-4h]
+  u16 v4; // [esp+14h] [ebp-4h]
+  u16 v5; // [esp+14h] [ebp-4h]
 
   if ( tabgen )
   {
@@ -9372,7 +9379,7 @@ int CPP_setup_stuff(void) //FINAL
 
     while ( v4 < 0x20u )
     {
-      CPP_make_fade_table((_BYTE *)palette, (_BYTE *)&tables_start[256 * v4++], 0, 0, 0, v2, v2, v2);
+      CPP_make_fade_table((u8 *)palette, (u8 *)&tables_start[256 * v4++], 0, 0, 0, v2, v2, v2);
       v2 -= 8;
     }
     v5 = 32;
@@ -9380,17 +9387,17 @@ int CPP_setup_stuff(void) //FINAL
 
     while ( v5 < 0x40u )
     {
-      CPP_make_fade_table((_BYTE *)palette, (_BYTE *)&tables_start[256 * v5++], 63, 63, 63, v3, v3, v3);
+      CPP_make_fade_table((u8 *)palette, (u8 *)&tables_start[256 * v5++], 63, 63, 63, v3, v3, v3);
       v3 += 6;
     }
 
     for ( i = 0; i < 0x100u; ++i )
       CPP_make_fade_table(
-        (_BYTE *)palette,
-        (_BYTE *)&ghost[256 * i],
-        *(_BYTE *)(3 * i + palette),
-        *(_BYTE *)(3 * i + palette + 1),
-        *(_BYTE *)(3 * i + palette + 2),
+        (u8 *)palette,
+        (u8 *)&ghost[256 * i],
+        *(u8 *)(3 * i + palette),
+        *(u8 *)(3 * i + palette + 1),
+        *(u8 *)(3 * i + palette + 2),
         85,
         85,
         85);
@@ -9434,7 +9441,7 @@ int CPP_MyWrite(int a1, int a2, int a3) //FINAL
 //return write(a1, (void*)a2, a3); //CLIB
 }
 
-void CPP_make_fade_table(_BYTE *A2, _BYTE *A3, signed char a4, signed char a5, signed char a6, short a7, short a8, short a9) //FINAL
+void CPP_make_fade_table(u8 *A2, u8 *A3, signed char a4, signed char a5, signed char a6, short a7, short a8, short a9) //FINAL
 {
     struct s0
     {
@@ -9508,23 +9515,23 @@ void CPP_make_fade_table(_BYTE *A2, _BYTE *A3, signed char a4, signed char a5, s
 void CPP_LoadAllData(int a2) //FINAL
 {
   int v2; // ebx
-  __int16 v3; // si
+  i16 v3; // si
   int v4; // ebx
-  __int16 v5; // ax
+  i16 v5; // ax
   char v7[100]; // [esp+0h] [ebp-64h] BYREF
 
   CPP_SetupMemory(/*a2, a1*/ );
 
   v2 = a2;
   v3 = 0;
-  if ( *(_DWORDNA *)(a2 + 28) )
+  if ( *(UA<u32> *)(a2 + 28) )
   {
     do
     {
       CPP_FreeData(v2);
       v2 += 44;
     }
-    while ( *(_DWORDNA *)(v2 + 28) );
+    while ( *(UA<u32> *)(v2 + 28) );
     v4 = a2;
   }
   else
@@ -9532,7 +9539,7 @@ void CPP_LoadAllData(int a2) //FINAL
     v4 = a2;
   }
 
-  while ( *(_DWORDNA *)(v4 + 28) )
+  while ( *(UA<u32> *)(v4 + 28) )
   {
     v5 = CPP_LoadData(/*a2 , v3,*/ v4);
     if ( v5 >= 0 )
@@ -9567,15 +9574,15 @@ void CPP_load_all_tmaps(void) //FINAL
 //  int *v4; // [esp+1Ch] [ebp-18h]
 //  int v5; // [esp+20h] [ebp-14h]
 //  int v6; // [esp+24h] [ebp-10h]
-//  __int16 v7; // [esp+28h] [ebp-Ch]
-//  __int16 v8; // [esp+2Ah] [ebp-Ah]
+//  i16 v7; // [esp+28h] [ebp-Ch]
+//  i16 v8; // [esp+2Ah] [ebp-Ah]
   unsigned int v9; // [esp+2Ch] [ebp-8h]
   int v10; // [esp+30h] [ebp-4h]
 
   v9 = 0;
   do
   {
-    ((void (*)(char*,char*,int))sprintf)((char*)v3,(char*)aDataTex02dDat, v9); //sprintf((char*)v3,(char*)aDataTex02dDat, v9);
+      sprintf((char*)v3,(char*)aDataTex02dDat, v9);
 
 //    v4 = &tmaps[v9];
 //    v5 = 0;
@@ -9593,7 +9600,7 @@ void CPP_load_all_tmaps(void) //FINAL
     v10 = CPP_LoadData(/*a1, a2, */ (int)v3);
     ++v9;
   }
-  while ( (__int16)v10 > 0 && v9 < 0x10 );
+  while ( (i16)v10 > 0 && v9 < 0x10 );
 
 //  result = v9 - 1;
   no_tmaps = v9 - 1;
@@ -9606,10 +9613,10 @@ void CPP_load_all_3d_files(void) //FINAL
   int v0; // eax
   int i; // [esp+0h] [ebp-14h]
   unsigned int v3; // [esp+4h] [ebp-10h]
-  _DWORD *v4; // [esp+8h] [ebp-Ch]
+  u32 *v4; // [esp+8h] [ebp-Ch]
   unsigned int v5; // [esp+Ch] [ebp-8h]
-  unsigned __int16 v6; // [esp+10h] [ebp-4h]
-  __int16 v7; // [esp+10h] [ebp-4h]
+  u16 v6; // [esp+10h] [ebp-4h]
+  i16 v7; // [esp+10h] [ebp-4h]
 
   memset(object3ds, 0, 0x640 /*sizeof(object3ds)*/ );
   memset(point3ds, 0, 0x23280 /*120000*/ );
@@ -9640,17 +9647,17 @@ void CPP_load_all_3d_files(void) //FINAL
       LOWORD(v0) = v6;
       if ( v6 == no_object3ds )
         break;
-      if ( *(_DWORDNA *)(i + 8) )
+      if ( *(UA<u32> *)(i + 8) )
       {
-        *(_DWORDNA *)(i + 8) = (_DWORD)&point3ds[*(_DWORDNA *)(i + 8) - 1];
-        if ( *(_DWORDNA *)(i + 8) > v5 )
+        *(UA<u32> *)(i + 8) = (u32)&point3ds[*(UA<u32> *)(i + 8) - 1];
+        if ( *(UA<u32> *)(i + 8) > v5 )
         {
-          v5 = *(_DWORDNA *)(i + 8);
+          v5 = *(UA<u32> *)(i + 8);
           selected_object = v6;
         }
       }
-      if ( *(_DWORDNA *)(i + 12) )
-        *(_DWORDNA *)(i + 12) = (_DWORD)&face3ds[*(_DWORDNA *)(i + 12) - 1];
+      if ( *(UA<u32> *)(i + 12) )
+        *(UA<u32> *)(i + 12) = (u32)&face3ds[*(UA<u32> *)(i + 12) - 1];
       ++v6;
     }
   }
@@ -9674,11 +9681,11 @@ void CPP_setup_host(void)
 //  int v2; // eax
 //  int result; // eax
 
-  CPP_FadePalette256(0, 0x10u, 0);
+//  CPP_FadePalette256(0, 0x10u, 0); //гашение DOS'овской консоли - здесь это не нужно
 
   ScreenMode = 1;
 
-  /*v2 = */ CPP_SetupScreenMCGA((unsigned __int8 *)WScreen);
+  /*v2 = */ CPP_SetupScreenMCGA((u8 *)WScreen);
 
 //  CPP_OpenIKeyboard(/*v2, a2*/ );
 
@@ -9848,7 +9855,7 @@ outp(0x20,0x20); //EOI
 #if 0
 void CPP_OpenIKeyboard() //not need for Win32
 {
-  __int16 i; // ax
+  i16 i; // ax
 //  int v3; // eax
   int A2;
 
@@ -9869,15 +9876,15 @@ void CPP_OpenIKeyboard() //not need for Win32
 }
 #endif
 
-char CPP_FindColor(unsigned __int8 *a1, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4) //FINAL
+char CPP_FindColor(u8 *a1, u8 a2, u8 a3, u8 a4) //FINAL
 {
   char v4; // cl
-  __int16 v6; // dx
-  __int16 v7; // si
-  __int16 i; // dx
-  __int16 v9; // di
-  __int16 v11; // [esp+4h] [ebp-8h]
-  unsigned __int16 v12; // [esp+8h] [ebp-4h]
+  i16 v6; // dx
+  i16 v7; // si
+  i16 i; // dx
+  i16 v9; // di
+  i16 v11; // [esp+4h] [ebp-8h]
+  u16 v12; // [esp+8h] [ebp-4h]
 
   if ( (ScreenMode & 6) != 0 )
     v6 = 16;
@@ -9890,7 +9897,7 @@ char CPP_FindColor(unsigned __int8 *a1, unsigned __int8 a2, unsigned __int8 a3, 
   {
     v11 = (a2 - *a1) * (a2 - *a1) + (a3 - a1[1]) * (a3 - a1[1]);
     v9 = a4 - a1[2];
-    if ( (__int16)(v11 + v9 * v9) < v7 )
+    if ( (i16)(v11 + v9 * v9) < v7 )
     {
       v7 = v11 + v9 * v9;
       v4 = i;
@@ -10041,10 +10048,10 @@ void CPP_calibrate_digistick(void) //FINAL
  word_1A5502 = 0; //джойстик запрещён
 
 /*
-  unsigned __int16 v1; // bx
-  unsigned __int16 v2; // si
+  u16 v1; // bx
+  u16 v2; // si
   int v3; // ecx
-  unsigned __int8 v4; // al
+  u8 v4; // al
 
   v1 = 0;
   v2 = 0;
@@ -10088,14 +10095,14 @@ void CPP_setup_a_sprite(unsigned int a1, unsigned int a2, unsigned int a3) //FIN
     if ( a1 >= a2 )
       break;
 
-    if ( ScreenMode && ((unsigned __int16)ScreenMode <= 1u || ScreenMode == 16) ) // ScreenMode = 1
+    if ( ScreenMode && ((u16)ScreenMode <= 1u || ScreenMode == 16) ) // ScreenMode = 1
     {
-      *(_BYTE *)(a1 + 4) *= 2;
-      *(_BYTE *)(a1 + 5) *= 2;
+      *(u8 *)(a1 + 4) *= 2;
+      *(u8 *)(a1 + 5) *= 2;
     }
 
-    if ( *(_DWORDNA *)a1 < a3 )
-      *(_DWORDNA *)a1 += a3;
+    if ( *(UA<u32> *)a1 < a3 )
+      *(UA<u32> *)a1 += a3;
 
     a1 += 6;
   }
@@ -10124,15 +10131,15 @@ void CPP_fill_stack(void) //???
 
 int CPP_MyAlloc(int a2) //FINAL
 {
-  intNA *v2; // eax
+  UA<i32> *v2; // eax
   unsigned int v3; // ecx
-  intNA *v4; // ebx
+  UA<i32> *v4; // ebx
   unsigned int v5; // esi
   unsigned int v6; // edx
 
   CPP_SetupMemory(/*a1, a2*/);
 
-  v2 = &MemoryArenas;
+  v2 = (UA<i32>*)&MemoryArenas;
   v3 = -1;
   v5 = a2 + 3;
   v4 = 0;
@@ -10141,18 +10148,18 @@ int CPP_MyAlloc(int a2) //FINAL
   while ( v2 )
   {
     v6 = v2[1];
-    if ( v5 <= v6 && v3 > v6 && !*((_BYTE *)v2 + 16) )
+    if ( v5 <= v6 && v3 > v6 && !*((u8 *)v2 + 16) )
     {
 
-//      a1 = *((unsigned __int8 *)v2 + 17);
+//      a1 = *((u8 *)v2 + 17);
 
-      if ( !dword_2B3F64[3 * *((unsigned __int8 *)v2 + 17)] )
+      if ( !dword_2B3F64[3 * *((u8 *)v2 + 17)] )
       {
         v4 = v2;
         v3 = v2[1];
       }
     }
-    v2 = (int *)v2[2];
+    v2 = (UA<i32>*)(i32)v2[2];
   }
 
   if ( !v4 || !CPP_split_arena((int)v4, v5) )
@@ -10160,7 +10167,7 @@ int CPP_MyAlloc(int a2) //FINAL
 
   CPP_CheckMemory();
 
-  memset((char*)*v4, 0, v5);
+  memset((char*)(i32)*v4, 0, v5);
 
   return *v4;
 }
@@ -10168,22 +10175,22 @@ int CPP_MyAlloc(int a2) //FINAL
 /*
 int CPP_compare(const void *a1, const void *a2)
 {
-  return *(_DWORDNA *)(((int)a1) + 4);
+  return *(UA<u32> *)(((int)a1) + 4);
 }
 */
 
 /*
 int CPP_compare(int a1) //FINAL
 {
-  return *(_DWORDNA *)(a1 + 4);
+  return *(UA<u32> *)(a1 + 4);
 }
 */
 
 #if 0
 void CPP_SetupMemory(void)
 {
- __int64 v2; // kr00_8
-  __int64 v3; // rax
+ i64 v2; // kr00_8
+  i64 v3; // rax
   int v4; // ebx
   int i; // ebx
   signed int v6; // ebx
@@ -10279,7 +10286,7 @@ void CPP_SetupMemory(void)
       v8 = CPP_dos_alloc(v6);
       if ( v8 )
       {
-        v9 = (unsigned __int16)v8;
+        v9 = (u16)v8;
         v10 = HIWORD(v8);
         v11 = 3 * v7;
         dword_2B3F68[v11] = v6;
@@ -10320,14 +10327,14 @@ void CPP_SetupMemory(void)
       if ( v15 )
       {
         ++v7;
-//        *(_DWORDNA *)(v16 + 2834280) = l; //2B3F68 HARDCODE !!!
-          *(_DWORDNA *)(v16 + ((int)dword_2B3F68)) = l;
+//        *(UA<u32> *)(v16 + 2834280) = l; //2B3F68 HARDCODE !!!
+          *(UA<u32> *)(v16 + ((int)dword_2B3F68)) = l;
 
 
 
         l += 4096;
-//        *(_DWORDNA *)(v16 + 2834276) = 0; //2B3F64 HARDCODE !!!
-          *(_DWORDNA *)(v16 + ((int)dword_2B3F64)) = 0;
+//        *(UA<u32> *)(v16 + 2834276) = 0; //2B3F64 HARDCODE !!!
+          *(UA<u32> *)(v16 + ((int)dword_2B3F64)) = 0;
       }
     }
 
@@ -10337,7 +10344,7 @@ void CPP_SetupMemory(void)
     do
     {
       v18 = 9 * v17++;
-      *(intNA *)((char *) dword_2B4B64 + 2 * v18) = 0;
+      *(UA<i32> *)((char *) dword_2B4B64 + 2 * v18) = 0;
     }
     while ( v17 < 256 );
 
@@ -10345,26 +10352,26 @@ void CPP_SetupMemory(void)
     {
       v20 = 18 * m;
 
-//      *(_DWORDNA *)(v20 + 2837344) = MemoryBlocks[3 * m]; //2B4B60 HARDCODE !!!
-//      *(_DWORDNA *)(v20 + 2837348) = dword_2B3F68[3 * m]; //2B4B64 HARDCODE !!!
+//      *(UA<u32> *)(v20 + 2837344) = MemoryBlocks[3 * m]; //2B4B60 HARDCODE !!!
+//      *(UA<u32> *)(v20 + 2837348) = dword_2B3F68[3 * m]; //2B4B64 HARDCODE !!!
 
-      *(_DWORDNA *)(v20 + ((int)&MemoryArenas)) = MemoryBlocks[3 * m]; //2B4B60 MemoryArenas
-      *(_DWORDNA *)(v20 + ((int) dword_2B4B64)) = dword_2B3F68[3 * m]; //2B4B64 dword_2B4B64
+      *(UA<u32> *)(v20 + ((int)&MemoryArenas)) = MemoryBlocks[3 * m]; //2B4B60 MemoryArenas
+      *(UA<u32> *)(v20 + ((int) dword_2B4B64)) = dword_2B3F68[3 * m]; //2B4B64 dword_2B4B64
 
 
       if ( m )
-        *(intNA *)((char *) dword_2B4B6C + 18 * m) = (int)&MemoryArenas + 18 * m - 18;
+        *(UA<i32> *)((char *) dword_2B4B6C + 18 * m) = (int)&MemoryArenas + 18 * m - 18;
       else
         dword_2B4B6C = 0;
 
       v21 = 9 * m;
 
-      *(intNA *)((char *) dword_2B4B68 + 2 * v21) = (int)&MemoryArenas + 18 * m + 18;
+      *(UA<i32> *)((char *) dword_2B4B68 + 2 * v21) = (int)&MemoryArenas + 18 * m + 18;
       byte_2B4B71[2 * v21] = m;
       byte_2B4B70[2 * v21] = 0;
     }
 
-    *(intNA *)((char *) dword_2B4B68 + 18 * v7 - 18) = 0;
+    *(UA<i32> *)((char *) dword_2B4B68 + 18 * v7 - 18) = 0;
 
 //    sosFreeSelector(sf18,sf8&0xFFFF,(int)sf24);
 //    sosFreeSelector(sf1C,sf4&0xFFFF,(int)sf20);
@@ -10375,8 +10382,8 @@ void CPP_SetupMemory(void)
 
 void CPP_SetupMemory(void)
 {
- __int64 v2; // kr00_8
-  __int64 v3; // rax
+ i64 v2; // kr00_8
+  i64 v3; // rax
   int v4; // ebx
   int i; // ebx
   signed int v6; // ebx
@@ -10451,7 +10458,7 @@ i=0; //начальный инит - его не было!
       {
 printf("%x \n",v6);
 getch();
-        v9 = (unsigned __int16)v8;
+        v9 = (u16)v8;
         v10 = HIWORD(v8);
         v11 = 3 * v7;
         dword_2B3F68[v11] = v6;
@@ -10501,12 +10508,12 @@ printf("%x \n",l);
 getch();
 
         ++v7;
-//        *(_DWORDNA *)(v16 + 2834280) = l; //2B3F68 HARDCODE !!!
-          *(_DWORDNA *)(v16 + ((int)dword_2B3F68)) = l;
+//        *(UA<u32> *)(v16 + 2834280) = l; //2B3F68 HARDCODE !!!
+          *(UA<u32> *)(v16 + ((int)dword_2B3F68)) = l;
 
         l += 4096;
-//        *(_DWORDNA *)(v16 + 2834276) = 0; //2B3F64 HARDCODE !!!
-          *(_DWORDNA *)(v16 + ((int)dword_2B3F64)) = 0;
+//        *(UA<u32> *)(v16 + 2834276) = 0; //2B3F64 HARDCODE !!!
+          *(UA<u32> *)(v16 + ((int)dword_2B3F64)) = 0;
       }
     }
 
@@ -10584,7 +10591,7 @@ v7=0xD; //13 пулов
     do
     {
       v18 = 9 * v17++;
-      *(intNA *)((char *) dword_2B4B64 + 2 * v18) = 0;
+      *(UA<i32> *)((char *) dword_2B4B64 + 2 * v18) = 0;
     }
     while ( v17 < 256 );
 
@@ -10592,26 +10599,26 @@ v7=0xD; //13 пулов
     {
       v20 = 18 * m;
 
-//      *(_DWORDNA *)(v20 + 2837344) = MemoryBlocks[3 * m]; //2B4B60 HARDCODE !!!
-//      *(_DWORDNA *)(v20 + 2837348) = dword_2B3F68[3 * m]; //2B4B64 HARDCODE !!!
+//      *(UA<u32> *)(v20 + 2837344) = MemoryBlocks[3 * m]; //2B4B60 HARDCODE !!!
+//      *(UA<u32> *)(v20 + 2837348) = dword_2B3F68[3 * m]; //2B4B64 HARDCODE !!!
 
-      *(_DWORDNA *)(v20 + ((int)&MemoryArenas)) = MemoryBlocks[3 * m]; //2B4B60 MemoryArenas
-      *(_DWORDNA *)(v20 + ((int) dword_2B4B64)) = dword_2B3F68[3 * m]; //2B4B64 dword_2B4B64
+      *(UA<u32> *)(v20 + ((int)&MemoryArenas)) = MemoryBlocks[3 * m]; //2B4B60 MemoryArenas
+      *(UA<u32> *)(v20 + ((int) dword_2B4B64)) = dword_2B3F68[3 * m]; //2B4B64 dword_2B4B64
 
 
       if ( m )
-        *(intNA *)((char *) dword_2B4B6C + 18 * m) = (int)&MemoryArenas + 18 * m - 18;
+        *(UA<i32> *)((char *) dword_2B4B6C + 18 * m) = (int)&MemoryArenas + 18 * m - 18;
       else
         dword_2B4B6C[0] = 0; //space fix
 
       v21 = 9 * m;
 
-      *(intNA *)((char *) dword_2B4B68 + 2 * v21) = (int)&MemoryArenas + 18 * m + 18;
+      *(UA<i32> *)((char *) dword_2B4B68 + 2 * v21) = (int)&MemoryArenas + 18 * m + 18;
       byte_2B4B71[2 * v21] = m;
       byte_2B4B70[2 * v21] = 0;
     }
 
-    *(intNA *)((char *) dword_2B4B68 + 18 * v7 - 18) = 0;
+    *(UA<i32> *)((char *) dword_2B4B68 + 18 * v7 - 18) = 0;
 
 //    sosFreeSelector(sf18,sf8&0xFFFF,(int)sf24);
 //    sosFreeSelector(sf1C,sf4&0xFFFF,(int)sf20);
@@ -10621,15 +10628,15 @@ v7=0xD; //13 пулов
 
 int CPP_MyLowAlloc(int a2) //FINAL
 {
-  intNA *v2; // eax
+  UA<i32> *v2; // eax
   unsigned int v3; // edi
-  intNA *v4; // ebx
+  UA<i32> *v4; // ebx
   unsigned int v5; // esi
   unsigned int v6; // edx
 
   CPP_SetupMemory(/*a1, a2*/);
 
-  v2 = &MemoryArenas;
+  v2 = (UA<i32>*)&MemoryArenas;
   v3 = -1;
   v5 = a2 + 15;
   v4 = 0;
@@ -10638,12 +10645,12 @@ int CPP_MyLowAlloc(int a2) //FINAL
   while ( v2 )
   {
     v6 = v2[1];
-    if ( v5 <= v6 && v3 > v6 && !*((_BYTE *)v2 + 16) && dword_2B3F64[3 * *((unsigned __int8 *)v2 + 17)] )
+    if ( v5 <= v6 && v3 > v6 && !*((u8 *)v2 + 16) && dword_2B3F64[3 * *((u8 *)v2 + 17)] )
     {
       v4 = v2;
       v3 = v2[1];
     }
-    v2 = (int *)v2[2];
+    v2 = (UA<i32>*)(i32)v2[2];
   }
 
   if ( !v4 || !CPP_split_arena((int)v4, v5) )
@@ -10651,18 +10658,18 @@ int CPP_MyLowAlloc(int a2) //FINAL
 
   CPP_CheckMemory();
 
-  memset((char*)*v4, 0, v5);
+  memset((char*)(i32)*v4, 0, v5);
 
   return *v4;
 }
 
 int *CPP_CheckMemory(void) //FINAL
 {
-  intNA *result; // eax
+  UA<i32> *result; // eax
   unsigned int v1; // edx
   int v2; // edx
 
-  result = &MemoryArenas;
+  result = (UA<i32>*)&MemoryArenas;
   MemoryAvailable = 0;
 
   dword_2B5D64 = 0;
@@ -10672,7 +10679,7 @@ int *CPP_CheckMemory(void) //FINAL
 
   while ( result )
   {
-    if ( *((_BYTE *)result + 16) )
+    if ( *((u8 *)result + 16) )
     {
       v2 = result[1];
       dword_2B5D68 += v2;
@@ -10692,7 +10699,7 @@ int *CPP_CheckMemory(void) //FINAL
       MemoryAvailable += result[1];
     }
 
-    result = (int *)result[2];
+    result = (UA<i32>*)(i32)result[2];
   }
   LOBYTE(MemoryAvailable) = MemoryAvailable & 0xFC;
   LOBYTE(dword_2B5D64) = dword_2B5D64 & 0xFC;
@@ -10700,45 +10707,45 @@ int *CPP_CheckMemory(void) //FINAL
   LOBYTE(dword_2B5D68) = dword_2B5D68 & 0xFC;
   LOBYTE(dword_2B5D70) = dword_2B5D70 & 0xFC;
 
-  return result;
+  return (int*)result;
 }
 
 char CPP_split_arena(int a1, int a2) //FINAL
 {
   char result; // al
-  intNA *i; // eax
+  UA<i32> *i; // eax
   char v4; // bl
   int v5; // edi
 
-  if ( (unsigned)a2 == *(_DWORDNA *)(a1 + 4) ) //unsigned fix
+  if ( (unsigned)a2 == *(UA<u32> *)(a1 + 4) ) //unsigned fix
   {
     result = 1;
-    *(_BYTE *)(a1 + 16) = 1;
+    *(u8 *)(a1 + 16) = 1;
   }
   else
   {
-    for ( i = &MemoryArenas; i < &MemoryAvailable && i[1]; i = (int *)((char *)i + 18) )
+    for ( i = (UA<i32>*)&MemoryArenas; i < (UA<i32>*)&MemoryAvailable && i[1]; i = (UA<i32>*)((char *)i + 18) )
       ;
-    if ( i == &MemoryAvailable )
+    if ( i == (UA<i32>*)&MemoryAvailable )
     {
       result = 0;
     }
     else
     {
-      i[1] = *(_DWORDNA *)(a1 + 4) - a2;
-      *i = a2 + *(_DWORDNA *)a1;
-      *(_BYTE *)(a1 + 16) = 1;
-      v4 = *(_BYTE *)(a1 + 17);
-      *(_DWORDNA *)(a1 + 4) = a2;
-      *((_BYTE *)i + 17) = v4;
-      i[2] = *(_DWORDNA *)(a1 + 8);
+      i[1] = *(UA<u32> *)(a1 + 4) - a2;
+      *i = a2 + *(UA<u32> *)a1;
+      *(u8 *)(a1 + 16) = 1;
+      v4 = *(u8 *)(a1 + 17);
+      *(UA<u32> *)(a1 + 4) = a2;
+      *((u8 *)i + 17) = v4;
+      i[2] = *(UA<u32> *)(a1 + 8);
       i[3] = a1;
-      v5 = *(_DWORDNA *)(a1 + 8);
+      v5 = *(UA<u32> *)(a1 + 8);
 
       if ( v5 )
-        *(_DWORDNA *)(v5 + 12) = (_DWORD)i;
+        *(UA<u32> *)(v5 + 12) = (u32)i;
 
-      *(_DWORDNA *)(a1 + 8) = (_DWORD)i;
+      *(UA<u32> *)(a1 + 8) = (u32)i;
 
       result = 1;
     }
@@ -10751,24 +10758,24 @@ int CPP_LoadData(int a3) //FINAL
   int v3; // edx
   int v5; // eax
   int v6; // edx
-  _DWORD *v7; // ecx
+  u32 *v7; // ecx
   int (/*__cdecl*/ *v8)(int); // [esp+0h] [ebp-4h]
 
   CPP_SetupMemory(/*a1, a2*/);
 
-  if ( (*(_BYTE *)(a3 + 40) & 1) != 0 )
+  if ( (*(u8 *)(a3 + 40) & 1) != 0 )
     v8 = CPP_MyLowAlloc;
   else
     v8 = CPP_MyAlloc;
 
   CPP_FreeData(a3);
 
-  if ( *(_BYTE *)a3 == 42 )
+  if ( *(u8 *)a3 == 42 )
   {
 
-    v3 = v8(*(_DWORDNA *)(a3 + 36));
+    v3 = v8(*(UA<u32> *)(a3 + 36));
 
-    **(_DWORD **)(a3 + 28) = v3;
+    **(u32 **)(a3 + 28) = v3;
 
     if ( !v3 )
       return 0;
@@ -10776,31 +10783,31 @@ int CPP_LoadData(int a3) //FINAL
   else
   {
     v5 = CPP_RncFileLength(a3);
-    *(_DWORDNA *)(a3 + 36) = v5;
+    *(UA<u32> *)(a3 + 36) = v5;
 
     if ( v5 <= 0 )
       return 0;
 
     v6 = v8(v5);
 
-    **(_DWORD **)(a3 + 28) = v6;
+    **(u32 **)(a3 + 28) = v6;
 
     if ( !v6 )
       return -1;
 
-    if ( (unsigned)CPP_LoadFileAt((const char *)a3, **(char ***)(a3 + 28)) != *(_DWORDNA *)(a3 + 36) ) //unsigned fix
+    if ( (unsigned)CPP_LoadFileAt((const char *)a3, **(char ***)(a3 + 28)) != *(UA<u32> *)(a3 + 36) ) //unsigned fix
     {
-      **(_DWORD **)(a3 + 28) = 0;
-      **(_DWORD **)(a3 + 32) = 0;
-      *(_DWORDNA *)(a3 + 36) = 0;
+      **(u32 **)(a3 + 28) = 0;
+      **(u32 **)(a3 + 32) = 0;
+      *(UA<u32> *)(a3 + 36) = 0;
       return 0;
     }
 
   }
-  v7 = *(_DWORD **)(a3 + 32);
+  v7 = *(u32 **)(a3 + 32);
 
   if ( v7 )
-    *v7 = *(_DWORDNA *)(a3 + 36) + **(_DWORD **)(a3 + 28);
+    *v7 = *(UA<u32> *)(a3 + 36) + **(u32 **)(a3 + 28);
 
   return 1;
 }
@@ -10829,11 +10836,11 @@ int *CPP_FreeData(int a1) //FINAL
 
 int *CPP_MyFree(int a1) //FINAL
 {
-  intNA *v1; // eax
+  UA<i32> *v1; // eax
   char v2; // bl
-  intNA *i; // ebx
+  UA<i32> *i; // ebx
 
-  v1 = &MemoryArenas;
+  v1 = (UA<i32>*)&MemoryArenas;
   v2 = 0;
 
   while ( v1 )
@@ -10841,17 +10848,17 @@ int *CPP_MyFree(int a1) //FINAL
     if ( a1 == *v1 )
     {
       v2 = 1;
-      *((_BYTE *)v1 + 16) = 0;
+      *((u8 *)v1 + 16) = 0;
       break;
     }
-    v1 = (int *)v1[2];
+    v1 = (UA<i32>*)(i32)v1[2];
   }
 
   if ( v2 == 1 )
   {
-    for ( i = &MemoryArenas; i; i = (int *)i[2] )
+    for ( i = (UA<i32>*)&MemoryArenas; i; i = (UA<i32>*)(i32)i[2] )
     {
-      if ( !*((_BYTE *)i + 16) )
+      if ( !*((u8 *)i + 16) )
         CPP_delete_arena((int)i);
     }
   }
@@ -10918,8 +10925,8 @@ int CPP_RncFileLength(int a1) //FINAL
   CPP_MyRead(v1, (int)v5, 8);
 
   if ( !strncmp((const char*)v5, (const char*)v6, 4) ) //CLIB
-    v3 = (unsigned __int8)v5[7]
-       + (((unsigned __int8)v5[6] + (((unsigned __int8)v5[5] + ((unsigned __int8)v5[4] << 8)) << 8)) << 8);
+    v3 = (u8)v5[7]
+       + (((u8)v5[6] + (((u8)v5[5] + ((u8)v5[4] << 8)) << 8)) << 8);
   else
     v3 = FileSize((FILE*)v1); //filelength(v1); //CLIB
 
@@ -10977,29 +10984,29 @@ int CPP_UnpackM1(int a1, char *a2) //NOT USED
   int *v3; // esi
   int v4; // eax
   int v5; // eax
-  _WORD *v6; // esi
+  u16 *v6; // esi
   unsigned int v7; // edx
   char *v8; // ebx
-  _DWORD *v9; // esi
+  u32 *v9; // esi
   char *v10; // edi
-  _DWORD *v11; // esi
-  _WORD *v12; // edi
-  _BYTE *v13; // esi
-  _BYTE *v14; // edi
+  u32 *v11; // esi
+  u16 *v12; // edi
+  u8 *v13; // esi
+  u8 *v14; // edi
   char *v15; // edi
   int v16; // eax
-  __int16 v17; // bx
-  __int16 v18; // ax
-  __int16 v19; // dx
-  __int16 v20; // ax
-  unsigned __int16 v22; // [esp-1Ah] [ebp-1Eh]
+  i16 v17; // bx
+  i16 v18; // ax
+  i16 v19; // dx
+  i16 v20; // ax
+  u16 v22; // [esp-1Ah] [ebp-1Eh]
 
-  if ( *(_WORDNA *)a1 != 20050 )
+  if ( *(UA<u16> *)a1 != 20050 )
     return 0;
 
   v3 = (int *)(a1 + 4);
 
-  if ( *(_WORDNA *)(a1 + 2) != 323 )
+  if ( *(UA<u16> *)(a1 + 2) != 323 )
     return 0;
 
   LOBYTE(v4) = read_long(v3);
@@ -11009,37 +11016,37 @@ int CPP_UnpackM1(int a1, char *a2) //NOT USED
   LOBYTE(v5) = read_long(v3);
 
   dword_22D448 = v5;
-  byte_22D454 = *(_BYTE *)(a1 + 9);
-  v6 = (_WORD *)(a1 + 10);
+  byte_22D454 = *(u8 *)(a1 + 9);
+  v6 = (u16 *)(a1 + 10);
   v7 = v5 + 18 + a1;
 
   if ( v7 > (unsigned int)a2 )
   {
-    v8 = &a2[dword_22D444 + *(unsigned __int8 *)(a1 + 16)];
+    v8 = &a2[dword_22D444 + *(u8 *)(a1 + 16)];
     if ( (unsigned int)v8 > v7 )
     {
-      v9 = (_DWORD *)(v7 - 4);
+      v9 = (u32 *)(v7 - 4);
       v10 = v8 - 4;
       for ( i = (unsigned int)dword_22D448 >> 2; i; --i )
       {
-        *(_DWORDNA *)v10 = *v9--;
+        *(UA<u32> *)v10 = *v9--;
         v10 -= 4;
       }
       v11 = v9 + 1;
 
-      v12 = (_WORD*)(v10 + 4);
+      v12 = (u16*)(v10 + 4);
 
       LOWORD(i) = dword_22D448 & 3;
       if ( (dword_22D448 & 3) != 0 )
       {
-        v13 = (_BYTE*)(((char *)v11) - 1); //(char *)v11 - 1;
-        v14 = (_BYTE*)(((char *)v12) - 1); //(char *)v12 - 1;
+        v13 = (u8*)(((char *)v11) - 1); //(char *)v11 - 1;
+        v14 = (u8*)(((char *)v12) - 1); //(char *)v12 - 1;
         while ( i )
         {
           *v14-- = *v13--;
           --i;
         }
-        v12 = (_WORD*)(v14 + 1);
+        v12 = (u16*)(v14 + 1);
       }
       v6 = v12;
     }
@@ -11060,12 +11067,12 @@ int CPP_UnpackM1(int a1, char *a2) //NOT USED
     while ( 1 )
     {
       input_value(word_22D2C4, (int)v6);
-      if ( (_WORD)i )
+      if ( (u16)i )
       {
         qmemcpy(v15, v6, i);
-        v6 = (_WORD *)((char *)v6 + i);
+        v6 = (u16 *)((char *)v6 + i);
         v15 += i;
-        i = (unsigned __int8)byte_22D455;
+        i = (u8)byte_22D455;
         v17 = *v6;
         v18 = __ROL2__(*v6, byte_22D455);
         v19 = (1 << byte_22D455) - 1;
@@ -11110,21 +11117,21 @@ int CPP_delete_arena(int a1) //FINAL
   int v3; // ebx
 
   result = a1;
-  if ( *(_DWORDNA *)(a1 + 12) )
+  if ( *(UA<u32> *)(a1 + 12) )
   {
-    *(_BYTE *)(a1 + 16) = 0;
-    v2 = *(_DWORDNA *)(a1 + 12);
+    *(u8 *)(a1 + 16) = 0;
+    v2 = *(UA<u32> *)(a1 + 12);
 
-    if ( *(_BYTE *)(a1 + 17) == *(_BYTE *)(v2 + 17) && !*(_BYTE *)(v2 + 16) )
+    if ( *(u8 *)(a1 + 17) == *(u8 *)(v2 + 17) && !*(u8 *)(v2 + 16) )
     {
-      v3 = *(_DWORDNA *)(a1 + 8);
+      v3 = *(UA<u32> *)(a1 + 8);
 
       if ( v3 )
-        *(_DWORDNA *)(v3 + 12) = v2;
+        *(UA<u32> *)(v3 + 12) = v2;
 
-      *(_DWORDNA *)(*(_DWORDNA *)(a1 + 12) + 8) = *(_DWORDNA *)(a1 + 8);
-      *(_DWORDNA *)(*(_DWORDNA *)(a1 + 12) + 4) += *(_DWORDNA *)(a1 + 4);
-      *(_DWORDNA *)(a1 + 4) = 0;
+      *(UA<u32> *)(*(UA<u32> *)(a1 + 12) + 8) = *(UA<u32> *)(a1 + 8);
+      *(UA<u32> *)(*(UA<u32> *)(a1 + 12) + 4) += *(UA<u32> *)(a1 + 4);
+      *(UA<u32> *)(a1 + 4) = 0;
     }
   }
 
@@ -11149,7 +11156,7 @@ void CPP_setup_vecs(int a1, int a2, int a3, int a4, int a5) //FINAL
     vec_window_width = a4;
 }
 
-void CPP_SetupScreenMCGA(unsigned __int8 *a1) //SDL2
+void CPP_SetupScreenMCGA(u8 *a1) //SDL2
 {
  if(SDL_Init(SDL_INIT_VIDEO)!=0)
  {
@@ -11191,7 +11198,7 @@ void CPP_SetupScreenMCGA(unsigned __int8 *a1) //SDL2
   int386(16, v2, v3);
 
   if ( !OldVideoMode )
-    OldVideoMode = (unsigned __int8)v3[0];
+    OldVideoMode = (u8)v3[0];
 
   v2[0] = 19;
 */
@@ -11211,14 +11218,17 @@ void CPP_SetupScreenMCGA(unsigned __int8 *a1) //SDL2
   }
 */
 
-  CPP_SetPalette256(a1);
+//  CPP_SetPalette256(a1); //не нужно
+
+    memset(Palette,0,sizeof(Palette));
+    memset(PAL16,0,sizeof(PAL16));
 
 //  SetMouseLimits(); //не нужно
 
 /*  return*/  CPP_SetGraphicsWindow(0, 0, 320, 200);
 }
 
-void CPP_SetGraphicsWindow(__int16 a1, __int16 a2, __int16 a3, __int16 a4) //FINAL
+void CPP_SetGraphicsWindow(i16 a1, i16 a2, i16 a3, i16 a4) //FINAL
 {
 //  int result; // eax
 
@@ -11235,7 +11245,7 @@ void CPP_SetGraphicsWindow(__int16 a1, __int16 a2, __int16 a3, __int16 a4) //FIN
 //  return result;
 }
 
-void CPP_SetPalette256(unsigned __int8 *a1) //SDL2
+void CPP_SetPalette256(u8 *a1) //SDL2
 {
  for(int i=0;i<256*3;i+=3)
  {
@@ -11243,17 +11253,17 @@ void CPP_SetPalette256(unsigned __int8 *a1) //SDL2
   Palette[i+1]=*a1++;
   Palette[i  ]=*a1++;
 
-  PAL16[i/3]=((Palette[i+2]>>1)<<11)|(Palette[i+1]<<5)|(Palette[i]>>1); //6:6:6 to 5:5:5
+  PAL16[i/3]=((Palette[i+2]>>1)<<11)|(Palette[i+1]<<5)|(Palette[i]>>1); //6:6:6 to 5:6:5
  }
 
  //ToScreen();
 
 #if 0
   int v2; // ecx
-  unsigned __int8 v3; // al
-  unsigned __int8 *v4; // ebx
-  unsigned __int8 v5; // al
-  unsigned __int8 result; // al
+  u8 v3; // al
+  u8 *v4; // ebx
+  u8 v5; // al
+  u8 result; // al
 
   outp(0x3C6u, 0xFFu);
   v2 = 0;
@@ -11270,13 +11280,13 @@ void CPP_SetPalette256(unsigned __int8 *a1) //SDL2
     a1 = v4 + 1;
     outp(0x3C9u, result);
   }
-  while ( (unsigned __int16)v2 < 0x100u );
+  while ( (u16)v2 < 0x100u );
 
 //  return result;
 #endif
 }
 
-void CPP_GetPalette256(unsigned __int8 *a1) //SDL2
+void CPP_GetPalette256(u8 *a1) //SDL2
 {
  for(int i=0;i<256*3;i+=3)
  {
@@ -11300,7 +11310,7 @@ void CPP_WaitVbi(void) //SDL2
  SDL_RenderPresent(renderer);
 
 #if 0
-  unsigned __int8 result; // al
+  u8 result; // al
 
   do
     result = inp(0x3DAu);
@@ -11310,19 +11320,19 @@ void CPP_WaitVbi(void) //SDL2
 #endif
 }
 
-__int16 CPP_FadePalette256(unsigned __int8 *a1, unsigned __int8 a2, char a3) //FINAL
+i16 CPP_FadePalette256(u8 *a1, u8 a2, char a3) //FINAL
 {
-  unsigned __int8 *v3; // ebx
-  __int16 j; // cx
+  u8 *v3; // ebx
+  i16 j; // cx
   int v5; // esi
   int v6; // eax
   char v7; // dl
-  __int16 result; // ax
-  __int16 i; // cx
+  i16 result; // ax
+  i16 i; // cx
   int v10; // esi
   int v11; // eax
   char v12; // dl
-  unsigned __int8 v13[768]; // [esp+0h] [ebp-300h] BYREF
+  u8 v13[768]; // [esp+0h] [ebp-300h] BYREF
 
   v3 = a1;
   if ( a3 )
@@ -11336,20 +11346,20 @@ __int16 CPP_FadePalette256(unsigned __int8 *a1, unsigned __int8 a2, char a3) //F
     {
       fade_count = 0;
       fade_started = 1;
-      CPP_GetPalette256((unsigned __int8 *)from);
+      CPP_GetPalette256((u8 *)from);
 
       if ( !a1 )
         memset((char*) to_pal, 0, 768);
     }
     if ( !a1 )
-      v3 = (unsigned __int8 *) to_pal;
+      v3 = (u8 *) to_pal;
     for ( i = 0; i < 768; ++i )
     {
       v10 = i;
 
       int tmp=unk_2B3E5E; //sanitizer crash
 
-      v11 = (__int16)(v3[i] - (unsigned __int8)from[i]) * ((int)tmp /*unk_2B3E5E*/ >> 16) / a2;
+      v11 = (i16)(v3[i] - (u8)from[i]) * ((int)tmp /*unk_2B3E5E*/ >> 16) / a2;
       v12 = from[i];
       v13[v10] = v12 + v11;
     }
@@ -11359,10 +11369,10 @@ __int16 CPP_FadePalette256(unsigned __int8 *a1, unsigned __int8 a2, char a3) //F
   }
   else
   {
-    CPP_GetPalette256((unsigned __int8 *)from);
+    CPP_GetPalette256((u8 *)from);
     if ( !a1 )
     {
-      v3 = (unsigned __int8 *) to_pal;
+      v3 = (u8 *) to_pal;
       memset((char*) to_pal, 0, 768);
     }
     for ( fade_count = 0; a2 >= fade_count; ++fade_count )
@@ -11373,7 +11383,7 @@ __int16 CPP_FadePalette256(unsigned __int8 *a1, unsigned __int8 a2, char a3) //F
 
         int tmp=unk_2B3E5E; //sanitizer crash
 
-        v6 = (__int16)(v3[j] - (unsigned __int8)from[j]) * ((int)tmp /*unk_2B3E5E*/ >> 16) / a2;
+        v6 = (i16)(v3[j] - (u8)from[j]) * ((int)tmp /*unk_2B3E5E*/ >> 16) / a2;
         v7 = from[j];
         v13[v5] = v7 + v6;
       }

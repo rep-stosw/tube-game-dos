@@ -11,24 +11,13 @@
 #ifndef HEXRAYS_DEFS_H
 #define HEXRAYS_DEFS_H
 
+#define FIX_ALIASING_AND_UNALIGNED /* need for ARM & DSP */
+#define MCPY memcpy
+
 static inline char __CFSHL__(int x,char y) //флаг переноса при сдвиге влево
 {
  if((((unsigned)x)&0x80000000)&&y)return 1;
  return 0;
-
-/*
- _asm
- {
-  mov	eax,x
-  mov	cl,y
-  shl	eax,cl
-  jnc	END
-  mov	r,1
-  END:
- }
- return r;
-*/
-
 }
 
 typedef long long             int64;
@@ -55,26 +44,164 @@ typedef int16 _BOOL2;
 typedef int32 _BOOL4;
 //typedef int64 _BOOL8;
 
-#define _BYTE  uint8
-#define _WORD  uint16
-#define _DWORD uint32
-#define _QWORD uint64
+#ifdef FIX_ALIASING_AND_UNALIGNED /* фиксит алиасинг указателей и доступ к невыровненным данным - необходимо для Cortex-A7 ARM и C6000+ DSP */
 
-#define BYTEn(x, n)   (*((_BYTE*)&(x)+n))
-#define WORDn(x, n)   (*((_WORD*)&(x)+n))
-#define DWORDn(x, n)  (*((_DWORD*)&(x)+n))
+#ifndef MCPY
+
+#pragma GCC push_options
+
+#pragma GCC optimize ("O0")
+
+static inline void MCPY(void *d,const void *s,unsigned n)
+{
+       char *D=(      char*)d;
+ const char *S=(const char*)s;
+ if(n)
+ {
+  do *D++=*S++;
+  while(--n);
+ }
+}
+
+#pragma GCC pop_options
+
+#endif
+
+template<typename T>
+struct UA
+{
+ char ua[sizeof(T)];
+
+ inline operator T() const
+ {
+  T t;
+  MCPY(&t,&ua,sizeof(T));
+  return t;
+ }
+
+ inline T operator=(const T p)
+ {
+  MCPY(&ua,&p,sizeof(T));
+  return p;
+ }
+
+ inline T operator+=(const T p)
+ {
+  T t;
+  MCPY(&t,&ua,sizeof(T));
+  t+=p;
+  MCPY(&ua,&t,sizeof(T));
+  return t;
+ }
+
+ inline T operator-=(const T p)
+ {
+  T t;
+  MCPY(&t,&ua,sizeof(T));
+  t-=p;
+  MCPY(&ua,&t,sizeof(T));
+  return t;
+ }
+
+ inline T operator>>=(const T p)
+ {
+  T t;
+  MCPY(&t,&ua,sizeof(T));
+  t>>=p;
+  MCPY(&ua,&t,sizeof(T));
+  return t;
+ }
+
+ inline T operator--()
+ {
+  T t;
+  MCPY(&t,&ua,sizeof(T));
+  --t;
+  MCPY(&ua,&t,sizeof(T));
+  return t;
+ }
+};
+
+/*
+template<typename T>
+static inline UA<T> & _mem(void * ptr)
+{
+ return *(UA<T>*)ptr;
+}
+
+#define BYTEn(x, n)  _mem<u8 >( (u8* )&(x)+n )
+#define WORDn(x, n)  _mem<u16>( (u16*)&(x)+n )
+#define DWORDn(x,n)  _mem<u32>( (u32*)&(x)+n )
+*/
+
+/*
+#define BYTEn(x, n)  (*(UA<u8 >*)(((u32)&(x))+ (n)   ))
+#define WORDn(x, n)  (*(UA<u16>*)(((u32)&(x))+((n)*2)))
+#define DWORDn(x,n)  (*(UA<u32>*)(((u32)&(x))+((n)*4)))
+*/
+
+#define BYTEn(x, n)  (*(UA<u8 >*)( (u8* )&(x)+(n) ))
+#define WORDn(x, n)  (*(UA<u16>*)( (u16*)&(x)+(n) ))
+#define DWORDn(x,n)  (*(UA<u32>*)( (u32*)&(x)+(n) ))
+
+#else /* без фикса алиасинга указателей и невыровненных данных - только для PC(x86) и Web(wasm) */
+
+template<typename T>
+using UA=T;
+/*
+struct UA
+{
+ T ua;
+
+ inline operator T() const
+ {
+  return ua;
+ }
+
+ inline T operator=(const T p)
+ {
+  return ua=p;
+ }
+
+ inline T operator+=(const T p)
+ {
+  return ua+=p;
+ }
+
+ inline T operator-=(const T p)
+ {
+  return ua-=p;
+ }
+
+ inline T operator>>=(const T p)
+ {
+  return ua>>=p;
+ }
+
+ inline T operator--()
+ {
+  return --ua;
+ }
+};
+*/
+
+#define BYTEn(x, n)  (*((u8* )&(x)+n))
+#define WORDn(x, n)  (*((u16*)&(x)+n))
+#define DWORDn(x,n)  (*((u32*)&(x)+n))
+
+#endif
 
 #define LAST_IND(x,part_type)    (sizeof(x)/sizeof(part_type) - 1)
 
 #define HIGH_IND(x,part_type)  LAST_IND(x,part_type)
 #define LOW_IND(x,part_type)   0
 
-#define LOBYTE(x)  BYTEn(x,LOW_IND(x,_BYTE))
-#define LOWORD(x)  WORDn(x,LOW_IND(x,_WORD))
-#define LODWORD(x) DWORDn(x,LOW_IND(x,_DWORD))
-#define HIBYTE(x)  BYTEn(x,HIGH_IND(x,_BYTE))
-#define HIWORD(x)  WORDn(x,HIGH_IND(x,_WORD))
-#define HIDWORD(x) DWORDn(x,HIGH_IND(x,_DWORD))
+#define LOBYTE(x)  BYTEn(x,LOW_IND(x,u8))
+#define LOWORD(x)  WORDn(x,LOW_IND(x,u16))
+#define LODWORD(x) DWORDn(x,LOW_IND(x,u32))
+#define HIBYTE(x)  BYTEn(x,HIGH_IND(x,u8))
+#define HIWORD(x)  WORDn(x,HIGH_IND(x,u16))
+#define HIDWORD(x) DWORDn(x,HIGH_IND(x,u32))
 
 #define BYTE1(x)   BYTEn(x,  1)         // byte 1 (counting from 0)
 #define BYTE2(x)   BYTEn(x,  2)

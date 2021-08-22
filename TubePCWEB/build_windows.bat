@@ -1,4 +1,4 @@
-rem goto LINK
+::goto LINK
 
 @echo Clear...
 
@@ -11,17 +11,17 @@ cls
 
 @echo Compile...
 
-g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -DNDEBUG -Wno-unused-result -c Game/tube.cpp   -IGame -IMusic -ISound -fsigned-char
-g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -DNDEBUG -Wno-unused-result -c Game/trig.cpp   -IGame -IMusic -ISound
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Game/misc.c     -IGame -IMusic -ISound
+g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Game/tube.cpp -IGame -IMusic -ISound -fsigned-char -fmax-errors=1
+g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Game/trig.cpp -IGame -IMusic -ISound
+g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Game/misc.cpp -IGame -IMusic -ISound
 
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Sound/SB16.C -IGame -IMusic -ISound
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -D_OPL3_ -Wno-unused-result -c Music/HMP.C  -IGame -IMusic -ISound
+g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -D_OPL3_ -Wno-unused-result -c Sound/SB16.cpp -IGame -IMusic -ISound
+g++ -m32 -Ofast -fomit-frame-pointer -ffast-math -fno-rtti -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -D_OPL3_ -Wno-unused-result -c Music/HMP.cpp  -IGame -IMusic -ISound
 
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Music/hmpfile.c -IGame -IMusic -ISound
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Music/hmpopl.c  -IGame -IMusic -ISound
+gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Music/hmpfile.c -IGame -IMusic -ISound
+gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Music/hmpopl.c  -IGame -IMusic -ISound
 
-gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -DNDEBUG -Wno-unused-result -c Music/opl3.c -o opl.o -IGame -IMusic -ISound
+gcc -m32 -Ofast -fomit-frame-pointer -ffast-math           -fno-exceptions -fno-builtin -ftree-vectorize -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -DNDEBUG -Wno-unused-result -c Music/opl3.c -o opl.o -IGame -IMusic -ISound
 
 :LINK
 
