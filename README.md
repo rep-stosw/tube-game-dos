@@ -23,8 +23,8 @@ The game is currently compiled by the following toolchains:
 2. GCC (Linux)
 3. Emscripten (Web)
 4. OpenWatcom 1.9 (DOS DPMI)
-5. ARM GCC (Cortex-A7 Allwinner V3s) - https://www.youtube.com/watch?v=ejwfzwd2_3A
-6. TI CGT C6x (DSP TMS320C6745) - https://www.youtube.com/watch?v=9L44_1E7QJg
+5. ARM GCC (Cortex-A7 Allwinner V3s) - https://www.youtube.com/watch?v=9L44_1E7QJg
+6. TI CGT C6x (DSP TMS320C6745) - https://www.youtube.com/watch?v=ejwfzwd2_3A
 
 Fully cross-platform, SDL2 is used.
 
