@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=dgaLhOj14e8
 Tube is a little known game from Bullfrog developed for M$ DOS, released in 1994.
 
 I was able to recreate the source code of this game using the Hex-rays decompiler and the IDA Pro disassembler.
+
 In addition, of course, I used a set of my own programs and scripts!
 
 For final debugging, I used the GDB debugger and the ASAN and UBSAN sanitizers for Linux.
@@ -28,10 +29,13 @@ The game is currently compiled by the following toolchains:
 Fully cross-platform, SDL2 is used.
 
 This program will not work on 64-bit architectures due to 32-bit pointers in the game code, 32-bit typecasts and a specific memory manager.
+
 Only for 32-bit architectures!
 
 The unaligned data access and alias pointers were fixed via C++ operators overloading and special data type creation.
+
 So rejoice, the program will work on architectures that hate unaligned data!
+
 Even the most aggressive optimization doesn't break the program! Because this program follows strict aliasing rules!
 
 HOW TO COMPILE:
