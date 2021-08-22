@@ -4,6 +4,7 @@
 # Tube
 
 My first reverse engineering game.
+Last update: 22.08.2021
 
 https://www.youtube.com/watch?v=dgaLhOj14e8
 
@@ -20,12 +21,17 @@ The game is currently compiled by the following toolchains:
 2. GCC (Linux)
 3. Emscripten (Web)
 4. OpenWatcom 1.9 (DOS DPMI)
+5. ARM GCC (ARM Cortex-A7 Allwinner V3s) - https://www.youtube.com/watch?v=ejwfzwd2_3A
+6. TI CGT C6x (DSP TMS320C6745) - https://www.youtube.com/watch?v=9L44_1E7QJg
 
 Fully cross-platform, SDL2 is used.
 
-Please keep in mind that this game will only work on 32-bit platforms! It won't work on 64-bit ones, because of 32-bit pointers in the game code.
+This program will not work on 64-bit architectures due to 32-bit pointers in the game code, 32-bit typecasts and a specific memory manager.
+Only for 32-bit architectures!
 
-The unaligned data access is done through "packed" pointers and can be redesigned for a different compiler that supports directives for handling unaligned data.
+The unaligned data access and alias pointers were fixed via C++ operators overloading and special data type creation.
+So rejoice, the program will work on architectures that hate unaligned data!
+Even the most aggressive optimization doesn't break the program! Because this program follows strict aliasing rules!
 
 HOW TO COMPILE:
 
@@ -37,3 +43,4 @@ The "bin" directory contains compiled programs.
 
 Play game in browser: https://clobberasm.itch.io/tube
 
+Tech discussion: https://gamedev.ru/flame/forum/?id=262348&page=8&m=5430353#m119
