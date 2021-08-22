@@ -12,7 +12,9 @@ https://www.youtube.com/watch?v=dgaLhOj14e8
 Tube is a little known game from Bullfrog developed for M$ DOS, released in 1994.
 
 I was able to recreate the source code of this game using the Hex-rays decompiler and the IDA Pro disassembler.
+
 In addition, of course, I used a set of my own programs and scripts!
+
 For final debugging, I used the GDB debugger and the ASAN and UBSAN sanitizers for Linux.
 
 The game is currently compiled by the following toolchains:
