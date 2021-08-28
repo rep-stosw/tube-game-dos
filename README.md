@@ -30,7 +30,7 @@ Fully cross-platform, SDL2 is used.
 
 This program will not work on 64-bit architectures due to 32-bit pointers in the game code, 32-bit typecasts and a specific memory manager.
 
-For 64-bit please, see my new project Tube64: https://github.com/rep-stosw/tube64
+For 64-bit please, see my new project - "Tube64" : https://github.com/rep-stosw/tube64
 
 The unaligned data access and alias pointers were fixed via C++ operators overloading and special data type creation.
 
