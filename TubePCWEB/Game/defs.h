@@ -122,68 +122,14 @@ struct UA
  }
 };
 
-/*
-template<typename T>
-static inline UA<T> & _mem(void * ptr)
-{
- return *(UA<T>*)ptr;
-}
-
-#define BYTEn(x, n)  _mem<u8 >( (u8* )&(x)+n )
-#define WORDn(x, n)  _mem<u16>( (u16*)&(x)+n )
-#define DWORDn(x,n)  _mem<u32>( (u32*)&(x)+n )
-*/
-
-/*
-#define BYTEn(x, n)  (*(UA<u8 >*)(((u32)&(x))+ (n)   ))
-#define WORDn(x, n)  (*(UA<u16>*)(((u32)&(x))+((n)*2)))
-#define DWORDn(x,n)  (*(UA<u32>*)(((u32)&(x))+((n)*4)))
-*/
-
-#define BYTEn(x, n)  (*(UA<u8 >*)( (u8* )&(x)+(n) ))
-#define WORDn(x, n)  (*(UA<u16>*)( (u16*)&(x)+(n) ))
-#define DWORDn(x,n)  (*(UA<u32>*)( (u32*)&(x)+(n) ))
+#define BYTEn(x, n) *((UA<u8 >*)&(x)+(n))
+#define WORDn(x, n) *((UA<u16>*)&(x)+(n))
+#define DWORDn(x,n) *((UA<u32>*)&(x)+(n))
 
 #else /* без фикса алиасинга указателей и невыровненных данных - только для PC(x86) и Web(wasm) */
 
 template<typename T>
 using UA=T;
-/*
-struct UA
-{
- T ua;
-
- inline operator T() const
- {
-  return ua;
- }
-
- inline T operator=(const T p)
- {
-  return ua=p;
- }
-
- inline T operator+=(const T p)
- {
-  return ua+=p;
- }
-
- inline T operator-=(const T p)
- {
-  return ua-=p;
- }
-
- inline T operator>>=(const T p)
- {
-  return ua>>=p;
- }
-
- inline T operator--()
- {
-  return --ua;
- }
-};
-*/
 
 #define BYTEn(x, n)  (*((u8* )&(x)+n))
 #define WORDn(x, n)  (*((u16*)&(x)+n))
